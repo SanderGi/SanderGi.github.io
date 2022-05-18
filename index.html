@@ -181,7 +181,7 @@
 								function submit() {
 									const emailTo = 'alexmetzgertutoring@gmail.com';
 									const emailSub = document.getElementById("subject").value;
-									const emailBody = document.getElementById("name").value + "\n" + document.getElementById("email").value + "\n" + document.getElementById("message").value;
+									const emailBody = "Inquiry by " + document.getElementById("name").value + " (" + document.getElementById("email").value + "): " + document.getElementById("message").value;
 									window.open(`mailto:${emailTo}?subject=${emailSub}&body=${emailBody}`, '_self');
 								}
 							</script>
