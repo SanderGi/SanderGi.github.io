@@ -168,7 +168,7 @@
 								</div>
 							</form>
 							<script>
-								document.getElementById('contactForm').submit(function () {
+								document.getElementById('contactForm').addEventListener('submit', () => {
 								 submit();
 								 return false;
 								});
