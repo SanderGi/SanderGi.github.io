@@ -28,7 +28,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images/pic00.jpg" alt="" /></span>
+							<span class="image fit"><img src="images/alex.jpg" alt="" /></span>
 						</div>
 						<div class="col-8 col-7-large col-12-medium">
 							<header>
@@ -88,7 +88,7 @@
 					<div class="row">
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="https://github.com/SanderGi/WiFiStrengthTester" class="image featured"><img src="images/wifitester.jpg" alt="" /></a>
+								<a href="https://github.com/SanderGi/WiFiStrengthTester" class="image featured"><img src="images/wifitester.png" alt="" /></a>
 								<h3><a href="https://github.com/SanderGi/WiFiStrengthTester">Software to measure WiFi RSSI</a></h3>
 								<p>One of the challenges we faced in Science Olympiad was standardizing the way teams test the WiFi antennas they build. So I created a program with a nice GUI to make this easy. It can be downloaded on the <a href="https://apps.microsoft.com/store/detail/wifi-strength-tester/9N3BV3RVGXDV?hl=en-us&gl=US">Microsoft Store</a> where it now has more than a thousand aquisitions.</p>
 							</article>
@@ -103,7 +103,7 @@
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								<h3><a href="#">Lorem ipsum</a></h3>
+								<h3><a href="#">Cryptography Chrome Extension</a></h3>
 								<p>Ornare nulla proin odio consequat.</p>
 							</article>
 						</div>
@@ -145,7 +145,7 @@
 					</header>
 					<div class="row">
 						<div class="col-12">
-							<form>
+<!-- 							<form> -->
 								<div class="row">
 									<div class="col-6 col-12-small">
 										<input type="text" name="name" id="name" placeholder="Name" />
@@ -162,12 +162,18 @@
 									<div class="col-12">
 										<ul class="actions">
 											<li><input type="submit" onclick="submit()" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
+											<li><input type="reset" onclick="clear()" value="Clear Form" class="alt" /></li>
 										</ul>
 									</div>
 								</div>
-							</form>
+<!-- 							</form> -->
 							<script>
+								function clear() {
+									document.getElementById("name").value = "";
+									document.getElementById("email").value = "";
+									document.getElementById("subject").value = "";
+									document.getElementById("message").value = "";
+								}
 								function submit() {
 									const emailTo = 'alexmetzgertutoring@gmail.com';
 									const emailSub = document.getElementById("subject").value;
