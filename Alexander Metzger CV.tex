@@ -14,6 +14,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{xcolor}
 
+\usepackage[normalem]{ulem} % for dashed underlining
+
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
@@ -92,16 +94,16 @@
 \section{Experience}
 \resumeSubHeadingListStart
 
-\resumeSubheading{Gooey.AI}{Junior Software Engineer}{Jun. 2023 -- Present}
+\resumeSubheading{Gooey.AI}{Software Engineer}{Jun. 2023 -- Present}
 \resumeItemListStart
+\resumeItem{Slack Bot}{
+    Worked closely with partners like Zephyr to implement an automated tool to integrate LLM powered Slack bots into Workspaces with Vector DBs, 200+ languages, and audio/image/video support.
+}
+\resumeItem{Low Resource Language Efforts}{
+    Partnered with Digital Green, EkStep Foundation, Bill \& Melinda Gates Foundation, and more to lead deployment of models for 20 extra dialects and 100 extra languages, transliteration and glossary features to support expansion into Senegal and improve products in India.
+}
 \resumeItem{Artistic QR code generator}{
     Launched the 3rd most used product with 50k+ active runs that has landed branding deals and social media exposure. Started as a machine learning intern, then got a return offer.
-}
-\resumeItem{Improved Translations}{
-    Deployed models for 20 extra dialects and 100 extra languages, transliteration, and glossary features to support expansion into regions like Senegal and improve products in India.
-}
-\resumeItem{Slack Bot}{
-    Worked closely with partners like Zephyr to implement an automated tool to integrate custom Slack bots into Workspaces with custom data (Vector DBs), 200+ languages, and audio/video support.
 }
 \resumeItem{Python}{
     \underbar{MLOps}, \underbar{Kubernetes}, \underbar{Docker}, \underbar{Google Cloud Platform}, \underbar{Django}, \underbar{Azure}, \underbar{OpenAI}, \underbar{Sentry}, \underbar{API design}.
@@ -129,10 +131,10 @@
 \resumeSubheading{University of Washington ICTD Lab}{Undergraduate Researcher}{Sep. 2022 -- Present}
 \resumeItemListStart
 \resumeItem{eKichabi v2 Django Developer}{
-    Managed the backend team for the eKichabi v2 project, shipped a USSD server and Android app via a digital intervention to connect 10K farmers in Tanzania.
+    Managed the backend team for the eKichabi v2 project, shipped a \href{https://github.com/SanderGi/eKichabi}{\dashuline{USSD server and Android app}} via a digital intervention to connect 10K farmers in Tanzania.
 }
-\resumeItem{Co-first authored eKichabi v2 paper}{
-    A paper on scaling technological interventions in Sub-Saharan Africa -- submitted to ACM SIGCHI. Gave 50 minute talk to 40 researchers at the CHANGE Seminar.
+\resumeItem{Co-first authored \href{https://sandergi.github.io/images/eKichabi_v2_chi24a.pdf}{\dashuline{eKichabi v2 paper}}}{
+    A paper on \href{https://youtu.be/v-1JuQp1ous}{\dashuline{scaling technological interventions in Sub-Saharan Africa}} -- accepted to \href{https://sigchi.org/}{\dashuline{ACM SIGCHI}}. Presented \href{https://sandergi.github.io/images/CHANGE_Seminar_Talk_eKichabi_v2.pdf}{\dashuline{a 50 minute talk}} to 40 researchers at the CHANGE Seminar.
 }
 \resumeItem{Technological Consultant}{
     Maintenance, consulting and analyzing data for an economic impact analysis of eKichabi v2 by Dr. Anderson (UW), Dr. Dillon (Cornell), and Dr. Rudder (UChicago).
