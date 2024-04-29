@@ -1,304 +1,684 @@
-<!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Alex Metzger</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" type="image/x-icon" href="/images/icons8-coding-64.png">
-	</head>
-	<body class="is-preload">
+  <head>
+    <title>Alex Metzger</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="icon" type="image/x-icon" href="/images/icons8-coding-64.png" />
+  </head>
+  <body class="is-preload">
+    <!-- Nav -->
+    <nav id="nav">
+      <ul class="container">
+        <li><a href="#top">Top</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Top</a></li>
-					<li><a href="#work">Work</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+    <!-- Home -->
+    <article id="top" class="wrapper style1">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 col-5-large col-12-medium">
+            <span class="image fit"
+              ><img src="images/profile.jpg" alt=""
+            /></span>
+          </div>
+          <div class="col-8 col-7-large col-12-medium">
+            <header>
+              <h1 style="line-height: 1em">
+                Greetings! I'm <strong>Alex Metzger</strong>.
+              </h1>
+            </header>
+            <p>
+              A University of Washington Computer Science and Mathematics major
+              with interests in violin, tennis, and machine learning
+              <button
+                onclick="window.open('/Alexander Metzger CV.pdf')"
+                style="
+                  font-size: 0.8em;
+                  padding: 0.5em 2em;
+                  background-color: blueviolet;
+                "
+              >
+                <i class="fa fa-download"></i> Resume
+              </button>
+            </p>
+            <a href="#work" class="button large scrolly"
+              >Learn about what I do</a
+            >
+          </div>
+        </div>
+      </div>
+    </article>
 
-		<!-- Home -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images/ClaireAlexBikingSquare.jpg" alt="" /></span>
-						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1 style="line-height: 1em">Greetings! I'm <strong>Alex Metzger</strong>.</h1>
-							</header>
-							<p>A University of Washington Computer Science and Mathematics major with interests in violin, tennis, and machine learning
-							<button onclick="window.open('/Alexander Metzger CV.pdf')" style="
-							    font-size: 0.8em;
-							    padding: 0.5em 2em;
-							    background-color: blueviolet;
-							"><i class="fa fa-download"></i> Resume</button>
-							</p>
-							<a href="#work" class="button large scrolly">Learn about what I do</a>
-						</div>
-					</div>
-				</div>
-			</article>
+    <!-- Work -->
+    <article id="work" class="wrapper style2">
+      <div class="container">
+        <header>
+          <h2>Here's what I do.</h2>
+          <p>
+            Click the links to learn more. Checkout my
+            <a href="https://www.linkedin.com/in/alexander-le-metzger/"
+              >Linkedin</a
+            >
+            for more details.
+          </p>
+        </header>
+        <div class="row aln-center">
+          <div class="col-4 col-6-medium col-12-small">
+            <section class="box style1">
+              <span class="icon solid featured fa-book"></span>
+              <h3>Research</h3>
+              <p style="margin-bottom: 5px">
+                Currently working with Doctoral Student, Ananditha Raghunath,
+                Dr. Anderson (UW), Dr. Dillon (Cornell), and Dr. Jess Rudder
+                (UChicago).
+              </p>
+              <div id="more-research" style="display: none">
+                <p style="margin-bottom: 5px">
+                  The eKichabi project is a digital intervention in rural
+                  Tanzania to study the economic effects of various mobile
+                  technologies to connect farmers and the technical
+                  considerations when doing so.
+                </p>
+                <p>
+                  I've been in charge of [developing/maintaining the Django
+                  Server, USSD application and Android
+                  integration](https://github.com/SanderGi/eKichabi). I also
+                  co-first authored the
+                  <a href="/images/eKichabi_v2_chi24a.pdf">technical paper</a>
+                  accepted to
+                  <a href="https://sigchi.org/">ACM SIGCHI 2024</a> (see
+                  <a href="https://youtu.be/v-1JuQp1ous"
+                    >our video presentation here</a
+                  >) and presented a talk on
+                  <a
+                    href="https://www.mail-archive.com/change@change.washington.edu/msg02806.html"
+                    >Designing and Deploying Digital Information Systems in
+                    Sub-Saharan Africa</a
+                  >
+                  at the CHANGE Seminar (see
+                  <a href="/images/CHANGE_Seminar_Talk_eKichabi_v2.pdf"
+                    >the slides here</a
+                  >). I'm currently a technical consultant for the continuation
+                  of the project aimed at studying the economic impacts of the
+                  intervention.
+                </p>
+              </div>
+              <button
+                style="display: block; margin: auto"
+                onclick="document.getElementById('more-research').style.display = document.getElementById('more-research').style.display == 'block' ? 'none' : 'block'; this.textContent = document.getElementById('more-research').style.display == 'block' ? 'Show Less' : 'Show More';"
+              >
+                Show More
+              </button>
+            </section>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <section class="box style1">
+              <span class="icon solid featured fa-code"></span>
+              <h3>Programming for fun</h3>
+              <p>
+                I love exploring new technologies to become a better software
+                developer. I do a lot of programming and I am always working on
+                some sort of side project. See
+                <a href="https://github.com/SanderGi">github</a> for my
+                published projects
+              </p>
+            </section>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <section class="box style1">
+              <span class="icon solid featured fa-music"></span>
+              <h3>Private Tutoring</h3>
+              <p>
+                Experience teaching
+                <a href="https://sandergi.github.io/images/TutoringAd.pdf"
+                  >Academic Subjects</a
+                >
+                for Elementary through High School Level
+              </p>
+              <p>
+                Taken Violin Lessons for 15 years<br />Given
+                <a href="https://sandergi.github.io/images/ViolinAd.pdf"
+                  >Violin Lessons</a
+                >
+                for 5 years
+              </p>
+            </section>
+          </div>
+        </div>
+        <footer>
+          <p>
+            Other interests of mine include playing in the University of
+            Washington Symphony Orchestra, participating in Design Build Fly at
+            UW as lead Data Scientist, recreational mathematics, tennis and
+            chess
+          </p>
+          <a href="#portfolio" class="button large scrolly"
+            >See some of my recent work</a
+          >
+        </footer>
+      </div>
+    </article>
 
-		<!-- Work -->
-			<article id="work" class="wrapper style2">
-				<div class="container">
-					<header>
-						<h2>Here's what I do.</h2>
-						<p>Click the links to learn more. Checkout my <a href="https://www.linkedin.com/in/alexander-le-metzger/">Linkedin</a> for more details.</p>
-					</header>
-					<div class="row aln-center">
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon solid featured fa-book"></span>
-								<h3>Research</h3>
-								<p style="margin-bottom: 5px;">
-									Currently working with Doctoral Student, Ananditha Raghunath, Dr. Anderson (UW), Dr. Dillon (Cornell), and Dr. Jess Rudder (UChicago).
-                                </p>
-                                <div id="more-research" style="display: none">
-                                    <p style="margin-bottom: 5px;">
-									    The eKichabi project is a digital intervention in rural Tanzania to study the economic effects of various mobile technologies to connect farmers and the technical considerations when doing so.
-                                    </p>
-                                    <p>
-                                        I've been in charge of [developing/maintaining the Django Server, USSD application and Android integration](https://github.com/SanderGi/eKichabi). I also co-first authored the <a href="/images/eKichabi_v2_chi24a.pdf">technical paper</a> accepted to <a href="https://sigchi.org/">ACM SIGCHI 2024</a> (see <a href="https://youtu.be/v-1JuQp1ous">our video presentation here</a>) and presented a talk on <a href="https://www.mail-archive.com/change@change.washington.edu/msg02806.html">Designing and Deploying Digital Information Systems in Sub-Saharan Africa</a> at the CHANGE Seminar (see <a href="/images/CHANGE_Seminar_Talk_eKichabi_v2.pdf">the slides here</a>). I'm currently a technical consultant for the continuation of the project aimed at studying the economic impacts of the intervention.
-                                    </p>
-                                </div>
-                                <button style="display: block; margin: auto" onclick="document.getElementById('more-research').style.display = document.getElementById('more-research').style.display == 'block' ? 'none' : 'block'; this.textContent = document.getElementById('more-research').style.display == 'block' ? 'Show Less' : 'Show More';">Show More</button>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon solid featured fa-code"></span>
-								<h3>Programming for fun</h3>
-								<p>I love exploring new technologies to become a better software developer. I do a lot of programming with my girlfriend and I am always working on some sort of side project. See <a href="https://github.com/SanderGi">github</a> for my published projects</p>
-							</section>
-						</div>
-                        <div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon solid featured fa-music"></span>
-								<h3>Private Tutoring</h3>
-								<p>Experience teaching <a href="https://sandergi.github.io/images/TutoringAd.pdf">Academic Subjects</a> for Elementary through High School Level</p>
-								<p>Taken Violin Lessons for 15 years<br>Given <a href="https://sandergi.github.io/images/ViolinAd.pdf">Violin Lessons</a> for 5 years</p>
-							</section>
-						</div>
-					</div>
-					<footer>
-						<p>Other interests of mine include playing in the University of Washington Symphony Orchestra, participating in Design Build Fly at UW as Electrical Engineer, recreational mathematics, tennis and chess</p>
-						<a href="#portfolio" class="button large scrolly">See some of my recent work</a>
-					</footer>
-				</div>
-			</article>
+    <!-- Portfolio -->
+    <article id="portfolio" class="wrapper style3">
+      <div class="container">
+        <header>
+          <h2>Here's some stuff I made recently.</h2>
+          <p>
+            Click the image for a demo of the specific project if available.
+            Click the title for the source code.
+          </p>
+        </header>
+        <div class="row">
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a
+                href="https://www.npmjs.com/package/sqlite-auto-migrator"
+                class="image featured"
+                ><img src="images/SAM.png" alt="website"
+              /></a>
+              <h3>
+                <a href="https://github.com/SanderGi/sqlite-auto-migrator"
+                  >SQLite Auto Migrator</a
+                >
+              </h3>
+              <p>
+                NPM package to automatically manage SQLite database schema
+                changes through a
+                <a href="https://realpython.com/django-migrations-a-primer/"
+                  >Django-like migration system</a
+                >
+                but framework agnostic and with JavaScript+CLI integration. The
+                library solves the issue of updating a production database
+                schema without losing data or having to manually write/execute
+                SQL queries. Used in production by
+                <a href="https://attendqr.com">attendqr.com</a>.
+              </p>
+            </article>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a href="https://github.com/SanderGi/HTMS" class="image featured"
+                ><img src="images/HTMS.png" alt="website"
+              /></a>
+              <h3>
+                <a href="https://github.com/SanderGi/HTMS">HTMS</a>
+              </h3>
+              <p>
+                A mini client-side web framework that allows creating
+                webcomponents and managing reactive state with Signals directly
+                in HTML.
+              </p>
+            </article>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a href="https://alex-dbf.glitch.me/" class="image featured"
+                ><img src="images/DBF.png" alt="website"
+              /></a>
+              <h3>
+                <a href="https://github.com/SanderGi/DesignBuildFly"
+                  >Design Build Fly</a
+                >
+              </h3>
+              <p>
+                Data processing tools for the University of Washington's
+                <a href="https://www.aiaa.org/dbf">Design Build Fly</a> team.
+                Helped our team get 3rd place in the 28th national DBF
+                competition.
+              </p>
+            </article>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a href="https://gooey.ai/qr-code/" class="image featured"
+                ><img src="images/qrart.png" alt="website"
+              /></a>
+              <h3>
+                <a href="https://gooey.ai/qr-code/">QR Code Art Generator</a>
+              </h3>
+              <p>
+                Made as an intern at Gooey.AI, this quickly became their top 3
+                tool with 30K+ uses within the first two weeks and has landed
+                branding deals and social media exposure for the company. It is
+                made using Stable Diffusion models with Controlnets (deployed
+                using Docker and Kubernetes) and also involved making a URL
+                shortener using Django.
+              </p>
+            </article>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a href="https://attendqr.com" class="image featured"
+                ><img src="images/AttendanceScanner.png" alt="website"
+              /></a>
+              <h3>
+                <a href="https://github.com/clr-li/AttendanceScanner"
+                  >Attendance Scanner</a
+                >
+              </h3>
+              <p>
+                A commercial version of the attendance scanner made for SYSO
+                coded in collaboration with Claire Li. Quick attendance system
+                powered by QR codes. Manages identity using OAuth2 and Firebase,
+                stores data using SQLite, and has electronic
+                payments/subscriptions using the Braintree payment gateway.
+              </p>
+            </article>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a href="https://quicktierlist.web.app/" class="image featured"
+                ><img src="images/tierlist.png" alt="website"
+              /></a>
+              <h3>
+                <a href="https://github.com/SanderGi/Tierlist"
+                  >Tierlist Maker</a
+                >
+              </h3>
+              <p>
+                I wanted to see if I could develop and deploy a small web
+                application in a few hours (spread across 5 days) without any
+                frameworks, nor referencing my old projects, and keeping google
+                searches to a minimum. So I challenged myself to do it with this
+                simple Tierlist Maker. The only thing I had to google was the
+                compression library and icon API as I had never used those
+                before (and these were non essential features anyways). As an
+                added bonus, it is completely ad free and runs locally in the
+                browser.
+              </p>
+            </article>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a
+                href="https://cascadeenrichment.com/elementary-math-assessments"
+                class="image featured"
+                ><img src="images/cascadeassessment.jpg" alt="website"
+              /></a>
+              <h3>
+                <a href="https://github.com/clr-li/AssessmentSoftware"
+                  >Cascade Assessment Software</a
+                >
+              </h3>
+              <p>
+                A customized assessment software to enhance Cascade Enrichment's
+                K-12 tutoring curriculum developed in collaboration with Claire
+                Li. The tests are commercially available
+                <a
+                  href="https://cascadeenrichment.com/elementary-math-assessments"
+                  >online</a
+                >
+                and rely on UI/UX design, accessibility principles, Javascript,
+                and a Google Form based backend for collecting and autograding
+                responses
+              </p>
+            </article>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a
+                href="https://seattletutoringpartners.web.app"
+                class="image featured"
+                ><img src="images/seattle_tutoring_partners.png" alt="website"
+              /></a>
+              <h3>
+                <a href="https://github.com/clr-li/STP"
+                  >Seattle Tutoring Partners</a
+                >
+              </h3>
+              <p>
+                The website for a tutoring company I cofounded. Designed and
+                coded in collaboration with Claire Li. Uses Firebase for static
+                file hosting and user-authentication. Uses Deta for the backend
+              </p>
+            </article>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a href="images/SYSOAttendance.png" class="image featured"
+                ><img src="images/SYSOAttendance.png" alt="attendanceScanner"
+              /></a>
+              <h3>
+                <a href="https://github.com/clr-li/AttendanceScanner"
+                  >SYSO Attendance System</a
+                >
+              </h3>
+              <p>
+                My old youth orchestra (SYSO) needed a way to automate taking
+                attendance for their hundreds of students. I wrote a QR-code
+                based system (hosted on Glitch) that allows people to scan their
+                QR code at a scanning station (any authorized smartphone)
+              </p>
+            </article>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a href="https://alextetris.glitch.me/" class="image featured"
+                ><img src="images/tetris.jpg" alt="tetris"
+              /></a>
+              <h3>
+                <a href="https://github.com/SanderGi/alextetris"
+                  >Tetris Clone</a
+                >
+              </h3>
+              <p>
+                A classic web-based Tetris game with no ads. Has PWA
+                capabilities so it can be downloaded and used offline. Simple
+                learning project to explore game-loops, touch controls, and
+                online leaderboards using a hosted database.
+              </p>
+            </article>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a
+                href="https://swap0nline.000webhostapp.com/alextest.php"
+                class="image featured"
+                ><img src="images/wurtle.jpg" alt="wurtle"
+              /></a>
+              <h3><a href="https://github.com/clr-li/SWAP">Wurtle Game</a></h3>
+              <p>
+                A word game inspired by the popular Wordle but with ocean themed
+                background graphics. Coded in collaboration with Claire Li. A
+                live demo of a similar game I coded on my own can be found here:
+                <a href="https://lawdle.web.app/">lawdle.web.app</a> (the
+                challenge is to guess the state/country of the absurd law, or in
+                a different mode select the AI generated law)
+              </p>
+            </article>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a
+                href="https://github.com/SanderGi/Science-Olympiad/tree/main/CodeBusters"
+                class="image featured"
+                ><img src="images/autoebes.jpg" alt="chrome extension"
+              /></a>
+              <h3>
+                <a
+                  href="https://github.com/SanderGi/Science-Olympiad/tree/main/CodeBusters"
+                  >Cryptography Puzzles</a
+                >
+              </h3>
+              <p>
+                This chrome extension enhances
+                <a href="https://toebes.com/codebusters/">toebes.com</a> to
+                allow autogeneration of Cryptographical Puzzles (Code Busters
+                tests for Science Olympiad to help my teammates practice) by
+                simply selecting a type of cipher (affine, ceasar, RSA,
+                Baconian, etc.).
+              </p>
+            </article>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a
+                href="https://github.com/SanderGi/WiFiStrengthTester"
+                class="image featured"
+                ><img src="images/wifitester.png" alt="windows app"
+              /></a>
+              <h3>
+                <a href="https://github.com/SanderGi/WiFiStrengthTester"
+                  >Software to measure WiFi RSSI</a
+                >
+              </h3>
+              <p>
+                One of the challenges we faced in Science Olympiad was
+                standardizing the way teams test the WiFi antennas they build.
+                So I created a program with a nice GUI to make this easy. It can
+                be downloaded on the
+                <a
+                  href="https://apps.microsoft.com/store/detail/wifi-strength-tester/9N3BV3RVGXDV?hl=en-us&gl=US"
+                  >Microsoft Store</a
+                >
+                where it now has more than three thousand aquisitions.
+              </p>
+            </article>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a
+                href="https://github.com/SanderGi/CSharp3D"
+                class="image featured"
+                ><img src="images/wumpus.jpg" alt="3D space"
+              /></a>
+              <h3>
+                <a href="https://github.com/SanderGi/CSharp3D"
+                  >CPU 3D Engine in C#</a
+                >
+              </h3>
+              <p>
+                The challenge here was to write a 3D rendering engine completely
+                from scratch (down to the drawing of individual pixels) using
+                only the CPU (so no help from the graphics card). This project
+                taught me a lot about the math behind projection matrices,
+                lighting, 3D transformations, and optimizing algorithms
+                (parallel triangle drawing routines, frustrum culling, and
+                more).
+              </p>
+            </article>
+          </div>
+          <div class="col-4 col-6-medium col-12-small">
+            <article class="box style2">
+              <a
+                href="https://github.com/SanderGi/Science-Olympiad/tree/main/Detector"
+                class="image featured"
+                ><img src="images/detector.jpg" alt="raspberry pi circuit"
+              /></a>
+              <h3>
+                <a
+                  href="https://github.com/SanderGi/Science-Olympiad/tree/main/Detector"
+                  >Conductivity-meter with Raspberry Pi and Python</a
+                >
+              </h3>
+              <p>
+                This Science Olympiad challenge involved building and
+                programming a sensor and its circuitry from scratch (using only
+                basic circuit components and DIP) to measure salt concentration
+                in water samples. I used a Raspberry Pi microcontroller to
+                communicate via the I2C protocol to a NAU7802 ADC chip reading a
+                voltage divider circuit. With proper callibration, probe
+                submersion, and luck it is capable of less than 1% measurement
+                error.
+              </p>
+            </article>
+          </div>
+        </div>
+        <footer>
+          <p>
+            Current projects under development include a calculator IOS app with
+            3D graphing capabilities. A web-demo can be viewed
+            <a href="https://calculator-df6f0.web.app/">here</a>. Another
+            project is an AI powered file system organizer.
+          </p>
+          <a href="#contact" class="button large scrolly"
+            >Get in touch with me</a
+          >
+        </footer>
+      </div>
+    </article>
 
-		<!-- Portfolio -->
-			<article id="portfolio" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2>Here's some stuff I made recently.</h2>
-						<p>Click the image for a demo of the specific project if available. Click the title for the source code.</p>
-					</header>
-					<div class="row">
-                        <div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://gooey.ai/qr-code/" class="image featured"><img src="images/qrart.png" alt="website" /></a>
-								<h3><a href="https://gooey.ai/qr-code/">QR Code Art Generator</a></h3>
-								<p>Made as an intern at Gooey.AI, this quickly became their top 3 tool with 30K+ uses within the first two weeks and has landed branding deals and social media exposure for the company. It is made using Stable Diffusion models with Controlnets (deployed using Docker and Kubernetes) and also involved making a URL shortener using Django.</p>
-							</article>
-						</div>
-                        <div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://attendancescannerqr.web.app" class="image featured"><img src="images/attendancesoftware.png" alt="website" /></a>
-								<h3><a href="https://github.com/clr-li/AttendanceScanner">Attendance Scanner</a></h3>
-								<p>A commercial version of the attendance scanner made for SYSO coded in collaboration with my girlfriend. Quick attendance system powered by QR codes. Manages identity using OAuth2 and Firebase, stores data using SQLite, and has electronic payments/subscriptions using the Braintree payment gateway.</p>
-							</article>
-						</div>
-                        <div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://quicktierlist.web.app/" class="image featured"><img src="images/tierlist.png" alt="website" /></a>
-								<h3><a href="https://github.com/SanderGi/Tierlist">Tierlist Maker</a></h3>
-								<p>I wanted to see if I could develop and deploy a small web application in a few hours (spread across 5 days) without any frameworks, nor referencing my old projects, and keeping google searches to a minimum. So I challenged myself to do it with this simple Tierlist Maker. The only thing I had to google was the compression library and icon API as I had never used those before (and these were non essential features anyways). As an added bonus, it is completely ad free and runs locally in the browser.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://cascadeenrichment.com/elementary-math-assessments" class="image featured"><img src="images/cascadeassessment.jpg" alt="website" /></a>
-								<h3><a href="https://github.com/clr-li/AssessmentSoftware">Cascade Assessment Software</a></h3>
-								<p>A customized assessment software to enhance Cascade Enrichment's K-12 tutoring curriculum developed in collaboration with my girlfriend. The tests are commercially available <a href="https://cascadeenrichment.com/elementary-math-assessments">online</a> and rely on UI/UX design, accessibility principles, Javascript, and a Google Form based backend for collecting and autograding responses</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://seattletutoringpartners.web.app" class="image featured"><img src="images/seattle_tutoring_partners.png" alt="website" /></a>
-								<h3><a href="https://github.com/clr-li/STP">Seattle Tutoring Partners</a></h3>
-								<p>The website for a tutoring company I cofounded. Designed and coded in collaboration with my girlfriend. Uses Firebase for static file hosting and user-authentication. Uses Deta for the backend</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="images/AttendanceScanner.png" class="image featured"><img src="images/AttendanceScanner.png" alt="attendanceScanner" /></a>
-								<h3><a href="https://github.com/clr-li/AttendanceScanner">SYSO Attendance System</a></h3>
-								<p>My old youth orchestra (SYSO) needed a way to automate taking attendance for their hundreds of students. I wrote a QR-code based system (hosted on Glitch) that allows people to scan their QR code at a scanning station (any authorized smartphone)</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://alextetris.glitch.me/" class="image featured"><img src="images/tetris.jpg" alt="tetris" /></a>
-								<h3><a href="https://github.com/SanderGi/alextetris">Tetris Clone</a></h3>
-								<p>A classic web-based Tetris game with no ads. Has PWA capabilities so it can be downloaded and used offline. Simple learning project to explore game-loops, touch controls, and online leaderboards using a hosted database.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://swap0nline.000webhostapp.com/alextest.php" class="image featured"><img src="images/wurtle.jpg" alt="wurtle" /></a>
-								<h3><a href="https://github.com/clr-li/SWAP">Wurtle Game</a></h3>
-								<p>A word game inspired by the popular Wordle but with ocean themed background graphics. Coded in collaboration with my girlfriend. A live demo of a similar game I coded on my own can be found here: <a href="https://lawdle.web.app/">lawdle.web.app</a> (the challenge is to guess the state/country of the absurd law, or in a different mode select the AI generated law)</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://github.com/SanderGi/Science-Olympiad/tree/main/CodeBusters" class="image featured"><img src="images/autoebes.jpg" alt="chrome extension" /></a>
-								<h3><a href="https://github.com/SanderGi/Science-Olympiad/tree/main/CodeBusters">Cryptography Puzzles</a></h3>
-								<p>This chrome extension enhances <a href="https://toebes.com/codebusters/">toebes.com</a> to allow autogeneration of Cryptographical Puzzles (Code Busters tests for Science Olympiad to help my teammates practice) by simply selecting a type of cipher (affine, ceasar, RSA, Baconian, etc.).</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://github.com/SanderGi/WiFiStrengthTester" class="image featured"><img src="images/wifitester.png" alt="windows app" /></a>
-								<h3><a href="https://github.com/SanderGi/WiFiStrengthTester">Software to measure WiFi RSSI</a></h3>
-								<p>One of the challenges we faced in Science Olympiad was standardizing the way teams test the WiFi antennas they build. So I created a program with a nice GUI to make this easy. It can be downloaded on the <a href="https://apps.microsoft.com/store/detail/wifi-strength-tester/9N3BV3RVGXDV?hl=en-us&gl=US">Microsoft Store</a> where it now has more than three thousand aquisitions.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://github.com/SanderGi/CSharp3D" class="image featured"><img src="images/wumpus.jpg" alt="3D space" /></a>
-								<h3><a href="https://github.com/SanderGi/CSharp3D">CPU 3D Engine in C#</a></h3>
-								<p>The challenge here was to write a 3D rendering engine completely from scratch (down to the drawing of individual pixels) using only the CPU (so no help from the graphics card). This project taught me a lot about the math behind projection matrices, lighting, 3D transformations, and optimizing algorithms (parallel triangle drawing routines, frustrum culling, and more).</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="https://github.com/SanderGi/Science-Olympiad/tree/main/Detector" class="image featured"><img src="images/detector.jpg" alt="raspberry pi circuit" /></a>
-								<h3><a href="https://github.com/SanderGi/Science-Olympiad/tree/main/Detector">Conductivity-meter with Raspberry Pi and Python</a></h3>
-								<p>This Science Olympiad challenge involved building and programming a sensor and its circuitry from scratch (using only basic circuit components and DIP) to measure salt concentration in water samples. I used a Raspberry Pi microcontroller to communicate via the I2C protocol to a NAU7802 ADC chip reading a voltage divider circuit. With proper callibration, probe submersion, and luck it is capable of less than 1% measurement error.</p>
-							</article>
-						</div>
-					</div>
-					<footer>
-						<p>Current projects under development include a calculator IOS app with 3D graphing capabilities. A web-demo can be viewed <a href="https://calculator-df6f0.web.app/">here</a>. Another project is an AI powered file system organizer.</p>
-						<a href="#contact" class="button large scrolly">Get in touch with me</a>
-					</footer>
-				</div>
-			</article>
+    <!-- Contact -->
+    <article id="contact" class="wrapper style4">
+      <div class="container medium">
+        <header>
+          <h2>Contact Me</h2>
+          <p>
+            Interested in working together on a project? Want to talk about a
+            cool machine learning application or an exciting math fact? Let me
+            know!
+          </p>
+        </header>
+        <div class="row">
+          <div class="col-12">
+            <form id="contactForm">
+              <div class="row">
+                <div class="col-6 col-12-small">
+                  <input type="text" name="name" id="name" placeholder="Name" />
+                </div>
+                <div class="col-6 col-12-small">
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="col-12">
+                  <input
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    placeholder="Subject"
+                  />
+                </div>
+                <div class="col-12">
+                  <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <ul class="actions">
+                    <li><input type="submit" value="Send Message" /></li>
+                    <li>
+                      <input
+                        type="reset"
+                        onclick="clear()"
+                        value="Clear Form"
+                        class="alt"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+            <script>
+              document
+                .getElementById("contactForm")
+                .addEventListener("submit", () => {
+                  submit();
+                  return false;
+                });
+              function clear() {
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("subject").value = "";
+                document.getElementById("message").value = "";
+              }
+              function submit() {
+                const emailTo = "alexander.le@outlook.dk";
+                const emailSub = document.getElementById("subject").value;
+                const emailBody =
+                  "Inquiry by " +
+                  document.getElementById("name").value +
+                  " (" +
+                  document.getElementById("email").value +
+                  "): " +
+                  document.getElementById("message").value;
+                window.open(
+                  `mailto:${emailTo}?subject=${emailSub}&body=${emailBody}`,
+                  "_self"
+                );
+              }
+            </script>
+          </div>
+          <div class="col-12">
+            <hr />
+            <h3>Add my contact info (scannable)</h3>
+            <img
+              src="images/vCardQR.png"
+              alt="vCard QR Code"
+              width="335"
+              height="511"
+              style="
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                box-shadow: 12px 12px 5px #282828;
+              "
+            />
+            <br /><br />
+            <button onclick="window.open('/vCard.vcf')">Download</button>
+          </div>
+          <div class="col-12">
+            <hr />
+            <h3>Find me on...</h3>
+            <ul class="social">
+              <!--
+			  <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+			  <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+			  <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+			  <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+			  <li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+			  <li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
+			  -->
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/alexander-le-metzger/"
+                  class="icon brands fa-linkedin-in"
+                  ><span class="label">LinkedIn</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/SanderGi"
+                  class="icon brands fa-github"
+                  ><span class="label">Github</span></a
+                >
+              </li>
+              <!--
+			  <li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
+			  <li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
+			  <li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>
+			  <li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>
+			  <li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>
+			  <li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>
+			  <li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>
+			  <li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>
+			  <li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>
+			  -->
+            </ul>
+            <hr />
+          </div>
+        </div>
+        <footer>
+          <ul id="copyright">
+            <li>&copy; All rights reserved.</li>
+            <li>
+              Page Design: <a href="http://html5up.net">HTML5 UP</a> (with
+              modifications)
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://icons8.com/icon/QxYSbRXbKF8u/coding"
+                >Coding</a
+              >
+              favicon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </article>
 
-		<!-- Contact -->
-			<article id="contact" class="wrapper style4">
-				<div class="container medium">
-					<header>
-						<h2>Contact Me</h2>
-						<p>Interested in signing up for tutoring or violin lessons? Want to talk about a cool project or an exciting math fact? Let me know!</p>
-					</header>
-					<div class="row">
-						<div class="col-12">
-							<form id="contactForm">
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="text" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" onclick="clear()" value="Clear Form" class="alt" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-							<script>
-								document.getElementById('contactForm').addEventListener('submit', () => {
-								 submit();
-								 return false;
-								});
-								function clear() {
-									document.getElementById("name").value = "";
-									document.getElementById("email").value = "";
-									document.getElementById("subject").value = "";
-									document.getElementById("message").value = "";
-								}
-								function submit() {
-									const emailTo = 'alexmetzgertutoring@gmail.com';
-									const emailSub = document.getElementById("subject").value;
-									const emailBody = "Inquiry by " + document.getElementById("name").value + " (" + document.getElementById("email").value + "): " + document.getElementById("message").value;
-									window.open(`mailto:${emailTo}?subject=${emailSub}&body=${emailBody}`, '_self');
-								}
-							</script>
-						</div>
-                        <div class="col-12">
-							<hr />
-							<h3>Add my contact info (scannable)</h3>
-							<img src="images/vCardQR.png" alt="vCard QR Code" 
-                                width="335" height="511" style="width: 300px; height: 300px; object-fit: cover; box-shadow: 12px 12px 5px #282828;"/>
-                            <br><br>
-                            <button onclick="window.open('/vCard.vcf')">Download</button>
-						</div>
-						<div class="col-12">
-							<hr />
-							<h3>Find me on...</h3>
-							<ul class="social">
-								<!--
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-								<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-								-->
-								<li><a href="https://www.linkedin.com/in/alexander-le-metzger/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://github.com/SanderGi" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<!--
-								<li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>
-								<li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>
-								<li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>
-								<li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>
-								<li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>
-								<li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>
-								<li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>
-								-->
-							</ul>
-							<hr />
-						</div>
-					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; All rights reserved.</li><li>Page Design: <a href="http://html5up.net">HTML5 UP</a> (with modifications)</li><li><a target="_blank" href="https://icons8.com/icon/QxYSbRXbKF8u/coding">Coding</a> favicon by <a target="_blank" href="https://icons8.com">Icons8</a></li>
-						</ul>
-					</footer>
-				</div>
-			</article>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
