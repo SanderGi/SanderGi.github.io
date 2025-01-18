@@ -1,6 +1,69 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
 @import url("fontawesome-all.min.css");
 
+.masonry {
+	columns: 18em;
+}
+
+.item {
+	break-inside: avoid;
+	margin-bottom: 1em;
+}
+
+.item .image img {
+	opacity: 0.8;
+	transition: opacity 0.25s ease;
+	width: calc(100% - 2px);
+	margin: auto;
+}
+
+@media (hover: none) {
+	.item .image img {
+		opacity: 1; /* No hover effect for touch devices */
+	}
+}
+
+.item .image img:hover {
+	opacity: 1;
+}
+
+details {
+	text-align: left;
+}
+
+details > summary {
+	list-style-type: none;
+	cursor: pointer;
+}
+
+details > summary::-webkit-details-marker {
+	display: none;
+}
+
+details > summary::after {
+	content: '';
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	margin-right: 0.5em;
+	background-image: url('/assets/right-arrow.png');
+	background-size: contain;
+	rotate: 0deg;
+  	transform-origin: 40% 50%;
+  	transition: .25s rotate ease;
+}
+
+details[open] > summary::after {
+	rotate: 90deg;
+}
+
+details > summary > h3 {
+	display: inline-block;
+	padding: 0.5em;
+	padding-left: 0;
+	vertical-align: super;
+}
+
 /*
 	Miniport by HTML5 UP
 	html5up.net | @ajlkn

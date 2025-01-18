@@ -1,0 +1,217 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\usepackage{merriweather} %% Option 'black' gives heavier bold face 
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+
+\usepackage{dashundergaps} % for dotted underlining
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\setlength{\footskip}{0pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\definecolor{awsomeblue}{HTML}{2079C7}
+\titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large\color{awsomeblue}
+}{}{0em}{}[\color{awsomeblue}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+    \item\small{
+        \textbf{#1}{: #2 \vspace{-2pt}}
+    }
+}
+
+\newcommand{\resumeLineItem}[3]{
+    \item[]{
+        \textbf{#1}{: #2}\hfill{#3}\vspace{-6pt}
+    }
+}
+
+\newcommand{\resumeTopItem}[4]{
+    \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{#1} -- \textit{#2} & #3 \\
+    \end{tabular*}\vspace{-5pt}
+    \item[]{\small{#4}}\vspace{-2pt}
+}
+
+\newcommand{\resumeSubheading}[3]{
+    \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{#1} -- \textit{#2} & #3 \\
+    \end{tabular*}\vspace{-5pt}\vspace{0pt}
+}
+
+\renewcommand{\labelitemii}{$\circ$} % changes the default bullet to a circle
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{\Large Alexander Metzger} & Seattle, WA 98195 \\
+    \href{https://sandergi.com}{\underbar{https://sandergi.com}} & \href{mailto:alex@sandergi.com}{\underbar{alex@sandergi.com}} \\
+\end{tabular*}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading{Koel Labs}{Founder and CEO}{Aug. 2024 -- Present}
+\resumeItemListStart
+\resumeItem{Raised \$100K in funding}{
+    from Mozilla, Next, and partners for computational linguistics research.
+}
+\resumeItem{First authoring}{
+    \underbar{ML} and \underbar{HCI} papers, leading team of 3, training SoTA models with \underbar{PyTorch}.
+}
+\resumeItem{Python}{
+    \underbar{MLOps}, \underbar{Docker}, \underbar{Google Cloud Platform}, \underbar{Azure}, \underbar{AWS}, \underbar{React}, \underbar{NLP}, \underbar{ML for Audio}, \underbar{Streaming}.
+}
+\resumeItemListEnd
+
+\resumeSubheading{Ubiquitous Computing Lab}{Undergraduate Researcher}{Jun. 2024 -- Present}
+\resumeItemListStart
+\resumeItem{Co-authored}{
+    the SAMIR research paper by leading the data collection effort for 1000s of
+    products, inventing the Computer Vision pipeline, designing the UI, and running extensive evaluations.
+}
+\resumeItem{Python}{
+    \underbar{Embedded ML}, \underbar{ML for Sustainability}, \underbar{Computer Vision}, \underbar{Vision Language Models}.
+}
+\resumeItemListEnd
+
+\resumeSubheading{Seattle Tutoring Partners}{Founder and Research Mentor }{May. 2022 -- Present}
+\resumeItemListStart
+\resumeItem{Mentoring research projects for High Schoolers}{
+    notably a CISG approved clinical study of the
+    effectiveness of digital concussion assessments for student athletes
+}
+\resumeItem{Developed}{
+    \href{https://attendqr.com/}{\dotuline{software}} for 500+ youth musicians and \href{https://github.com/SanderGi/WiFiStrengthTester}{\dotuline{antenna software}} for 8K+ aspiring scientists.
+}
+\resumeItem{Cascade Enrichment, Technical Lead}{
+    managing remote certification and coding curriculum for 30+ tutors; developing and maintaining \href{https://cascadeenrichment.com/elementary-math-assessments}{\dotuline{online assessment platform}} for 100+ students.
+}
+\resumeItemListEnd
+
+\resumeSubheading{Gooey.AI}{Software Engineer}{Jun. 2023 -- Sep. 2024}
+\resumeItemListStart
+\resumeItem{Mentored}{
+    team of 4 interns through merging 70 pull requests touching 1000s of daily active users.
+}
+\resumeItem{Deployed}{
+    ML solutions to 10M+ farmers across 5+ countries, demoed to 193 world leaders at the UN.
+}
+\resumeItem{Python}{
+    \underbar{MLOps}, \underbar{Kubernetes}, \underbar{Docker}, \underbar{Google Cloud Platform}, \underbar{Django}, \underbar{Azure}, \underbar{OpenAI}, \underbar{Sentry}, \underbar{API design}.
+}
+\resumeItemListEnd
+\vspace{-10pt} % Hacky fix for awkward extra space that randomly appears
+
+\resumeSubheading{University of Washington ICTD Lab}{Undergraduate Researcher}{Sep. 2022 -- May 2024}
+\resumeItemListStart
+\resumeItem{Shipped}{
+    a \href{https://github.com/SanderGi/eKichabi}{\dotuline{USSD server and Android app}} via a digital intervention to connect 10K farmers in Tanzania.
+}
+\resumeItem{Co-first authored \href{https://sandergi.github.io/images/eKichabi_v2_chi24a.pdf}{\dotuline{eKichabi v2 paper}}}{
+    on \href{https://youtu.be/v-1JuQp1ous}{\dotuline{scaling technological interventions in Sub-Saharan Africa}} -- accepted to ACM SIGCHI. Presented \href{https://sandergi.github.io/images/CHANGE_Seminar_Talk_eKichabi_v2.pdf}{\dotuline{a 50 minute talk}} to 40 researchers at the CHANGE Seminar.
+}
+\resumeItem{Python/Java}{\underbar{Jupyter}, \underbar{Django}, \underbar{MySQL}, \underbar{Redis}, \underbar{HTTP}, \underbar{REST}, \underbar{USSD}/\underbar{Telecom APIs} and \underbar{Android Studio}.}
+\resumeItemListEnd
+
+\resumeSubheading{Akvelon}{Software Engineering Intern}{Jun. 2023 -- Aug. 2023}
+\resumeItemListStart
+\resumeItem{Led}{
+    team of 4 to make 200K open-source contributions to 7 Microsoft repos across 27 pull requests.
+}
+\resumeItem{TypeScript/C++}{
+    \underbar{Power BI Custom Visuals}, \underbar{Automated Testing}, \underbar{Embedded Systems}, and \underbar{Azure IOT Hub}.
+}
+\resumeItemListEnd
+\vspace{-10pt} % Hacky fix for awkward extra space that randomly appears
+
+\resumeSubheading{European Environment Agency}{Data Science Intern}{Apr. 2020 -- May. 2022}
+\resumeItemListStart
+\resumeItem{Authored}{
+    3 technical reports and 5 data analysis scripts used internally and by scientists in 40 countries.
+}
+\resumeItem{Python}{
+    \underbar{Pandas}, \underbar{PySpark}, \underbar{Azure ML Studio}, \underbar{Azure Databricks}, and Excel.
+}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeTopItem
+{University of Washington}
+{3.87 GPA, 3.96 in CS}
+{Sep. 2022 -- Jun. 2026}{
+    BS+MS in Computer Science, BS in Mathematics, UWSO First Violin Section, Accelerated Honors Math
+}
+\resumeSubheading
+{Bothell High School}
+{Valedictorian (4.0 GPA), Varsity Science Olympian}
+{Aug. 2018 -- Jun. 2022}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeTopItem{\href{https://github.com/SanderGi/Genus}{\dotuline{PAGE}}}{Graph Embedding Research}{Sep. 2024 -- Present}{
+    Invented and implemented a novel algorithm in \underbar{C} with visualization and verification in \underbar{Python} that outperforms all existing algorithms for calculating the genus of arbitrary cage graphs. Paper in review.
+}
+\resumeTopItem{\href{https://github.com/SanderGi/WiFiStrengthTester}{\dotuline{WiFi RSSI}}}{Windows App}{Jan. 2022 -- Feb 2022}{
+    8000+ downloads, 4.4/5 rating. GUI to calculate the RSS in dBm of available networks by analyzing WiFi packets and BSSIDs. Made for WA Science Olympiad to standardize evaluation of antennas made for new WiFi Lab event.
+}
+\resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+\resumeSubHeadingListStart
+\resumeLineItem{Languages}{JavaScript, TypeScript, Python, Java, C, C++, C\#, SQL}{6+ years}
+\resumeLineItem{Tech}{Cloud (GCP, Azure, AWS), REST, PyTorch, Auto Testing, React, Docker, Unix, Git}{3+ years}
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

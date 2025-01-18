@@ -1,0 +1,293 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\usepackage{merriweather} %% Option 'black' gives heavier bold face 
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+
+\usepackage{dashundergaps} % for dotted underlining
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\setlength{\footskip}{0pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\definecolor{awsomeblue}{HTML}{2079C7}
+\titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large\color{awsomeblue}
+}{}{0em}{}[\color{awsomeblue}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+    \item\small{
+        \textbf{#1}{#2 \vspace{-2pt}}
+    }
+}
+
+\newcommand{\resumeLineItem}[3]{
+    \item[]{
+        \textbf{#1}{: #2}\hfill{#3}\vspace{-6pt}
+    }
+}
+
+\newcommand{\resumeTopItem}[4]{
+    \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{#1} -- \textit{#2} & #3 \\
+    \end{tabular*}\vspace{-5pt}
+    \item[]{\small{#4}}\vspace{-2pt}
+}
+
+\newcommand{\resumeSubheading}[3]{
+    \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{#1} -- \textit{#2} & #3 \\
+    \end{tabular*}\vspace{-5pt}\vspace{0pt}
+}
+
+\usepackage{colortbl}
+\definecolor{Gray}{gray}{0.85}
+\newcommand{\resumeSubheadingStrong}[3]{
+    \vspace{-1pt}\item[]
+    \begingroup\setlength{\fboxsep}{1pt}
+    \hspace{-5pt}\colorbox{lightgray}{
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+            \vspace{-2pt}\textbf{#1} -- \textit{#2} & #3 \\
+        \end{tabular*}
+    }\endgroup\vspace{-15pt}\vspace{0pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-1pt}\item[]
+    \textbf{#1} #2
+    \vspace{-2pt}
+}
+
+\renewcommand{\labelitemii}{$\circ$} % changes the default bullet to a circle
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{\Large Alexander Metzger} & Seattle, WA 98195 \\
+    \href{https://sandergi.com}{\underbar{https://sandergi.com}} & \href{mailto:alex@sandergi.com}{\underbar{alex@sandergi.com}} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeTopItem
+{University of Washington}
+{3.87 GPA, 3.96 in CS}
+{09/22 -- 06/26}{
+    BS+MS in Computer Science, BS in Mathematics, UWSO First Violin Section, Accelerated Honors Math
+}
+\resumeSubHeadingListEnd
+
+%-----------RESEARCH EXPERIENCE-----------------
+\section{Research Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheadingStrong{University of Washington}{Advisor: Dr. Stefan Steinerberger}{Sep. 2024 -- Present}
+\resumeSubSubheading{Practical algorithms for graph embedding.}{Graph Theory, Algorithms, Combinatorics. \href{https://github.com/SanderGi/Genus}{\dotuline{Link}.}}
+\resumeSubSubheading{Goal:}{Design a specialized algorithm optimized for embedding cage graphs.}
+\resumeItemListStart
+\resumeItem{Invented and Implemented}{
+    algorithm in \underbar{C} with visualization and verification in \underbar{Python}.
+}
+\resumeItem{Co-authored}{
+    the research paper [P3] by writing 50\% of the paper, 100\% of the code, 80\% of the figures.
+}
+\resumeItemListEnd
+
+\resumeSubheadingStrong{Ubiquitous Computing Lab}{Advisor: Dr. Shwetak Patel}{Jun. 2024 -- Present}
+\resumeSubSubheading{Battery-free flight-based sensor systems for environmental monitoring and alerts.}{Embedded ML.}
+\resumeSubSubheading{Goal:}{Low-cost, low-power environmental monitoring to predict disasters like wildfires.}
+\resumeSubSubheading{Multi-modal automated lifecycle assessments of consumer electronics.}{ML for sustainability.}
+\resumeSubSubheading{Goal:}{Democratize access to environmental impact estimates and empower sustainable consumption.}
+\resumeItemListStart
+\resumeItem{Co-authored}{
+    study design and research paper [P4] by leading the data collection effort for 1000s of products, inventing the \underbar{Computer Vision} pipeline, designing the UI, running extensive evaluations.
+}
+\resumeItemListEnd
+
+\resumeSubheadingStrong{ICTD Lab}{Advisor: Dr. Richard Anderson}{Sep. 2022 -- May 2024}
+\resumeSubSubheading{Digital phone directory for subsistence farmers in rural Tanzania.}{ICTD. \href{https://github.com/SanderGi/eKichabi}{\dotuline{Link}.}}
+\resumeSubSubheading{Goal:}{Study the economic impacts of digital agricultural information systems in Sub-Saharan Africa.}
+\resumeItemListStart
+\resumeItem{Presented}{
+    live (Para.chi DUB [T2] and CHANGE Seminar [T1]) and video talks [T3].
+}
+\resumeItem{Co-first-authored}{
+    the paper [P5] accepted to ACM SIGCHI 2024.
+}
+\resumeItem{Led}{
+    development of the USSD server and later also the Android App.
+}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------------
+\section{Publications}
+\resumeSubHeadingListStart
+\resumeTopItem{[P5]}{\href{https://doi.org/10.1145/3613904.3642099}{\dotuline{Peer Reviewed and Published}}, Co-first}{\underbar{HCI}, \underbar{ICTD}}{
+    Ananditha Raghunath, \textbf{Alexander Metzger}, Hans Easton, XunMei Liu, Fanchong Wang, Yunqi Wang, Yunwei Zhao, Hosea Mpogole, and Richard Anderson. 2024. eKichabi v2: Designing and Scaling a Dual-Platform Agricultural Technology in Rural Tanzania. In Proceedings of the CHI Conference on Human Factors in Computing Systems (CHI '24), May 11-16, 2024, Honolulu, HI, USA. ACM, New York, NY, USA, 16 pages.
+}
+\resumeTopItem{[P4]}{Submitted to ACM MobiSys 2025, Third}{\underbar{ML}, \underbar{CV}}{
+    Zhihan Zhang, Yuxuan Mei, \textbf{Alexander Metzger}, Felix Hähnlein, Zachary Englhardt, Tingyu Cheng, Shwetak Patel, Adriana Schulz, and Vikram Iyer. SAMIR: Autonomous Sustainability Assessment via Multimodal Information Retrieval.
+}
+\resumeTopItem{[P3]}{\href{https://arxiv.org/abs/2411.07347}{\dotuline{Submitted to Discrete Mathematics}}, Co-first}{\underbar{Algorithms}, \underbar{Graph Combinatorics}}{
+    \textbf{Alexander Metzger} and Austin Ulrigg. An Efficient Genus Algorithm Based on Graph Rotations.
+}
+\resumeTopItem{[P2]}{Submitted to Interspeech 2025, First}{\underbar{Audio Models}, \underbar{ML}, \underbar{NLP}, \underbar{HCI}}{
+    \textbf{Alexander Metzger}, Aruna Srivastava, Ruslan Mukhamedvaleev, and Samir Farhan. MAPLE: Machine Aided Pronunciation Learning via Entertainment.
+}
+\resumeTopItem{[P1]}{Planned for NeurIPS, First}{\underbar{HCI}, \underbar{CV}, \underbar{Medical ML}}{
+    \textbf{Alexander Metzger} and Aureole. Digitized Concussion Tests Using Computer Vision and Speech Recognition.
+}
+\resumeSubHeadingListEnd
+
+%-----------TALKS-----------------
+\section{Talks}
+\resumeSubHeadingListStart
+\resumeTopItem{[T6]}{\href{https://www.youtube.com/watch?v=oWEe9op0bb0}{\dotuline{The Future of Language Learning}}}{Dec. 2024}{
+    Mozilla Builders Accelerator Demo Day, San Francisco, CA
+}
+\resumeTopItem{[T5]}{\href{https://docs.google.com/presentation/d/16tZGX8pRINhTTnhDZHCynEDKyfHl0I9tVnjHukLFnuM/mobilepresent?slide=id.p}{\dotuline{Computational Linguistics for Machine Aided Pronunciation Learning}}}{Oct. 2024}{
+    University of Washington Computational Linguistics Group, Seattle, WA
+}
+\resumeTopItem{[T4]}{\href{https://docs.google.com/document/d/1-CiYRXL2UK_jAynByqgqHhKYLmjmNsg8y_VNUHJCUFU/mobilebasic}{\dotuline{Local AI and Machine Aided Pronunciation Learning}}}{Sep. 2024}{
+    Mozilla Builders Accelerator Kickoff Event, New York, NY
+}
+\resumeTopItem{[T3\&2]}{\href{https://parachidub.wpcomstaging.com/}{\dotuline{eKichabi v2: Designing and Scaling a Dual Platform Technology in Rural Tanzania}}}{May 2024}{
+    ACM SIGCHI Video Presentation, Remote AND Design Use Build's Para.chi Event, Seattle, WA
+}
+\resumeTopItem{[T1]}{\href{https://sandergi.com/images/CHANGE_Seminar_Talk_eKichabi_v2.pdf}{\dotuline{Designing and Deploying Digital Information Systems in Sub-Saharan Africa}}}{Oct. 2023}{
+    University of Washington CHANGE Seminar, Seattle, WA
+}
+\resumeSubHeadingListEnd
+
+%-----------WORK EXPERIENCE-----------------
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading{Koel Labs}{Founder and CEO}{Aug. 2024 -- Present}
+\resumeItemListStart
+\resumeItem{Raised \$100K in funding}{
+    from Mozilla [H2], Next, and partners for computational linguistics research.
+}
+\resumeItem{First authoring}{
+    \underbar{ML} and \underbar{HCI} papers [P2], leading team of 3, training SoTA models with \underbar{PyTorch}.
+}
+\resumeItemListEnd
+
+\resumeSubheading{Gooey.AI}{Software Engineer}{Jun. 2023 -- Sep. 2024}
+\resumeItemListStart
+\resumeItem{Mentored}{
+    team of 4 interns through merging 70 pull requests touching 1000s of daily active users.
+}
+\resumeItem{Deployed}{
+    \underbar{ML} solutions to 10M+ farmers across 5+ countries, demoed to 193 world leaders at the UN.
+}
+\resumeItemListEnd
+
+\resumeSubheading{Akvelon, Inc.}{Software Development Intern}{Jun. 2023 -- Aug. 2023}
+\resumeItemListStart
+\resumeItem{Led}{
+    team of 4 to make 200K open-source contributions to 7 Microsoft repos across 27 pull requests [H1].
+}
+\resumeItemListEnd
+
+\resumeSubheading{European Environment Agency}{Data Science Intern}{April. 2020 -- May. 2022}
+\resumeItemListStart
+\resumeItem{Authored}{
+    3 technical reports and 5 data analysis scripts used internally and by scientists in 40 countries.
+}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------LEADERSHIP-----------------
+\section{Leadership}
+\resumeSubHeadingListStart
+
+\resumeSubheading{Seattle Tutoring Partners}{Founder and Research Mentor}{May 2022 -- Present}
+\resumeItemListStart
+\resumeItem{Mentoring research projects for High Schoolers}{
+    notably a CISG approved clinical study of the
+    effectiveness of digital concussion assessments for student athletes [P1]
+}
+\resumeItem{Developed}{
+    \href{https://attendqr.com/}{\dotuline{software}} for 500+ youth musicians and \href{https://github.com/SanderGi/WiFiStrengthTester}{\dotuline{antenna software}} for 8K+ aspiring scientists.
+}
+\resumeItemListEnd
+
+\resumeSubheading{Cascade Enrichment}{Technical Lead}{Sep. 2022 -- Sep. 2024}
+\resumeItemListStart
+\resumeItem{Managing}{
+    remote certification and coding curriculum for 30+ tutors; online platform for 100+ students.
+}
+\resumeItemListEnd
+
+\resumeSubheading{Design Build Fly}{Lead Computer Scientist}{Sep. 2023 -- Sep. 2024}
+\resumeItemListStart
+\resumeItem{Coordinated}{
+    optimization algorithms and data analysis for 30 engineers; we placed 3rd nationally.
+}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%--------HONORS AND DISTINCTIONS------------
+\section{Honors and Distinctions}
+\resumeSubHeadingListStart
+\resumeLineItem{[H3] CRA Outstanding Undergraduate Researcher Award}{Honorable Mention}{2025}
+\resumeLineItem{[H2] Mozilla Builders Accelerator}{\$39K research grant, \$35K cloud credits}{2024}
+\resumeLineItem{[H1] Akvelon Mentor's Choice}{Outstanding Leadership}{2023}
+\resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+\resumeSubHeadingListStart
+\resumeLineItem{Languages}{JavaScript, TypeScript, Python, Java, C, C++, C\#, SQL}{6+ years}
+\resumeLineItem{Tech}{Cloud (GCP, Azure, AWS), REST, Pytorch, Auto Testing, React, Docker, Unix, Git}{3+ years}
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

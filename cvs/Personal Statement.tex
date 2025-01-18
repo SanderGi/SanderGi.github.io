@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\pgfplotsset{compat = newest}
+\usepackage{graphicx}
+\usepackage[shortlabels]{enumitem}
+\usepackage[stable]{footmisc} % allow footnotes in section titles
+\addtolength{\skip\footins}{2pc plus 5pt} % give footnotes some breathing room
+\usepackage[T1]{fontenc} % fix underscore from \jobname
+\usepackage{float}
+\usepackage{subcaption} % subfigures
+
+% Laplace Operator
+\usepackage{mathtools}
+\DeclarePairedDelimiterXPP\Laplace[1]{\operatorname{\mathcal{L}}}{\{}{\}}{}{#1}
+\DeclarePairedDelimiterXPP\LaplaceInv[1]{\operatorname{\mathcal{L}^{-1}}}{\{}{\}}{}{#1}
+
+% Derivatives
+\newcommand*{\Partial}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand*{\Deriv}[2]{\frac{d #1}{d #2}}
+
+% augmented coefficient matrix
+\newenvironment{amatrix}[1]{%
+    \left(\begin{array}{@{}*{#1}{c}|c@{}}
+}{%
+    \end{array}\right)
+}
+
+% rules 
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+
+% common sets
+\newcommand*{\R}{\mathbb{R}}
+\newcommand*{\C}{\mathbb{C}}
+\newcommand*{\Z}{\mathbb{Z}}
+\newcommand*{\N}{\mathbb{N}}
+\newcommand*{\Q}{\mathbb{Q}}
+\newcommand*{\D}{\mathbb{D}}
+
+% inner products
+\newcommand*{\Inner}[1]{\langle #1 \rangle}
+
+% formatting
+\newcommand*{\parspace}{\vspace{1em} \\}
+
+% vectors
+\newcommand*{\vx}{\mathbf{x}}
+\newcommand*{\vy}{\mathbf{y}}
+\newcommand*{\vz}{\mathbf{z}}
+\newcommand*{\va}{\mathbf{a}}
+\newcommand*{\vb}{\mathbf{b}}
+\newcommand*{\vc}{\mathbf{c}}
+\newcommand*{\vF}{\mathbf{F}}
+\newcommand*{\vG}{\mathbf{G}}
+\newcommand*{\vH}{\mathbf{H}}
+\newcommand*{\vn}{\mathbf{n}}
+\newcommand*{\vm}{\mathbf{m}}
+\newcommand*{\vf}{\mathbf{f}}
+\newcommand*{\vg}{\mathbf{g}}
+\newcommand*{\vh}{\mathbf{h}}
+\newcommand*{\vi}{{\mathbf{\hat{\textnormal{\bfseries\i}}}}}
+\newcommand*{\vj}{{\mathbf{\hat{\textnormal{\bfseries\j}}}}}
+\newcommand*{\vk}{{\mathbf{\hat{\textnormal{\bfseries k}}}}}
+\newcommand*{\vzero}{\mathbf{0}}
+
+\usepackage{xstring}
+\title{\StrSubstitute{\jobname}{"}{}}
+\author{Alexander Metzger}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+I started playing the violin when I was four and a half with the Danish Suzuki
+Institute. It has been a constant comfort, even as I was uprooted and moved to the US
+seven years ago, shaping my resilience and initiative. The support I received from teachers
+and friendships I made with peers, kindled my high school interest in mentoring and
+motivated me to teach music to elementary schools with Seattle Music Partners (SMP).
+\\\\
+\indent When SMP was struck down by COVID, I carried on the torch and founded my own
+tutoring company (creatively named Seattle Tutoring Partners) to keep teaching music. I
+also started teaching coding and connecting mentors with students. Going into college, I
+had created the Tech Leadership position at Cascade Enrichment to write accessible
+assessment software for students and empower tutors to teach coding remotely through a
+curated curriculum and remote learning certification program.
+\\\\
+\indent Now in college, I continue to mentor students in academic subjects, music, research
+projects, and science olympiad events. Violin is an active part of my life in the UW
+Symphony Orchestra and continues to teach me how crucial teamwork and discipline are,
+both in and out of music. This propensity to discipline and teamwork compliments my
+drive to pursue opportunities that combine technical growth with leadership.
+\\\\
+\indent As Lead Computer Scientist for Design Build Fly, a student organization for
+RC-plane building enthusiasts, my co-leads and I led our team to secure the annual bronze
+medal. I'm putting the experience with sensor data and aircraft optimization to direct use
+in my research with the UbiComp Lab. As a math discord member, I took action on an
+unsolved genus problem which led to research with Dr. Stefan Steinerberger. Motivated by
+these positive experiences in my communities, I seek to positively impact marginalized
+communities through my research.
+
+\end{document}
