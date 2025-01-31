@@ -7,7 +7,8 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
+% \usepackage[pdftex]{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 
 \usepackage{merriweather} %% Option 'black' gives heavier bold face 
@@ -46,7 +47,7 @@
 % Custom commands
 \newcommand{\resumeItem}[2]{
     \item\small{
-        \textbf{#1}{: #2 \vspace{-2pt}}
+        \textbf{#1}{: #2 \vspace{0pt}}
     }
 }
 
@@ -65,7 +66,7 @@
 }
 
 \newcommand{\resumeSubheading}[3]{
-    \vspace{-1pt}\item[]
+    \vspace{0pt}\item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
         \textbf{#1} -- \textit{#2} & #3 \\
     \end{tabular*}\vspace{-5pt}\vspace{0pt}
@@ -120,9 +121,8 @@
 
 \resumeSubheading{Seattle Tutoring Partners}{Founder and Research Mentor }{May. 2022 -- Present}
 \resumeItemListStart
-\resumeItem{Mentoring research projects for High Schoolers}{
-    notably a CISG approved clinical study of the
-    effectiveness of digital concussion assessments for student athletes
+\resumeItem{Mentoring}{
+    research projects for High Schoolers and collaborating with College Students on independent research such as the novel \href{https://github.com/SanderGi/Genus}{\dotuline{PAGE}} algorithm for graph embedding implemented in \underbar{C}.
 }
 \resumeItem{Developed}{
     \href{https://attendqr.com/}{\dotuline{software}} for 500+ youth musicians and \href{https://github.com/SanderGi/WiFiStrengthTester}{\dotuline{antenna software}} for 8K+ aspiring scientists.
@@ -185,26 +185,25 @@
 \resumeSubHeadingListStart
 \resumeTopItem
 {University of Washington}
-{3.87 GPA, 3.96 in CS}
-{Sep. 2022 -- Jun. 2026}{
-    BS+MS in Computer Science, BS in Mathematics, UWSO First Violin Section, Accelerated Honors Math
+{3.98 GPA}
+{Sep. 2024 -- Jun. 2026}{
+    Masters in Computer Science, UWSO First Violin Section, DubHacks Next Project Track
 }
-\resumeSubheading
-{Bothell High School}
-{Valedictorian (4.0 GPA), Varsity Science Olympian}
-{Aug. 2018 -- Jun. 2022}
+\resumeTopItem
+{University of Washington}
+{3.87 GPA, 3.96 in CS}
+{Sep. 2022 -- Jun. 2025}{
+    Bachelor's in Computer Science and Mathematics, Design Build Fly CS Lead, Accelerated Honors Math
+}
 \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------------
-\section{Projects}
-\resumeSubHeadingListStart
-\resumeTopItem{\href{https://github.com/SanderGi/Genus}{\dotuline{PAGE}}}{Graph Embedding Research}{Sep. 2024 -- Present}{
-    Invented and implemented a novel algorithm in \underbar{C} with visualization and verification in \underbar{Python} that outperforms all existing algorithms for calculating the genus of arbitrary cage graphs. Paper in review.
-}
-\resumeTopItem{\href{https://github.com/SanderGi/WiFiStrengthTester}{\dotuline{WiFi RSSI}}}{Windows App}{Jan. 2022 -- Feb 2022}{
-    8000+ downloads, 4.4/5 rating. GUI to calculate the RSS in dBm of available networks by analyzing WiFi packets and BSSIDs. Made for WA Science Olympiad to standardize evaluation of antennas made for new WiFi Lab event.
-}
-\resumeSubHeadingListEnd
+% %-----------PROJECTS-----------------
+% \section{Projects}
+% \resumeSubHeadingListStart
+% \resumeTopItem{\href{URL}{\dotuline{URL TEXT}}}{KIND}{Sep. 2024 -- Present}{
+%     DESCRIPTION
+% }
+% \resumeSubHeadingListEnd
 
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
