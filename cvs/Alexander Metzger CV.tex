@@ -47,7 +47,7 @@
 % Custom commands
 \newcommand{\resumeItem}[2]{
     \item\small{
-        \textbf{#1}{: #2 \vspace{0pt}}
+        \textbf{#1}{ #2\strut \vspace{0pt}}
     }
 }
 
@@ -103,7 +103,7 @@
 \resumeItem{First authoring}{
     \underbar{ML} and \underbar{HCI} papers, leading team of 3, training SoTA models with \underbar{PyTorch}.
 }
-\resumeItem{Python}{
+\resumeItem{Python,}{
     \underbar{MLOps}, \underbar{Docker}, \underbar{Google Cloud Platform}, \underbar{Azure}, \underbar{AWS}, \underbar{React}, \underbar{NLP}, \underbar{ML for Audio}, \underbar{Streaming}.
 }
 \resumeItemListEnd
@@ -112,10 +112,10 @@
 \resumeItemListStart
 \resumeItem{Co-authored}{
     the SAMIR research paper by leading the data collection effort for 1000s of
-    products, inventing the Computer Vision pipeline, designing the UI, and running extensive evaluations.
+    products and designing the \underbar{Computer Vision} pipeline, UI, model training and evaluation framework.
 }
-\resumeItem{Python}{
-    \underbar{Embedded ML}, \underbar{ML for Sustainability}, \underbar{Computer Vision}, \underbar{Vision Language Models}.
+\resumeItem{Python,}{
+    \underbar{Embedded ML}, \underbar{ML for Sustainability}, \underbar{Computer Vision}, \underbar{Vision Language Models}, \underbar{PyTorch}.
 }
 \resumeItemListEnd
 
@@ -124,8 +124,11 @@
 \resumeItem{Mentoring}{
     research projects for High Schoolers and collaborating with College Students on independent research such as the novel \href{https://github.com/SanderGi/Genus}{\dotuline{PAGE}} algorithm for graph embedding implemented in \underbar{C}.
 }
+\resumeItem{Established}{
+    \href{https://scat6-web.web.app}{\dotuline{the international standard}} for digital concussion testing w/ the Concussion in Sports Group.
+}
 \resumeItem{Developed}{
-    \href{https://attendqr.com/}{\dotuline{software}} for 500+ youth musicians and \href{https://github.com/SanderGi/WiFiStrengthTester}{\dotuline{antenna software}} for 8K+ aspiring scientists.
+    \href{https://attendqr.com/}{\dotuline{software}} for 500+ youth musicians and \href{https://github.com/SanderGi/WiFiStrengthTester}{\dotuline{antenna software}} for 10K+ aspiring scientists.
 }
 \resumeItem{Cascade Enrichment, Technical Lead}{
     managing remote certification and coding curriculum for 30+ tutors; developing and maintaining \href{https://cascadeenrichment.com/elementary-math-assessments}{\dotuline{online assessment platform}} for 100+ students.
@@ -144,15 +147,14 @@
     \underbar{MLOps}, \underbar{Kubernetes}, \underbar{Docker}, \underbar{Google Cloud Platform}, \underbar{Django}, \underbar{Azure}, \underbar{OpenAI}, \underbar{Sentry}, \underbar{API design}.
 }
 \resumeItemListEnd
-\vspace{-10pt} % Hacky fix for awkward extra space that randomly appears
 
 \resumeSubheading{University of Washington ICTD Lab}{Undergraduate Researcher}{Sep. 2022 -- May 2024}
 \resumeItemListStart
 \resumeItem{Shipped}{
     a \href{https://github.com/SanderGi/eKichabi}{\dotuline{USSD server and Android app}} via a digital intervention to connect 10K farmers in Tanzania.
 }
-\resumeItem{Co-first authored \href{https://sandergi.github.io/images/eKichabi_v2_chi24a.pdf}{\dotuline{eKichabi v2 paper}}}{
-    on \href{https://youtu.be/v-1JuQp1ous}{\dotuline{scaling technological interventions in Sub-Saharan Africa}} -- accepted to ACM SIGCHI. Presented \href{https://sandergi.github.io/images/CHANGE_Seminar_Talk_eKichabi_v2.pdf}{\dotuline{a 50 minute talk}} to 40 researchers at the CHANGE Seminar.
+\resumeItem{Co-first authored}{
+    \href{https://sandergi.github.io/images/eKichabi_v2_chi24a.pdf}{\dotuline{eKichabi v2 paper}} on scaling technological interventions in Sub-Saharan Africa -- accepted to ACM SIGCHI. Presented a 50 minute talk to 40 researchers at the CHANGE Seminar.
 }
 \resumeItem{Python/Java}{\underbar{Jupyter}, \underbar{Django}, \underbar{MySQL}, \underbar{Redis}, \underbar{HTTP}, \underbar{REST}, \underbar{USSD}/\underbar{Telecom APIs} and \underbar{Android Studio}.}
 \resumeItemListEnd
@@ -166,17 +168,6 @@
     \underbar{Power BI Custom Visuals}, \underbar{Automated Testing}, \underbar{Embedded Systems}, and \underbar{Azure IOT Hub}.
 }
 \resumeItemListEnd
-\vspace{-10pt} % Hacky fix for awkward extra space that randomly appears
-
-\resumeSubheading{European Environment Agency}{Data Science Intern}{Apr. 2020 -- May. 2022}
-\resumeItemListStart
-\resumeItem{Authored}{
-    3 technical reports and 5 data analysis scripts used internally and by scientists in 40 countries.
-}
-\resumeItem{Python}{
-    \underbar{Pandas}, \underbar{PySpark}, \underbar{Azure ML Studio}, \underbar{Azure Databricks}, and Excel.
-}
-\resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
@@ -185,13 +176,13 @@
 \resumeSubHeadingListStart
 \resumeTopItem
 {University of Washington}
-{3.98 GPA}
+{4.00 GPA}
 {Sep. 2024 -- Jun. 2026}{
-    Masters in Computer Science, UWSO First Violin Section, DubHacks Next Project Track
+    Master's in Computer Science, UWSO First Violin Section, Meta+8VC Hackathon Winner, Next Entrepreneur
 }
 \resumeTopItem
 {University of Washington}
-{3.87 GPA, 3.96 in CS}
+{3.87 GPA, 3.98 in CS}
 {Sep. 2022 -- Jun. 2025}{
     Bachelor's in Computer Science and Mathematics, Design Build Fly CS Lead, Accelerated Honors Math
 }
@@ -208,8 +199,8 @@
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
 \resumeSubHeadingListStart
-\resumeLineItem{Languages}{JavaScript, TypeScript, Python, Java, C, C++, C\#, SQL}{6+ years}
-\resumeLineItem{Tech}{Cloud (GCP, Azure, AWS), REST, PyTorch, Auto Testing, React, Docker, Unix, Git}{3+ years}
+\resumeLineItem{Languages}{JavaScript, TypeScript, Python, Java, C, C++, C\#, SQL}{7+ years}
+\resumeLineItem{Tech}{Cloud (GCP, Azure, AWS), REST, PyTorch, Auto Testing, React, Docker, Unix, Git}{4+ years}
 \resumeSubHeadingListEnd
 
 %-------------------------------------------
