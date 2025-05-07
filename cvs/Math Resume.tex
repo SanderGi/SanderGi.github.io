@@ -1,0 +1,274 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\usepackage{merriweather} %% Option 'black' gives heavier bold face 
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+
+\usepackage{dashundergaps} % for dotted underlining
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\setlength{\footskip}{0pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\definecolor{awsomeblue}{HTML}{2079C7}
+\titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large\color{awsomeblue}
+}{}{0em}{}[\color{awsomeblue}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+    \item\small{
+        \textbf{#1}{#2 \vspace{-2pt}}\strut
+    }
+}
+
+\newcommand{\resumeLineItem}[3]{
+    \item[]{
+        \textbf{#1}{: #2}\hfill{#3}\vspace{-6pt}
+    }
+}
+
+\newcommand{\resumeTopItem}[4]{
+    \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{#1} -- \textit{#2} & #3 \\
+    \end{tabular*}\vspace{-5pt}
+    \item[]{\small{#4}}\vspace{-2pt}
+}
+
+\newcommand{\resumeSubheading}[3]{
+    \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{#1} -- \textit{#2} & #3 \\
+    \end{tabular*}\vspace{-5pt}\vspace{0pt}
+}
+
+\usepackage{colortbl}
+\definecolor{Gray}{gray}{0.85}
+\newcommand{\resumeSubheadingStrong}[3]{
+    \vspace{-1pt}\item[]
+    \begingroup\setlength{\fboxsep}{1pt}
+    \hspace{-5pt}\colorbox{lightgray}{
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+            \vspace{-2pt}\textbf{#1} -- \textit{#2} & #3 \\
+        \end{tabular*}
+    }\endgroup\vspace{-15pt}\vspace{0pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-1pt}\item[]
+    \textbf{#1} #2
+    \vspace{-2pt}
+}
+
+\renewcommand{\labelitemii}{$\circ$} % changes the default bullet to a circle
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{\Large Alexander Metzger} & Seattle, WA 98195 \\
+    \href{https://sandergi.com}{\underbar{https://sandergi.com}} & \href{mailto:alex@sandergi.com}{\underbar{alex@sandergi.com}} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeTopItem
+{University of Washington}
+{3.87 GPA}
+{09/22 -- 06/26}{
+    BS in Mathematics and CS, Accelerated Honors Math, Math Departmental Honors, UWSO First Violin Section
+}
+\resumeSubHeadingListEnd
+
+%-----------RESEARCH EXPERIENCE-----------------
+\section{Research Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheadingStrong{University of Washington}{Independent, advised by: Dr. Stefan Steinerberger}{Sep. 2024 -- Present}
+\resumeSubSubheading{Practical algorithm for graph embedding.}{Graph Theory, Algorithms, Combinatorics. \href{https://github.com/SanderGi/Genus}{\dotuline{Link}.}}
+\resumeSubSubheading{Goal:}{Design a specialized algorithm optimized for embedding cage graphs.}
+\resumeItemListStart
+\resumeItem{Invented and Implemented}{
+    algorithm in \underbar{C} with visualization and verification in \underbar{SageMath}.
+}
+\resumeItem{Co-authored}{
+    the research paper [P1] with fellow Mathematics major Austin Ulrigg.
+}
+\resumeItemListEnd
+
+\resumeSubheadingStrong{Ubiquitous Computing Lab}{Advisor: Dr. Shwetak Patel}{Jun. 2024 -- Present}
+\resumeSubSubheading{Mathematical models for urban sound localization and battery-free autonomous flight control.}{}
+\resumeSubSubheading{Goal:}{Low-cost, low-power environmental monitoring to predict disasters like wildfires.}
+\resumeSubSubheading{Statistical lifecycle assessment models for consumer and industrial electronics.}{}
+\resumeSubSubheading{Goal:}{Democratize access to environmental impact estimates and empower sustainable consumption.}
+\resumeItemListStart
+\resumeItem{Co-authored}{ the ACM MobiSys 2025 paper by designing statistical and \underbar{Computer Vision} models.}
+\resumeItemListEnd
+
+\resumeSubheadingStrong{ICTD Lab}{Advisor: Dr. Richard Anderson}{Sep. 2022 -- May 2024}
+\resumeSubSubheading{Digital phone directory for subsistence farmers in rural Tanzania.}{\href{https://github.com/SanderGi/eKichabi}{\dotuline{Link}.}}
+\resumeSubSubheading{Goal:}{Study the economic impacts of digital agricultural information systems in Sub-Saharan Africa.}
+\resumeItemListStart
+\resumeItem{Led}{
+    UW SWE team in multi-million-USD, multi-year collaboration with Cornell, EDI Global, and IRDP.
+}
+\resumeItem{Presented}{
+    live [T1,2] and video talks [T3] about the 10K farmers we helped across 5 districts in Tanzania.  
+}
+\resumeItem{Co-first-authored}{
+    the paper [P2] accepted to ACM SIGCHI 2024 and led statistical analysis.
+}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------------
+\section{Favorite Publications}
+\resumeSubHeadingListStart
+\resumeTopItem{[P2]}{\href{https://doi.org/10.1145/3613904.3642099}{\dotuline{Peer Reviewed and Published}}, Co-first}{\underbar{Economics}, \underbar{ICTD}}{
+    Ananditha Raghunath, \textbf{Alexander Metzger}, Hans Easton, XunMei Liu, Fanchong Wang, Yunqi Wang, Yunwei Zhao, Hosea Mpogole, and Richard Anderson. 2024. eKichabi v2: Designing and Scaling a Dual-Platform Agricultural Technology in Rural Tanzania. In Proceedings of the CHI Conference on Human Factors in Computing Systems (CHI '24), May 11-16, 2024, Honolulu, HI, USA. ACM, New York, NY, USA, 16 pages.
+}
+\resumeTopItem{[P1]}{\href{https://arxiv.org/abs/2411.07347}{\dotuline{Submitted to Discrete Mathematics}}, Co-first}{\underbar{Algorithms}, \underbar{Graph Combinatorics}}{
+    \textbf{Alexander Metzger} and Austin Ulrigg. An Efficient Genus Algorithm Based on Graph Rotations.
+}
+\resumeSubHeadingListEnd
+
+%-----------TALKS-----------------
+\section{Talks}
+\resumeSubHeadingListStart
+\resumeTopItem{[T4]}{\href{https://www.washington.edu/urs/visitors/}{\dotuline{Graph Algorithms, Discrete Combinatorial Optimization, and Genus}}}{May 2025}{
+    Universifty of Washington Undergraduate Research Symposium, Seattle, WA
+}
+\resumeTopItem{[T4]}{\href{https://docs.google.com/presentation/d/16tZGX8pRINhTTnhDZHCynEDKyfHl0I9tVnjHukLFnuM/mobilepresent?slide=id.p}{\dotuline{Computational Linguistics for Machine Aided Pronunciation Learning}}}{Oct. 2024}{
+    University of Washington Computational Linguistics Group, Seattle, WA
+}
+\resumeTopItem{[T3\&2]}{\href{https://parachidub.wpcomstaging.com/}{\dotuline{eKichabi v2: Designing and Scaling a Dual Platform Technology in Rural Tanzania}}}{May 2024}{
+    ACM SIGCHI Video Presentation, Remote AND Design Use Build's Para.chi Event, Seattle, WA
+}
+\resumeTopItem{[T1]}{\href{https://sandergi.com/images/CHANGE_Seminar_Talk_eKichabi_v2.pdf}{\dotuline{Designing and Deploying Digital Information Systems in Sub-Saharan Africa}}}{Oct. 2023}{
+    University of Washington CHANGE Seminar, Seattle, WA
+}
+\resumeSubHeadingListEnd
+
+%-----------WORK EXPERIENCE-----------------
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading{Koel Labs}{Founder and CEO}{Aug. 2024 -- Present}
+\resumeItemListStart
+\resumeItem{Raised \$100K in funding}{
+    from Microsoft and partners [H3,5,6] for computational linguistics research.
+}
+\resumeItem{First authoring}{
+    machine learning papers and talks [T4] on novel mathematical modeling of speech.
+}
+\resumeItemListEnd
+
+\resumeSubheading{Gooey.AI}{Software Engineer}{Jun. 2023 -- Sep. 2024}
+\resumeItemListStart
+\resumeItem{Mentored}{
+    team of 4 interns through merging 70 pull requests touching 1000s of daily active users.
+}
+\resumeItem{Deployed}{
+    \underbar{ML} solutions to 10M+ farmers across 5+ countries, demoed to 193 world leaders at the UN.
+}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------LEADERSHIP-----------------
+\section{Leadership}
+\resumeSubHeadingListStart
+
+\resumeSubheading{Seattle Tutoring Partners}{Founder and Research Mentor}{May 2022 -- Present}
+\resumeItemListStart
+\resumeItem{Mentoring}{ K-12 students through Calculus, Stats, Algebra, and \href{https://scat6-web.web.app}{\dotuline{internationaly recognized research}}.}
+\resumeItem{Serving}{
+    \href{https://attendqr.com/}{\dotuline{500+ youth musicians}} and \href{https://github.com/SanderGi/WiFiStrengthTester}{\dotuline{10K+ aspiring scientists}} through custom mathematical software.
+}
+\resumeItemListEnd
+
+\resumeSubheading{Cascade Enrichment}{Technical Lead}{Sep. 2022 -- Sep. 2024}
+\resumeItemListStart
+\resumeItem{Managed}{
+    math curriculum for 30+ tutors and online math assessment platform for 100+ students.
+}
+\resumeItemListEnd
+
+\resumeSubheading{Design Build Fly}{Lead Computer Scientist}{Sep. 2023 -- Sep. 2024}
+\resumeItemListStart
+\resumeItem{Coordinated}{
+    aerodynamic modeling and optimization team of 30; secured international 3rd place [H2].
+}
+\resumeItemListEnd
+
+\resumeSubheading{Akvelon, Inc.}{Intern Software Development Manager}{Jun. 2023 -- Aug. 2023}
+\resumeItemListStart
+\resumeItem{Led}{
+    team of 4 to make open-source accessibility contributions to 7 Microsoft data analysis tools [H1].
+}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%--------HONORS AND DISTINCTIONS------------
+\section{Honors and Distinctions}
+\resumeSubHeadingListStart
+\resumeLineItem{[H6] Meta+8VC Next Llama Stack Hackathon}{1st Place, \$1K Prize}{2025}
+\resumeLineItem{[H5] Microsoft Imagine Cup}{Semifinalist, \$5K cloud credits}{2025}
+\resumeLineItem{[H4] CRA Outstanding Undergraduate Researcher Award}{Honorable Mention}{2025}
+\resumeLineItem{[H3] Mozilla Builders Accelerator}{\$39K research grant, \$35K cloud credits}{2024}
+\resumeLineItem{[H2] Design Build Fly Annual Competition}{International 3rd Place}{2024}
+\resumeLineItem{[H1] Akvelon Mentor's Choice}{Outstanding Leadership}{2023}
+\resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Math Skills}
+\resumeSubHeadingListStart
+\resumeLineItem{Computational Tools}{Mathematica, SageMath, Matlab, PyTorch, C/C++}{3+ years}
+\resumeLineItem{Classes}{Abstract+Linear Algebra, Combinatorics, Probability, Numerical Analysis, Stats}{3+ years}
+\resumeLineItem{Applied}{Aerodynamics, Antenna Design, Machine Learning, Economics, Teaching}{3+ years}
+\resumeLineItem{Research}{Study Design, Clinical Trials, Paper Writing, Grant Applications, Presentation}{3+ years}
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
