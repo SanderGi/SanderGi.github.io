@@ -1,33 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
 @import url("fontawesome-all.min.css");
 
-.masonry {
-	columns: 18em;
-}
-
-.item {
-	break-inside: avoid;
-	margin-bottom: 1em;
-}
-
-.item .image img {
-	opacity: 0.8;
-	transition: opacity 0.25s ease;
-	width: calc(100% - 2px);
-	margin: auto;
-	border-top: 1px solid #ccc;
-}
-
-@media (hover: none) {
-	.item .image img {
-		opacity: 1; /* No hover effect for touch devices */
-	}
-}
-
-.item .image img:hover {
-	opacity: 1;
-}
-
 details {
 	text-align: left;
 }
@@ -44,8 +17,8 @@ details > summary::-webkit-details-marker {
 details > summary::after {
 	content: '';
 	display: inline-block;
-	width: 2em;
-	height: 2em;
+	width: 1.6em;
+	height: 1.6em;
 	margin-right: 0.5em;
 	background-image: url('/assets/right-arrow.png');
 	background-size: contain;
@@ -59,10 +32,118 @@ details[open] > summary::after {
 }
 
 details > summary > h3 {
+	cursor: default;
+}
+
+details > summary > h4 {
 	display: inline-block;
+	vertical-align: super;
 	padding: 0.5em;
 	padding-left: 0;
-	vertical-align: super;
+	margin-left: calc(50% - 4ch);
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom: 1em;
+}
+
+.card {
+  display: flex;
+  align-items: stretch;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+  cursor: default;
+}
+
+.card-img {
+  flex: 0 0 250px; 
+  min-width: 120px;
+  max-width: 40%;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0% 50%;
+  display: block;
+  /* Fade-out overlay using a pseudo-element */
+  position: relative;
+  z-index: 1;
+}
+
+.card-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  /* Fade to white from left to right */
+  background: linear-gradient(to right, rgba(255,255,255,0) 60%, rgba(255,255,255,1) 100%);
+  pointer-events: none;
+}
+
+.card-content {
+  flex: 1 1 0;
+  padding: 2rem 2rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 3; /* above the image, thanks to fade */
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 500px) {
+  .card {
+    flex-direction: column;
+  }
+  .card-img {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    height: 200px;
+  }
+  .card-img img {
+    height: 100%;
+    width: 100%;
+  }
+  .card-img::after {
+	content: none;
+  }
+  .card-content {
+    padding: 1.2rem;
+  }
+}
+
+.pills {
+	line-height: 2.3em;
+}
+.pills > span {
+	background-color: #0062DB;
+	border-radius: 10px;
+	width: fit-content;
+	text-shadow: none;
+	color: white;
+	padding: 0.2em 0.5em 0.3em 0.6em;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.pills > span:nth-child(1) {
+	background-color: #B1B2FF
+}
+.pills > span:nth-child(2) { 
+	background-color: #AAC4FF;
+}
+.pills > span:nth-child(3) { 
+	background-color: #FFD6A5;
+}
+.pills > span:nth-child(4) { 
+	background-color: #FF9B9B;
 }
 
 /*
@@ -2017,9 +2098,25 @@ input, select, textarea {
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
+			font-family: 'Font Awesome 6 Free';
 			font-weight: 400;
 		}
+
+		.icon.huggingface::before {
+			width: 1.25em;
+			height: 1.25em;
+			translate: 0 -0.1em;
+			content: "";
+			background-size: 100% 100%;
+			background-image: url('/assets/huggingface.svg');
+			background-repeat: no-repeat;
+			filter: brightness(0) saturate(100%) invert(17%) sepia(0%) saturate(1458%) hue-rotate(199deg) brightness(93%) contrast(76%);
+			margin-left: -0.1em;
+			margin-right: -0.1em;
+		}
+		.icon.huggingface:hover::before {
+			filter: brightness(0) saturate(100%) invert(59%) sepia(97%) saturate(439%) hue-rotate(165deg) brightness(95%) contrast(85%);
+		} /* Filter: https://codepen.io/sosuke/pen/Pjoqqp */
 
 		.icon:before {
 			font-size: 1.25em;
@@ -2029,12 +2126,12 @@ input, select, textarea {
 			display: none;
 		}
 
-		.icon.solid:before {
+		.icon.fa-solid:before {
 			font-weight: 900;
 		}
 
-		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
+		.icon.fa-brands:before {
+			font-family: 'Font Awesome 6 Brands';
 		}
 
 		.icon.featured {

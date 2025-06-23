@@ -4,6 +4,17 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+function isChildOfAnchor(element) {
+  let currentElement = element;
+  while (currentElement && currentElement !== document.body) {
+    if (currentElement.tagName === "A") {
+      return true;
+    }
+    currentElement = currentElement.parentElement;
+  }
+  return false;
+}
+
 class Accordion {
   constructor(el) {
     // Store the <details> element
@@ -20,7 +31,7 @@ class Accordion {
     }
     this.summary.insertAdjacentHTML("afterend", `<div>${nonSummaryHTML}</div>`);
     // Store the content element
-    this.content = el.querySelector("div");
+    this.content = this.summary.nextSibling;
 
     // Store the animation object (so we can cancel it if needed)
     this.animation = null;
@@ -33,6 +44,12 @@ class Accordion {
   }
 
   onClick(e) {
+    if (e.target != this.summary && e.target.dataset.details != "toggle") {
+      if (!isChildOfAnchor(e.target)) {
+        e.preventDefault();
+      }
+      return;
+    }
     // Stop default behaviour from the browser
     e.preventDefault();
     // Add an overflow on the <details> to avoid content overflowing

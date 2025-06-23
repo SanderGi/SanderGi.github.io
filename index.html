@@ -39,7 +39,7 @@
               </h1>
             </header>
             <p>
-              Seattle-based researcher and open-source enthusiast! Love to talk
+              Seattle-based computational researcher and open-source enthusiast! Love to talk
               about board games, machine learning, violin, and graph theory.
             </p>
             <a
@@ -57,11 +57,7 @@
             <a
               href="cvs/ResearchCV.pdf"
               target="_blank"
-              style="
-                font-size: 1.2em;
-                padding: 0.5em 2em;
-                background-color: blueviolet;
-              "
+              style="font-size: 1.2em; padding: 0.5em 2em; background-color: blueviolet;"
               class="button"
             >
               <i class="fa fa-flask"></i> Research CV
@@ -69,23 +65,23 @@
             <a
               href="https://www.linkedin.com/in/alexander-le-metzger/"
               target="_blank"
-              class="button icon brands fa-linkedin-in"
-              style="font-size: 1.2em; padding: 0.6em 0.8em 0.4em 0.8em"
+              class="button icon fa-brands fa-linkedin-in"
+              style="font-size: 1.2em; padding: 0.7em 0.8em 0.6em 0.8em; font-family: inherit;"
             >
               <span class="label">LinkedIn</span>
             </a>
             <a
               href="https://github.com/SanderGi"
               target="_blank"
-              class="button icon brands fa-github"
-              style="font-size: 1.2em; padding: 0.6em 0.8em 0.4em 0.8em"
+              class="button icon fa-brands fa-github"
+              style="font-size: 1.2em; padding: 0.7em 0.8em 0.6em 0.8em; font-family: inherit;"
             >
               <span class="label">Github</span>
             </a>
             <a
               href="mailto:alex@sandergi.com"
               class="button icon fa-solid fa-envelope"
-              style="font-size: 1.2em; padding: 0.6em 0.8em 0.4em 0.8em"
+              style="font-size: 1.2em; padding: 0.7em 0.8em 0.6em 0.8em; font-family: inherit;"
             >
               <span class="label">Email</span>
             </a>
@@ -194,9 +190,8 @@
         </div>
         <footer>
           <p>
-            I'm also a full-time student at the University of Washington,
-            Seattle, majoring in Computer Science and Math (and doing a combined
-            masters program for CS).
+            I'm also a Computer Science Master's student at the University of Washington,
+            Seattle.
           </p>
         </footer>
       </div>
@@ -208,83 +203,130 @@
         <header style="margin-bottom: 1em">
           <h2>Here's some stuff I made recently.</h2>
           <p>
-            Click the image for a demo of the specific project if available.
-            Click the title for the source code.
+            My goal is to combine computational research, algorithm design, machine learning, and mobile technology
+            to bridge gaps in information access for underserved languages and communities.
           </p>
         </header>
 
-        <details open>
-          <summary><h3>Startups</h3></summary>
-          <div class="masonry">
-            <article class="item box style2">
+        <details>
+          <summary><h3>Startups</h3>
+            <article class="card">
               <a
                 href="https://koellabs.com"
-                class="image featured"
-                target="_blank"
-                ><img src="images/KoelLabsBanner.png" alt="website"
-              /></a>
-              <h3>
-                <a href="https://github.com/KoelLabs" target="_blank"
-                  >Koel Labs</a
-                >
-              </h3>
-              <p>
-                Nearly half of all foreign speakers struggle with their accent.
-                Yet previous digital language learning apps focus on
-                vocabulary/grammar and fail to provide the specific and
-                actionable feedback that non-native speakers (like me) need to
-                improve their pronunciation. As CEO and Founder, I assembled a
-                team of 2 other co-founders to rectify this issue. Through the
-                Mozilla Builders Accelerator, we received $75,000 in funding and
-                cloud credits which has enabled us to train SoTA audio models
-                and launch our MVP. We are working closely with top researchers
-                across the US and Canada to iterate on and publish our results.
-              </p>
+                class="card-img"
+                target="_blank">
+                <img src="images/KoelLabsBanner.png" alt="website"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/KoelLabs" target="_blank">Koel Labs</a>
+                  <a
+                    href="https://koellabs.com"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Website</span></a>
+                  <a
+                  href="https://github.com/KoelLabs"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                  <a
+                  href="https://huggingface.co/KoelLabs"
+                  target="_blank"
+                  class="icon huggingface"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Hugging Face</span></a>
+                </h3>
+                <p>
+                  Nearly half of all foreign speakers struggle with their accent.
+                  As Founder and CEO, I've assembled a team of 2 co-founders to make speech pathology accessible. 
+                  We are working closely with top researchers across the US 
+                  and Canada to iterate on and publish our results.
+                </p>
+                <div class="pills">
+                  <span>Raised 100K USD</span>
+                  <span>Founder and CEO</span>
+                  <span>PyTorch</span>
+                  <span>Speech Research</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <h4 data-details="toggle">Show All</h4>
+          </summary>
+          <div>
+            <article class="card">
               <a
                 href="https://attendqr.com"
-                class="image featured"
-                target="_blank"
-                ><img src="images/AttendanceScanner.png" alt="website"
-              /></a>
-              <h3>
-                <a
+                class="card-img"
+                target="_blank">
+                <img src="images/AttendanceScanner.png" alt="website"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/clr-li/AttendanceScanner" target="_blank">Attendance Scanner</a>
+                  <a
+                    href="https://attendqr.com"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Website</span></a>
+                  <a
                   href="https://github.com/clr-li/AttendanceScanner"
                   target="_blank"
-                  >Attendance Scanner</a
-                >
-              </h3>
-              <p>
-                A commercial version of the attendance scanner made for SYSO
-                coded in collaboration with Claire Li. Quick attendance system
-                powered by QR codes. Manages identity using OAuth2 and Firebase,
-                stores data using SQLite, and has electronic
-                payments/subscriptions using the Braintree payment gateway.
-              </p>
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                </h3>
+                <p>
+                  A commercial version of an attendance system I made for the Seattle Youth Symphony Orchestras. I
+                  co-founded this company with Claire Li. Quickly take attendance using QR codes.
+                  Features OAuth2 integration, electronic payments and a powerful admin UI.
+                </p>
+                <div class="pills">
+                  <span>500+ Users</span>
+                  <span>Co-Founder</span>
+                  <span>Backend Engineer</span>
+                  <span>Sales Lead</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <article class="card">
               <a
                 href="https://seattletutoringpartners.web.app"
-                class="image featured"
-                target="_blank"
-                ><img src="images/seattle_tutoring_partners.png" alt="website"
-              /></a>
-              <h3>
-                <a href="https://github.com/clr-li/STP" target="_blank"
-                  >Seattle Tutoring Partners</a
-                >
-              </h3>
-              <p>
-                Co-founded a tutoring company with Claire Li. I've taught 20+
-                students in K-12 topics and music/violin. I also fascillitate 
-                peer-reviewed research opportunities for high schoolers. 
-                This includes applied projects in the HCI space and projects
-                that involve training custom multi-modal machine learning models.   
-                The company website is coded using vanilla
-                HTML/CSS/JS and Firebase for the backend and static file
-                hosting.
-              </p>
+                class="card-img"
+                target="_blank">
+                <img src="images/seattle_tutoring_partners.png" alt="website" style="object-position: 30% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/clr-li/STP" target="_blank">Seattle Tutoring Partners</a>
+                  <a
+                    href="https://seattletutoringpartners.web.app"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Website</span></a>
+                  <a
+                  href="https://github.com/clr-li/STP"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                </h3>
+                <p>
+                  Co-founded a tutoring company with Claire Li. I've taught 20+
+                  students in K-12 topics and music/violin. I also fascillitate 
+                  peer-reviewed research opportunities for high schoolers.
+                </p>
+                <div class="pills">
+                  <span>20+ Students</span>
+                  <span>Co-Founder</span>
+                  <span>3+ Teachers</span>
+                  <span>International Research</span>
+                </div>
+              </div>
             </article>
           </div>
           <!-- Startups -->
@@ -292,59 +334,136 @@
         </details>
 
         <details>
-          <summary><h3>Publications</h3></summary>
-          <div class="masonry">
-            <article class="item box style2">
+          <summary><h3>Publications</h3>
+            <article class="card">
               <a
                 href="https://arxiv.org/abs/2411.07347"
-                class="image featured"
-                target="_blank"
-                ><img
-                  src="images/k3-3torus.png"
-                  alt="website"
-                  style="padding-top: 2em"
-              /></a>
-              <h3>
-                <a href="https://github.com/SanderGi/Genus" target="_blank"
-                  >An Efficient Genus Algorithm Based on Graph Rotations</a
-                >
-              </h3>
-              <p>
-                Worked with my fellow math major, Austin Ulrigg, to design a
-                novel graph embedding algorithm optimized for cage graphs. This
-                graph family was particularly difficult for previous algorithms
-                because cages have relatively high genus compared to the degree.
-                You can try out a hosted version
-                <a href="https://genus.fly.dev/" target="_blank">here</a>. This
-                problem lies at the intersection of graph theory, combinatorics,
-                and topology and has applications in network design, chemistry,
-                infrastructure planning, and more. We have co-authored a paper
-                submitted to Discrete Mathematics.
-              </p>
+                class="card-img"
+                target="_blank">
+                <img src="images/k3-3torus.png" alt="k3,3 embedded on a torus" style="object-position: 70% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/SanderGi/Genus" target="_blank">Practical Algorithm for Graph Embedding (PAGE)</a>
+                  <a
+                    href="https://genus.fly.dev/"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Web Demo</span></a>
+                  <a
+                  href="https://github.com/SanderGi/Genus"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                  <a
+                    href="https://arxiv.org/abs/2411.07347"
+                    target="_blank"
+                    class="icon fa-solid fa-book-open-reader"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">arXiv pre-print</span></a>
+                </h3>
+                <p>
+                  Worked with my friend, Austin Ulrigg, to design a
+                  novel graph embedding algorithm optimized for cage graphs. The
+                  problem lies at the intersection of graph theory, combinatorics,
+                  and topology and has applications in network design, chemistry,
+                  infrastructure planning, and more.
+                </p>
+                <div class="pills">
+                  <span>Algorithm Design</span>
+                  <span>Co-First Author</span>
+                  <span>SageMath, C, Mathematica</span>
+                  <span>Graph Theory</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <h4 data-details="toggle">Show All</h4>
+          </summary>
+          <div>
+            <!-- TODO: SCAT6 -->
+            <!-- TODO: LCA -->
+             <!-- TODO: YADES -->
+            <article class="card">
               <a
                 href="https://dl.acm.org/doi/full/10.1145/3613904.3642099"
-                class="image featured"
-                target="_blank"
-                ><img src="images/eKichabiUSSD.jpg" alt="website"
-              /></a>
-              <h3>
-                <a href="https://github.com/SanderGi/eKichabi" target="_blank"
-                  >eKichabi v2: Designing and Scaling a Dual-Platform
-                  Agricultural Technology in Rural Tanzania</a
-                >
-              </h3>
-              <p>
-                The eKichabi project is a digital intervention in rural Tanzania
-                to study the economic effects of various mobile technologies to
-                connect farmers and the technical considerations when doing so.
-                I worked with Doctoral Student, Ananditha Raghunath, Dr.
-                Anderson (UW), Dr. Dillon (Cornell), and Dr. Jess Rudder
-                (UChicago) and co-first authored the paper accepted to
-                <a href="https://sigchi.org/" target="_blank">ACM SIGCHI 2024</a
-                >.
-              </p>
+                class="card-img"
+                target="_blank">
+                <img src="images/eKichabiUSSD.jpg" alt="eKichabi v2 USSD app"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/SanderGi/eKichabi" target="_blank">eKichabi v2</a>
+                  <a
+                    href="https://youtu.be/v-1JuQp1ous"
+                    target="_blank"
+                    class="icon fa-solid fa-circle-play"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Video presentation</span></a>
+                  <a
+                  href="https://github.com/SanderGi/eKichabi"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                  <a
+                    href="https://dl.acm.org/doi/full/10.1145/3613904.3642099"
+                    target="_blank"
+                    class="icon fa-solid fa-book-open-reader"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">ACM SIGCHI Paper</span></a>
+                </h3>
+                <p>
+                  This multi-million-dollar multi-decade study investigates 
+                  the economic impact of mobile technology in rural Tanzania.
+                  As researcher at the ICTD Lab, I led the software engineering 
+                  and data-analysis teams and worked closely with our 
+                  collaborators at Cornell, EDI Global, and IRDP.
+                </p>
+                <div class="pills">
+                  <span>10,000 Farmers</span>
+                  <span>Co-First Author</span>
+                  <span><a href="https://sigchi.org/" target="_blank" style="color: white">ACM SIGCHI 2024</a></span>
+                  <span>ICT4D Research</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <a
+                href="TODO"
+                class="card-img"
+                target="_blank">
+                <img src="images/genusfolding.png" alt="various surfaces folded and glued from polygons" style="object-position: 50% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/SanderGi/Genus" target="_blank">Topological Graph Theory: An Algorithmic Approach</a>
+                  <a
+                    href="https://github.com/SanderGi/Genus"
+                    target="_blank"
+                    class="icon fa-brands fa-github"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                  <a
+                    href="TODO"
+                    target="_blank"
+                    class="icon fa-solid fa-book-open-reader"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">arXiv pre-print</span></a>
+                </h3>
+                <p>
+                  A visually rich exposition to topological graph theory, graph embedding, and rotation systems
+                  culminating in a deeper understanding of the novel Practical Algorithm for Graph Embedding (PAGE)
+                  that I co-invented. A brief history of algorithmic developments in the field is outlined.
+                </p>
+                <div class="pills">
+                  <span>Topological Graph Theory</span>
+                  <span>First Author</span>
+                  <span>Honors Thesis</span>
+                  <span>Algorithm Design</span>
+                </div>
+              </div>
             </article>
           </div>
           <!-- Publications -->
@@ -352,104 +471,375 @@
         </details>
 
         <details>
-          <summary><h3>Talks</h3></summary>
-          <div class="masonry">
-            <article class="item box style2">
+          <summary><h3>Talks</h3>
+            <article class="card">
               <a
-                href="https://www.youtube.com/watch?v=oWEe9op0bb0"
-                class="image featured"
-                target="_blank"
-                ><img src="images/MozillaDemoDay.png" alt="website"
-              /></a>
-              <h3>
-                <a href="https://github.com/KoelLabs" target="_blank"
-                  >The Future of Language Learning</a
-                >
-              </h3>
-              <p>
-                We (Koel Labs) presented our progress developing an MVP for
-                pronunciation learning at Mozilla Builders '24 Demo Day
-                following 12 weeks of intense user validation, machine learning,
-                and HCI research.
-              </p>
+                href="https://www.youtube.com/watch?v=s7yPjSUjU9s"
+                class="card-img"
+                target="_blank">
+                <img src="images/MozillaDemoDay.png" alt="presenting on the Mozilla demo day stage" style="object-position: 80% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/KoelLabs" target="_blank">The Future of Language Learning</a>
+                  <a
+                    href="https://koellabs.com"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Website</span></a>
+                  <a
+                  href="https://github.com/KoelLabs"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                  <a
+                    href="https://www.youtube.com/watch?v=s7yPjSUjU9s"
+                    target="_blank"
+                    class="icon fa-solid fa-circle-play"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Talk video recording</span></a>
+                </h3>
+                <p>
+                  We presented our progress developing an MVP for
+                  pronunciation learning at Mozilla Builders '24 Demo Day
+                  following 12 weeks of intense user validation, machine learning,
+                  and HCI research.
+                </p>
+                <div class="pills">
+                  <span>Mozilla Builders</span>
+                  <span>Keynote Speaker</span>
+                  <span>One of 14 among 200</span>
+                  <span>ML for Social Good</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <h4 data-details="toggle">Show All</h4>
+          </summary>
+          <div>
+            <article class="card">
               <a
-                href="https://docs.google.com/presentation/d/16tZGX8pRINhTTnhDZHCynEDKyfHl0I9tVnjHukLFnuM/edit#slide=id.p"
-                class="image featured"
-                target="_blank"
-                ><img src="images/CompLingSlide.png" alt="website"
-              /></a>
-              <h3>
-                <a href="https://github.com/KoelLabs" target="_blank"
-                  >Computational Linguistics for Machine Aided Pronunciation
-                  Learning</a
-                >
-              </h3>
-              <p>
-                Mini-lecture about practical applications of computational
-                linguistics for pronunciation learning for the PhD students at
-                <a href="https://www.compling.uw.edu/" target="_blank"
-                  >the Tree House seminar</a
-                >.
-              </p>
+                href="images/NLPResearchPoster.pdf"
+                class="card-img"
+                target="_blank">
+                <img src="images/xlsrenglish01.png" alt="chart showing how great the model is"  style="object-position: 100% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/KoelLabs" target="_blank">Robustly Modelling Non-native Speech</a>
+                  <a
+                    href="https://huggingface.co/KoelLabs/xlsr-english-01"
+                    target="_blank"
+                    class="icon huggingface"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Hugging Face Model</span></a>
+                  <a
+                  href="https://github.com/KoelLabs/ML"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                  <a
+                    href="images/NLPResearchPoster.pdf"
+                    target="_blank"
+                    class="icon fa-solid fa-chalkboard-user"
+                    style="font-size: 0.95em; float: right; padding-left: 0.3em;"
+                  ><span class="label">Poster</span></a>
+                </h3>
+                <p>
+                  Presented our speech research and state of the art non-native speech phonemic transcription
+                  model at the Natural Language Processing poster session.
+                </p>
+                <div class="pills">
+                  <span>University of Washington</span>
+                  <span>NLP Researcher</span>
+                  <span>Co-First Author</span>
+                  <span>Inclusive Speech Technology</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <article class="card">
+              <a
+                href="https://docs.google.com/presentation/d/1Giw_u8XKrby_i51ffmLsIflefSI6qQem0FtMYbfchZs/edit?usp=sharing"
+                class="card-img"
+                target="_blank">
+                <img src="images/ugradsymposiumkoellabs.png" alt="slides" style="object-position: 50% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/KoelLabs" target="_blank">Speech Technology Built for Everyone, Everywhere</a>
+                  <a
+                    href="https://huggingface.co/KoelLabs"
+                    target="_blank"
+                    class="icon huggingface"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Hugging Face</span></a>
+                  <a
+                  href="https://github.com/KoelLabs"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                  <a
+                    href="https://docs.google.com/presentation/d/1Giw_u8XKrby_i51ffmLsIflefSI6qQem0FtMYbfchZs/edit?usp=sharing"
+                    target="_blank"
+                    class="icon fa-solid fa-chalkboard-user"
+                    style="font-size: 0.95em; float: right; padding-left: 0.3em;"
+                  ><span class="label">Slides</span></a>
+                </h3>
+                <p>
+                  Presented about the challenges of evaluating and building inclusive speech technology based on 
+                  research with Samir Farhan (British Columbia) and Eunjung Yeo (Carnegie Mellon).
+                </p>
+                <div class="pills">
+                  <span>University of Washington</span>
+                  <span>ML Researcher</span>
+                  <span>Inclusive Speech Technology</span>
+                  <span>Linguistics</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <a
+                href="https://docs.google.com/presentation/d/1i_Cgw6-gkC61TXUSUXWIr0OdXsFOMHFp1-PsEdg3Rvk/edit?usp=sharing"
+                class="card-img"
+                target="_blank">
+                <img src="images/donutcircuit.png" alt="donut shaped printed circuit board"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/SanderGi/Genus" target="_blank">Graph Embedding and Genus</a>
+                  <a
+                    href="https://genus.fly.dev"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Website</span></a>
+                  <a
+                  href="https://github.com/SanderGi/Genus"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                  <a
+                    href="https://docs.google.com/presentation/d/1i_Cgw6-gkC61TXUSUXWIr0OdXsFOMHFp1-PsEdg3Rvk/edit?usp=sharing"
+                    target="_blank"
+                    class="icon fa-solid fa-chalkboard-user"
+                    style="font-size: 0.95em; float: right; padding-left: 0.3em;"
+                  ><span class="label">Slides</span></a>
+                </h3>
+                <p>
+                  Presented a non-technical hands-on introduction to graph embedding at the Undergraduate Research Symposium
+                  with my co-author Austin Ulrigg.
+                </p>
+                <div class="pills">
+                  <span>University of Washington</span>
+                  <span>Co-First Author</span>
+                  <span>Graph Theory</span>
+                  <span>Algorithm Design</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <a
+                href="https://docs.google.com/presentation/d/1AKP7oRXGpO5aSY_WTrLGazX3p_xHAyNbu3Ow8yAF4vA/edit?usp=sharing"
+                class="card-img"
+                target="_blank">
+                <img src="images/KoelLabsPeople.png" alt="pictures of koel labs poster sessions" style="object-position: 50% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/KoelLabs" target="_blank">Building a Language Learning Startup</a>
+                  <a
+                    href="https://koellabs.com"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Website</span></a>
+                  <a
+                  href="https://github.com/KoelLabs"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                  <a
+                    href="https://docs.google.com/presentation/d/1AKP7oRXGpO5aSY_WTrLGazX3p_xHAyNbu3Ow8yAF4vA/edit?usp=sharing"
+                    target="_blank"
+                    class="icon fa-solid fa-chalkboard-user"
+                    style="font-size: 0.95em; float: right; padding-left: 0.3em;"
+                  ><span class="label">Slides</span></a>
+                </h3>
+                <p>
+                  Presented our work on Koel Labs at the DubHacks Next Demo Day.
+                  We did a poster presentation and were invited to do both a Headline Talk and a pitch to Madrona Venture Group.
+                </p>
+                <div class="pills">
+                  <span>DubHacks Next</span>
+                  <span>Keynote Speaker</span>
+                  <span>Founder and CEO</span>
+                  <span>Entrepreneurship</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <a
+                href="https://docs.google.com/presentation/d/16tZGX8pRINhTTnhDZHCynEDKyfHl0I9tVnjHukLFnuM/edit"
+                class="card-img"
+                target="_blank">
+                <img src="images/CompLingSlide.png" alt="slides"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/KoelLabs" target="_blank">Machine Aided Pronunciation Learning</a>
+                  <a
+                    href="https://koellabs.com"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Website</span></a>
+                  <a
+                  href="https://github.com/KoelLabs"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                  <a
+                    href="https://docs.google.com/presentation/d/16tZGX8pRINhTTnhDZHCynEDKyfHl0I9tVnjHukLFnuM/edit"
+                    target="_blank"
+                    class="icon fa-solid fa-chalkboard-user"
+                    style="font-size: 0.95em; float: right; padding-left: 0.3em;"
+                  ><span class="label">Slides</span></a>
+                </h3>
+                <p>
+                  Invited by Professor Bender to give a 50-minute lecture on
+                  applications of computational linguistics for 
+                  pronunciation learning to the PhD students at
+                  <a href="https://www.compling.uw.edu/" target="_blank"
+                    >the Tree House seminar</a
+                  >.
+                </p>
+                <div class="pills">
+                  <span>University of Washington</span>
+                  <span>Graduate Lecturer</span>
+                  <span>ML Scientist</span>
+                  <span>Computational Linguistics</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
               <a
                 href="https://builders.mozilla.org/"
-                class="image featured"
-                target="_blank"
-                ><img src="images/MozillaBuildersGroupPhoto.jpg" alt="website"
-              /></a>
-              <h3>
-                <a href="https://github.com/KoelLabs" target="_blank"
-                  >Local AI and Machine Aided Pronunciation Learning</a
-                >
-              </h3>
-              <p>
-                Introduction to my company, Koel Labs, and our plans for
-                pronunciation learning. Presented to the other 13 cohort teams
-                at the Mozilla Builders Accelerator Kickoff Event in New York.
-              </p>
+                class="card-img"
+                target="_blank">
+                <img src="images/MozillaBuildersGroupPhoto.jpg" alt="mozilla builders cohort" style="object-position: 30% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/KoelLabs" target="_blank">Local AI for Trustworthy Speech Pathology</a>
+                  <a
+                    href="https://koellabs.com"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Website</span></a>
+                  <a
+                  href="https://github.com/KoelLabs"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                </h3>
+                <p>
+                  Introduction to my company, Koel Labs, and our plans for
+                  pronunciation learning. Presented to the other 13 cohort teams
+                  at the Mozilla Builders Accelerator Kickoff Event in New York.
+                </p>
+                <div class="pills">
+                  <span>Mozilla Builders</span>
+                  <span>ML Engineer</span>
+                  <span>Youngest Team</span>
+                  <span>Local AI</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <article class="card">
               <a
                 href="https://youtu.be/v-1JuQp1ous"
-                class="image featured"
-                target="_blank"
-                ><img src="images/cherryblossom.jpg" alt="website"
-              /></a>
-              <h3>
-                <a
-                  href="https://docs.google.com/presentation/d/1zPWr36pCDeSlEOrVR1ERLteToymZlx9GikdPMF6_WY0"
-                  target="_blank"
-                  >eKichabi v2: Designing and Scaling a Dual Platform Technology
-                  in Rural Tanzania</a
-                >
-              </h3>
-              <p>
-                10 minute in person talk at Para.chi.dub about the eKichabi v2
-                paper that I co-first-authored.
-              </p>
+                class="card-img"
+                target="_blank">
+                <img src="images/cherryblossom.jpg" alt="uw cherry blossoms" style="object-position: 30% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://dl.acm.org/doi/full/10.1145/3613904.3642099" target="_blank">Designing Dual Platform Technology in Rural Tanzania</a>
+                  <a
+                    href="https://github.com/SanderGi/eKichabi"
+                    target="_blank"
+                    class="icon fa-brands fa-github"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                  <a
+                    href="https://dl.acm.org/doi/full/10.1145/3613904.3642099"
+                    target="_blank"
+                    class="icon fa-solid fa-book-open-reader"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">ACM SIGCHI Paper</span></a>
+                </h3>
+                <p>
+                  10 minute in person talk at Para.chi.dub about designing and scaling 
+                  dual platform information dissemination systems in rural Tanzania based
+                  on my work on the eKichabi v2 project.
+                </p>
+                <div class="pills">
+                  <span>University of Washington</span>
+                  <span>Co-First Author</span>
+                  <span>ACM SIGCHI Paper</span>
+                  <span>ICT4D Research</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <article class="card">
               <a
                 href="images/CHANGE_Seminar_Talk_eKichabi_v2.pdf"
-                class="image featured"
-                target="_blank"
-                ><img src="images/eKichabiMegaChart.png" alt="website"
-              /></a>
-              <h3>
-                <a href="https://github.com/SanderGi/eKichabi" target="_blank"
-                  >Designing and Deploying Digital Information Systems in
-                  Sub-Saharan Africa</a
-                >
-              </h3>
-              <p>
-                I was invited to do this 50 minute talk at the CHANGE Seminar
-                for ~40 people based on my research in the ICTD space while
-                working as part of the eKichabi project.
-              </p>
+                class="card-img"
+                target="_blank">
+                <img src="images/eKichabiMegaChart.png" alt="fancy data analysis chart"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://dl.acm.org/doi/full/10.1145/3613904.3642099" target="_blank">Scaling Information Systems in Sub-Saharan Africa</a>
+                  <a
+                    href="https://github.com/SanderGi/eKichabi"
+                    target="_blank"
+                    class="icon fa-brands fa-github"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                  <a
+                    href="https://dl.acm.org/doi/full/10.1145/3613904.3642099"
+                    target="_blank"
+                    class="icon fa-solid fa-book-open-reader"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">ACM SIGCHI Paper</span></a>
+                  <a
+                    href="images/CHANGE_Seminar_Talk_eKichabi_v2.pdf"
+                    target="_blank"
+                    class="icon fa-solid fa-chalkboard-user"
+                    style="font-size: 0.95em; float: right; padding-left: 0.3em;"
+                  ><span class="label">Slides</span></a>
+                </h3>
+                <p>
+                  Professor Anderson invited me to give this 50 minute 
+                  lecture at the CHANGE Seminar for 40 PhDs based on my research 
+                  in the ICT4D space as part of the eKichabi v2 project.
+                </p>
+                <div class="pills">
+                  <span>University of Washington</span>
+                  <span>Graduate Lecturer</span>
+                  <span>Mobile Network Technology</span>
+                  <span>HCI Research</span>
+                </div>
+              </div>
             </article>
           </div>
           <!-- Talks -->
@@ -457,131 +847,182 @@
         </details>
 
         <details>
-          <summary><h3>Community</h3></summary>
-          <div class="masonry">
-            <article class="item box style2">
-              <a
-                href="https://alex-dbf.glitch.me/"
-                class="image featured"
-                target="_blank"
-                ><img src="images/DBF.png" alt="website"
-              /></a>
-              <h3>
-                <a
-                  href="https://github.com/SanderGi/DesignBuildFly"
-                  target="_blank"
-                  >Design Build Fly</a
-                >
-              </h3>
-              <p>
-                Data processing tools for the University of Washington's
-                <a href="https://www.aiaa.org/dbf" target="_blank"
-                  >Design Build Fly</a
-                >
-                team. Helped our team win 3rd place in the 28th national DBF
-                competition.
-              </p>
-            </article>
-            <article class="item box style2">
+          <summary><h3>Community</h3> <!-- TODO: Agentic AI Graduate Class -->
+            <article class="card">
               <a
                 href="https://cascadeenrichment.com/elementary-math-assessments"
-                class="image featured"
-                target="_blank"
-                ><img src="images/cascadeassessment.jpg" alt="website"
-              /></a>
-              <h3>
-                <a
+                class="card-img"
+                target="_blank">
+                <img src="images/cascadeassessment.jpg" alt="website"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/clr-li/AssessmentSoftware" target="_blank">Cascade Enrichment Assessment Software</a>
+                  <a
+                    href="https://cascadeenrichment.com/elementary-math-assessments"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Website</span></a>
+                  <a
                   href="https://github.com/clr-li/AssessmentSoftware"
                   target="_blank"
-                  >Cascade Assessment Software</a
-                >
-              </h3>
-              <p>
-                A customized assessment software to enhance Cascade Enrichment's
-                K-12 tutoring curriculum developed in collaboration with Claire
-                Li. The tests are commercially available
-                <a
-                  href="https://cascadeenrichment.com/elementary-math-assessments"
-                  target="_blank"
-                  >online</a
-                >
-                and rely on UI/UX design, accessibility principles, Javascript,
-                and a Google Form based backend for collecting and autograding
-                responses.
-              </p>
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                </h3>
+                <p>
+                  As Tech Lead, I led development of customized assessment software to enhance Cascade Enrichment's
+                  K-12 tutoring curriculum in collaboration with Claire Li.
+                </p>
+                <div class="pills">
+                  <span>Online K-12 Education</span>
+                  <span>Tech Lead</span>
+                  <span>Used by 100s of Tutors</span>
+                  <span>Enterprise Software Engineering</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <h4 data-details="toggle">Show All</h4>
+          </summary>
+          <div>
+            <article class="card">
+              <a
+                href="https://alex-dbf.glitch.me/"
+                class="card-img"
+                target="_blank">
+                <img src="images/DBF.png" alt="website"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/SanderGi/DesignBuildFly" target="_blank">Design Build Fly: Data-Processing Tools</a>
+                  <a
+                    href="https://alex-dbf.glitch.me/"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Website</span></a>
+                  <a
+                    href="https://github.com/SanderGi/DesignBuildFly"
+                    target="_blank"
+                    class="icon fa-brands fa-github"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                </h3>
+                <p>
+                  Data processing tools for the University of Washington's
+                  <a href="https://www.aiaa.org/dbf" target="_blank"
+                    >Design Build Fly</a
+                  >
+                  team. Helped our team win 3rd place in the 28th national DBF
+                  competition.
+                </p>
+                <div class="pills">
+                  <span>Sensor Data Analytics</span>
+                  <span>Data Science Lead</span>
+                  <span>Building RC Planes</span>
+                  <span>Aerodynamic Optimization</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
               <a
                 href="images/SYSOAttendance.png"
-                class="image featured"
-                target="_blank"
-                ><img src="images/SYSOAttendance.png" alt="attendanceScanner"
-              /></a>
-              <h3>
-                <a
-                  href="https://github.com/clr-li/AttendanceScanner"
-                  target="_blank"
-                  >SYSO Attendance System</a
-                >
-              </h3>
-              <p>
-                My old youth orchestra (SYSO) needed a way to automate taking
-                attendance for their hundreds of students. I wrote a QR-code
-                based system (hosted on Glitch) that allows people to scan their
-                QR code at a scanning station (any authorized smartphone).
-              </p>
+                class="card-img"
+                target="_blank">
+                <img src="images/SYSOAttendance.png" alt="webapp" style="object-position: 50% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/clr-li/AttendanceScanner" target="_blank">SYSO Attendance System</a>
+                  <a
+                    href="https://github.com/clr-li/AttendanceScanner"
+                    target="_blank"
+                    class="icon fa-brands fa-github"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                </h3>
+                <p>
+                  My old youth orchestra (SYSO) needed a way to automate taking
+                  attendance so I made a system that allows musicians to scan their
+                  QR code at a scanning station (any authorized smartphone).
+                </p>
+                <div class="pills">
+                  <span>500+ Users</span>
+                  <span>Software Engineer</span>
+                  <span>Full-stack</span>
+                  <span>Enterprise Software Engineering</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <article class="card">
               <a
-                href="https://github.com/SanderGi/WiFiStrengthTester"
-                target="_blank"
-                class="image featured"
-                ><img src="images/wifitester.png" alt="windows app"
-              /></a>
-              <h3>
-                <a
-                  href="https://github.com/SanderGi/WiFiStrengthTester"
-                  target="_blank"
-                  >Software to measure WiFi RSSI</a
-                >
-              </h3>
-              <p>
-                One of the challenges we faced in Science Olympiad was
-                standardizing the way teams test the WiFi antennas they build.
-                So I created a program with a nice GUI to make this easy. It can
-                be downloaded on the
-                <a
-                  href="https://apps.microsoft.com/store/detail/wifi-strength-tester/9N3BV3RVGXDV?hl=en-us&gl=US"
-                  target="_blank"
-                  >Microsoft Store</a
-                >
-                where it now has more than three thousand aquisitions.
-              </p>
+                href="https://apps.microsoft.com/store/detail/wifi-strength-tester/9N3BV3RVGXDV?hl=en-us&gl=US"
+                class="card-img"
+                target="_blank">
+                <img src="images/wifitester.png" alt="windows application"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/SanderGi/WiFiStrengthTester" target="_blank">Software to measure WiFi RSSI</a>
+                  <a
+                    href="https://apps.microsoft.com/store/detail/wifi-strength-tester/9N3BV3RVGXDV?hl=en-us&gl=US"
+                    target="_blank"
+                    class="icon fa-brands fa-microsoft"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Microsoft Store</span></a>
+                  <a
+                    href="https://github.com/SanderGi/WiFiStrengthTester"
+                    target="_blank"
+                    class="icon fa-brands fa-github"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                </h3>
+                <p>
+                  One of the challenges we faced in Science Olympiad was
+                  standardizing the way teams test the WiFi antennas they build.
+                  So I created a program with a nice GUI to make this easy.
+                </p>
+                <div class="pills">
+                  <span>10,000+ Users</span>
+                  <span>Windows Application</span>
+                  <span>Operating System APIs</span>
+                  <span>Antenna Testing</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <article class="card">
               <a
                 href="https://github.com/SanderGi/Science-Olympiad/tree/main/CodeBusters"
-                class="image featured"
-                target="_blank"
-                ><img src="images/autoebes.jpg" alt="chrome extension"
-              /></a>
-              <h3>
-                <a
-                  href="https://github.com/SanderGi/Science-Olympiad/tree/main/CodeBusters"
-                  target="_blank"
-                  >Cryptography Puzzles</a
-                >
-              </h3>
-              <p>
-                This chrome extension enhances
-                <a href="https://toebes.com/codebusters/" target="_blank"
-                  >toebes.com</a
-                >
-                to allow autogeneration of Cryptographical Puzzles (Code Busters
-                tests for Science Olympiad to help my teammates practice) by
-                simply selecting a type of cipher (affine, ceasar, RSA,
-                Baconian, etc.).
-              </p>
+                class="card-img"
+                target="_blank">
+                <img src="images/autoebes.jpg" alt="chrome extension"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/SanderGi/WiFiStrengthTester" target="_blank">Automated Cryptography Puzzles</a>
+                  <a
+                    href="https://github.com/SanderGi/Science-Olympiad/tree/main/CodeBusters"
+                    target="_blank"
+                    class="icon fa-brands fa-github"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                </h3>
+                <p>
+                  This chrome extension enhances
+                  <a href="https://toebes.com/codebusters/" target="_blank"
+                    >toebes.com</a
+                  >
+                  to allow autogeneration of Cryptographical Puzzles (Code Busters
+                  tests for Science Olympiad to help my teammates practice).
+                </p>
+                <div class="pills">
+                  <span>10,000+ Users</span>
+                  <span>Chrome Extension</span>
+                  <span>Automation</span>
+                  <span>Cryptography</span>
+                </div>
+              </div>
             </article>
           </div>
           <!-- Community -->
@@ -589,54 +1030,84 @@
         </details>
 
         <details>
-          <summary><h3>Libraries and Frameworks</h3></summary>
-          <div class="masonry">
-            <article class="item box style2">
+          <summary><h3>Libraries and Frameworks</h3>
+            <article class="card">
               <a
                 href="https://www.npmjs.com/package/sqlite-auto-migrator"
-                target="_blank"
-                class="image featured"
-                ><img src="images/SAM.png" alt="website"
-              /></a>
-              <h3>
-                <a
+                class="card-img"
+                target="_blank">
+                <img src="images/SAM.png" alt="npm cli"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/SanderGi/sqlite-auto-migrator" target="_blank">SQLite Auto Migrator</a>
+                  <a
                   href="https://github.com/SanderGi/sqlite-auto-migrator"
                   target="_blank"
-                  >SQLite Auto Migrator</a
-                >
-              </h3>
-              <p>
-                NPM package to automatically manage SQLite database schema
-                changes through a
-                <a
-                  href="https://realpython.com/django-migrations-a-primer/"
-                  target="_blank"
-                  >Django-like migration system</a
-                >
-                but framework agnostic and with JavaScript+CLI integration. The
-                library solves the issue of updating a production database
-                schema without losing data or having to manually write/execute
-                SQL queries. Used in production by
-                <a href="https://attendqr.com" target="_blank">attendqr.com</a>.
-              </p>
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                  <a
+                    href="https://www.npmjs.com/package/sqlite-auto-migrator"
+                    target="_blank"
+                    class="icon fa-brands fa-npm"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">NPM Package</span></a>
+                </h3>
+                <p>
+                  NPM package to automatically manage SQLite database schema
+                  changes through a
+                  <a
+                    href="https://realpython.com/django-migrations-a-primer/"
+                    target="_blank"
+                    >Django-like migration system</a
+                  >
+                  but framework agnostic and with JavaScript+CLI integration. The
+                  library solves the issue of updating a production database
+                  schema without losing data or having to manually write/execute
+                  SQL queries. Used in production by
+                  <a href="https://attendqr.com" target="_blank">attendqr.com</a>.
+                </p>
+                <div class="pills">
+                  <span>1000s of Installs</span>
+                  <span>NPM Package</span>
+                  <span>MIT Licensed</span>
+                  <span>Automated DB Migrations</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <h4 data-details="toggle">Show All</h4>
+          </summary>
+          <div>
+            <article class="card">
               <a
                 href="https://github.com/SanderGi/HTMS"
-                class="image featured"
-                target="_blank"
-                ><img src="images/HTMS.png" alt="website"
-              /></a>
-              <h3>
-                <a href="https://github.com/SanderGi/HTMS" target="_blank"
-                  >HTMS</a
-                >
-              </h3>
-              <p>
-                A mini client-side web framework that allows creating
-                webcomponents and managing reactive state with Signals directly
-                in HTML.
-              </p>
+                class="card-img"
+                target="_blank">
+                <img src="images/HTMS.png" alt="github"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/SanderGi/HTMS" target="_blank">HTMS</a>
+                  <a
+                  href="https://github.com/SanderGi/HTMS"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                </h3>
+                <p>
+                  A mini client-side web framework that allows creating
+                  webcomponents and managing reactive state with signals directly
+                  in HTML.
+                </p>
+                <div class="pills">
+                  <span>Joke Library</span>
+                  <span>NPM Package</span>
+                  <span>JS Framework 🚀</span>
+                  <span>Web APIs</span>
+                </div>
+              </div>
             </article>
           </div>
           <!-- Libraries -->
@@ -644,141 +1115,221 @@
         </details>
 
         <details>
-          <summary><h3>Learning Projects</h3></summary>
-          <div class="masonry">
-            <article class="item box style2">
+          <summary><h3>Learning Projects</h3>
+            <article class="card">
               <a
                 href="https://gooey.ai/qr-code/"
-                class="image featured"
-                target="_blank"
-                ><img src="images/qrart.png" alt="website"
-              /></a>
-              <h3>
-                <a href="https://gooey.ai/qr-code/" target="_blank"
-                  >QR Code Art Generator</a
-                >
-              </h3>
-              <p>
-                Made as an intern at Gooey.AI, this quickly became their top 3
-                tool with 30K+ uses within the first two weeks and has landed
-                branding deals and social media exposure for the company. It is
-                made using Stable Diffusion models with Controlnets (deployed
-                using Docker and Kubernetes) and also involved making a URL
-                shortener using Django.
-              </p>
+                class="card-img"
+                target="_blank">
+                <img src="images/qrart.png" alt="fancy AI generated QR code"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/GooeyAI" target="_blank">QR Code Art Generator</a>
+                  <a
+                    href="https://gooey.ai/qr-code/"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Website</span></a>
+                  <a
+                  href="https://github.com/GooeyAI"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                </h3>
+                <p>
+                  Made as an intern at Gooey.AI, this quickly became their top 3
+                  tool with 30K+ uses within the first two weeks and has landed
+                  branding deals and social media exposure for the company.
+                </p>
+                <div class="pills">
+                  <span>30K+ Users</span>
+                  <span>Django URL Shortener</span>
+                  <span>Stable Diffusion + Controlnets</span>
+                  <span>Docker + Kubernetes</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <h4 data-details="toggle">Show All</h4>
+          </summary>
+          <div>
+            <article class="card">
               <a
                 href="https://quicktierlist.web.app/"
-                class="image featured"
-                target="_blank"
-                ><img src="images/tierlist.png" alt="website"
-              /></a>
-              <h3>
-                <a href="https://github.com/SanderGi/Tierlist" target="_blank"
-                  >Tierlist Maker</a
-                >
-              </h3>
-              <p>
-                I wanted to see if I could develop and deploy a small web
-                application in a few hours (spread across 5 days) without any
-                frameworks, nor referencing my old projects, and keeping google
-                searches to a minimum. So I challenged myself to do it with this
-                simple Tierlist Maker. The only thing I had to google was the
-                compression library and icon API as I had never used those
-                before (and these were non essential features anyways). As an
-                added bonus, it is completely ad free and runs locally in the
-                browser.
-              </p>
+                class="card-img"
+                target="_blank">
+                <img src="images/tierlist.png" alt="website"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/SanderGi/Tierlist" target="_blank">Tierlist Maker</a>
+                  <a
+                    href="https://quicktierlist.web.app/"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Website</span></a>
+                  <a
+                  href="https://github.com/SanderGi/Tierlist"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                </h3>
+                <p>
+                  Simple, advertisement free, 100% local, and privacy friendly tierlist maker.
+                </p>
+                <div class="pills">
+                  <span>100s of Users</span>
+                  <span>Sharing Functionality</span>
+                  <span>Icon APIs</span>
+                  <span>Drag & Drop UX</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <article class="card">
               <a
                 href="https://alextetris.glitch.me/"
-                class="image featured"
-                target="_blank"
-                ><img src="images/tetris.jpg" alt="tetris"
-              /></a>
-              <h3>
-                <a href="https://github.com/SanderGi/alextetris" target="_blank"
-                  >Tetris Clone</a
-                >
-              </h3>
-              <p>
-                A classic web-based Tetris game with no ads. Has PWA
-                capabilities so it can be downloaded and used offline. Simple
-                learning project to explore game-loops, touch controls, and
-                online leaderboards using a hosted database.
-              </p>
+                class="card-img"
+                target="_blank">
+                <img src="images/tetris.jpg" alt="webapp"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/SanderGi/alextetris" target="_blank">Tetris Clone</a>
+                  <a
+                    href="https://alextetris.glitch.me/"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Webapp</span></a>
+                  <a
+                  href="https://github.com/SanderGi/alextetris"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                </h3>
+                <p>
+                  A classic web-based Tetris game with no ads. Can be downloaded and used offline.
+                </p>
+                <div class="pills">
+                  <span>100s of Users</span>
+                  <span>Online Leaderboard</span>
+                  <span>Progressive Web App</span>
+                  <span>Touch Controls</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <article class="card">
               <a
-                href="https://swap0nline.000webhostapp.com/alextest.php"
-                target="_blank"
-                class="image featured"
-                ><img src="images/wurtle.jpg" alt="wurtle"
-              /></a>
-              <h3>
-                <a href="https://github.com/clr-li/SWAP" target="_blank"
-                  >Wurtle Game</a
-                >
-              </h3>
-              <p>
-                A word game inspired by the popular Wordle but with ocean themed
-                background graphics. Coded in collaboration with Claire Li. A
-                live demo of a similar game I coded on my own can be found here:
-                <a href="https://lawdle.web.app/" target="_blank"
-                  >lawdle.web.app</a
-                >
-                (the challenge is to guess the state/country of the absurd law,
-                or in a different mode select the AI generated law)
-              </p>
+                href="https://lawdle.web.app/"
+                class="card-img"
+                target="_blank">
+                <img src="images/wurtle.jpg" alt="webapp" style="object-position: 50% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/clr-li/SWAP" target="_blank">Wurtle Game</a>
+                  <a
+                    href="https://lawdle.web.app/"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Webapp</span></a>
+                  <a
+                  href="https://github.com/clr-li/SWAP"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                </h3>
+                <p>
+                  A word game inspired by the popular Wordle but with ocean themed
+                  background graphics. Coded in collaboration with Claire Li. I coded 
+                  <a href="https://lawdle.web.app/" target="_blank"
+                    >a similar game</a
+                  > on my own where you have to guess the state/country of the absurd law,
+                  or in a different mode select the AI generated law.
+                </p>
+                <div class="pills">
+                  <span>Cool Animations</span>
+                  <span>Online Leaderboard</span>
+                  <span>Geolocation + Map APIs</span>
+                  <span>PHP</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <article class="card">
               <a
                 href="https://github.com/SanderGi/CSharp3D"
-                target="_blank"
-                class="image featured"
-                ><img src="images/wumpus.jpg" alt="3D space"
-              /></a>
-              <h3>
-                <a href="https://github.com/SanderGi/CSharp3D" target="_blank"
-                  >CPU 3D Engine in C#</a
-                >
-              </h3>
-              <p>
-                The challenge here was to write a 3D rendering engine completely
-                from scratch (down to the drawing of individual pixels) using
-                only the CPU (so no help from the graphics card). This project
-                taught me a lot about the math behind projection matrices,
-                lighting, 3D transformations, and optimizing algorithms
-                (parallel triangle drawing routines, frustrum culling, and
-                more).
-              </p>
+                class="card-img"
+                target="_blank">
+                <img src="images/wumpus.jpg" alt="windows game" style="object-position: 50% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/SanderGi/CSharp3D" target="_blank">CPU 3D Rendering Engine</a>
+                  <a
+                  href="https://github.com/SanderGi/CSharp3D"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                </h3>
+                <p>
+                  3D rendering engine written completely from scratch 
+                  (down to the drawing of individual pixels) using
+                  only the CPU (so no help from the graphics card). This project
+                  taught me a lot about the math behind projection matrices,
+                  lighting and shadows, 3D transformations, texture mapping, and 
+                  optimizing algorithms (parallel triangle drawing routines, 
+                  frustrum culling, etc.).
+                </p>
+                <div class="pills">
+                  <span>3D Graphics</span>
+                  <span>Space Themed Wumpus Game</span>
+                  <span>Full Object File and Texture Support</span>
+                  <span>C#</span>
+                </div>
+              </div>
             </article>
-            <article class="item box style2">
+            <article class="card">
               <a
                 href="https://github.com/SanderGi/Science-Olympiad/tree/main/Detector"
-                target="_blank"
-                class="image featured"
-                ><img src="images/detector.jpg" alt="raspberry pi circuit"
-              /></a>
-              <h3>
-                <a
+                class="card-img"
+                target="_blank">
+                <img src="images/detector.jpg" alt="raspberry pi circuit" style="object-position: 50% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://github.com/SanderGi/Science-Olympiad/tree/main/Detector" target="_blank">Conductivity-meter with Raspberry Pi and Python</a>
+                  <a
                   href="https://github.com/SanderGi/Science-Olympiad/tree/main/Detector"
                   target="_blank"
-                  >Conductivity-meter with Raspberry Pi and Python</a
-                >
-              </h3>
-              <p>
-                This Science Olympiad challenge involved building and
-                programming a sensor and its circuitry from scratch (using only
-                basic circuit components and DIP) to measure salt concentration
-                in water samples. I used a Raspberry Pi microcontroller to
-                communicate via the I2C protocol to a NAU7802 ADC chip reading a
-                voltage divider circuit. With proper callibration, probe
-                submersion, and luck it is capable of less than 1% measurement
-                error.
-              </p>
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                </h3>
+                <p>
+                  This Science Olympiad challenge involved building and
+                  programming a sensor and its circuitry from scratch (using only
+                  basic circuit components and DIP) to measure salt concentration
+                  in water samples. I used a Raspberry Pi microcontroller to
+                  communicate via the I2C protocol to a NAU7802 ADC chip reading a
+                  voltage divider circuit. With proper callibration, probe
+                  submersion, and luck it is capable of less than 1% measurement
+                  error.
+                </p>
+                <div class="pills">
+                  <span>Circuit Design</span>
+                  <span>Chemistry</span>
+                  <span>Sensor Data Analytics</span>
+                  <span>Device Driver Development</span>
+                </div>
+              </div>
             </article>
           </div>
           <!-- Learning -->
@@ -827,37 +1378,37 @@
             <h3>Find me on...</h3>
             <ul class="social">
               <!--
-			  <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-			  <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-			  <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-			  <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-			  <li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-			  <li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
+			  <li><a href="#" class="icon fa-brands fa-twitter"><span class="label">Twitter</span></a></li>
+			  <li><a href="#" class="icon fa-brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+			  <li><a href="#" class="icon fa-brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+			  <li><a href="#" class="icon fa-brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+			  <li><a href="#" class="icon fa-brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+			  <li><a href="#" class="icon fa-brands fa-google-plus"><span class="label">Google+</span></a></li>
 			  -->
               <li>
                 <a
                   href="https://www.linkedin.com/in/alexander-le-metzger/"
-                  class="icon brands fa-linkedin-in"
+                  class="icon fa-brands fa-linkedin-in"
                   ><span class="label">LinkedIn</span></a
                 >
               </li>
               <li>
                 <a
                   href="https://github.com/SanderGi"
-                  class="icon brands fa-github"
+                  class="icon fa-brands fa-github"
                   ><span class="label">Github</span></a
                 >
               </li>
               <!--
 			  <li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
-			  <li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
-			  <li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>
-			  <li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>
-			  <li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>
-			  <li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>
-			  <li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>
-			  <li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>
-			  <li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>
+			  <li><a href="#" class="icon fa-brands fa-instagram"><span>Instagram</span></a></li>
+			  <li><a href="#" class="icon fa-brands fa-foursquare"><span>Foursquare</span></a></li>
+			  <li><a href="#" class="icon fa-brands fa-skype"><span>Skype</span></a></li>
+			  <li><a href="#" class="icon fa-brands fa-soundcloud"><span>Soundcloud</span></a></li>
+			  <li><a href="#" class="icon fa-brands fa-youtube"><span>YouTube</span></a></li>
+			  <li><a href="#" class="icon fa-brands fa-blogger"><span>Blogger</span></a></li>
+			  <li><a href="#" class="icon fa-brands fa-flickr"><span>Flickr</span></a></li>
+			  <li><a href="#" class="icon fa-brands fa-vimeo"><span>Vimeo</span></a></li>
 			  -->
             </ul>
             <hr />
