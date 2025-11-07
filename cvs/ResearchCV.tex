@@ -108,56 +108,63 @@
     \href{https://sandergi.com}{\underbar{https://sandergi.com}} & \href{mailto:alex@sandergi.com}{\underbar{alex@sandergi.com}} \\
 \end{tabular*}
 
+%----------Summary-----------------
+\vspace{0.2cm}
+My research aims to bridge gaps in information access for underserved
+languages and communities through a combination of algorithm design,
+machine learning, and edge device technology.
+
 %-----------EDUCATION-----------------
 \section{Education}
 \resumeSubHeadingListStart
 \resumeTopItem
 {University of Washington}
-{4.0 GPA}
-{09/24 -- 06/26}{
-    MS Computer Science, Graduate Compilers Teaching Assistant, Guest Lecturer [T1, T6, T12], NeurIPS reviewer.
-}
-\resumeTopItem
-{University of Washington}
 {3.85 GPA, 3.97 in CS}
-{09/22 -- 06/25}{
-    BS Computer Science and Mathematics, UWSO First Violin Section, Accelerated Honors Math.
+{09/22 -- 06/26}{
+    BS/MS Computer Science and BS Mathematics, Graduate Compilers Teaching Assistant, UWSO First Violin Section, Accelerated Honors Math, Guest Lecturer [T7, T8, T9], NeurIPS reviewer, COM$^2$ Mentor.
 }
+\resumeSubHeadingListEnd
+
+%--------AWARDS AND FUNDING------------
+\section{Awards}
+\resumeSubHeadingListStart
+\resumeLineItem{[H2] CRA Outstanding Undergraduate Researcher Award}{\href{https://news.cs.washington.edu/2025/01/31/allen-school-undergraduates-receive-national-recognition-for-research-contributions/}{\dotuline{Honorable Mention}}}{2025}
+\resumeLineItem{[H1] Akvelon Mentor's Choice}{Outstanding Leadership}{2023}
+\resumeSubHeadingListEnd
+
+\section{Funding}
+\resumeSubHeadingListStart
+\resumeTopItem{[F6] Mozilla Builders Accelerator}{\$39K research grant, \$35K cloud credits}{2024\hspace{-3pt}}{
+    Youngest out of 14 founders and researchers selected from \href{https://blog.mozilla.org/en/mozilla/14-ai-projects-to-watch-mozillas-first-builders-accelerator-cohort-kicks-off/}{\dotuline{44 countries \& 100s of applicants}}. Featured on the \href{https://stackoverflow.blog/2025/07/11/how-your-favorite-movie-is-changing-language-learning-technology/}{\dotuline{Stack Overflow}} podcast with more than 2 million viewers. Praised as ``most promising'' by \href{https://siliconangle.com/2024/09/23/mozilla-kicks-off-builders-accelerator-program-local-ai-startups/}{\dotuline{Silicon}} \& \href{https://pulse2.com/mozilla-reveals-funding-for-14-ai-projects-as-part-of-builders-accelerator-program/}{\dotuline{Pulse}}.}
+\resumeLineItem{[F5] Microsoft Imagine Cup}{Semifinalist, \$5K cloud credits}{2025}
+\resumeLineItem{[F4] Facebook AI for Health Challenge}{1st Place, \$1K Prize}{2025}
+\resumeLineItem{[F3] Google Research}{Special Google TPU Research Cloud Access}{2025}
+\resumeLineItem{[F2] Nvidia Inception}{Accepted Startup Founder, GPUs}{2025}
+\resumeLineItem{[F1] Clean Energy Institute}{TARs Research Grant}{2025}
 \resumeSubHeadingListEnd
 
 %-----------RESEARCH EXPERIENCE-----------------
 \section{Research Experience}
 \resumeSubHeadingListStart
 
-\resumeSubheadingStrong{University of Washington}{Advisor: Dr. Stefan Steinerberger}{Sep. 2024 -- Present}
-\resumeSubSubheading{Practical algorithms for graph embedding.}{Graph Theory, Algorithms, Combinatorics. \href{https://github.com/SanderGi/Genus}{\dotuline{Link}.}}
-% \resumeSubSubheading{Goal:}{Design a specialized algorithm optimized for embedding cage graphs.}
+\resumeSubheadingStrong{Ubiquitous Computing Lab}{Advisor: Dr. Shwetak Patel}{Jun. 2024 -- Present}
+\resumeSubSubheading{Battery-Free DL on MCUs via Agentic Model and System Optimization.}{Embedded ML. \href{https://github.com/SanderGi/YADES}{\dotuline{Link}.}}
+\resumeSubSubheading{Goal:}{Automatically adapt Deep Learning models to ultra-low-power hardware/microcontrollers.}
 \resumeItemListStart
-\resumeItem{Invented and implemented}{
-    algorithm in \underbar{C} with visualization and verification in \underbar{Python}.
-}
-\resumeItem{Started as independent research}{
-    and then reached out to Professor Steinerberger and Brinkmann.
-}
-\resumeItemListEnd
-
-\resumeSubheadingStrong{Ubiquitous Computing Lab}{Advisors: Dr. Shwetak Patel, Dr. Vikram Iyer}{Jun. 2024 -- Present}
-\resumeSubSubheading{Battery-free flight-based sensor systems for monitoring and alerts.}{Embedded ML. \href{https://github.com/SanderGi/YADES}{\dotuline{Link}.}}
-% \resumeSubSubheading{Goal:}{Low-cost, ultra-low-power environmental monitoring to predict disasters like wildfires.}
-\resumeItemListStart
-\resumeItem{Co-first-authoring}{
-    paper and leading trial deployment (animal monitoring to prevent crop destruction).
-}
 \resumeItem{Developed}{
     a novel model compression framework for hardware constraints in MCU accelerators.
 }
+\resumeItem{Co-first-authored}{
+    paper submitted to ACM IMWUT [P6] analyzing applications including animal monitoring to prevent crop destruction, and wearables to assess linguistic development in toddlers.
+}
 \resumeItemListEnd
 
+\resumeSubheadingStrong{CS 4 The Environment}{Advisor: Dr. Vikram Iyer}{Jun. 2024 -- Present}
 \resumeSubSubheading{Multi-modal automated lifecycle assessments of consumer electronics.}{ML for sustainability. \href{https://github.com/SanderGi/LCA}{\dotuline{Link}.}}
-% \resumeSubSubheading{Goal:}{Democratize access to environmental impact estimates and empower sustainable consumption.}
+\resumeSubSubheading{Goal:}{Democratize access to environmental impact estimates and empower sustainable consumption.}
 \resumeItemListStart
 \resumeItem{Co-authored}{
-    study design and research papers [P2, P4] and designed the \underbar{Computer Vision} pipeline.
+    study design and research papers [P2, P4] and designed the multi-modal pipeline.
 }
 \resumeItemListEnd
 
@@ -166,10 +173,25 @@
 \resumeSubSubheading{Goal:}{Study the economic impacts of digital agricultural information systems in Sub-Saharan Africa.}
 \resumeItemListStart
 \resumeItem{Co-first-authored}{
-    the paper [P5] accepted to ACM SIGCHI 2024. Presented talks [T1, T2, T3].
+    the paper [P5] accepted to ACM SIGCHI 2024. Presented talks [T7, T12].
 }
 \resumeItem{Led}{
-    team of 4 developers for the USSD server and later also the Android App.
+    team of 4 developers for the USSD server and later also the Android App optimizing latency by 40\%.
+}
+\resumeItem{Designed}{
+    a binary protocol reducing data costs by 70\%, making the platform affordable for 10K farmers.
+}
+\resumeItemListEnd
+
+\resumeSubheadingStrong{University of Washington}{Advisor: Dr. Stefan Steinerberger}{Sep. 2024 -- Present}
+\resumeSubSubheading{Practical algorithms for graph embedding.}{Graph Theory, Algorithms, Combinatorics. \href{https://github.com/SanderGi/Genus}{\dotuline{Link}.}}
+\resumeSubSubheading{Goal:}{Compute the genus of the previously intractable (3, 12)-cage graph (turns out it is 17).}
+\resumeItemListStart
+\resumeItem{Invented and implemented}{
+    SoTA algorithm in C with visualization and verification in Python.
+}
+\resumeItem{Started as independent research}{
+    and then reached out to Professor Steinerberger and Brinkmann.
 }
 \resumeItemListEnd
 
@@ -178,19 +200,22 @@
 %-----------PUBLICATIONS-----------------
 \section{Publications}
 \resumeSubHeadingListStart
-\resumeTopItem{[P5]}{\href{https://doi.org/10.1145/3613904.3642099}{\dotuline{ACM SIGCHI}}, Co-first}{\underbar{HCI}, \underbar{ICTD}}{
-    Ananditha Raghunath, \textbf{Alexander Metzger}, Hans Easton, XunMei Liu, Fanchong Wang, Yunqi Wang, Yunwei Zhao, Hosea Mpogole, and Richard Anderson. 2024. eKichabi v2: Designing and Scaling a Dual-Platform Agricultural Technology in Rural Tanzania.
+\resumeTopItem{[P6]}{In Review to ACM IMWUT}{\underbar{Embedded ML}, \underbar{Wearables}, \underbar{Agents}}{
+    \textbf{Alexander Metzger}*, Jiuyang Lyu*, Chun-Cheng Chang, Jiayi Shao, Emmanuel Azuh, Yujia Liu, Zachary Englhardt, Ethan Schwartz, Devin Mackenzie, Gregory D. Abowd, Edward Wang, Tingyu Cheng, Kurtis Heimerl, Shwetak Patel, Vikram Iyer, Zhihan Zhang. Battery-Free Deep Learning on MCUs via Agentic Model and System Co-Optimization.
 }
-\resumeTopItem{[P4]}{\href{https://dl.acm.org/doi/10.1145/3749488}{\dotuline{ACM IMWUT}}, Third}{\underbar{ML for Sustainability}, \underbar{CV}, \underbar{HCI}}{
+\resumeTopItem{[P5]}{\href{https://doi.org/10.1145/3613904.3642099}{\dotuline{ACM SIGCHI}}}{\underbar{HCI}, \underbar{ICTD}}{
+    Ananditha Raghunath*, \textbf{Alexander Metzger}*, Hans Easton, XunMei Liu, Fanchong Wang, Yunqi Wang, Yunwei Zhao, Hosea Mpogole, and Richard Anderson. 2024. eKichabi v2: Designing and Scaling a Dual-Platform Agricultural Technology in Rural Tanzania.
+}
+\resumeTopItem{[P4]}{\href{https://dl.acm.org/doi/10.1145/3749488}{\dotuline{ACM IMWUT}}}{\underbar{ML for Sustainability}, \underbar{CV}, \underbar{HCI}}{
     Zhihan Zhang, Puvarin Thavikulwat, \textbf{Alexander Metzger}, Yuxuan Mei, Felix Hähnlein, Zachary Englhardt, Gregory D. Abowd, Shwetak Patel, Adriana Schulz, Tingyu Cheng, and Vikram Iyer. 2025. Living Sustainability: In-Context Interactive Environmental Impact Communication.
 }
-\resumeTopItem{[P3]}{\href{https://arxiv.org/abs/2411.07347}{\dotuline{Pre-print}}, Co-first}{\underbar{Algorithms}, \underbar{Graph Combinatorics}}{
-    \textbf{Alexander Metzger} and Austin Ulrigg. An Efficient Genus Algorithm Based on Graph Rotations.
+\resumeTopItem{[P3]}{\href{https://arxiv.org/abs/2411.07347}{\dotuline{Pre-print, in review to Discrete Mathematics}}}{\underbar{Algorithms}, \underbar{Graph Combinatorics}}{
+    \textbf{Alexander Metzger}* and Austin Ulrigg*. An Efficient Genus Algorithm Based on Graph Rotations.
 }
-\resumeTopItem{[P2]}{\href{https://arxiv.org/abs/2507.17012}{\dotuline{Pre-print}}, Second}{\underbar{ML for Sustainability}, \underbar{CV}, \underbar{Agents}}{
+\resumeTopItem{[P2]}{\href{https://arxiv.org/abs/2507.17012}{\dotuline{Pre-print, in review to ACM SIGCHI}}}{\underbar{ML for Sustainability}, \underbar{CV}, \underbar{Agents}}{
     Zhihan Zhang, \textbf{Alexander Metzger}, Yuxuan Mei, Felix Hähnlein, Zachary Englhardt, Tingyu Cheng, Gregory D. Abowd, Shwetak Patel, Adriana Schulz, Vikram Iyer. Towards Autonomous Sustainability Assessment via Multimodal AI Agents.
 }
-\resumeTopItem{[P1]}{\href{https://hdl.handle.net/1773/53829}{\dotuline{University of Washington Student Research Paper}}, First}{\underbar{Topology}, \underbar{Graph Theory}, \underbar{Algorithms}}{
+\resumeTopItem{[P1]}{\href{https://hdl.handle.net/1773/53829}{\dotuline{University of Washington Student Research Paper}}}{\underbar{Topology}, \underbar{Graph Theory}, \underbar{Algorithms}}{
     \textbf{Alexander Metzger}. A Practical Algorithmic Approach to Graph Embedding. University of Washington. Department of Mathematics. Honors Thesis. https://hdl.handle.net/1773/53829.
 }
 % \resumeTopItem{[P1]}{Pre-print, First}{\underbar{HCI}, \underbar{CV}, \underbar{Medical ML}}{
@@ -201,38 +226,49 @@
 %-----------TALKS-----------------
 \section{Talks}
 \resumeSubHeadingListStart
-\resumeTopItem{[T12]}{\href{https://sandergi.com/images/MAX78000_DEMO.pdf}{\dotuline{Embedded ML - Computer Vision Demo}}}{Oct. 2025}{
-    University of Washington Embedded Capstone, Seattle, WA [20 attendees]
+\resumeTopItem{[T13]}{\href{https://docs.google.com/presentation/d/1XNRk8qb2RPiSYrVpxZaxItbfVP-UmISv/edit?usp=sharing\&ouid=110368631524695946265\&rtpof=true\&sd=true}{\dotuline{In-Context
+            Interactive Environmental Impact Communication}}}{Oct. 2025}{ DUB
+    Research Day, Seattle, WA [100s of attendees, only undergrad of 8
+            invited speakers] }
+
+\resumeTopItem{[T12]}{\href{https://parachidub.wpcomstaging.com/}{\dotuline{eKichabi v2: Designing and Scaling a Dual Platform Technology in Rural Tanzania}}}{May 2024}{
+    DUB Para.chi Event, Seattle, WA [100s of attendees, youngest invited speaker]
 }
-\resumeTopItem{[T10\&11]}{\href{https://docs.google.com/presentation/d/1XNRk8qb2RPiSYrVpxZaxItbfVP-UmISv/edit?usp=sharing\&ouid=110368631524695946265\&rtpof=true\&sd=true}{\dotuline{In-Context Interactive Environmental Impact Communication}}}{Oct. 2025}{
-    DUB Research Day, Seattle, WA | Paul G. Allen's Annual Research Showcase, Seattle, WA [100s of attendees]
+
+\resumeTopItem{[T11]}{\href{https://www.interspeech2025.org/home}{\dotuline{Deploying Speech Technology at Scale}}}{Aug. 2025}{
+    Interspeech Conference, Rotterdam, Netherlands [2K attendees, 1 of 4 speakers invited for the science slam]
 }
-\resumeTopItem{[T9]}{\href{https://www.interspeech2025.org/home}{\dotuline{Deploying Speech Technology at Scale}}}{Aug. 2025}{
-    Interspeech Conference, Rotterdam, Netherlands [2K attendees]
+
+\resumeTopItem{[T10]}{\href{https://docs.google.com/presentation/d/1XNRk8qb2RPiSYrVpxZaxItbfVP-UmISv/edit?usp=sharing\&ouid=110368631524695946265\&rtpof=true\&sd=true}{\dotuline{In-Context Interactive Environmental Impact Communication}}}{Oct. 2025}{
+    Paul G. Allen's Annual Research Showcase, Seattle, WA [100s of attendees, 3 posters and a talk]
 }
-\resumeTopItem{[T7\&8]}{\href{https://docs.google.com/presentation/d/1Giw_u8XKrby_i51ffmLsIflefSI6qQem0FtMYbfchZs/edit?usp=sharing}{\dotuline{Graph Embedding and Genus}} | \href{https://docs.google.com/presentation/d/1i_Cgw6-gkC61TXUSUXWIr0OdXsFOMHFp1-PsEdg3Rvk/edit?usp=sharing}{\dotuline{Speech Technology Built For Everyone, Everwhere}}}{May. 2025}{
+
+\resumeTopItem{[T9]}{\href{https://sandergi.com/images/MAX78000_DEMO.pdf}{\dotuline{Embedded ML - Computer Vision Demo}}}{Oct. 2025}{
+    University of Washington Embedded Systems Capstone Guest Talk, Seattle, WA [20 students]
+}
+
+\resumeTopItem{[T8]}{\href{https://docs.google.com/presentation/d/16tZGX8pRINhTTnhDZHCynEDKyfHl0I9tVnjHukLFnuM/mobilepresent?slide=id.p}{\dotuline{Computational Linguistics for Machine Aided Pronunciation Learning}}}{Oct. 2024}{
+    University of Washington Computational Linguistics Group  Guest Talk, Seattle, WA [30 PhD attendees]
+}
+
+\resumeTopItem{[T7]}{\href{https://sandergi.com/images/CHANGE_Seminar_Talk_eKichabi_v2.pdf}{\dotuline{Designing and Deploying Digital Information Systems in Sub-Saharan Africa}}}{Oct. 2023}{
+    University of Washington CHANGE Seminar Guest Talk, Seattle, WA [40 PhD attendees]
+}
+
+\resumeTopItem{[T6]}{\href{https://docs.google.com/presentation/d/1Giw_u8XKrby_i51ffmLsIflefSI6qQem0FtMYbfchZs/edit?usp=sharing}{\dotuline{Graph Algorithms and Optimization}}}{Nov. 2025}{
+    Northwest Undergraduate Mathematics Symposium, Bothell, WA [30 attendees]
+}
+
+\resumeTopItem{[T4\&T5]}{\href{https://docs.google.com/presentation/d/1Giw_u8XKrby_i51ffmLsIflefSI6qQem0FtMYbfchZs/edit?usp=sharing}{\dotuline{Graph Embedding and Genus}} | \href{https://docs.google.com/presentation/d/1i_Cgw6-gkC61TXUSUXWIr0OdXsFOMHFp1-PsEdg3Rvk/edit?usp=sharing}{\dotuline{Speech Technology Built For Everyone, Everwhere}}}{May. 2025}{
     University of Washington Research Symposium, Seattle, WA [60 attendees]
 }
-% \resumeTopItem{[T7]}{\href{https://www.youtube.com/watch?v=oWEe9op0bb0}{\dotuline{Building Inclusive Speech Technology}}}{Apr. 2025}{
-%     DubHacks Next Demo Day, Seattle, WA [100 attendees]
-% }
-% \resumeTopItem{[T6]}{\href{https://www.youtube.com/watch?v=oWEe9op0bb0}{\dotuline{The Future of Language Learning}}}{Dec. 2024}{
-%     Mozilla Builders Accelerator Demo Day, San Francisco, CA [500 attendees]
-% }
-\resumeTopItem{[T6]}{\href{https://docs.google.com/presentation/d/16tZGX8pRINhTTnhDZHCynEDKyfHl0I9tVnjHukLFnuM/mobilepresent?slide=id.p}{\dotuline{Computational Linguistics for Machine Aided Pronunciation Learning}}}{Oct. 2024}{
-    University of Washington Computational Linguistics Group, Seattle, WA [30 PhD attendees]
-}
-\resumeTopItem{[T4\&5]}{\href{https://www.youtube.com/watch?v=oWEe9op0bb0}{\dotuline{The Future of Language Learning}}}{Sep. \& Dec. 2024}{
+
+\resumeTopItem{[T2\&T3]}{\href{https://www.youtube.com/watch?v=oWEe9op0bb0}{\dotuline{The Future of Language Learning}}}{Sep. \& Dec. 2024}{
     Mozilla Builders, New York, NY | Mozilla Builders, San Francisco, CA [500 attendees]
 }
-% \resumeTopItem{[T4]}{\href{https://docs.google.com/document/d/1-CiYRXL2UK_jAynByqgqHhKYLmjmNsg8y_VNUHJCUFU/mobilebasic}{\dotuline{Local AI and Machine Aided Pronunciation Learning}}}{Sep. 2024}{
-%     Mozilla Builders Accelerator Kickoff Event, New York, NY [50 attendees]
-% }
-\resumeTopItem{[T2\&3]}{\href{https://parachidub.wpcomstaging.com/}{\dotuline{eKichabi v2: Designing and Scaling a Dual Platform Technology in Rural Tanzania}}}{May 2024}{
-    ACM SIGCHI Video Presentation, Remote | Design Use Build's Para.chi Event, Seattle, WA [100s of attendees]
-}
-\resumeTopItem{[T1]}{\href{https://sandergi.com/images/CHANGE_Seminar_Talk_eKichabi_v2.pdf}{\dotuline{Designing and Deploying Digital Information Systems in Sub-Saharan Africa}}}{Oct. 2023}{
-    University of Washington CHANGE Seminar, Seattle, WA [40 PhD attendees]
+
+\resumeTopItem{[T1]}{\href{https://www.youtube.com/watch?v=oWEe9op0bb0}{\dotuline{Building Inclusive Speech Technology}}}{Apr. 2025}{
+    DubHacks Next Demo Day, Seattle, WA [100 attendees]
 }
 \resumeSubHeadingListEnd
 
@@ -247,6 +283,12 @@
 }
 \resumeItem{Trained}{
     SoTA NLP models, cutting streaming latency by 60\% and doubling accuracy.
+}
+\resumeItem{Managed}{
+    open-source team of 4 engineers and 6 researchers from CMU, UToronto, UT Austin, and UBC.
+}
+\resumeItem{Established}{
+    strategic partnerships and research collaborations with 5 companies and 5 institutions.
 }
 \resumeItemListEnd
 
@@ -263,7 +305,7 @@
 \resumeSubheading{Akvelon, Inc.}{Software Development Intern}{Jun. 2023 -- Aug. 2023}
 \resumeItemListStart
 \resumeItem{Led}{
-    team of 4 to make 200K open-source contributions to 7 Microsoft repos across 27 pull requests [H1].
+    team of 4 to make 200K open-source contributions to 7 Microsoft repos across 27 pull requests.
 }
 \resumeItemListEnd
 
@@ -295,19 +337,6 @@
 }
 \resumeItemListEnd
 
-\resumeSubHeadingListEnd
-
-%--------AWARDS AND FUNDING------------
-\section{Awards and Funding}
-\resumeSubHeadingListStart
-\resumeLineItem{[H8] Google Research}{Special Google TPU Research Cloud Access}{2025}
-\resumeLineItem{[H7] Nvidia Inception}{Accepted Startup Founder, GPUs}{2025}
-\resumeLineItem{[H6] Meta+8VC Next Llama Stack Hackathon}{1st Place, \$1K Prize}{2025}
-\resumeLineItem{[H5] Microsoft Imagine Cup}{Semifinalist, \$5K cloud credits}{2025}
-\resumeLineItem{[H4] Clean Energy Institute}{TARs Research Grant}{2025}
-\resumeLineItem{[H3] CRA Outstanding Undergraduate Researcher Award}{Honorable Mention}{2025}
-\resumeLineItem{[H2] Mozilla Builders Accelerator}{\$39K research grant, \$35K cloud credits}{2024}
-\resumeLineItem{[H1] Akvelon Mentor's Choice}{Outstanding Leadership}{2023}
 \resumeSubHeadingListEnd
 
 %-------------------------------------------
