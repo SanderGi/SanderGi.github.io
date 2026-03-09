@@ -12,7 +12,7 @@ const audioInput = document.getElementById("audioFile");
 const runButton = document.getElementById("run");
 
 configureOrtWeb({
-  wasmPaths: "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.23.0/dist/",
+  wasmPaths: "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.24.3/dist/",
 });
 
 let modelPromise = null;
