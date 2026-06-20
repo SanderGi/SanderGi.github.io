@@ -123,9 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setActive(current.link);
   }
 
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => setActive(link));
-  });
   updateActiveSection();
   window.addEventListener("scroll", updateActiveSection, { passive: true });
 });
