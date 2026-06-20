@@ -562,7 +562,7 @@ footer > p {
   height: auto;
   aspect-ratio: 1;
   border-radius: 26px;
-  box-shadow: 18px 18px 0 var(--coral), -18px -18px 0 var(--mint), 0 28px 60px rgba(35, 49, 61, 0.17);
+  box-shadow: 18px 18px 0 var(--coral), -18px -18px 0 var(--teal), 0 28px 60px rgba(35, 49, 61, 0.17);
   overflow: hidden;
 }
 
