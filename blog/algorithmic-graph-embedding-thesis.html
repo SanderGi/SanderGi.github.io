@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A Gentle Door Into Graphs on Surfaces</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/refresh.css" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <meta name="author" content="Alexander Metzger" />
+    <meta name="description" content="A lay summary of my UW honors thesis, which builds intuition for topological graph theory and the Practical Algorithm for Graph Embedding." />
+    <meta name="keywords" content="Research,Algorithms,Math,Graph Theory" />
+    <meta name="dcterms.created" content="2026-06-13" />
+    <meta property="og:image" content="/images/genusfolding.png | surfaces folded and glued from polygons" />
+  </head>
+  <body>
+    <nav id="nav">
+      <ul class="container">
+        <li><a href="/index.html#top">Home</a></li>
+        <li><a href="/index.html#work">Research</a></li>
+        <li><a href="/index.html#portfolio">Portfolio</a></li>
+        <li><a href="/blog.html">Writing</a></li>
+        <li><a href="/index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <article class="wrapper style1 post-hero">
+      <div class="container">
+        <p class="eyebrow">Honors Thesis</p>
+        <h1>A gentle door into graphs on surfaces</h1>
+        <p>
+          The thesis turns topological graph theory into a guided path from
+          drawings and glued polygons to a practical genus algorithm.
+        </p>
+        <div class="post-meta"><span>Alexander Metzger</span><span>June 13, 2026</span></div>
+        <div class="pills">
+          <span>UW Mathematics</span><span>Topology</span><span>PAGE</span>
+        </div>
+        <img class="post-cover" src="/images/genusfolding.png" alt="surfaces folded and glued from polygons" />
+      </div>
+    </article>
+    <section class="wrapper style3 post-body">
+      <div class="container">
+        <article>
+          <p class="post-callout">
+            The thesis explains minimal-genus graph embedding and studies PAGE,
+            a Practical Algorithm for Graph Embedding that uses cycle structure
+            to work efficiently in practice.
+          </p>
+          <h2>Why surfaces enter the story</h2>
+          <p>
+            Graph theory often begins on paper: dots and lines. But many graphs
+            are not really paper-friendly. They need a richer surface before
+            their edges can avoid crossing. A torus, for example, gives K3,3 a
+            path around the hole that a flat sheet cannot provide.
+          </p>
+          <p>
+            The thesis starts by building that intuition carefully: topology,
+            compact surfaces, graph embeddings, and rotation systems. Rotation
+            systems are especially delightful because they convert a geometric
+            drawing question into combinatorial data about the order of edges
+            around vertices.
+          </p>
+          <h2>From exposition to algorithm</h2>
+          <p>
+            Once embeddings can be described combinatorially, they become
+            searchable. PAGE takes advantage of the cycle sequence of a graph,
+            which is especially useful for graphs with high girth or low degree.
+            The thesis walks through the algorithm and its results, including
+            the genus-17 computation for the (3,12)-cage.
+          </p>
+          <h2>Why it matters</h2>
+          <p>
+            I like this project because it is both visual and computational.
+            The pictures give you intuition; the rotation systems give you a
+            certificate; the implementation gives you something you can run.
+            That combination is exactly what makes algorithmic mathematics feel
+            alive.
+          </p>
+          <div class="post-links">
+            <a class="button" href="/images/UndergraduateMathThesis.pdf" target="_blank">Read the thesis</a>
+            <a class="button alt" href="https://github.com/SanderGi/Genus" target="_blank">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <script src="/assets/js/site.js"></script>
+  </body>
+</html>

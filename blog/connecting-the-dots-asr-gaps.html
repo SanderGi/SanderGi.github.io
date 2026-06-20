@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Speech AI Progress Is Not Evenly Distributed</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/refresh.css" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <meta name="author" content="Alexander Metzger" />
+    <meta name="description" content="A lay summary of Connecting the Dots, our draft on why automatic speech recognition improvements for mainstream English do not reliably transfer to minority English varieties." />
+    <meta name="keywords" content="Research,Speech,Fairness,ML" />
+    <meta name="dcterms.created" content="2026-06-19" />
+    <meta property="og:image" content="/images/connecting-the-dots-allstar-dhr.png | ASR word error rate plot for ALLSTAR DHR accents" />
+  </head>
+  <body>
+    <nav id="nav">
+      <ul class="container">
+        <li><a href="/index.html#top">Home</a></li>
+        <li><a href="/index.html#work">Research</a></li>
+        <li><a href="/index.html#portfolio">Portfolio</a></li>
+        <li><a href="/blog.html">Writing</a></li>
+        <li><a href="/index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <article class="wrapper style1 post-hero">
+      <div class="container">
+        <p class="eyebrow">Speech Fairness</p>
+        <h1>Speech AI progress is not evenly distributed</h1>
+        <p>
+          Bigger speech models can look better every year while still leaving
+          many English speakers with unstable, unreliable transcripts.
+        </p>
+        <div class="post-meta"><span>Alexander Metzger</span><span>June 19, 2026</span></div>
+        <div class="pills">
+          <span>Pre-print Draft</span><span>ASR Fairness</span><span>World Englishes</span>
+        </div>
+        <img class="post-cover" src="/images/connecting-the-dots-allstar-dhr.png" alt="ASR word error rate plot for ALLSTAR DHR accents" />
+      </div>
+    </article>
+    <section class="wrapper style3 post-body">
+      <div class="container">
+        <article>
+          <p class="post-callout">
+            The draft studies 16 speech recognition systems released from 2021
+            to 2025 across 8 accent-aware evaluations. The core finding is
+            uncomfortable: the gap between mainstream and minority English
+            varieties is stubborn, and minority accents can suffer large
+            regressions between model generations.
+          </p>
+          <h2>The optimism we tested</h2>
+          <p>
+            There is a familiar assumption in machine learning: bigger models,
+            more data, and newer releases will eventually wash away old biases.
+            For speech recognition, that would mean that today's accent gaps are
+            temporary glitches. Wait a few generations and the rising tide lifts
+            every speaker.
+          </p>
+          <p>
+            Connecting the Dots asks whether that story holds up over time. We
+            evaluate systems on datasets that include Mainstream US English and
+            Standard Southern British English alongside many minority English
+            varieties. Instead of asking whether one model has one average word
+            error rate, we ask how performance changes for different speakers
+            across successive releases.
+          </p>
+          <h2>What we found</h2>
+          <p>
+            Mainstream US English is consistently protected by standard
+            benchmarking practice. It often stays stable and can approach very
+            low error rates. Minority accents, by contrast, can improve in one
+            generation and degrade sharply in the next. In some cases, the draft
+            finds degradations as large as 65 percentage points in absolute word
+            error rate between systems.
+          </p>
+          <p>
+            That means "state of the art" is not a single global fact. A model
+            can be newer and better on a leaderboard while becoming worse for a
+            speaker whose accent was not represented in the evaluation culture
+            surrounding that model.
+          </p>
+          <h2>Why it matters</h2>
+          <p>
+            Speech recognition is now used in schools, workplaces, immigration
+            systems, hiring workflows, call centers, and accessibility tools.
+            In those settings, bad transcripts are not merely annoying. They can
+            change who gets understood, who gets help, and who gets treated as
+            competent.
+          </p>
+          <p>
+            The fix is not one magic model. It is continuous, disaggregated
+            auditing: developers and deployers need to check which speakers are
+            helped, which speakers are harmed, and whether a new release quietly
+            breaks performance for communities outside the benchmark center.
+          </p>
+        </article>
+      </div>
+    </section>
+    <script src="/assets/js/site.js"></script>
+  </body>
+</html>

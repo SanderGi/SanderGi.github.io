@@ -7,62 +7,20 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="icon" type="image/x-icon" href="/images/icons8-coding-64.png" />
-    <style>
-      .search-container {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-      }
-
-      #search-input {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-      }
-
-      .tag-filters {
-        margin-top: 10px;
-      }
-
-      .tag {
-        display: inline-block;
-        padding: 5px 10px;
-        background-color: #f0f0f0;
-        border: 1px solid #ddd;
-        border-radius: 15px;
-        margin-right: 5px;
-        margin-bottom: 5px;
-        cursor: pointer;
-        text-shadow: none;
-      }
-
-      .tag.active {
-        background-color: #B1B2FF;
-        color: white;
-      }
-
-      .item {
-        padding: 10px;
-        border: 1px solid #eee;
-        margin-bottom: 5px;
-      }
-
-      .hidden {
-        display: none;
-      }
-    </style>
+    <link rel="stylesheet" href="assets/css/refresh.css" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   </head>
   <body class="is-preload">
     <!-- Nav -->
     <nav id="nav">
       <ul class="container">
         <li><a href="index.html#top">Home</a></li>
-        <li><a href="index.html#work">About</a></li>
+        <li><a href="index.html#work">Research</a></li>
         <li><a href="index.html#portfolio">Portfolio</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="blog.html">Writing</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
@@ -70,9 +28,11 @@
     <article id="portfolio" class="wrapper style3">
       <div class="container">
         <header style="margin-bottom: 1em">
-          <h2 id="blog">Blog.</h2>
+          <p class="eyebrow">Writing</p>
+          <h2 id="blog">Research notes for curious people.</h2>
           <p>
-            Read about my research, my side-projects, and my interests.
+            Plain-language tours through the papers, prototypes, and ideas
+            behind my work.
           </p>
         </header>
 
@@ -80,15 +40,16 @@
           <input type="search" id="search-input" placeholder="Search..." />
           <div class="tag-filters">
             <span class="tag" data-tag="Research">Research</span>
-            <span class="tag" data-tag="Project">Projects</span>
-            <span class="tag" data-tag="Tutorial">Tutorials</span>
-            <span class="tag" data-tag="SWE">SWE</span>
+            <span class="tag" data-tag="Speech">Speech</span>
+            <span class="tag" data-tag="Sustainability">Sustainability</span>
+            <span class="tag" data-tag="Access">Access</span>
+            <span class="tag" data-tag="Algorithms">Algorithms</span>
             <span class="tag" data-tag="Math">Math</span>
             <span class="tag" data-tag="ML">ML</span>
           </div>
         </div>
 
-        <div id="item-list" style="text-align: left;">
+        <div id="item-list" class="blog-list">
           {blog_list}
         </div>
       </div>
@@ -118,7 +79,7 @@
               activeTags.every((tag) => itemTags.includes(tag));
 
             if (matchesSearch && matchesTags) {
-              item.style.display = "flex";
+              item.style.display = "";
             } else {
               item.style.display = "none";
             }
@@ -137,5 +98,6 @@
         filterItems(); // Initial filter on page load
       });
     </script>
+    <script src="assets/js/site.js"></script>
   </body>
 </html>

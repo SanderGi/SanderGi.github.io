@@ -13,6 +13,20 @@ function markdown_to_html(markdown) {
     .replace(/\[([^\[]+)\](\(([^)]*))\)/gim, '<a href="$3">$1</a>'); // anchor tags
 }
 
+function read_meta(content, name, fallback = "") {
+  const match = content.match(
+    new RegExp(`<meta\\s+name=["']${name}["']\\s+content=["']([^"']*)["']`, "i")
+  );
+  return match ? match[1] : fallback;
+}
+
+function read_property(content, property, fallback = "") {
+  const match = content.match(
+    new RegExp(`<meta\\s+property=["']${property}["']\\s+content=["']([^"']*)["']`, "i")
+  );
+  return match ? match[1] : fallback;
+}
+
 function update_blog_list() {
   const template = fs.readFileSync("./blog_template.html").toString();
   const [template_start, template_end] = template.split("{blog_list}", 2);
@@ -25,29 +39,26 @@ function update_blog_list() {
     }
 
     files.forEach((file) => {
+      if (!file.endsWith(".html")) return;
+
       const url = "./blog/" + file;
       const content = fs.readFileSync(url).toString();
+      if (read_meta(content, "draft").toLowerCase() === "true") return;
+
       const title = content.split("<title>", 2)[1].split("</", 2)[0];
-      const author = content
-        .split('<meta name="author" content="', 2)[1]
-        .split('"', 2)[0];
-      const description = content
-        .split('<meta name="description" content="', 2)[1]
-        .split('"', 2)[0];
-      const keywords = content
-        .split('<meta name="keywords" content="', 2)[1]
-        .split('"', 2)[0]
+      const author = read_meta(content, "author", "Alexander Metzger");
+      const description = read_meta(content, "description");
+      const keywords = read_meta(content, "keywords", "Research")
         .split(",");
-      const created = content
-        .split('<meta name="dcterms.created" content="', 2)[1]
-        .split('"', 2)[0];
-      const [image, alt] = content
-        .split('<meta property="og:image" content="', 2)[1]
-        .split('"', 2)[0]
-        .split(" | ");
+      const created = read_meta(content, "dcterms.created");
+      const [image, alt] = read_property(
+        content,
+        "og:image",
+        "/images/profile.jpg | Alex Metzger"
+      ).split(" | ");
       blog_list.push([
         /* html */ `
-          <article class="card" data-tags="${keywords}">
+          <article class="card blog-card" data-tags="${keywords}">
             <a
               href="${url}"
               class="card-img">
@@ -56,11 +67,12 @@ function update_blog_list() {
             <div class="card-content">
               <h3><a href="${url}">${title}</a></h3>
               <p>${markdown_to_html(description)}</p>
+              <div class="blog-meta">
+                <span>${author}</span>
+                <span>${created}</span>
+              </div>
               <div class="pills">
-                ${keywords.map((k) => "<span>" + k + "</span> ").join("")}
-                <div style="float: right; margin-right: 1em">
-                  ${author} • ${created}
-                </div>
+                ${keywords.map((k) => "<span>" + k.trim() + "</span> ").join("")}
               </div>
             </div>
           </article>
@@ -80,13 +92,15 @@ function update_blog_list() {
   });
 }
 
-fs.watch(".", (_, filename) => {
-  if (!["blog_template.html"].includes(filename)) return;
-  update_blog_list();
-});
-
-fs.watch("./blog", () => {
-  update_blog_list();
-});
-
 update_blog_list();
+
+if (process.argv.includes("--watch")) {
+  fs.watch(".", (_, filename) => {
+    if (!["blog_template.html"].includes(filename)) return;
+    update_blog_list();
+  });
+
+  fs.watch("./blog", () => {
+    update_blog_list();
+  });
+}

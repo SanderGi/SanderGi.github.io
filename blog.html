@@ -12,51 +12,6 @@
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-    <style>
-      .search-container {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-      }
-
-      #search-input {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-      }
-
-      .tag-filters {
-        margin-top: 10px;
-      }
-
-      .tag {
-        display: inline-block;
-        padding: 5px 10px;
-        background-color: #f0f0f0;
-        border: 1px solid #ddd;
-        border-radius: 15px;
-        margin-right: 5px;
-        margin-bottom: 5px;
-        cursor: pointer;
-        text-shadow: none;
-      }
-
-      .tag.active {
-        background-color: #B1B2FF;
-        color: white;
-      }
-
-      .item {
-        padding: 10px;
-        border: 1px solid #eee;
-        margin-bottom: 5px;
-      }
-
-      .hidden {
-        display: none;
-      }
-    </style>
   </head>
   <body class="is-preload">
     <!-- Nav -->
@@ -73,9 +28,11 @@
     <article id="portfolio" class="wrapper style3">
       <div class="container">
         <header style="margin-bottom: 1em">
-          <h2 id="blog">Blog.</h2>
+          <p class="eyebrow">Writing</p>
+          <h2 id="blog">Research notes for curious people.</h2>
           <p>
-            Read about my research, my side-projects, and my interests.
+            Plain-language tours through the papers, prototypes, and ideas
+            behind my work.
           </p>
         </header>
 
@@ -83,120 +40,165 @@
           <input type="search" id="search-input" placeholder="Search..." />
           <div class="tag-filters">
             <span class="tag" data-tag="Research">Research</span>
-            <span class="tag" data-tag="Project">Projects</span>
-            <span class="tag" data-tag="Tutorial">Tutorials</span>
-            <span class="tag" data-tag="SWE">SWE</span>
+            <span class="tag" data-tag="Speech">Speech</span>
+            <span class="tag" data-tag="Sustainability">Sustainability</span>
+            <span class="tag" data-tag="Access">Access</span>
+            <span class="tag" data-tag="Algorithms">Algorithms</span>
             <span class="tag" data-tag="Math">Math</span>
             <span class="tag" data-tag="ML">ML</span>
           </div>
         </div>
 
-        <div id="item-list" style="text-align: left;">
+        <div id="item-list" class="blog-list">
           
-          <article class="card" data-tags="SWE,Code Optimization,ML,CV">
+          <article class="card blog-card" data-tags="Research,Speech,ML,Accessibility">
             <a
-              href="./blog/optimizing-deep-live-cam.html"
+              href="./blog/scaling-human-g2p-supervision.html"
               class="card-img">
-              <img src="/images/chadalex.png" alt="me with the Chad meme face merged in"/>
+              <img src="/images/xlsrenglish01.png" alt="phonetic transcription benchmark chart"/>
             </a>
             <div class="card-content">
-              <h3><a href="./blog/optimizing-deep-live-cam.html">I optimized DLC so you can look like anyone in real-time</a></h3>
-              <p>Whether for pranking your friends and coworkers in video calls or creating content, a popular tool to change your face in camera streams is <a href="https://github.com/hacksider/Deep-Live-Cam">Deep Live Cam (DLC)</a> &mdash; 75K stars! But even on beefy M4 Macbook Pros, it snails away at gray-hair-inducing 1-3 FPS. Luckily, with some quick tricks, we can boost it to 10-20 FPS, even on CPU, and save the gray hairs for the deep fakes!</p>
+              <h3><a href="./blog/scaling-human-g2p-supervision.html">When More Synthetic Speech Labels Stop Helping</a></h3>
+              <p>A plain-language tour of our Interspeech 2026 paper on phonetic transcription, why synthetic labels help only up to a point, and what this means for accent-robust speech technology.</p>
+              <div class="blog-meta">
+                <span>Alexander Metzger</span>
+                <span>2026-06-20</span>
+              </div>
               <div class="pills">
-                <span>SWE</span> <span>Code Optimization</span> <span>ML</span> <span>CV</span> 
-                <div style="float: right; margin-right: 1em">
-                  Alexander Le Metzger • 2025-09-10
-                </div>
+                <span>Research</span> <span>Speech</span> <span>ML</span> <span>Accessibility</span> 
               </div>
             </div>
           </article>
         
-          <article class="card" data-tags="Math,Topology,Graph Theory,Combinatorics">
+          <article class="card blog-card" data-tags="Research,Speech,Fairness,ML">
             <a
-              href="./blog/topological-graph-embedding.html"
+              href="./blog/connecting-the-dots-asr-gaps.html"
               class="card-img">
-              <img src="/images/k3-3torus.png" alt="me with the Chad meme face merged in"/>
+              <img src="/images/connecting-the-dots-allstar-dhr.png" alt="ASR word error rate plot for ALLSTAR DHR accents"/>
             </a>
             <div class="card-content">
-              <h3><a href="./blog/topological-graph-embedding.html">Graph Embedding and Why You Should Care</a></h3>
-              <p></p>
+              <h3><a href="./blog/connecting-the-dots-asr-gaps.html">Speech AI Progress Is Not Evenly Distributed</a></h3>
+              <p>A lay summary of Connecting the Dots, our draft on why automatic speech recognition improvements for mainstream English do not reliably transfer to minority English varieties.</p>
+              <div class="blog-meta">
+                <span>Alexander Metzger</span>
+                <span>2026-06-19</span>
+              </div>
               <div class="pills">
-                <span>Math</span> <span>Topology</span> <span>Graph Theory</span> <span>Combinatorics</span> 
-                <div style="float: right; margin-right: 1em">
-                  Alexander Le Metzger • 2025-09-08
-                </div>
+                <span>Research</span> <span>Speech</span> <span>Fairness</span> <span>ML</span> 
               </div>
             </div>
           </article>
         
-          <article class="card" data-tags="ML,Quantization,Pruning,Distillation">
+          <article class="card blog-card" data-tags="Research,Access,HCI,ICTD">
             <a
-              href="./blog/model-compression-yolo-pico.html"
+              href="./blog/ekichabi-v2-tanzania.html"
               class="card-img">
-              <img src="/images/numbers.png" alt="some numbers representing model weights"/>
+              <img src="/images/eKichabiUSSD.png" alt="eKichabi USSD phone interface"/>
             </a>
             <div class="card-content">
-              <h3><a href="./blog/model-compression-yolo-pico.html">Squeezing Deep Learning Models onto Microcontrollers</a></h3>
-              <p>The art of model compression</p>
+              <h3><a href="./blog/ekichabi-v2-tanzania.html">Building Agricultural Search for Both Smartphones and Feature Phones</a></h3>
+              <p>A lay summary of eKichabi v2, our CHI 2024 work on designing and scaling agricultural directory technology for nearly 10,000 rural Tanzanian enterprises.</p>
+              <div class="blog-meta">
+                <span>Alexander Metzger</span>
+                <span>2026-06-18</span>
+              </div>
               <div class="pills">
-                <span>ML</span> <span>Quantization</span> <span>Pruning</span> <span>Distillation</span> 
-                <div style="float: right; margin-right: 1em">
-                  Alexander Le Metzger • 2025-04-04
-                </div>
+                <span>Research</span> <span>Access</span> <span>HCI</span> <span>ICTD</span> 
               </div>
             </div>
           </article>
         
-          <article class="card" data-tags="Tutorial,NPM,JavaScript,Sqlite-Auto-Migrator">
+          <article class="card blog-card" data-tags="Research,Sustainability,ML,Agents">
             <a
-              href="./blog/npm-lib-sqlite-auto-migrator.html"
+              href="./blog/ai-agents-lca.html"
               class="card-img">
-              <img src="/images/SAM.png" alt="me with the Chad meme face merged in"/>
+              <img src="/images/ai-agents-lca-fig1.jpg" alt="overview of multimodal AI agents for life-cycle assessment"/>
             </a>
             <div class="card-content">
-              <h3><a href="./blog/npm-lib-sqlite-auto-migrator.html">I made an NPM library and you can too!</a></h3>
-              <p></p>
+              <h3><a href="./blog/ai-agents-lca.html">Can AI Agents Estimate the Carbon Footprint of Electronics?</a></h3>
+              <p>A plain-language breakdown of our Nature Electronics paper on multimodal AI agents that estimate electronics carbon footprints from public information.</p>
+              <div class="blog-meta">
+                <span>Alexander Metzger</span>
+                <span>2026-06-17</span>
+              </div>
               <div class="pills">
-                <span>Tutorial</span> <span>NPM</span> <span>JavaScript</span> <span>Sqlite-Auto-Migrator</span> 
-                <div style="float: right; margin-right: 1em">
-                  Alexander Le Metzger • 2024-04-02
-                </div>
+                <span>Research</span> <span>Sustainability</span> <span>ML</span> <span>Agents</span> 
               </div>
             </div>
           </article>
         
-          <article class="card" data-tags="Research,eKichabi,Farmer.chat,ICT4D">
+          <article class="card blog-card" data-tags="Research,ML,Embedded,Agents">
             <a
-              href="./blog/ekichabi-and-farmerchat.html"
+              href="./blog/embedded-arena.html"
               class="card-img">
-              <img src="/images/eKichabiUSSD.jpg" alt="me with the Chad meme face merged in"/>
+              <img src="/images/donutcircuit.png" alt="embedded machine learning hardware"/>
             </a>
             <div class="card-content">
-              <h3><a href="./blog/ekichabi-and-farmerchat.html">The Things They Don't Tell You About Deploying Technology to Millions of Sub-Saharan Subsistence Farmers</a></h3>
-              <p></p>
+              <h3><a href="./blog/embedded-arena.html">Giving AI Agents Real Hardware to Learn From</a></h3>
+              <p>A lay summary of Embedded Arena, our benchmark and hardware-in-the-loop harness for AI agents optimizing machine learning models on microcontrollers.</p>
+              <div class="blog-meta">
+                <span>Alexander Metzger</span>
+                <span>2026-06-16</span>
+              </div>
               <div class="pills">
-                <span>Research</span> <span>eKichabi</span> <span>Farmer.chat</span> <span>ICT4D</span> 
-                <div style="float: right; margin-right: 1em">
-                  Alexander Le Metzger • 2024-03-15
-                </div>
+                <span>Research</span> <span>ML</span> <span>Embedded</span> <span>Agents</span> 
               </div>
             </div>
           </article>
         
-          <article class="card" data-tags="SWE,Joke,Tutorial,HTMS">
+          <article class="card blog-card" data-tags="Research,Sustainability,HCI,Access">
             <a
-              href="./blog/joke-html-framework-htms.html"
+              href="./blog/living-sustainability.html"
               class="card-img">
-              <img src="/images/HTMS.png" alt="me with the Chad meme face merged in"/>
+              <img src="/images/living_sustainability.png" alt="living sustainability browser extension"/>
             </a>
             <div class="card-content">
-              <h3><a href="./blog/joke-html-framework-htms.html">Addressing the JavaScript Framework Shortage with HTML</a></h3>
-              <p></p>
+              <h3><a href="./blog/living-sustainability.html">Making Product Sustainability Visible While You Shop</a></h3>
+              <p>A plain-language summary of Living Sustainability, our IMWUT work on in-context interactive environmental impact communication for everyday product decisions.</p>
+              <div class="blog-meta">
+                <span>Alexander Metzger</span>
+                <span>2026-06-15</span>
+              </div>
               <div class="pills">
-                <span>SWE</span> <span>Joke</span> <span>Tutorial</span> <span>HTMS</span> 
-                <div style="float: right; margin-right: 1em">
-                  Alexander Le Metzger • 2024-02-10
-                </div>
+                <span>Research</span> <span>Sustainability</span> <span>HCI</span> <span>Access</span> 
+              </div>
+            </div>
+          </article>
+        
+          <article class="card blog-card" data-tags="Research,Algorithms,Math,Graph Theory">
+            <a
+              href="./blog/efficient-genus-algorithm.html"
+              class="card-img">
+              <img src="/images/k3-3torus.png" alt="K3,3 embedded on a torus"/>
+            </a>
+            <div class="card-content">
+              <h3><a href="./blog/efficient-genus-algorithm.html">How Many Holes Does a Graph Need?</a></h3>
+              <p>A friendly explanation of our graph genus algorithm, why drawing graphs on surfaces matters, and how rotations helped compute the genus of the (3,12)-cage.</p>
+              <div class="blog-meta">
+                <span>Alexander Metzger</span>
+                <span>2026-06-14</span>
+              </div>
+              <div class="pills">
+                <span>Research</span> <span>Algorithms</span> <span>Math</span> <span>Graph Theory</span> 
+              </div>
+            </div>
+          </article>
+        
+          <article class="card blog-card" data-tags="Research,Algorithms,Math,Graph Theory">
+            <a
+              href="./blog/algorithmic-graph-embedding-thesis.html"
+              class="card-img">
+              <img src="/images/genusfolding.png" alt="surfaces folded and glued from polygons"/>
+            </a>
+            <div class="card-content">
+              <h3><a href="./blog/algorithmic-graph-embedding-thesis.html">A Gentle Door Into Graphs on Surfaces</a></h3>
+              <p>A lay summary of my UW honors thesis, which builds intuition for topological graph theory and the Practical Algorithm for Graph Embedding.</p>
+              <div class="blog-meta">
+                <span>Alexander Metzger</span>
+                <span>2026-06-13</span>
+              </div>
+              <div class="pills">
+                <span>Research</span> <span>Algorithms</span> <span>Math</span> <span>Graph Theory</span> 
               </div>
             </div>
           </article>
@@ -229,7 +231,7 @@
               activeTags.every((tag) => itemTags.includes(tag));
 
             if (matchesSearch && matchesTags) {
-              item.style.display = "flex";
+              item.style.display = "";
             } else {
               item.style.display = "none";
             }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>When More Synthetic Speech Labels Stop Helping</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/refresh.css" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <meta name="author" content="Alexander Metzger" />
+    <meta name="description" content="A plain-language tour of our Interspeech 2026 paper on phonetic transcription, why synthetic labels help only up to a point, and what this means for accent-robust speech technology." />
+    <meta name="keywords" content="Research,Speech,ML,Accessibility" />
+    <meta name="dcterms.created" content="2026-06-20" />
+    <meta property="og:image" content="/images/xlsrenglish01.png | phonetic transcription benchmark chart" />
+  </head>
+  <body>
+    <nav id="nav">
+      <ul class="container">
+        <li><a href="/index.html#top">Home</a></li>
+        <li><a href="/index.html#work">Research</a></li>
+        <li><a href="/index.html#portfolio">Portfolio</a></li>
+        <li><a href="/blog.html">Writing</a></li>
+        <li><a href="/index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <article class="wrapper style1 post-hero">
+      <div class="container">
+        <p class="eyebrow">Inclusive Speech</p>
+        <h1>When more synthetic speech labels stop helping</h1>
+        <p>
+          Robust pronunciation feedback needs to hear what people actually say,
+          not just what standard English spelling suggests they should say.
+        </p>
+        <div class="post-meta"><span>Alexander Metzger</span><span>June 20, 2026</span></div>
+        <div class="pills">
+          <span>Interspeech 2026</span><span>Speech ML</span><span>Phonetic Transcription</span>
+        </div>
+        <img class="post-cover" src="/images/xlsrenglish01.png" alt="phonetic transcription benchmark chart" />
+      </div>
+    </article>
+    <section class="wrapper style3 post-body">
+      <div class="container">
+        <article>
+          <p class="post-callout">
+            The headline result: auto-generated phonetic labels are useful when
+            human labels are scarce, but after roughly 20 to 30 hours of human
+            annotation they can stop helping and even hurt cross-dialect robustness.
+          </p>
+          <h2>The everyday problem</h2>
+          <p>
+            A speech recognizer writes words. A phonetic transcriber tries to
+            write sounds. That distinction matters for pronunciation learning,
+            speech therapy, accent research, and any tool that needs to notice
+            how a word was said rather than only guessing which word was meant.
+          </p>
+          <p>
+            The catch is that expert phonetic annotation is slow and expensive.
+            A common shortcut is grapheme-to-phoneme labeling: give a model the
+            text and ask it to predict the expected pronunciation. That creates
+            lots of labels cheaply, but it also risks teaching the model an
+            idealized pronunciation instead of the sound in the recording.
+          </p>
+          <h2>What we tested</h2>
+          <p>
+            We studied English phonetic transcription across native, non-native,
+            and post-stroke speech using a curated 80-hour benchmark. Then we
+            asked a practical scaling question: when should a team spend its next
+            dollar on more expert labels, and when is synthetic supervision good
+            enough?
+          </p>
+          <p>
+            The surprising answer is not "more data always wins." G2P labels are
+            helpful in the low-data regime. Once there is a meaningful amount of
+            human annotation, the better recipe is strong ASR pretraining plus
+            carefully curated human labels. That recipe achieved a 2.3x reduction
+            in weighted phone feature error rate over prior systems, with gains
+            on non-native and aphasic speech.
+          </p>
+          <h2>Why it matters</h2>
+          <p>
+            The work pushes against a tempting story in speech ML: if labels are
+            cheap, scale them up. For inclusive speech systems, label quality and
+            dialect coverage can matter more than raw quantity. A pronunciation
+            tutor, clinical tool, or linguistic analysis pipeline should not
+            become confident by averaging away the very differences it needs to
+            hear.
+          </p>
+          <div class="post-links">
+            <a class="button" href="https://arxiv.org/abs/2606.16019" target="_blank">Read the paper</a>
+            <a class="button alt" href="https://huggingface.co/KoelLabs/xlsr-english-01" target="_blank">Try the model</a>
+            <a class="button alt" href="https://github.com/KoelLabs/ML" target="_blank">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <script src="/assets/js/site.js"></script>
+  </body>
+</html>

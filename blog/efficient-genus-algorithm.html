@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How Many Holes Does a Graph Need?</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/refresh.css" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <meta name="author" content="Alexander Metzger" />
+    <meta name="description" content="A friendly explanation of our graph genus algorithm, why drawing graphs on surfaces matters, and how rotations helped compute the genus of the (3,12)-cage." />
+    <meta name="keywords" content="Research,Algorithms,Math,Graph Theory" />
+    <meta name="dcterms.created" content="2026-06-14" />
+    <meta property="og:image" content="/images/k3-3torus.png | K3,3 embedded on a torus" />
+  </head>
+  <body>
+    <nav id="nav">
+      <ul class="container">
+        <li><a href="/index.html#top">Home</a></li>
+        <li><a href="/index.html#work">Research</a></li>
+        <li><a href="/index.html#portfolio">Portfolio</a></li>
+        <li><a href="/blog.html">Writing</a></li>
+        <li><a href="/index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <article class="wrapper style1 post-hero">
+      <div class="container">
+        <p class="eyebrow">Graph Algorithms</p>
+        <h1>How many holes does a graph need?</h1>
+        <p>
+          Some graphs cannot be drawn flat without crossings. The genus asks:
+          what surface makes the drawing possible?
+        </p>
+        <div class="post-meta"><span>Alexander Metzger</span><span>June 14, 2026</span></div>
+        <div class="pills">
+          <span>Graph Theory</span><span>Algorithms</span><span>Topology</span>
+        </div>
+        <img class="post-cover" src="/images/k3-3torus.png" alt="K3,3 embedded on a torus" />
+      </div>
+    </article>
+    <section class="wrapper style3 post-body">
+      <div class="container">
+        <article>
+          <p class="post-callout">
+            Our algorithm determines the orientable genus of a graph, outputs an
+            optimal embedding, and proved that the previously stubborn
+            (3,12)-cage has genus 17.
+          </p>
+          <h2>The puzzle</h2>
+          <p>
+            Imagine trying to connect three houses to three utilities without
+            any pipes crossing. On a flat sheet, the classic utility graph
+            K3,3 cannot be drawn cleanly. On a donut-shaped surface, it can.
+            That one hole changes what is possible.
+          </p>
+          <p>
+            The genus of a graph is the smallest number of holes needed in a
+            surface so the graph can be drawn without crossings. This is a
+            beautiful mathematical invariant, but it also connects to circuit
+            layout, network design, visualization, and other settings where
+            crossings are costly or meaningful.
+          </p>
+          <h2>The algorithmic trick</h2>
+          <p>
+            Instead of trying every drawing directly, the algorithm works with
+            rotations: the cyclic order of edges around each vertex. Those local
+            choices determine the faces of a surface embedding. By using cycle
+            structure, the search can narrow upper and lower bounds and avoid
+            some bridge-placement headaches that make genus algorithms difficult
+            in practice.
+          </p>
+          <p>
+            The result is practical in a very satisfying sense: it is relatively
+            simple to implement, it returns a certificate that can be checked,
+            and it can produce the actual faces of the optimal embedding rather
+            than only a number.
+          </p>
+          <h2>Why it matters</h2>
+          <p>
+            Computing the genus of the (3,12)-cage as 17 is the kind of result
+            that makes a theoretical algorithm feel tangible. It says: here is a
+            graph whose surface was hard to pin down, and here is a concrete way
+            to certify it.
+          </p>
+          <div class="post-links">
+            <a class="button" href="https://arxiv.org/abs/2411.07347" target="_blank">Read the paper</a>
+            <a class="button alt" href="https://github.com/SanderGi/Genus" target="_blank">Code</a>
+            <a class="button alt" href="https://genus.fly.dev/" target="_blank">Web demo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <script src="/assets/js/site.js"></script>
+  </body>
+</html>

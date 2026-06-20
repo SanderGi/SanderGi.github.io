@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Giving AI Agents Real Hardware to Learn From</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/refresh.css" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <meta name="author" content="Alexander Metzger" />
+    <meta name="description" content="A lay summary of Embedded Arena, our benchmark and hardware-in-the-loop harness for AI agents optimizing machine learning models on microcontrollers." />
+    <meta name="keywords" content="Research,ML,Embedded,Agents" />
+    <meta name="dcterms.created" content="2026-06-16" />
+    <meta property="og:image" content="/images/donutcircuit.png | embedded machine learning hardware" />
+  </head>
+  <body>
+    <nav id="nav">
+      <ul class="container">
+        <li><a href="/index.html#top">Home</a></li>
+        <li><a href="/index.html#work">Research</a></li>
+        <li><a href="/index.html#portfolio">Portfolio</a></li>
+        <li><a href="/blog.html">Writing</a></li>
+        <li><a href="/index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <article class="wrapper style1 post-hero">
+      <div class="container">
+        <p class="eyebrow">Embedded ML</p>
+        <h1>Giving AI agents real hardware to learn from</h1>
+        <p>
+          Tiny devices have hard limits. Embedded Arena asks whether agents can
+          optimize models by compiling, flashing, measuring, and trying again.
+        </p>
+        <div class="post-meta"><span>Alexander Metzger</span><span>June 16, 2026</span></div>
+        <div class="pills">
+          <span>Embedded ML</span><span>Hardware Feedback</span><span>Benchmark</span>
+        </div>
+        <img class="post-cover" src="/images/donutcircuit.png" alt="embedded machine learning hardware" />
+      </div>
+    </article>
+    <section class="wrapper style3 post-body">
+      <div class="container">
+        <article>
+          <p class="post-callout">
+            Without hardware feedback, frontier agents had 0% deployment success
+            in the benchmark. With a hardware-in-the-loop setup, agents achieved
+            successful deployments and sometimes surpassed human expert results.
+          </p>
+          <h2>The tiny-computer problem</h2>
+          <p>
+            A model that runs beautifully on a laptop can fail completely on a
+            microcontroller. The device may run out of memory, overheat, draw too
+            much power, or simply fail to compile. These constraints matter for
+            wildlife cameras, wearables, health devices, and privacy-preserving
+            sensing systems that need local inference.
+          </p>
+          <p>
+            Today, expert engineers often tune these deployments by hand. They
+            compress models, adjust firmware, measure real hardware behavior, and
+            iterate through messy tradeoffs.
+          </p>
+          <h2>What Embedded Arena changes</h2>
+          <p>
+            Embedded Arena turns that engineering loop into a benchmark. An
+            agent cannot merely write plausible code. It must compile, flash,
+            run, measure, and respond to feedback from physical hardware.
+          </p>
+          <p>
+            That feedback is the key. In our experiments, hardware-in-the-loop
+            optimization enabled large compressions: 250x for vision models with
+            less than 3.3% accuracy loss, and 400x for audio with less than 6%
+            feature error rate loss. We demonstrated the approach in an
+            elk-detection camera trap and a phonetic-transcription wearable for
+            child development research.
+          </p>
+          <h2>Why it matters</h2>
+          <p>
+            The world does not run only in cloud APIs. Many important AI systems
+            need to work offline, cheaply, privately, and on a battery. Embedded
+            Arena makes those constraints visible to agents, and it gives the
+            research community a way to measure whether agentic coding systems
+            can handle physical reality rather than just software benchmarks.
+          </p>
+          <div class="post-links">
+            <a class="button" href="https://arxiv.org/abs/2606.16190" target="_blank">Read the paper</a>
+            <a class="button alt" href="https://ubicomplab.github.io/embedded-arena/" target="_blank">Project page</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <script src="/assets/js/site.js"></script>
+  </body>
+</html>
