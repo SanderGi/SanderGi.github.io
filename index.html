@@ -7,16 +7,20 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="icon" type="image/x-icon" href="/images/icons8-coding-64.png" />
+    <link rel="stylesheet" href="assets/css/refresh.css" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   </head>
   <body class="is-preload">
     <!-- Nav -->
     <nav id="nav">
       <ul class="container">
         <li><a href="#top">Home</a></li>
-        <li><a href="#work">About</a></li>
+        <li><a href="#work">Research</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="blog.html">Writing</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -24,67 +28,51 @@
     <!-- Home -->
     <article id="top" class="wrapper style1">
       <div class="container">
-        <div class="row">
-          <div class="col-4 col-5-large col-12-medium">
+        <div class="row aln-middle hero-grid">
+          <div class="col-4 col-5-large col-12-medium hero-photo-column">
             <span class="image fit"
               ><img
                 src="images/profile.jpg"
                 alt="Alexander Metzger holding a violin"
             /></span>
           </div>
-          <div class="col-8 col-7-large col-12-medium">
+          <div class="col-8 col-7-large col-12-medium hero-copy">
+            <p class="eyebrow">PhD student at UC Berkeley</p>
             <header>
-              <h1 style="line-height: 1em">
-                Greetings! I'm <strong>Alex</strong>.
-              </h1>
+              <h1>Hi, I'm <strong>Alex Metzger</strong>.</h1>
             </header>
             <p>
-              Seattle-based computational researcher and open-source enthusiast! Love to talk
-              about board games, machine learning, violin, and graph theory.
+              I build machine learning systems for speech, sustainability, and
+              resource-constrained computing. My work mixes research, product
+              engineering, and a stubborn fondness for tools that help real
+              communities.
             </p>
-            <a
-              href="cvs/Alexander Metzger CV.pdf"
-              target="_blank"
-              style="
-                font-size: 1.2em;
-                padding: 0.5em 2em;
-                background-color: blueviolet;
-              "
-              class="button"
-            >
-              <i class="fa fa-briefcase"></i> Resume
-            </a>
-            <a
-              href="cvs/ResearchCV.pdf"
-              target="_blank"
-              style="font-size: 1.2em; padding: 0.5em 2em; background-color: blueviolet;"
-              class="button"
-            >
-              <i class="fa fa-flask"></i> Research CV
-            </a>
-            <a
-              href="https://www.linkedin.com/in/alexander-le-metzger/"
-              target="_blank"
-              class="button icon fa-brands fa-linkedin-in"
-              style="font-size: 1.2em; padding: 0.7em 0.8em 0.6em 0.8em; font-family: inherit;"
-            >
-              <span class="label">LinkedIn</span>
-            </a>
-            <a
-              href="https://github.com/SanderGi"
-              target="_blank"
-              class="button icon fa-brands fa-github"
-              style="font-size: 1.2em; padding: 0.7em 0.8em 0.6em 0.8em; font-family: inherit;"
-            >
-              <span class="label">Github</span>
-            </a>
-            <a
-              href="mailto:alex@sandergi.com"
-              class="button icon fa-solid fa-envelope"
-              style="font-size: 1.2em; padding: 0.7em 0.8em 0.6em 0.8em; font-family: inherit;"
-            >
-              <span class="label">Email</span>
-            </a>
+            <div class="hero-actions">
+              <a href="cvs/ResearchCV.pdf" target="_blank" class="button">
+                <i class="fa fa-flask"></i> Research CV
+              </a>
+              <a href="cvs/Alexander Metzger CV.pdf" target="_blank" class="button alt">
+                <i class="fa fa-briefcase"></i> Resume
+              </a>
+              <a
+                href="https://scholar.google.com/citations?hl=en&user=fyNH0IwAAAAJ"
+                target="_blank"
+                class="button alt"
+              >
+                <i class="fa fa-graduation-cap"></i> Scholar
+              </a>
+            </div>
+            <div class="hero-links" aria-label="Social links">
+              <a href="https://www.linkedin.com/in/alexander-le-metzger/" target="_blank">LinkedIn</a>
+              <a href="https://github.com/SanderGi" target="_blank">GitHub</a>
+              <a href="https://orcid.org/0009-0003-3830-9660" target="_blank">ORCID</a>
+              <a href="mailto:alex@sandergi.com">Email</a>
+            </div>
+            <div class="hero-stats">
+              <span><strong>NSF GRFP</strong> Fellow</span>
+              <span><strong>Koel Labs</strong> Founder</span>
+              <span><strong>Speech + embedded ML</strong> Researcher</span>
+            </div>
           </div>
         </div>
       </div>
@@ -94,104 +82,55 @@
     <article id="work" class="wrapper style2">
       <div class="container">
         <header>
-          <h2>Here's what I do.</h2>
+          <h2>Research, systems, and field-facing software.</h2>
           <p>
-            Check out my
-            <a
-              href="https://www.linkedin.com/in/alexander-le-metzger/"
-              target="_blank"
-              >Linkedin</a
-            >
-            or read my
-            <a href="cvs/Personal Statement.pdf" target="_blank"
-              >personal statement</a
-            >
-            for details.
+            I am a CS PhD student at UC Berkeley, advised by Professor
+            Gopala Krishna Anumanchipalli, after a joint BS/MS in Computer
+            Science and Mathematics at the University of Washington.
           </p>
         </header>
-        <div class="row aln-center">
-          <div class="col-4 col-6-medium col-12-small">
-            <section class="box style1" style="padding-bottom: 0">
-              <span class="icon solid featured fa-book"></span>
-              <h3>Research</h3>
-              <p style="margin-bottom: -1em; min-height: 3lh">
-                AI for sustainability and Embedded ML at the
-                <a
-                  href="https://ubicomplab.cs.washington.edu/members/"
-                  target="_blank"
-                  >Ubicomp Lab</a
-                >. Read
-                <a href="cvs/Research Summary.pdf" target="_blank"
-                  >my research summary</a
-                >
-                for the full story.
-              </p>
-              <a
-                target="_blank"
-                href="https://verified.sertifier.com/en/verify/78185704831859/?trk=public_profile_see-credential"
-              >
-                <img
-                  src="https://storage.googleapis.com/verified-storage/badge/78185704831859.png"
-                  alt="Computing Research Association's Outstanding Undergraduate Researcher Award Honorable Mention"
-                  style="width: auto; height: 16em"
-                />
-              </a>
-            </section>
-          </div>
-          <div class="col-4 col-6-medium col-12-small">
-            <section class="box style1">
-              <span class="icon solid featured fa-code"></span>
-              <h3>Solving Problems</h3>
-              <p style="margin-bottom: 1.65em; min-height: 4lh">
-                I love building solutions to problems my communities face. Most
-                recently, I founded
-                <a href="https://koellabs.com/" target="_blank">Koel Labs</a> to
-                help foreign speakers master pronunciation.
-              </p>
-              <a
-                target="_blank"
-                href="https://blog.mozilla.org/en/mozilla/14-ai-projects-to-watch-mozillas-first-builders-accelerator-cohort-kicks-off/"
-              >
-                <img
-                  src="images/MozillaBuilders.png"
-                  alt="Mozilla Builders logo"
-                  style="width: auto; height: 8em"
-                />
-              </a>
-            </section>
-          </div>
-          <div class="col-4 col-6-medium col-12-small">
-            <section class="box style1">
-              <span class="icon solid featured fa-music"></span>
-              <h3>Having Fun</h3>
-              <p style="margin-bottom: 2.18em; min-height: 4lh">
-                I play violin with
-                <a
-                  href="https://music.washington.edu/ensembles/university-washington-symphony-orchestra"
-                  target="_blank"
-                  >UWSO</a
-                >, build RC planes with
-                <a href="https://www.dbfuw.com/" target="_blank"
-                  >Design Build Fly</a
-                >, play tennis and chess, mentor high schoolers, and code up fun
-                projects.
-              </p>
-              <a target="_blank" href="https://github.com/SanderGi">
-                <div style="width: auto; height: 8em">
-                  <img
-                    style="width: 100%"
-                    src="https://github-readme-streak-stats-eight-psi.vercel.app/?user=SanderGi&theme=dark&hide_border=false"
-                    alt="Github Stats"
-                  />
-                </div>
-              </a>
-            </section>
-          </div>
+        <div class="research-venn" aria-label="Research areas">
+          <a
+            class="research-orb speech"
+            target="_blank"
+            href="https://arxiv.org/abs/2606.16019"
+          >
+            <span class="icon solid featured fa-wave-square"></span>
+            <h3>Inclusive speech technology</h3>
+            <p>
+              Robust phonetic transcription and pronunciation learning for
+              non-native, accented, and impaired speech.
+            </p>
+          </a>
+          <a
+            class="research-orb embedded"
+            target="_blank"
+            href="https://arxiv.org/abs/2606.16190"
+          >
+            <span class="icon solid featured fa-microchip"></span>
+            <h3>Embedded and sustainable ML</h3>
+            <p>
+              Hardware-in-the-loop benchmarks, tiny models, and multimodal
+              agents for environmental impact.
+            </p>
+          </a>
+          <a
+            class="research-orb access"
+            target="_blank"
+            href="https://dl.acm.org/doi/10.1145/3613904.3642099"
+          >
+            <span class="icon solid featured fa-seedling"></span>
+            <h3>Technology for access</h3>
+            <p>
+              Field-facing systems for farmers, students, musicians, and
+              educators.
+            </p>
+          </a>
         </div>
         <footer>
           <p>
-            I'm also a Computer Science Master's student at the University of Washington,
-            Seattle.
+            I also like graph theory, violin, board games, tennis, mentoring,
+            and the occasional over-engineered side project.
           </p>
         </footer>
       </div>
@@ -201,10 +140,11 @@
     <article id="portfolio" class="wrapper style3">
       <div class="container">
         <header style="margin-bottom: 1em">
-          <h2>Here's some stuff I made recently.</h2>
+          <h2>Selected work.</h2>
           <p>
-            My goal is to combine computational research, algorithm design, machine learning, and mobile technology
-            to bridge gaps in information access for underserved languages and communities.
+            A mix of research papers, startups, talks, and tools. The common
+            thread is practical computing for language, sustainability,
+            education, and access.
           </p>
         </header>
 
@@ -240,13 +180,13 @@
                   ><span class="label">Hugging Face</span></a>
                 </h3>
                 <p>
-                  Nearly half of all foreign speakers struggle with their accent.
-                  As Founder and CEO, I've assembled a team of 2 co-founders to make speech pathology accessible. 
-                  We are working closely with top researchers across the US 
-                  and Canada to iterate on and publish our results.
+                  I founded Koel Labs to make pronunciation feedback and speech
+                  technology more inclusive. We build open speech models,
+                  evaluation tools, and products for non-native and impaired
+                  speech, supported by Mozilla, Microsoft, Google, and Nvidia.
                 </p>
                 <div class="pills">
-                  <span>Raised 100K USD</span>
+                  <span>Raised $100K</span>
                   <span>Founder and CEO</span>
                   <span>PyTorch</span>
                   <span>Speech Research</span>
@@ -337,14 +277,90 @@
           <summary><h3>Publications</h3>
             <article class="card">
               <a
-                href="https://dl.acm.org/doi/full/10.1145/3613904.3642099"
+                href="https://arxiv.org/abs/2606.16019"
+                class="card-img"
+                target="_blank">
+                <img src="images/xlsrenglish01.png" alt="phonetic transcription benchmark chart" style="object-position: 100% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://arxiv.org/abs/2606.16019" target="_blank">Scaling Human and G2P Supervision</a>
+                  <a
+                    href="https://huggingface.co/KoelLabs/xlsr-english-01"
+                    target="_blank"
+                    class="icon huggingface"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Hugging Face Model</span></a>
+                  <a
+                  href="https://github.com/KoelLabs/ML"
+                  target="_blank"
+                  class="icon fa-brands fa-github"
+                  style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Github</span></a>
+                  <a
+                    href="https://arxiv.org/abs/2606.16019"
+                    target="_blank"
+                    class="icon fa-solid fa-book-open-reader"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">arXiv pre-print</span></a>
+                </h3>
+                <p>
+                  First-author Interspeech work on robust phonetic
+                  transcription for accented and non-native speech. We study how
+                  human and grapheme-to-phoneme supervision scale, and ship
+                  practical models through Koel Labs.
+                </p>
+                <div class="pills">
+                  <span>First Author</span>
+                  <span>Interspeech 2026</span>
+                  <span>Speech ML</span>
+                  <span>Phonetic Transcription</span>
+                </div>
+              </div>
+            </article>
+            <h4 data-details="toggle">Show All</h4>
+          </summary>
+          <div>
+            <article class="card">
+              <a
+                href="https://scholar.google.com/citations?hl=en&user=fyNH0IwAAAAJ"
+                class="card-img"
+                target="_blank">
+                <img src="images/CompLingSlide.png" alt="slide about speech model bias" style="object-position: 50% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://scholar.google.com/citations?hl=en&user=fyNH0IwAAAAJ" target="_blank">Connecting the Dots</a>
+                  <a
+                    href="https://scholar.google.com/citations?hl=en&user=fyNH0IwAAAAJ"
+                    target="_blank"
+                    class="icon fa-solid fa-graduation-cap"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Google Scholar</span></a>
+                </h3>
+                <p>
+                  Pre-print on enduring performance gaps in ASR systems between
+                  standard and minority English varieties, with collaborators
+                  across CMU, UBC, and international speech research groups.
+                </p>
+                <div class="pills">
+                  <span>Pre-print</span>
+                  <span>Co-First Author</span>
+                  <span>ASR Fairness</span>
+                  <span>Speech Equity</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <a
+                href="https://doi.org/10.1145/3613904.3642099"
                 class="card-img"
                 target="_blank">
                 <img src="images/eKichabiUSSD.jpg" alt="eKichabi v2 USSD app"/>
               </a>
               <div class="card-content">
                 <h3>
-                  <a href="https://github.com/SanderGi/eKichabi" target="_blank">eKichabi v2</a>
+                  <a href="https://doi.org/10.1145/3613904.3642099" target="_blank">eKichabi v2</a>
                   <a
                     href="https://youtu.be/v-1JuQp1ous"
                     target="_blank"
@@ -352,39 +368,96 @@
                     style="float: right; padding-left: 0.3em;"
                   ><span class="label">Video presentation</span></a>
                   <a
-                  href="https://github.com/SanderGi/eKichabi"
-                  target="_blank"
-                  class="icon fa-brands fa-github"
-                  style="float: right; padding-left: 0.3em;"
+                    href="https://github.com/SanderGi/eKichabi"
+                    target="_blank"
+                    class="icon fa-brands fa-github"
+                    style="float: right; padding-left: 0.3em;"
                   ><span class="label">Github</span></a>
                   <a
-                    href="https://dl.acm.org/doi/full/10.1145/3613904.3642099"
+                    href="https://doi.org/10.1145/3613904.3642099"
                     target="_blank"
                     class="icon fa-solid fa-book-open-reader"
                     style="float: right; padding-left: 0.3em;"
                   ><span class="label">ACM CHI Paper</span></a>
                 </h3>
                 <p>
-                  This multi-million-dollar multi-decade study investigates 
-                  the economic impact of mobile technology in rural Tanzania.
-                  As researcher at the ICTD Lab, I led the software engineering 
-                  and data-analysis teams and worked closely with our 
-                  collaborators at Cornell, EDI Global, and IRDP.
+                  Co-first-authored CHI paper on designing and scaling a
+                  dual-platform agricultural technology for 10,000 farmers in
+                  rural Tanzania.
                 </p>
                 <div class="pills">
                   <span>10,000 Farmers</span>
                   <span>Co-First Author</span>
-                  <span><a href="https://sigchi.org/conferences/history/" target="_blank" style="color: white">ACM CHI 2024</a></span>
+                  <span>ACM CHI 2024</span>
                   <span>ICT4D Research</span>
                 </div>
               </div>
             </article>
-            <h4 data-details="toggle">Show All</h4>
-          </summary>
-          <div>
-            <!-- TODO: SCAT6 -->
-            <!-- TODO: LCA -->
-            <!-- TODO: YADES -->
+            <article class="card">
+              <a
+                href="https://www.nature.com/articles/s41928-026-01653-w"
+                class="card-img"
+                target="_blank">
+                <img src="images/living_sustainability.png" alt="sustainability assessment browser extension" style="object-position: 50% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://www.nature.com/articles/s41928-026-01653-w" target="_blank">Sustainability Assessment with AI Agents</a>
+                  <a
+                    href="https://www.nature.com/articles/s41928-026-01653-w"
+                    target="_blank"
+                    class="icon fa-solid fa-book-open-reader"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Nature Electronics Paper</span></a>
+                </h3>
+                <p>
+                  Co-first-authored Nature Electronics work on multimodal AI
+                  agents for sustainability assessment of consumer electronics.
+                </p>
+                <div class="pills">
+                  <span>Nature Electronics</span>
+                  <span>Co-First Author</span>
+                  <span>ML for Sustainability</span>
+                  <span>Agents</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <a
+                href="https://arxiv.org/abs/2606.16190"
+                class="card-img"
+                target="_blank">
+                <img src="images/donutcircuit.png" alt="embedded machine learning hardware" style="object-position: 50% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://arxiv.org/abs/2606.16190" target="_blank">Embedded Arena</a>
+                  <a
+                    href="https://ubicomplab.github.io/embedded-arena/"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Project Website</span></a>
+                  <a
+                    href="https://arxiv.org/abs/2606.16190"
+                    target="_blank"
+                    class="icon fa-solid fa-book-open-reader"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">arXiv pre-print</span></a>
+                </h3>
+                <p>
+                  Co-first-authored benchmark and harness for iterative
+                  optimization via hardware feedback in embedded machine
+                  learning deployments.
+                </p>
+                <div class="pills">
+                  <span>Pre-print</span>
+                  <span>Co-First Author</span>
+                  <span>Embedded ML</span>
+                  <span>Hardware Feedback</span>
+                </div>
+              </div>
+            </article>
             <article class="card">
               <a
                 href="https://arxiv.org/abs/2411.07347"
@@ -394,7 +467,7 @@
               </a>
               <div class="card-content">
                 <h3>
-                  <a href="https://github.com/SanderGi/Genus" target="_blank">Practical Algorithm for Graph Embedding (PAGE)</a>
+                  <a href="https://arxiv.org/abs/2411.07347" target="_blank">Efficient Genus Algorithm</a>
                   <a
                     href="https://genus.fly.dev/"
                     target="_blank"
@@ -438,7 +511,7 @@
               </a>
               <div class="card-content">
                 <h3>
-                  <a href="https://github.com/SanderGi/Genus" target="_blank">A Practical Algorithmic Approach to Graph Embedding</a>
+                  <a href="./images/UndergraduateMathThesis.pdf" target="_blank">Algorithmic Graph Embedding</a>
                   <a
                     href="https://github.com/SanderGi/Genus"
                     target="_blank"
@@ -474,7 +547,7 @@
               </a>
               <div class="card-content">
                 <h3>
-                  <a href="https://dl.acm.org/doi/10.1145/3749488" target="_blank">In-Context Interactive Environmental Impact Communication</a>
+                  <a href="https://dl.acm.org/doi/10.1145/3749488" target="_blank">Living Sustainability</a>
                   <a
                     href="https://chromewebstore.google.com/detail/living-sustainability/fgdcifpcoknldfmpegnjoomeafgfefkf"
                     target="_blank"
@@ -556,6 +629,93 @@
           <div>
             <article class="card">
               <a
+                href="https://docs.google.com/presentation/d/1XNRk8qb2RPiSYrVpxZaxItbfVP-UmISv/edit?usp=sharing&ouid=110368631524695946265&rtpof=true&sd=true"
+                class="card-img"
+                target="_blank">
+                <img src="images/living_sustainability.png" alt="living sustainability extension" style="object-position: 50% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://docs.google.com/presentation/d/1XNRk8qb2RPiSYrVpxZaxItbfVP-UmISv/edit?usp=sharing&ouid=110368631524695946265&rtpof=true&sd=true" target="_blank">Environmental Impact Communication</a>
+                  <a
+                    href="https://docs.google.com/presentation/d/1XNRk8qb2RPiSYrVpxZaxItbfVP-UmISv/edit?usp=sharing&ouid=110368631524695946265&rtpof=true&sd=true"
+                    target="_blank"
+                    class="icon fa-solid fa-chalkboard-user"
+                    style="font-size: 0.95em; float: right; padding-left: 0.3em;"
+                  ><span class="label">Slides</span></a>
+                </h3>
+                <p>
+                  Invited DUB Research Day talk on in-context interactive
+                  environmental impact communication.
+                </p>
+                <div class="pills">
+                  <span>DUB Research Day</span>
+                  <span>Invited Speaker</span>
+                  <span>ML for Sustainability</span>
+                  <span>Oct. 2025</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <a
+                href="https://docs.google.com/presentation/d/1XNRk8qb2RPiSYrVpxZaxItbfVP-UmISv/edit?usp=sharing&ouid=110368631524695946265&rtpof=true&sd=true"
+                class="card-img"
+                target="_blank">
+                <img src="images/living_sustainability.png" alt="research showcase sustainability presentation" style="object-position: 50% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://docs.google.com/presentation/d/1XNRk8qb2RPiSYrVpxZaxItbfVP-UmISv/edit?usp=sharing&ouid=110368631524695946265&rtpof=true&sd=true" target="_blank">Environmental Impact Communication</a>
+                  <a
+                    href="https://docs.google.com/presentation/d/1XNRk8qb2RPiSYrVpxZaxItbfVP-UmISv/edit?usp=sharing&ouid=110368631524695946265&rtpof=true&sd=true"
+                    target="_blank"
+                    class="icon fa-solid fa-chalkboard-user"
+                    style="font-size: 0.95em; float: right; padding-left: 0.3em;"
+                  ><span class="label">Slides</span></a>
+                </h3>
+                <p>
+                  Paul G. Allen School Annual Research Showcase talk and poster
+                  presentation on multimodal sustainability assessment.
+                </p>
+                <div class="pills">
+                  <span>Allen Showcase</span>
+                  <span>Talk + Poster</span>
+                  <span>Sustainability</span>
+                  <span>Oct. 2025</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <a
+                href="https://sandergi.com/images/MAX78000_DEMO.pdf"
+                class="card-img"
+                target="_blank">
+                <img src="images/donutcircuit.png" alt="embedded machine learning demo hardware" style="object-position: 50% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://sandergi.com/images/MAX78000_DEMO.pdf" target="_blank">Embedded ML Demo</a>
+                  <a
+                    href="https://sandergi.com/images/MAX78000_DEMO.pdf"
+                    target="_blank"
+                    class="icon fa-solid fa-chalkboard-user"
+                    style="font-size: 0.95em; float: right; padding-left: 0.3em;"
+                  ><span class="label">Slides</span></a>
+                </h3>
+                <p>
+                  Guest talk for the University of Washington embedded systems
+                  capstone on computer vision deployment for small devices.
+                </p>
+                <div class="pills">
+                  <span>UW Capstone</span>
+                  <span>Guest Talk</span>
+                  <span>Embedded ML</span>
+                  <span>Oct. 2025</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <a
                 href="https://web.archive.org/web/20250829081355/https://www.interspeech2025.org/home"
                 class="card-img"
                 target="_blank">
@@ -598,6 +758,70 @@
             </article>
             <article class="card">
               <a
+                href="https://docs.google.com/presentation/d/1G44GzNijh1LLo7df7-NQC8DdmMdvTQqecT_NZO5EmaM/edit?usp=sharing"
+                class="card-img"
+                target="_blank">
+                <img src="images/SAM.png" alt="concussion care research presentation" style="object-position: 50% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://docs.google.com/presentation/d/1G44GzNijh1LLo7df7-NQC8DdmMdvTQqecT_NZO5EmaM/edit?usp=sharing" target="_blank">On-device ML for Concussion Care</a>
+                  <a
+                    href="https://docs.google.com/presentation/d/1G44GzNijh1LLo7df7-NQC8DdmMdvTQqecT_NZO5EmaM/edit?usp=sharing"
+                    target="_blank"
+                    class="icon fa-solid fa-chalkboard-user"
+                    style="font-size: 0.95em; float: right; padding-left: 0.3em;"
+                  ><span class="label">Slides</span></a>
+                </h3>
+                <p>
+                  University of Washington Research Symposium presentation on
+                  accessible, privacy-preserving concussion care.
+                </p>
+                <div class="pills">
+                  <span>UW Symposium</span>
+                  <span>Research Talk</span>
+                  <span>On-device ML</span>
+                  <span>May 2026</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <a
+                href="https://docs.google.com/presentation/d/1Giw_u8XKrby_i51ffmLsIflefSI6qQem0FtMYbfchZs/edit?usp=sharing"
+                class="card-img"
+                target="_blank">
+                <img src="images/k3-3torus.png" alt="graph embedded on a torus" style="object-position: 70% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://docs.google.com/presentation/d/1Giw_u8XKrby_i51ffmLsIflefSI6qQem0FtMYbfchZs/edit?usp=sharing" target="_blank">Graph Algorithms and Optimization</a>
+                  <a
+                    href="https://genus.fly.dev"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Website</span></a>
+                  <a
+                    href="https://docs.google.com/presentation/d/1Giw_u8XKrby_i51ffmLsIflefSI6qQem0FtMYbfchZs/edit?usp=sharing"
+                    target="_blank"
+                    class="icon fa-solid fa-chalkboard-user"
+                    style="font-size: 0.95em; float: right; padding-left: 0.3em;"
+                  ><span class="label">Slides</span></a>
+                </h3>
+                <p>
+                  Northwest Undergraduate Mathematics Symposium talk on graph
+                  embedding algorithms and optimization.
+                </p>
+                <div class="pills">
+                  <span>NUMS</span>
+                  <span>Graph Theory</span>
+                  <span>Algorithms</span>
+                  <span>Nov. 2025</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <a
                 href="images/NLPResearchPoster.pdf"
                 class="card-img"
                 target="_blank">
@@ -634,6 +858,41 @@
                   <span>NLP Researcher</span>
                   <span>Co-First Author</span>
                   <span>Inclusive Speech Technology</span>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <a
+                href="https://www.youtube.com/watch?v=oWEe9op0bb0"
+                class="card-img"
+                target="_blank">
+                <img src="images/KoelLabsPeople.png" alt="Koel Labs presentation and poster session" style="object-position: 50% 50%;"/>
+              </a>
+              <div class="card-content">
+                <h3>
+                  <a href="https://www.youtube.com/watch?v=oWEe9op0bb0" target="_blank">Building Inclusive Speech Technology</a>
+                  <a
+                    href="https://koellabs.com"
+                    target="_blank"
+                    class="icon fa-solid fa-globe"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Website</span></a>
+                  <a
+                    href="https://www.youtube.com/watch?v=oWEe9op0bb0"
+                    target="_blank"
+                    class="icon fa-solid fa-circle-play"
+                    style="float: right; padding-left: 0.3em;"
+                  ><span class="label">Talk video recording</span></a>
+                </h3>
+                <p>
+                  DubHacks Next Demo Day presentation on inclusive speech
+                  technology and Koel Labs.
+                </p>
+                <div class="pills">
+                  <span>DubHacks Next</span>
+                  <span>Demo Day</span>
+                  <span>Speech Technology</span>
+                  <span>Apr. 2025</span>
                 </div>
               </div>
             </article>
@@ -1449,7 +1708,7 @@
               "
             />
             <br /><br />
-            <button onclick="window.open('/vCard.vcf')">Download</button>
+            <button class="download-button" onclick="window.open('/vCard.vcf')">Download</button>
           </div>
           <div class="col-12">
             <hr />
@@ -1484,6 +1743,13 @@
                   ><span class="label">ORCID</span></a
                 >
               </li>
+              <li>
+                <a
+                  href="https://scholar.google.com/citations?hl=en&user=fyNH0IwAAAAJ"
+                  class="icon fa-solid fa-graduation-cap"
+                  ><span class="label">Google Scholar</span></a
+                >
+              </li>
               <!--
 			  <li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
 			  <li><a href="#" class="icon fa-brands fa-instagram"><span>Instagram</span></a></li>
@@ -1502,29 +1768,13 @@
         <footer>
           <ul id="copyright">
             <li>&copy; All rights reserved.</li>
-            <li>
-              Page Design: <a href="http://html5up.net">HTML5 UP</a> (with
-              modifications)
-            </li>
-            <li>
-              <a
-                target="_blank"
-                href="https://icons8.com/icon/QxYSbRXbKF8u/coding"
-                >Coding</a
-              >
-              favicon by <a target="_blank" href="https://icons8.com">Icons8</a>
-            </li>
+            <li>Designed and built by Alex Metzger.</li>
           </ul>
         </footer>
       </div>
     </article>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/site.js"></script>
   </body>
 </html>

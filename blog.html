@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alex Metzger</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/refresh.css" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <style>
+      .search-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+
+      #search-input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .tag-filters {
+        margin-top: 10px;
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        text-shadow: none;
+      }
+
+      .tag.active {
+        background-color: #B1B2FF;
+        color: white;
+      }
+
+      .item {
+        padding: 10px;
+        border: 1px solid #eee;
+        margin-bottom: 5px;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <!-- Nav -->
+    <nav id="nav">
+      <ul class="container">
+        <li><a href="index.html#top">Home</a></li>
+        <li><a href="index.html#work">Research</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="blog.html">Writing</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <article id="portfolio" class="wrapper style3">
+      <div class="container">
+        <header style="margin-bottom: 1em">
+          <h2 id="blog">Blog.</h2>
+          <p>
+            Read about my research, my side-projects, and my interests.
+          </p>
+        </header>
+
+        <div class="search-container">
+          <input type="search" id="search-input" placeholder="Search..." />
+          <div class="tag-filters">
+            <span class="tag" data-tag="Research">Research</span>
+            <span class="tag" data-tag="Project">Projects</span>
+            <span class="tag" data-tag="Tutorial">Tutorials</span>
+            <span class="tag" data-tag="SWE">SWE</span>
+            <span class="tag" data-tag="Math">Math</span>
+            <span class="tag" data-tag="ML">ML</span>
+          </div>
+        </div>
+
+        <div id="item-list" style="text-align: left;">
+          
+          <article class="card" data-tags="SWE,Code Optimization,ML,CV">
+            <a
+              href="./blog/optimizing-deep-live-cam.html"
+              class="card-img">
+              <img src="/images/chadalex.png" alt="me with the Chad meme face merged in"/>
+            </a>
+            <div class="card-content">
+              <h3><a href="./blog/optimizing-deep-live-cam.html">I optimized DLC so you can look like anyone in real-time</a></h3>
+              <p>Whether for pranking your friends and coworkers in video calls or creating content, a popular tool to change your face in camera streams is <a href="https://github.com/hacksider/Deep-Live-Cam">Deep Live Cam (DLC)</a> &mdash; 75K stars! But even on beefy M4 Macbook Pros, it snails away at gray-hair-inducing 1-3 FPS. Luckily, with some quick tricks, we can boost it to 10-20 FPS, even on CPU, and save the gray hairs for the deep fakes!</p>
+              <div class="pills">
+                <span>SWE</span> <span>Code Optimization</span> <span>ML</span> <span>CV</span> 
+                <div style="float: right; margin-right: 1em">
+                  Alexander Le Metzger • 2025-09-10
+                </div>
+              </div>
+            </div>
+          </article>
+        
+          <article class="card" data-tags="Math,Topology,Graph Theory,Combinatorics">
+            <a
+              href="./blog/topological-graph-embedding.html"
+              class="card-img">
+              <img src="/images/k3-3torus.png" alt="me with the Chad meme face merged in"/>
+            </a>
+            <div class="card-content">
+              <h3><a href="./blog/topological-graph-embedding.html">Graph Embedding and Why You Should Care</a></h3>
+              <p></p>
+              <div class="pills">
+                <span>Math</span> <span>Topology</span> <span>Graph Theory</span> <span>Combinatorics</span> 
+                <div style="float: right; margin-right: 1em">
+                  Alexander Le Metzger • 2025-09-08
+                </div>
+              </div>
+            </div>
+          </article>
+        
+          <article class="card" data-tags="ML,Quantization,Pruning,Distillation">
+            <a
+              href="./blog/model-compression-yolo-pico.html"
+              class="card-img">
+              <img src="/images/numbers.png" alt="some numbers representing model weights"/>
+            </a>
+            <div class="card-content">
+              <h3><a href="./blog/model-compression-yolo-pico.html">Squeezing Deep Learning Models onto Microcontrollers</a></h3>
+              <p>The art of model compression</p>
+              <div class="pills">
+                <span>ML</span> <span>Quantization</span> <span>Pruning</span> <span>Distillation</span> 
+                <div style="float: right; margin-right: 1em">
+                  Alexander Le Metzger • 2025-04-04
+                </div>
+              </div>
+            </div>
+          </article>
+        
+          <article class="card" data-tags="Tutorial,NPM,JavaScript,Sqlite-Auto-Migrator">
+            <a
+              href="./blog/npm-lib-sqlite-auto-migrator.html"
+              class="card-img">
+              <img src="/images/SAM.png" alt="me with the Chad meme face merged in"/>
+            </a>
+            <div class="card-content">
+              <h3><a href="./blog/npm-lib-sqlite-auto-migrator.html">I made an NPM library and you can too!</a></h3>
+              <p></p>
+              <div class="pills">
+                <span>Tutorial</span> <span>NPM</span> <span>JavaScript</span> <span>Sqlite-Auto-Migrator</span> 
+                <div style="float: right; margin-right: 1em">
+                  Alexander Le Metzger • 2024-04-02
+                </div>
+              </div>
+            </div>
+          </article>
+        
+          <article class="card" data-tags="Research,eKichabi,Farmer.chat,ICT4D">
+            <a
+              href="./blog/ekichabi-and-farmerchat.html"
+              class="card-img">
+              <img src="/images/eKichabiUSSD.jpg" alt="me with the Chad meme face merged in"/>
+            </a>
+            <div class="card-content">
+              <h3><a href="./blog/ekichabi-and-farmerchat.html">The Things They Don't Tell You About Deploying Technology to Millions of Sub-Saharan Subsistence Farmers</a></h3>
+              <p></p>
+              <div class="pills">
+                <span>Research</span> <span>eKichabi</span> <span>Farmer.chat</span> <span>ICT4D</span> 
+                <div style="float: right; margin-right: 1em">
+                  Alexander Le Metzger • 2024-03-15
+                </div>
+              </div>
+            </div>
+          </article>
+        
+          <article class="card" data-tags="SWE,Joke,Tutorial,HTMS">
+            <a
+              href="./blog/joke-html-framework-htms.html"
+              class="card-img">
+              <img src="/images/HTMS.png" alt="me with the Chad meme face merged in"/>
+            </a>
+            <div class="card-content">
+              <h3><a href="./blog/joke-html-framework-htms.html">Addressing the JavaScript Framework Shortage with HTML</a></h3>
+              <p></p>
+              <div class="pills">
+                <span>SWE</span> <span>Joke</span> <span>Tutorial</span> <span>HTMS</span> 
+                <div style="float: right; margin-right: 1em">
+                  Alexander Le Metzger • 2024-02-10
+                </div>
+              </div>
+            </div>
+          </article>
+        
+        </div>
+      </div>
+    </article>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById("search-input");
+        const tagFilters = document.querySelectorAll(".tag");
+        const items = document.getElementById("item-list").children;
+
+        function filterItems() {
+          const searchTerm = searchInput.value.toLowerCase();
+          const activeTags = Array.from(tagFilters)
+            .filter((tag) => tag.classList.contains("active"))
+            .map((tag) => tag.dataset.tag);
+
+          [...items].forEach((item) => {
+            const itemText = item.textContent.toLowerCase();
+            const itemTags = item.dataset.tags
+              ? item.dataset.tags.split(",")
+              : [];
+
+            const matchesSearch = itemText.includes(searchTerm);
+            const matchesTags =
+              activeTags.length === 0 ||
+              activeTags.every((tag) => itemTags.includes(tag));
+
+            if (matchesSearch && matchesTags) {
+              item.style.display = "flex";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        }
+
+        searchInput.addEventListener("input", filterItems);
+
+        tagFilters.forEach((tag) => {
+          tag.addEventListener("click", () => {
+            tag.classList.toggle("active");
+            filterItems();
+          });
+        });
+
+        filterItems(); // Initial filter on page load
+      });
+    </script>
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>
