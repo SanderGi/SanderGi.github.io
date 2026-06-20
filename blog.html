@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
+      content="width=device-width, initial-scale=1"
     />
     <link rel="stylesheet" href="assets/css/refresh.css" />
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
@@ -37,15 +37,16 @@
         </header>
 
         <div class="search-container">
+          <label class="sr-only" for="search-input">Search writing</label>
           <input type="search" id="search-input" placeholder="Search..." />
           <div class="tag-filters">
-            <span class="tag" data-tag="Research">Research</span>
-            <span class="tag" data-tag="Speech">Speech</span>
-            <span class="tag" data-tag="Sustainability">Sustainability</span>
-            <span class="tag" data-tag="Access">Access</span>
-            <span class="tag" data-tag="Algorithms">Algorithms</span>
-            <span class="tag" data-tag="Math">Math</span>
-            <span class="tag" data-tag="ML">ML</span>
+            <button type="button" class="tag" data-tag="Research" aria-pressed="false">Research</button>
+            <button type="button" class="tag" data-tag="Speech" aria-pressed="false">Speech</button>
+            <button type="button" class="tag" data-tag="Sustainability" aria-pressed="false">Sustainability</button>
+            <button type="button" class="tag" data-tag="Access" aria-pressed="false">Access</button>
+            <button type="button" class="tag" data-tag="Algorithms" aria-pressed="false">Algorithms</button>
+            <button type="button" class="tag" data-tag="Math" aria-pressed="false">Math</button>
+            <button type="button" class="tag" data-tag="ML" aria-pressed="false">ML</button>
           </div>
         </div>
 
@@ -243,6 +244,7 @@
         tagFilters.forEach((tag) => {
           tag.addEventListener("click", () => {
             tag.classList.toggle("active");
+            tag.setAttribute("aria-pressed", tag.classList.contains("active") ? "true" : "false");
             filterItems();
           });
         });
