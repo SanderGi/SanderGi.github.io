@@ -89,9 +89,48 @@
             <a class="button alt" href="https://github.com/SanderGi/eKichabi" target="_blank">Code</a>
             <a class="button alt" href="https://youtu.be/v-1JuQp1ous" target="_blank">Watch the talk</a>
           </div>
+          <section class="ussd-demo" id="ekichabi-demo" aria-labelledby="ekichabi-demo-title">
+            <div class="ussd-demo-copy">
+              <p class="eyebrow">Interactive Demo</p>
+              <h2 id="ekichabi-demo-title">Try a feature-phone eKichabi flow</h2>
+              <p>
+                Dial <strong>*149*46#</strong>, press <strong>Call</strong>, then use the
+                number buttons to move through a small fictional directory. The
+                structure follows the real USSD menu, but every business shown here is
+                made up for the demo.
+              </p>
+              <button type="button" class="button alt ussd-language-toggle" data-ussd-language>
+                Switch to Swahili
+              </button>
+            </div>
+            <div class="feature-phone" aria-label="Interactive feature phone eKichabi demo">
+              <div class="feature-phone-speaker" aria-hidden="true"></div>
+              <div class="feature-phone-screen" aria-live="polite">
+                <pre data-ussd-screen></pre>
+                <div class="feature-phone-input" data-ussd-input aria-label="Current phone input"></div>
+              </div>
+              <div class="feature-phone-keypad" aria-label="Phone keypad">
+                <button type="button" data-ussd-key="1">1<span></span></button>
+                <button type="button" data-ussd-key="2">2<span>ABC</span></button>
+                <button type="button" data-ussd-key="3">3<span>DEF</span></button>
+                <button type="button" data-ussd-key="4">4<span>GHI</span></button>
+                <button type="button" data-ussd-key="5">5<span>JKL</span></button>
+                <button type="button" data-ussd-key="6">6<span>MNO</span></button>
+                <button type="button" data-ussd-key="7">7<span>PQRS</span></button>
+                <button type="button" data-ussd-key="8">8<span>TUV</span></button>
+                <button type="button" data-ussd-key="9">9<span>WXYZ</span></button>
+                <button type="button" data-ussd-key="*">*</button>
+                <button type="button" data-ussd-key="0">0<span>Next</span></button>
+                <button type="button" data-ussd-key="#">#</button>
+                <button type="button" class="phone-action clear" data-ussd-clear>Clear</button>
+                <button type="button" class="phone-action call" data-ussd-call>Call</button>
+              </div>
+            </div>
+          </section>
         </article>
       </div>
     </section>
     <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/ekichabi-demo.js"></script>
   </body>
 </html>
