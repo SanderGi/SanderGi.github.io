@@ -30,8 +30,7 @@
         <p class="eyebrow">ML For Sustainability</p>
         <h1>Can AI agents estimate the carbon footprint of electronics?</h1>
         <p>
-          Traditional life-cycle assessment can take weeks or months. We asked
-          whether a team of multimodal agents could do useful first-pass work
+          Traditional life-cycle assessment can take weeks or months. A team of multimodal agents can do useful first-pass work
           from public data.
         </p>
         <div class="post-meta"><span>Alexander Metzger</span><span>June 17, 2026</span></div>
@@ -90,9 +89,53 @@
             <a class="button alt" href="https://github.com/iamZhihanZhang/AI-Agents-for-LCA" target="_blank">Code</a>
             <a class="button alt" href="https://iamzhihanzhang.github.io/AI-Agents-for-LCA/" target="_blank">Project page</a>
           </div>
+          <section class="edge-demo pcb-demo" data-pcb-demo>
+            <div class="edge-demo-copy">
+              <p class="eyebrow">Interactive Demo</p>
+              <h2>A tiny tool the agents can trust</h2>
+              <p>
+                The full system coordinates many sources of evidence, but one
+                useful subcomponent is delightfully concrete: a specialized PCB
+                segmentation model. Pick a preset image, or upload your own
+                electronics photo, and the detector will mark the circuit board
+                pixels directly in your browser.
+              </p>
+            </div>
+            <div class="edge-demo-panel">
+              <div class="edge-demo-controls" aria-label="PCB detector controls">
+                <button class="sample-tile active" type="button" data-pcb-src="/images/demo/pcb-augmented.jpg">Augmented PCB</button>
+                <button class="sample-tile" type="button" data-pcb-src="/images/demo/pcb-phone-front.jpg">Phone Board</button>
+                <button class="sample-tile" type="button" data-pcb-src="/images/demo/pcb-arduino.jpg">Arduino Top</button>
+                <button class="sample-tile" type="button" data-pcb-src="/images/demo/pcb-workbench.jpg">Workbench PCB</button>
+                <label class="sample-upload">
+                  Upload image
+                  <input data-pcb-upload type="file" accept="image/*" />
+                </label>
+              </div>
+              <div class="edge-demo-grid">
+                <figure class="edge-preview pcb-preview">
+                  <div class="pcb-preview-stack">
+                    <img data-pcb-image src="/images/demo/pcb-augmented.jpg" alt="electronics image selected for PCB segmentation" />
+                    <canvas data-pcb-overlay aria-hidden="true"></canvas>
+                  </div>
+                </figure>
+                <div class="edge-result" aria-live="polite">
+                  <p class="edge-result-label" data-pcb-label>Loading PCB detector</p>
+                  <p class="edge-result-score" data-pcb-score>Preparing the model in your browser.</p>
+                  <div class="edge-meter" aria-hidden="true"><span data-pcb-meter></span></div>
+                  <p class="edge-result-note" data-pcb-note>
+                    The detector runs locally with ONNX Runtime Web; uploaded
+                    images stay in your browser.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
         </article>
       </div>
     </section>
     <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/vendor/ort.wasm.min.js"></script>
+    <script src="/assets/js/pcb-detector-demo.js"></script>
   </body>
 </html>
