@@ -1842,6 +1842,198 @@ button.alt:hover,
   margin-top: 0.7em !important;
 }
 
+.genus-demo {
+  background: linear-gradient(135deg, #fff8ec 0%, #f8fbff 100%);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 18px 18px 0 var(--mint), -18px -18px 0 var(--rose);
+  margin: 3em 0 0.75em;
+  padding: 1.4em;
+}
+
+.genus-demo-copy h2 {
+  margin-top: 0.15em;
+}
+
+.genus-demo-copy p {
+  color: var(--ink);
+  font-size: 1em;
+}
+
+.genus-board {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 156, 127, 0.18), transparent 28%),
+    radial-gradient(circle at 82% 78%, rgba(111, 207, 183, 0.22), transparent 30%),
+    linear-gradient(180deg, #fffdf8 0%, #f6faf8 100%);
+  border: 1px solid rgba(35, 49, 61, 0.16);
+  border-radius: 8px;
+  cursor: crosshair;
+  height: min(33em, 58vh);
+  margin-top: 1.25em;
+  min-height: 23em;
+  overflow: hidden;
+  position: relative;
+  touch-action: none;
+}
+
+.genus-canvas {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.genus-marker-canvas {
+  height: 100%;
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: 4;
+}
+
+.genus-node-row {
+  display: grid;
+  gap: clamp(0.65em, 3vw, 2.2em);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  left: clamp(0.9em, 5vw, 4em);
+  pointer-events: none;
+  position: absolute;
+  right: clamp(0.9em, 5vw, 4em);
+  z-index: 2;
+}
+
+.genus-utilities {
+  top: 1.35em;
+}
+
+.genus-houses {
+  bottom: 1.35em;
+}
+
+.genus-node {
+  align-items: center;
+  aspect-ratio: 1;
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  box-shadow: none;
+  color: var(--ink);
+  cursor: crosshair;
+  display: inline-flex;
+  font-size: clamp(0.78rem, 1.8vw, 1rem);
+  font-weight: 900;
+  justify-content: center;
+  line-height: 1.1;
+  min-width: 0;
+  padding: 0.38em;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  transition: transform 0.18s ease;
+}
+
+.genus-node svg {
+  display: block;
+  filter: none;
+  height: clamp(2.4em, 7vw, 3.8em);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: filter 0.18s ease;
+  width: clamp(2.4em, 7vw, 3.8em);
+}
+
+.genus-node .icon-fill {
+  fill: var(--genus-icon-fill);
+  stroke: var(--genus-icon-stroke);
+  stroke-width: 2.6;
+  transition: filter 0.18s ease, stroke-width 0.18s ease;
+}
+
+.genus-node .icon-fill-secondary {
+  fill: var(--genus-icon-secondary);
+}
+
+.genus-node .icon-detail {
+  fill: none;
+  stroke: var(--genus-icon-stroke);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.6;
+  transition: stroke-width 0.18s ease;
+}
+
+.genus-node[data-node="water"] {
+  --genus-icon-fill: #4fb3e8;
+  --genus-icon-secondary: #a9dcf5;
+  --genus-icon-stroke: #174d73;
+}
+
+.genus-node[data-node="gas"] {
+  --genus-icon-fill: #f47b3d;
+  --genus-icon-secondary: #ffd15c;
+  --genus-icon-stroke: #7a3316;
+}
+
+.genus-node[data-node="power"] {
+  --genus-icon-fill: #f5c542;
+  --genus-icon-secondary: #ffe48a;
+  --genus-icon-stroke: #6d4d00;
+}
+
+.genus-node.house {
+  --genus-icon-fill: #62c79f;
+  --genus-icon-secondary: #c9f1df;
+  --genus-icon-stroke: #164c3d;
+}
+
+.genus-node:hover,
+.genus-node:focus-visible,
+.genus-node.active {
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: translateY(-1px);
+}
+
+.genus-node:hover svg,
+.genus-node:focus-visible svg,
+.genus-node.active svg {
+  filter:
+    drop-shadow(1.2px 0 0 var(--genus-icon-stroke))
+    drop-shadow(-1.2px 0 0 var(--genus-icon-stroke))
+    drop-shadow(0 1.2px 0 var(--genus-icon-stroke))
+    drop-shadow(0 -1.2px 0 var(--genus-icon-stroke));
+}
+
+.genus-node:hover .icon-fill,
+.genus-node:focus-visible .icon-fill,
+.genus-node.active .icon-fill,
+.genus-node:hover .icon-detail,
+.genus-node:focus-visible .icon-detail,
+.genus-node.active .icon-detail {
+  stroke-width: 4.1px !important;
+}
+
+.genus-node:focus-visible {
+  outline: none;
+}
+
+.genus-demo-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin-top: 1.2em;
+}
+
+.genus-demo-actions p {
+  color: #43515b;
+  font-size: 0.95em;
+  font-weight: 800;
+  margin: 0;
+}
+
 details {
   margin-bottom: 1.8em;
   text-align: left;

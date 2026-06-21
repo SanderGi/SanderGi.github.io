@@ -89,9 +89,69 @@
             <a class="button alt" href="https://github.com/SanderGi/Genus" target="_blank">Code</a>
             <a class="button alt" href="https://genus.fly.dev/" target="_blank">Web demo</a>
           </div>
+          <section class="genus-demo" data-genus-demo>
+            <div class="genus-demo-copy">
+              <p class="eyebrow">Interactive Demo</p>
+              <h2>Try the utility problem</h2>
+              <p>
+                Connect every utility to every house. Draw from a utility to a
+                house with your mouse or finger, then validate the drawing to
+                see missing connections and crossings.
+              </p>
+            </div>
+            <div class="genus-board" data-genus-board>
+              <canvas class="genus-canvas" data-genus-canvas aria-label="Utility problem drawing surface"></canvas>
+              <div class="genus-node-row genus-utilities" aria-label="Utilities">
+                <button class="genus-node utility" type="button" data-node="water" aria-label="Water">
+                  <svg aria-hidden="true" viewBox="0 0 48 48">
+                    <path class="icon-fill" d="M24 5C17 14 12 22 12 29a12 12 0 0 0 24 0c0-7-5-15-12-24Z" />
+                    <path class="icon-detail" d="M18 31c1.2 3.4 3.5 5.1 7 5.1" />
+                  </svg>
+                </button>
+                <button class="genus-node utility" type="button" data-node="gas" aria-label="Gas">
+                  <svg aria-hidden="true" viewBox="0 0 48 48">
+                    <path class="icon-fill" d="M25 43c8-3 12-8 12-15 0-7-5-12-8-16 0 5-3 8-6 10 1-7-3-12-8-16 1 9-6 13-6 22 0 7 5 13 16 15Z" />
+                    <path class="icon-fill icon-fill-secondary" d="M24 39c4-2 6-5 6-9 0-3-2-6-4-8-1 4-5 6-5 11 0 3 1 5 3 6Z" />
+                  </svg>
+                </button>
+                <button class="genus-node utility" type="button" data-node="power" aria-label="Power">
+                  <svg aria-hidden="true" viewBox="0 0 48 48">
+                    <path class="icon-fill" d="M28 4 11 27h12l-3 17 17-23H25l3-17Z" />
+                  </svg>
+                </button>
+              </div>
+              <div class="genus-node-row genus-houses" aria-label="Houses">
+                <button class="genus-node house" type="button" data-node="house-a" aria-label="House A">
+                  <svg aria-hidden="true" viewBox="0 0 48 48">
+                    <path class="icon-fill" d="M7 23.5 24 9l17 14.5-3 3.5v14H10V27l-3-3.5Z" />
+                    <path class="icon-detail" d="M20 41V29h8v12" />
+                  </svg>
+                </button>
+                <button class="genus-node house" type="button" data-node="house-b" aria-label="House B">
+                  <svg aria-hidden="true" viewBox="0 0 48 48">
+                    <path class="icon-fill" d="M7 23.5 24 9l17 14.5-3 3.5v14H10V27l-3-3.5Z" />
+                    <path class="icon-detail" d="M20 41V29h8v12" />
+                  </svg>
+                </button>
+                <button class="genus-node house" type="button" data-node="house-c" aria-label="House C">
+                  <svg aria-hidden="true" viewBox="0 0 48 48">
+                    <path class="icon-fill" d="M7 23.5 24 9l17 14.5-3 3.5v14H10V27l-3-3.5Z" />
+                    <path class="icon-detail" d="M20 41V29h8v12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="genus-demo-actions">
+              <button class="button" type="button" data-genus-validate>Validate</button>
+              <button class="button alt" type="button" data-genus-solution>Show Solution</button>
+              <button class="button alt" type="button" data-genus-reset>Reset</button>
+              <p data-genus-status aria-live="polite">Draw nine utility-to-house lines.</p>
+            </div>
+          </section>
         </article>
       </div>
     </section>
     <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/genus-utility-demo.js"></script>
   </body>
 </html>
