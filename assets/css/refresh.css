@@ -1336,6 +1336,512 @@ button.alt:hover,
   width: 100%;
 }
 
+.living-demo {
+  background: linear-gradient(135deg, #f8fbff 0%, #fff8ec 100%);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 18px 18px 0 var(--mint), -18px -18px 0 var(--rose);
+  margin: 3em 0 0.75em;
+  padding: 1.4em;
+}
+
+.living-demo-copy h2 {
+  margin-top: 0.15em;
+}
+
+.living-demo-copy p {
+  color: var(--ink);
+  font-size: 1em;
+}
+
+.living-browser-window {
+  background: #fff;
+  border: 1px solid #d8dedb;
+  border-radius: 8px;
+  box-shadow: 0 18px 34px rgba(35, 49, 61, 0.16);
+  margin-top: 1.4em;
+  max-height: min(620px, calc(100vh - 5.5rem));
+  overflow: hidden;
+  margin-left: -1.4em;
+  margin-right: -1.4em;
+  margin-bottom: -1.4em;
+}
+
+.living-browser-header {
+  align-items: center;
+  background: #f1f3f4;
+  border-bottom: 1px solid #d8dedb;
+  display: flex;
+  gap: 1em;
+  padding: 0.7em 0.9em;
+}
+
+.living-window-controls {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 0.48em;
+}
+
+.living-window-dot {
+  border-radius: 999px;
+  height: 0.72em;
+  width: 0.72em;
+}
+
+.living-window-dot.close {
+  background: #ff5f56;
+}
+
+.living-window-dot.minimize {
+  background: #ffbd2e;
+}
+
+.living-window-dot.maximize {
+  background: #27c93f;
+}
+
+.living-url-bar {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #d1d1d6;
+  border-radius: 6px;
+  color: #333;
+  display: flex;
+  flex: 1 1 auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.78em;
+  gap: 10px;
+  line-height: 1.2;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0.45em 0.75em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.living-lock {
+  align-items: center;
+  color: #39805f;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 0;
+  height: 1.1em;
+  justify-content: center;
+  width: 1.1em;
+}
+
+.living-lock::before {
+  content: "🔒";
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.living-browser-content {
+  background:
+    radial-gradient(circle at 15% 8%, rgba(211, 237, 229, 0.65), transparent 34%),
+    radial-gradient(circle at 90% 10%, rgba(255, 215, 203, 0.54), transparent 32%),
+    linear-gradient(180deg, #fffdf8 0%, #f6faf8 100%);
+  height: min(540px, calc(100vh - 9rem));
+  min-height: 430px;
+  overflow: hidden;
+  position: relative;
+}
+
+.living-shop-shell {
+  height: 100%;
+  position: relative;
+}
+
+.living-shop-main {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.living-shop-toolbar {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(3, 52, 37, 0.1);
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  padding: 0.78em 1em;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.living-shop-toolbar h3 {
+  color: #033425;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(0.92rem, 1.45vw, 1.06rem);
+  line-height: 1.08;
+  margin: 0.1em 0 0;
+  white-space: nowrap;
+}
+
+.living-shop-label,
+.living-panel-kicker {
+  color: #39805f !important;
+  font-size: 0.76em !important;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  text-transform: uppercase;
+}
+
+.living-shop-toolbar nav {
+  display: flex;
+  flex: 0 1 auto;
+  gap: 0.4em;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.living-shop-toolbar nav a {
+  border-radius: 999px;
+  color: #31443d !important;
+  font-size: 0.78em;
+  font-weight: 900;
+  padding: 0.45em 0.65em;
+  text-decoration: none;
+}
+
+.living-shop-toolbar nav a:hover {
+  background: #e1ede8;
+}
+
+.living-store-hero {
+  background: linear-gradient(135deg, rgba(3, 52, 37, 0.92), rgba(57, 128, 95, 0.88));
+  border-radius: 10px;
+  color: #fff;
+  display: grid;
+  gap: 0.15em;
+  margin: 0.85em 23em 0.85em 1em;
+  min-height: 5em;
+  padding: 0.9em 1em;
+}
+
+.living-store-hero p,
+.living-store-hero span {
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-size: 0.78em !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+}
+
+.living-store-hero p {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.living-store-hero strong {
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55em;
+  line-height: 1.04;
+}
+
+.living-product-grid {
+  display: grid;
+  gap: 0.72em;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0 23em 1em 1em;
+}
+
+.living-product-card {
+  background: #fff;
+  border: 1px solid rgba(35, 49, 61, 0.16);
+  border-radius: 8px;
+  color: var(--ink);
+  cursor: pointer;
+  display: grid;
+  gap: 0.55em;
+  grid-template-columns: 1fr;
+  padding: 0.55em 0.55em 3.05em;
+  position: relative;
+  text-align: left;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.living-product-card:hover,
+.living-product-card:focus-visible {
+  border-color: #52b788;
+  box-shadow: 0 8px 18px rgba(35, 49, 61, 0.1);
+  transform: translateY(-1px);
+}
+
+.living-product-card[aria-pressed="true"] {
+  background: #edfff2;
+  border-color: #52b788;
+  box-shadow: inset 0 0 0 2px rgba(82, 183, 136, 0.18);
+}
+
+.living-product-art {
+  background: #f6faf8;
+  border: 1px solid rgba(3, 52, 37, 0.14);
+  border-radius: 8px;
+  display: block;
+  overflow: hidden;
+}
+
+.living-product-art img {
+  aspect-ratio: 1 / 1;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.living-product-info {
+  display: grid;
+  gap: 0.22em;
+  min-height: 4.65em;
+  min-width: 0;
+}
+
+.living-product-name,
+.living-product-seller,
+.living-product-meta,
+.living-product-badge {
+  display: block;
+  line-height: 1.2;
+}
+
+.living-product-name {
+  color: #23313d;
+  font-size: 0.92em;
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.living-product-seller,
+.living-product-meta {
+  color: #526878;
+  font-size: 0.8em;
+  font-weight: 800;
+}
+
+.living-product-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45em;
+}
+
+.living-product-badge {
+  align-items: center;
+  background: #e1ede8;
+  border: 1px solid rgba(57, 128, 95, 0.25);
+  border-radius: 999px;
+  color: #033425;
+  display: inline-flex;
+  gap: 0.28em;
+  font-size: 0.66em;
+  font-weight: 900;
+  height: 2.15em;
+  justify-self: start;
+  left: 0.55em;
+  line-height: 1;
+  min-width: 0;
+  padding: 0.25em 0.5em 0.25em 0.34em;
+  position: absolute;
+  bottom: 0.55em;
+  white-space: nowrap;
+  max-width: calc(100% - 1.1em);
+}
+
+.living-product-badge img {
+  flex: 0 0 auto;
+  height: 1.2em;
+  width: 1.2em;
+}
+
+.living-product-badge span {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.living-impact-panel {
+  background: #fff;
+  border: 2px solid #52b788;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  color: #033425;
+  display: grid;
+  gap: 0.55em;
+  max-height: calc(100% - 6.7em);
+  overflow-y: auto;
+  padding: 0.62em;
+  position: absolute;
+  right: 0.8em;
+  top: 5.85em;
+  width: min(20.5em, calc(100% - 1.6em));
+  z-index: 4;
+}
+
+.living-impact-panel p,
+.living-impact-panel li {
+  color: #31443d !important;
+  font-size: 0.78em !important;
+  line-height: 1.45 !important;
+  margin: 0 !important;
+}
+
+.living-impact-banner {
+  align-items: center;
+  background: #d3ede5;
+  border-radius: 8px;
+  display: grid;
+  gap: 0.55em;
+  grid-template-columns: auto 1fr;
+  min-height: 2.6em;
+  padding: 0.48em;
+}
+
+.living-logo {
+  background: transparent;
+  border-radius: 6px;
+  height: 1.7em;
+  object-fit: contain;
+  width: 1.7em;
+}
+
+.living-impact-banner strong {
+  color: #033425;
+  line-height: 1.1;
+}
+
+.living-impact-section {
+  background: #f7fbf9;
+  border: 1px solid rgba(3, 52, 37, 0.08);
+  border-radius: 8px;
+  padding: 0.62em;
+}
+
+.living-impact-section h3,
+.living-impact-section h4 {
+  color: #033425;
+  font-family: "Nunito", system-ui, sans-serif;
+  font-weight: 900;
+  line-height: 1.08;
+  margin: 0.16em 0 0.35em;
+}
+
+.living-impact-section h3 {
+  font-size: 1.35em;
+}
+
+.living-impact-section h4 {
+  font-size: 0.92em;
+}
+
+.living-score-card {
+  background: #eef2f0;
+  border-radius: 8px;
+  display: grid;
+  gap: 0.45em;
+  padding: 0.62em;
+}
+
+.living-score-card > div:first-child {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
+
+.living-score-card span {
+  color: #31443d;
+  font-size: 0.8em;
+  font-weight: 900;
+}
+
+.living-score-card b {
+  color: #033425;
+  font-size: 1.35em;
+  line-height: 1;
+}
+
+.living-score-track,
+.living-stage-track {
+  background: rgba(3, 52, 37, 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.living-score-track {
+  height: 0.75em;
+}
+
+.living-score-track span,
+.living-stage-track span {
+  background: linear-gradient(90deg, #52b788, #ff9c7f);
+  display: block;
+  height: 100%;
+  transition: width 0.24s ease;
+}
+
+.living-metrics {
+  display: grid;
+  gap: 0.42em;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.living-metrics div {
+  background: #eef2f0;
+  border-radius: 8px;
+  display: grid;
+  gap: 0.2em;
+  padding: 0.54em;
+}
+
+.living-metrics span {
+  color: #636363;
+  font-size: 0.72em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.living-metrics b {
+  color: #033425;
+  font-size: 0.95em;
+  line-height: 1.15;
+}
+
+.living-stage-list {
+  display: grid;
+  gap: 0.5em;
+}
+
+.living-stage-row {
+  align-items: center;
+  color: #31443d;
+  display: grid;
+  font-size: 0.74em;
+  font-weight: 900;
+  gap: 0.55em;
+  grid-template-columns: 4.9em minmax(0, 1fr) 2.5em;
+}
+
+.living-stage-track {
+  height: 0.65em;
+}
+
+.living-impact-section ul {
+  margin: 0.4em 0 0 1.1em;
+  padding: 0;
+}
+
+.living-equivalency {
+  color: #636363 !important;
+  margin-top: 0.7em !important;
+}
+
 details {
   margin-bottom: 1.8em;
   text-align: left;
@@ -1625,6 +2131,10 @@ ul.social li a.fa-orcid:hover:before {
   .edge-demo-grid {
     grid-template-columns: 1fr;
   }
+
+  .living-shop-shell {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 736px) {
@@ -1831,6 +2341,83 @@ ul.social li a.fa-orcid:hover:before {
 
   .edge-result {
     min-height: 12em;
+  }
+
+  .living-demo {
+    box-shadow: 9px 9px 0 var(--mint), -9px -9px 0 var(--rose);
+    padding: 1em;
+  }
+
+  .living-shop-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .living-shop-toolbar nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  .living-browser-window {
+    max-height: min(650px, calc(100vh - 4.8rem));
+  }
+
+  .living-browser-header {
+    gap: 0.65em;
+    padding: 0.62em;
+  }
+
+  .living-window-controls {
+    gap: 0.35em;
+  }
+
+  .living-url-bar {
+    font-size: 0.68em;
+    padding: 0.42em 0.55em;
+  }
+
+  .living-browser-content {
+    height: min(570px, calc(100vh - 8.5rem));
+    min-height: 500px;
+  }
+
+  .living-store-hero {
+    margin: 0.7em;
+    padding: 0.8em;
+  }
+
+  .living-store-hero strong {
+    font-size: 1.26em;
+  }
+
+  .living-shop-toolbar h3 {
+    white-space: normal;
+  }
+
+  .living-product-grid {
+    grid-template-columns: 1fr;
+    padding: 0 0.7em 14em;
+  }
+
+  .living-product-card {
+    grid-template-columns: 4.2em minmax(0, 1fr);
+  }
+
+  .living-product-badge {
+    grid-column: 2;
+  }
+
+  .living-impact-panel {
+    bottom: 0.55em;
+    max-height: 14.5em;
+    padding: 0.65em;
+    right: 0.55em;
+    top: auto;
+    width: calc(100% - 1.1em);
+  }
+
+  .living-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   details > summary > h3 {

@@ -83,9 +83,95 @@
             <a class="button" href="https://dl.acm.org/doi/10.1145/3749488" target="_blank">Read the paper</a>
             <a class="button alt" href="https://github.com/iamZhihanZhang/Living-Sustainability" target="_blank">Code</a>
           </div>
+          <section class="living-demo" data-living-demo>
+            <div class="living-demo-copy">
+              <p class="eyebrow">Interactive Demo</p>
+              <h2>Shop with sustainability in the room</h2>
+              <p>
+                This mock store uses deliberately silly products and hardcoded
+                sustainability data to show the interaction pattern: select an
+                item, and the shopping page gets an in-context impact panel
+                instead of asking you to leave the decision moment.
+              </p>
+            </div>
+            <div class="living-browser-window">
+              <div class="living-browser-header" aria-hidden="true">
+                <div class="living-window-controls">
+                  <span class="living-window-dot close"></span>
+                  <span class="living-window-dot minimize"></span>
+                  <span class="living-window-dot maximize"></span>
+                </div>
+                <div class="living-url-bar">
+                  <span class="living-lock">lock</span>
+                  <span>https://mythic.marketplace.example/search?q=sustainable</span>
+                </div>
+              </div>
+              <div class="living-browser-content">
+                <div class="living-shop-shell">
+                  <div class="living-shop-main">
+                    <div class="living-shop-toolbar">
+                      <div>
+                        <p class="living-shop-label">Mythic Marketplace</p>
+                        <h3>Questionable goods, clearer tradeoffs</h3>
+                      </div>
+                      <nav aria-label="Mock store sections">
+                        <a href="#0">Deals</a>
+                        <a href="#0">Artifacts</a>
+                        <a href="#0">Electronics</a>
+                      </nav>
+                    </div>
+                    <div class="living-store-hero">
+                      <p>Today only</p>
+                      <strong>Legendary items, ordinary checkout flow.</strong>
+                      <span>Living Sustainability overlays impact cues as you browse.</span>
+                    </div>
+                    <div class="living-product-grid" data-living-products></div>
+                  </div>
+                  <aside class="living-impact-panel" aria-live="polite">
+                    <div class="living-impact-banner">
+                      <img class="living-logo" src="/images/demo/lca-128.png" alt="" aria-hidden="true" />
+                      <strong>Living Sustainability</strong>
+                    </div>
+                    <div class="living-score-card">
+                      <div>
+                        <span>Estimated impact score</span>
+                        <b><span data-living-score>95</span>/100</b>
+                      </div>
+                      <div class="living-score-track" aria-hidden="true">
+                        <span data-living-score-bar style="width: 95%"></span>
+                      </div>
+                    </div>
+                    <div class="living-metrics">
+                      <div><span>Carbon</span><b data-living-co2e>0.8 kg CO2e</b></div>
+                      <div><span>Water</span><b data-living-water>0 L</b></div>
+                      <div><span>Repair</span><b data-living-repair>Digital</b></div>
+                      <div><span>Risk</span><b data-living-risk>Low</b></div>
+                    </div>
+                    <div class="living-impact-section">
+                      <h4>Lifecycle signal</h4>
+                      <div class="living-stage-list" data-living-stages></div>
+                    </div>
+                    <div class="living-impact-section">
+                      <h4>Plain-language read</h4>
+                      <p data-living-note>
+                        A pronunciation and language-learning app with no shipping,
+                        no rare materials, and a seller you can actually email.
+                      </p>
+                      <p class="living-equivalency" data-living-equivalency></p>
+                    </div>
+                    <div class="living-impact-section">
+                      <h4>Sources considered</h4>
+                      <ul data-living-sources></ul>
+                    </div>
+                  </aside>
+                </div>
+              </div>
+            </div>
+          </section>
         </article>
       </div>
     </section>
     <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/living-sustainability-demo.js"></script>
   </body>
 </html>
