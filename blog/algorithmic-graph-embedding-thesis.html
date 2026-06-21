@@ -82,9 +82,47 @@
             <a class="button" href="/images/UndergraduateMathThesis.pdf" target="_blank">Read the thesis</a>
             <a class="button alt" href="https://github.com/SanderGi/Genus" target="_blank">Code</a>
           </div>
+          <section class="embedding-demo" data-embedding-demo>
+            <div class="embedding-demo-copy">
+              <p class="eyebrow">Interactive Demo</p>
+              <h2>Build a graph, then embed it</h2>
+              <p>
+                Click to place vertices. Drag between vertices to add edges.
+                Toggle move mode to reposition vertices, then ask PAGE to find
+                a crossing-free embedding.
+              </p>
+            </div>
+            <div class="embedding-workspace">
+              <div class="embedding-canvas-wrap">
+                <canvas class="embedding-canvas" data-embedding-canvas aria-label="Graph builder canvas"></canvas>
+              </div>
+              <aside class="embedding-panel">
+                <div class="embedding-actions">
+                  <button class="button" type="button" data-embedding-run>Embed</button>
+                  <button class="button alt" type="button" data-embedding-move aria-pressed="false">Move Mode</button>
+                  <button class="button alt" type="button" data-embedding-sample>Load (3, 8) Cage</button>
+                  <button class="button alt" type="button" data-embedding-clear>Clear</button>
+                </div>
+                <p class="embedding-status" data-embedding-status aria-live="polite">Start by placing a few vertices.</p>
+                <div class="embedding-output" data-embedding-output hidden>
+                  <div class="embedding-facts">
+                    <p><strong>Genus:</strong> <span data-embedding-genus></span></p>
+                    <p>
+                      A rotation system lists the cyclic order of neighbors
+                      around each vertex in the embedding and is what my algorithm 
+                      (PAGE) outputs to Professor Brinkmann's drawing routine. 
+                      See it here:
+                    </p>
+                    <pre data-embedding-rotation></pre>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </section>
         </article>
       </div>
     </section>
     <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/graph-embedding-demo.js"></script>
   </body>
 </html>
