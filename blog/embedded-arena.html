@@ -87,9 +87,54 @@
             <a class="button" href="https://arxiv.org/abs/2606.16190" target="_blank">Read the paper</a>
             <a class="button alt" href="https://ubicomplab.github.io/embedded-arena/" target="_blank">Project page</a>
           </div>
+          <section class="edge-demo" id="embedded-animal-demo" aria-labelledby="embedded-animal-demo-title">
+            <div class="edge-demo-copy">
+              <p class="eyebrow">Interactive Demo</p>
+              <h2 id="embedded-animal-demo-title">Could a tiny field camera ignore the wind?</h2>
+              <p>
+                The original motivation was practical: a farmer needed to know when
+                crop-damaging animals entered large fields, without maintaining a
+                power and WiFi grid. Try the compressed animal detector below with a
+                preset image or your own upload. With hardware-in-the-loop feedback, 
+                agents can easily compress models like this to run battery-free in the field.
+              </p>
+            </div>
+            <div class="edge-demo-panel">
+              <div class="edge-demo-controls" aria-label="Choose an image for animal detection">
+                <button type="button" class="sample-tile active" data-edge-sample="/images/demo/yades-chickens.jpg">
+                  Chickens
+                </button>
+                <button type="button" class="sample-tile" data-edge-sample="/images/demo/yades-turtle.jpg">
+                  Turtle
+                </button>
+                <button type="button" class="sample-tile" data-edge-sample="/images/demo/yades-quiet-field.jpg">
+                  Quiet field
+                </button>
+                <label class="sample-upload">
+                  <span>Upload image</span>
+                  <input type="file" accept="image/*" data-edge-upload />
+                </label>
+              </div>
+              <div class="edge-demo-grid">
+                <figure class="edge-preview">
+                  <img src="/images/demo/yades-chickens.jpg" alt="Selected field camera image for animal detection" data-edge-preview />
+                </figure>
+                <div class="edge-result" aria-live="polite">
+                  <p class="edge-result-label" data-edge-label>Model loading...</p>
+                  <p class="edge-result-score" data-edge-score></p>
+                  <div class="edge-meter" aria-hidden="true"><span data-edge-meter></span></div>
+                  <p class="edge-result-note" data-edge-note>
+                    The model runs in your browser using ONNX Runtime Web. No image is uploaded.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
         </article>
       </div>
     </section>
     <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/vendor/ort.wasm.min.js"></script>
+    <script src="/assets/js/embedded-animal-demo.js"></script>
   </body>
 </html>
