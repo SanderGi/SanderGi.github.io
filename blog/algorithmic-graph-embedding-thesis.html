@@ -56,11 +56,19 @@
             path around the hole that a flat sheet cannot provide.
           </p>
           <p>
+            An embedding is a drawing of a graph on a surface where edges meet
+            only at their intended endpoints. If the surface is a plane, the
+            graph is planar. If the surface needs one handle, like a donut, the
+            graph has genus 1; two handles means genus 2; and so on. The goal is
+            to find the smallest surface that gives the graph enough room.
+          </p>
+          <p>
             The thesis starts by building that intuition carefully: topology,
-            compact surfaces, graph embeddings, and rotation systems. Rotation
-            systems are especially delightful because they convert a geometric
-            drawing question into combinatorial data about the order of edges
-            around vertices.
+            compact surfaces, graph embeddings, and rotation systems. A rotation
+            system is a compact way to describe an embedding without drawing the
+            whole surface. For each vertex, it records the cyclic order in which
+            the incident edges appear as you walk around that vertex. Those local
+            clockwise orders determine how the faces of the drawing fit together.
           </p>
           <h2>From exposition to algorithm</h2>
           <p>
@@ -77,6 +85,15 @@
             certificate; the implementation gives you something you can run.
             That combination is exactly what makes algorithmic mathematics feel
             alive.
+          </p>
+          <p>
+            The demo below shows the same idea in miniature. You build a graph,
+            PAGE searches for a low-genus embedding, and the drawing routine
+            returns a polygon picture. When matching polygon sides are glued
+            together, the picture represents a surface where the graph can be
+            drawn without crossings. The rotation system is the text certificate
+            of that drawing: each line says which neighbors surround a vertex
+            and in what cyclic order.
           </p>
           <div class="post-links">
             <a class="button" href="/images/UndergraduateMathThesis.pdf" target="_blank">Read the thesis</a>
