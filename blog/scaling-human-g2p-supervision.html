@@ -92,9 +92,40 @@
             <a class="button alt" href="https://huggingface.co/KoelLabs/xlsr-english-01" target="_blank">Try the model</a>
             <a class="button alt" href="https://github.com/KoelLabs/ML" target="_blank">Code</a>
           </div>
+          <section class="koel-demo" data-koel-demo>
+            <div class="koel-demo-copy">
+              <p class="eyebrow">Interactive Demo</p>
+              <h2>Try an accent coaching story flow</h2>
+              <p>
+                This mini lesson lets you watch a short story clip,
+                say the target phrase, and get word-level pronunciation
+                feedback. It uses the phonetic transcription models and
+                benchmarks described in the paper. Inference goes through
+                the Koel Labs server, but your audio is only processed 
+                ephemerally and not stored past processing.
+              </p>
+            </div>
+            <div class="koel-phone" aria-label="Interactive Slay Speech pronunciation demo">
+              <div class="koel-phone-speaker" aria-hidden="true"></div>
+              <div class="koel-phone-screen">
+                <div class="koel-app-nav">
+                  <div class="koel-progress" data-koel-progress aria-label="Story progress"></div>
+                  <span class="koel-counter" data-koel-counter>1/12</span>
+                </div>
+                <div class="koel-view" data-koel-view></div>
+              </div>
+            </div>
+            <p class="koel-demo-note">
+              Want more content, translations, personalization, practice
+              modes, and deeper feedback? <br> Download <a href="https://slayspeech.com" target="_blank" rel="noopener">my startup's app</a>.
+            </p>
+          </section>
         </article>
       </div>
     </section>
     <script src="/assets/js/site.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.6.16/dist/hls.min.js"></script>
+    <script src="/assets/js/vendor/vosk.js"></script>
+    <script src="/assets/js/koel-story-demo.js"></script>
   </body>
 </html>
