@@ -7,7 +7,7 @@
       id: "slay-speech",
       name: "Slay Speech",
       seller: "Koel Labs",
-      price: "$12/mo",
+      price: "$5/mo",
       badge: "Lowest impact",
       url: "https://slayspeech.com",
       category: "Software",
