@@ -5,6 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/assets/css/refresh.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "onnxruntime-web": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.24.3/dist/ort.all.min.mjs"
+        }
+      }
+    </script>
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
@@ -95,9 +102,71 @@
             helped, which speakers are harmed, and whether a new release quietly
             breaks performance for communities outside the benchmark center.
           </p>
+          <section class="asr-demo" data-asr-demo>
+            <div class="asr-demo-copy">
+              <p class="eyebrow">Interactive Demo</p>
+              <h2>See how well ASR works for you</h2>
+              <p>
+                Record a short phrase, then run local speech recognition models
+                so audio never leaves your browser using <a href="https://github.com/SanderGi/onnx-asr-web" target="_blank">my library</a>. Try background noise, a different speaking
+                style, or an accent you actually use in daily life.
+              </p>
+            </div>
+            <div class="asr-workspace">
+              <div class="asr-recorder">
+                <canvas class="asr-waveform" data-asr-waveform role="img" aria-label="Live microphone waveform"></canvas>
+                <div class="asr-controls">
+                  <button class="button" type="button" data-asr-record>Record</button>
+                  <button class="button alt" type="button" data-asr-stop disabled>Stop</button>
+                  <button class="button alt" type="button" data-asr-run disabled>Transcribe</button>
+                  <button class="button alt" type="button" data-asr-clear disabled>Clear</button>
+                </div>
+                <p class="asr-status" data-asr-status aria-live="polite">Grant microphone access to record a short clip.</p>
+                <audio data-asr-audio controls hidden></audio>
+              </div>
+              <aside class="asr-panel">
+                <h3>Models</h3>
+                <div class="asr-model-list">
+                  <label class="asr-model-option">
+                    <input type="checkbox" data-asr-model checked value="istupakov/parakeet-ctc-0.6b-onnx" />
+                    <span>NVIDIA Parakeet</span>
+                  </label>
+                  <label class="asr-model-option">
+                    <input type="checkbox" data-asr-model value="istupakov/whisper-base-onnx" />
+                    <span>OpenAI Whisper</span>
+                  </label>
+                  <label class="asr-model-option">
+                    <input type="checkbox" data-asr-model value="istupakov/canary-180m-flash-onnx" />
+                    <span>NVIDIA Canary</span>
+                  </label>
+                  <label class="asr-model-option">
+                    <input type="checkbox" data-asr-model value="istupakov/gigaam-v2-onnx" />
+                    <span>GigaAM</span>
+                  </label>
+                  <label class="asr-model-option">
+                    <input type="checkbox" data-asr-model value="t-tech/T-one" />
+                    <span>T-one</span>
+                  </label>
+                  <label class="asr-model-option">
+                    <input type="checkbox" data-asr-model value="alphacep/vosk-model-small-ru" />
+                    <span>Vosk Small</span>
+                  </label>
+                </div>
+                <div class="asr-results" data-asr-results></div>
+                <p class="asr-note">
+                  Don't feel bad if the ASR models don't pick up your speech
+                  correctly. They are known to not work great outside ideal
+                  non-noisy environments or for speakers who don't fit their
+                  speaker profile. If you want to work on your pronunciation,
+                  check out <a href="https://slayspeech.com" target="_blank" rel="noopener">my app</a>.
+                </p>
+              </aside>
+            </div>
+          </section>
         </article>
       </div>
     </section>
     <script src="/assets/js/site.js"></script>
+    <script type="module" src="/assets/js/asr-gap-demo.js"></script>
   </body>
 </html>
