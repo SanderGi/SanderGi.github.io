@@ -592,7 +592,7 @@
         <p class="koel-step-label">Story Complete</p>
         <p class="koel-prompt">Nice work. You finished the Tin Soldier demo.</p>
         <div class="koel-feedback">
-          <div class="koel-score">The full app includes more stories, translations, review, and personalized practice.</div>
+          <div class="koel-score">The full app includes more stories, translations, review, personalized practice, detailed feedback, and more.</div>
         </div>
         <div class="koel-footer-actions">
           <a class="koel-action" href="https://slayspeech.com" target="_blank" rel="noopener">Download Slay Speech</a>

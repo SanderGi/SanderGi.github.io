@@ -51,16 +51,16 @@
           <h2>The everyday problem</h2>
           <p>
             A speech recognizer writes words. A phonetic transcriber tries to
-            write sounds. That distinction matters for pronunciation learning,
+            write sounds. The latter is required for pronunciation learning,
             speech therapy, accent research, and any tool that needs to notice
             how a word was said rather than only guessing which word was meant.
           </p>
           <p>
             The catch is that expert phonetic annotation is slow and expensive.
-            A common shortcut is grapheme-to-phoneme labeling: give a model the
-            text and ask it to predict the expected pronunciation. That creates
-            lots of labels cheaply, but it also risks teaching the model an
-            idealized pronunciation instead of the sound in the recording.
+            A common shortcut is grapheme-to-phoneme (G2P) labeling: take the text
+            transcription of the audio and predict the expected pronunciation. 
+            That creates lots of labels cheaply, but it also risks teaching the 
+            model an idealized pronunciation instead of the sound in the recording.
           </p>
           <h2>What we tested</h2>
           <p>
@@ -71,21 +71,30 @@
             enough?
           </p>
           <p>
-            The surprising answer is not "more data always wins." G2P labels are
+            In stark contrast with <a href="https://www.cs.utexas.edu/~eunsol/courses/data/bitter_lesson.pdf">The Bitter Lesson</a>, 
+            the surprising answer is not "more data always wins." G2P labels are
             helpful in the low-data regime. Once there is a meaningful amount of
             human annotation, the better recipe is strong ASR pretraining plus
             carefully curated human labels. That recipe achieved a 2.3x reduction
             in weighted phone feature error rate over prior systems, with gains
-            on non-native and aphasic speech.
+            on non-native and aphasic speech. For speakers suffering from post post-stroke
+            aphasia, the difference is >25% error rate with thousands of hours of G2P labeled data
+            and &lt;6% error rate with just 40 hours of human annotated data, only a couple of which
+            actually need to be aphasic speech. That's the difference between a clinically
+            useful model and one that is almost randomly guessing. Moreover, a couple hours
+            of specialized human annotations is often quite feasible, even in low resource settings.
+            We have additionally shown that the higher quality labels generalize better to unseen dialects, 
+            further paving the way for greater performance in low resource settings.
           </p>
           <h2>Why it matters</h2>
           <p>
             The work pushes against a tempting story in speech ML: if labels are
-            cheap, scale them up. For inclusive speech systems, label quality and
-            dialect coverage can matter more than raw quantity. A pronunciation
-            tutor, clinical tool, or linguistic analysis pipeline should not
-            become confident by averaging away the very differences it needs to
-            hear.
+            cheap, scale them up. For inclusive speech systems, label quality can 
+            matter more than raw quantity. A pronunciation tutor, clinical tool, 
+            or linguistic analysis pipeline should not become confident by averaging 
+            away the very differences it needs to hear. While cheap labels are convenient
+            for narrow benchmarks and research publications, careful handling of data 
+            is essential for systems deployed in the real world to diverse users. 
           </p>
           <div class="post-links">
             <a class="button" href="https://arxiv.org/abs/2606.16019" target="_blank">Read the paper</a>
