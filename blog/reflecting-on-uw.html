@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reflecting on my time at University of Washington</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/css/refresh.css" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <meta name="draft" content="true">
+    <meta name="author" content="Alexander Metzger" />
+    <meta name="description" content="I spent 4 years at UW: 1.5 years on my Bachelors of Science in CS, 1.5 year on my BS with Honors in Math, and 1 year on my Masters in CS. I learned a lot and built lots of fun projects with my classmates." />
+    <meta name="keywords" content="Projects,ML,Math" />
+    <meta name="dcterms.created" content="2026-06-23" />
+    <meta property="og:image" content="/images/4_years_at_UW.png | photos from my time at UW" />
+  </head>
+  <body>
+    <nav id="nav">
+      <ul class="container">
+        <li><a href="/index.html#top">Home</a></li>
+        <li><a href="/index.html#work">Research</a></li>
+        <li><a href="/index.html#portfolio">Portfolio</a></li>
+        <li><a href="/blog.html">Writing</a></li>
+        <li><a href="/index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <article class="wrapper style1 post-hero">
+      <div class="container">
+        <p class="eyebrow">Learning Projects</p>
+        <h1>Reflecting on my time at University of Washington</h1>
+        <p>
+          A tour through 4 years of projects at University of Washington and what I have learned.
+        </p>
+        <div class="post-meta"><span>Alexander Metzger</span><span>June 23, 2026</span></div>
+        <div class="pills">
+          <span>Projects</span><span>Computer Science</span><span>Math</span>
+        </div>
+        <img class="post-cover" src="/images/4_years_at_UW.png" alt="photos from my time at UW" />
+      </div>
+    </article>
+    <section class="wrapper style3 post-body">
+      <div class="container">
+        <article>
+          <p class="post-callout">
+            Having just graduated, I've been cleaning out old class notes and projects and realizing how much of my UW experience was shaped by side quests: getting lost in research, extending class assignments too far, turning hobbies into technical projects, and eventually learning to share the work publicly. 
+            This post is a tour through some of my favorite projects, and what they taught me, told through interactive widgets.
+          </p>
+          <h2>Year 1: Reaching Out Early (2022-23)</h2>
+          <p>
+            The first thing I did upon accepting my UW offer was look for fun groups to join. One stood out: <a href="https://www.cs.washington.edu/people/faculty/richard-anderson/" target="_blank">Richard Anderson</a>'s <a href="https://ictd.cs.washington.edu/" target="_blank">ICTD Lab</a> and the <a href="/blog/ekichabi-v2-tanzania.html">eKichabi v2 project </a>(a digital phone directory for farmers in rural Tanzania). 
+            I sent in an email and, thanks to PhD student <a href="https://www.ananditha.me/" target="_blank">Ananditha Raghunath</a> and Professor Anderson taking a chance on an incoming freshman, I got to join the project. 
+            After a year of field deployments and validation, I had learned Django and made friends in the ICTD community. Both helped me land my first internship at <a href="https://gooey.ai" target="_blank">Gooey.AI</a> working on <a href="https://farmer.chat" target="_blank">Farmer.CHAT</a> (a chatbot to help farmers across India, Ethiopia, and Kenya).
+            The work was demoed at the <a href="https://gooey.ai/FarmerCHATatUN" target="_blank">UN 77th General Assembly</a> and <a href="https://www.fao.org/agroinformatics/news/news-detail/fao--ai-and-digital-tools-for-climate-resilient-agri-food-systems--on-the-spotlight-at-the-science-and-innovation-forum-2023/en" target="_blank">FAO Science and Innovation Forum 2023</a>, but it is more fun if you try the English version yourself:
+          </p>
+          <section class="edge-demo" style="padding: 0; overflow: hidden;">
+            <div id="gooey-embed"></div>
+            <script src="https://cdn.jsdelivr.net/gh/GooeyAI/gooey-web-widget@2.12.1/dist/lib.js"></script>
+            <script>
+                function onLoadGooeyEmbed() { 
+                    GooeyEmbed.mount({ 
+                      target: "#gooey-embed",
+                      enableConversations: false
+                    }); 
+                }
+            </script>
+            <script async="" defer="" onload="onLoadGooeyEmbed()" src="https://gooey.ai/chat/agriculture-farmerchat-NRq/lib.js"></script>
+          </section>
+          <br><p>
+            Working at Gooey with AI agents, clients, startups, and model deployments laid the foundation for eventually founding <a href="https://koellabs.com" target="_blank">my own startup</a>.
+            The main takeaway I have for anyone about to start their undergrad is to not be afraid to reach out to join extracurricular projects, especially research, in the first year. 
+            The sooner you start building and publishing useful projects, the more doors open up.
+          </p>
+          <p>
+            That said, while my most useful experiences were outside the classroom, the course exercises were definitely not without their merits.
+            As a violinist in <a href="https://music.washington.edu/ensembles/university-washington-symphony-orchestra" target="_blank">the UWSO</a>, the first project that resonated with me was actually in the very first introductory CS class I took.
+            The task was to implement a simple Guitar sound synthesizer. Naturally, I extended it to accept <a href="https://it.wikipedia.org/wiki/Musical_Instrument_Digital_Interface" target="_blank">MIDI input</a>:
+          </p>
+          <section class="edge-demo">
+            TODO
+          </section>
+          <br><p>
+            So, while I recommend seeking out extracurricular experiences early, I do not want the message to be to ignore your coursework. Even if you're forced to take a boring prerequisite, the smart move is to extend it and learn something new.
+            In fact, through extending projects in my first year, I got good enough at building apps/games to petition into a senior capstone in software development for underserved populations.
+            Together, my group and I built <a href="https://doi.org/10.13140/RG.2.2.30902.06727" target="_blank">an app</a> to teach community health workers in India how to use EKG machines to screen for heart diseases.
+            Huge thanks to my mom for teaching me how to read electrocardiograms.
+          </p>
+          <h2>Year 2: Interdisciplinary CS (2023-24)</h2>
+          <p>
+            Having seen the impact you can have building software, my main goal for the second year was to explore the intersections of CS with other fields.
+            Starting with aerodynamics, I joined <a href="https://www.dbfuw.com/" target="_blank">Design Build Fly</a> to build RC planes.
+            My computer science skills were of great use writing <a href="https://github.com/SanderGi/DesignBuildFly" target="_blank">data analysis scripts</a> for the team, and I learned a ton about fabrication, physics, and electronics.
+            We were even able to place 3rd nationally!
+          </p>
+          <p>
+            Outside extracurriculars, my favorite class from year two was intro to compilers because it lies at the interface of software and hardware.
+            It is one of the main classes I recommend everyone take. In fact, I even went on to become a teaching assistant for it.
+            My class partner, <a href="https://www.linkedin.com/in/danieltameishi" target="_blank">Daniel Tameishi</a>, and I built a (mini)Java compiler that targets x86 and extended it to support Apple Silicon's ARM64 target.
+            Enjoy this <a href="https://godbolt.org/" target="_blank">Godbolt Compiler Explorer</a> inspired MiniJava explorer that shows the source code and assembly correspondence:
+          </p>
+          <section class="edge-demo">
+            TODO
+          </section>
+          <br><p>
+            The things I've learned from building compilers have come in useful in linguistics projects, machine learning research, and software-hardware optimmization.
+            Learning to teach the concepts to undergraduate students and professional masters has also made me better at conveying my research in a more accessible language.
+          </p>
+          <p>
+            Many of the other courses I took have come in useful later too. Most notably, algorithms, modern algorithms, and theory of computation came in quite handy for working on graph algorithms over the summer with <a href="https://austinulrigg.github.io/" target="_blank">Austin Ulrigg</a>.
+            We started with a simple textbook problem: figuring out the genus of the <a href="https://en.wikipedia.org/wiki/Balaban_10-cage" target="_blank">Balaban 10-cage</a>.
+            At the time, we didn't know this was an NP-hard problem in general, so we went about designing a general algorithm for this. It was slow, but eventually, after a few days, we had our answer (the genus is 9).
+            After taking combinatorial theory and numerical analysis in my third year, I was able to optimize our algorithm so it now can solve the Balaban 10-cage and even the much larger, and previously unsolved, <a href="https://en.wikipedia.org/wiki/Tutte_12-cage" target="_blank">Tutte 12-cage</a> in just a few seconds.
+            As of writing, our algorithm, <a href="/blog/efficient-genus-algorithm.html">PAGE</a>, is the fastest general-purpose graph embedding algorithm, has been published in <a href="https://doi.org/10.1016/j.disc.2026.115308" target="_blank">Discrete Mathematics</a>, and inspired <a href="/blog/algorithmic-graph-embedding-thesis.html">my honors thesis</a>.
+            Enjoy a nice genus 17 embedding of the Tutte 12-cage (or <a href="https://genus.fly.dev/" target="_blank">generate 3D files for your own graphs</a>):
+          </p>
+          <section class="edge-demo">
+            TODO
+          </section>
+          <br><p>
+            My main takeaway from the math research, applications of compilers/teaching knowlegde, and wind tunnel data analysis is that my favorite uses of CS skills are not purely computer science, software, or hardware engineering.
+            The coolest applications are when CS skills are used in combination with knowledge from other fields. My advice to current undergrads is to not be afraid to pursue other hobbies and interests even if they seem unrelated to your main field of study.
+            I used to worry that spreading myself across music, planes, math, apps, and research made me unfocused. In practice, the intersections were where the best projects came from.
+            The best time to try new things, have fun, and take risks is when you're young.
+          </p>
+          <h2>Year 3: Learning to share (2024-25)</h2>
+          <p>
+            To learn more about wearables and cross department collaboration, in my third year, I joined the <a href="https://ubicomplab.cs.washington.edu/" target="_blank">Ubicomp Lab</a>, advised by Professor <a href="https://www.cs.washington.edu/people/faculty/shwetak-patel/" target="_blank">Shwetak Patel</a>, Professor <a href="https://www.cs.washington.edu/people/faculty/vikram-iyer/" target="_blank">Vikram Iyer</a>, and senior PhD student <a href="https://homes.cs.washington.edu/~zzhihan/" target="_blank">Zhihan Zhang</a>.
+            Together, we published <a href="/blog/ai-agents-lca.html">multimodal agents for sustainability information retrieval</a> in Nature Electronics and <a href="/blog/living-sustainability.html">work on interactively discovering sustainability information while browsing</a> in ACM IMWUT.
+            We also released an open-source agentic hardware tool-use benchmark, <a href="/blog/embedded-arena.html">Embedded Arena</a>.
+            The part I enjoyed the most was collaborating with other departments across the university, particularly the seismology department.
+            We started by shadowing their work and understanding the data analysis bottlenecks. Then we built a tailored seismology agent to make iteration and data exploration easy for seismologists.
+            Check out the earthquake detection 101 tutorial below and see how good you are at identifying earthquakes from the noisy data:
+          </p>
+          <section class="edge-demo">
+            TODO
+          </section>
+          <br><p>
+            Based on these research experiences, I gave a bunch of <a href="/index.html#portfolio">talks and guest lectures</a> this year.
+            A fun one was to the students of the Embedded Systems capstone where <a href="https://www.linkedin.com/in/jiuyang-lyu-92ab28222/" target="_blank">Jiuyang Lyu</a> and I showed how to run custom ML architectures on the <a href="https://github.com/analogdevicesinc/MaximAI_Documentation" target="_blank">MAX78000</a>.
+            We demonstrated both a tiny LLM and a simple elk detection model:
+          </p>
+          <section class="edge-demo" style="padding: 0; overflow: hidden; display: flex;">
+            <video style="width: 100%; margin: 0;" controls loop>
+              <source src="/images/demo/elkdetection.mp4" type="video/mp4" />
+            </video>
+          </section>
+          <br><p>
+            I ended the year by taking the NLP capstone with <a href="https://github.com/arunasrivastava" target="_blank">Aruna Srivastava</a>.
+            We laid the groundwork for <a href="https://sandergi.com/blog/scaling-human-g2p-supervision.html">our Interspeech publication</a> and trained early versions of the models we now use in <a href="https://koellabs.com" target="_blank">our startup</a>.
+            Try a quantized version of the phonetic transcription model we trained in your browser below:
+          </p>
+          <section class="edge-demo">
+            TODO
+          </section>
+          <br><p>
+            This year, I learned that sharing my work is just as fun as making it. 
+            Before, I would keep my projects on my private disk for my own enjoyment and shy away from public speaking.
+            But after speaking at lots of events, including <a href="https://www.youtube.com/watch?v=s7yPjSUjU9s&list=PLgjjGlfBflISGQaljPUkxEWqDYBgfC7TZ&index=6" target="_blank">the Mozilla Builders Demo Day</a> and Interspeech Speech Slam, I now see the value of it.
+            The reality of the overwhelming amount of papers being published is that if you don't advertise your work, it won't be seen and other researchers won't be able to build on it.
+            More importantly, when you present a talk, your face becomes recognizable and other event attendees will seek you out to talk with you. 
+            This means you get to hear lots of cool ideas and perspectives you otherwise wouldn't.
+            So my main advice to other early researchers is to share your work, and try to be one of the first people presenting at events you attend.
+            This is something my mentor at Gooey, <a href="https://www.linkedin.com/in/sean-blagsvedt/" target="_blank">Sean Blagsvedt</a>, had also tried to teach me, but it didn't click before now.
+          </p>
+          <h2>Year 4: The Sweet Lesson (2025-26)</h2>
+          <p>
+            Starting my master's in computer science, a main theme for my fourth year was the value of human engineering and domain-specific expertise.
+            While this primarily showed up in my research and startup work, I also have relevant class projects to share. 
+            The first was in robotics with <a href="https://www.linkedin.com/in/ethan-k-8a92041b7/" target="_blank">Ethan Kogan</a> where we trained a model to control a robotic arm using our brain waves.
+            In the video, I'm moving a second arm to focus my brain waves, but the main arm on the left is purely controlled by my brain:
+          </p>
+          <section class="edge-demo" style="padding: 0; overflow: hidden; display: flex;">
+            <video style="width: 100%; margin: 0;" controls loop>
+              <source src="/images/demo/cse571.mp4" type="video/mp4" />
+            </video>
+          </section>
+          <br><p>
+            Even a simple task like picking up a charger and dropping it in a box based on my brain signaling to the model how the charger and box are positioned, required many hours of demonstrations for the model to learn.
+            Because we cannot easily simulate a human brain (yet), this was inherently something that could not be trained in simulation and had to be done manually in the real world.
+          </p>
+          <p>
+            Similarly, my other favorite project from this year, required collecting physical data on humans using their body to play tennis.
+            With my group in computer vision, we collected hundreds of videos of serves, and used that data to build a pipeline that takes a video of someone playing tennis, determines the frames where a serve occurs, further annotates each frame with the corresponding stage in <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3445225/" target="_blank">the 8 stage model</a>, and then analyses each stage for potential injury risks and technique improvements.
+            View it in action below and try with some of your own videos too:
+          </p>
+          <section class="edge-demo">
+            TODO
+          </section>
+          <br><p>
+            Lastly, since I spent a significant amount of time this year working on <a href="https://slayspeech.com">my pronunciation coaching app</a>, I would like to share the most tedious part: reviewing and annotating audio samples.
+            Listening to audio, even sped up, is inherently a linear process where reviewing X hours of audio is lower-bounded by X hours of work.
+            However, by visually representing audio using <a href="https://huggingface.co/learn/audio-course/en/chapter1/audio_data#mel-spectrogram" target="_blank">Mel spectrograms</a>, it is possible to read it much faster and "listen" to multiple audio samples at the same time to spot patterns by rendering multiple on the same screen.
+            Here's an interactive tutorial on reading Mel spectrograms:
+          </p>
+          <section class="edge-demo">
+            TODO
+          </section>
+          <br><p>
+            A lot of my projects this year required tedious human work: frame annotations for tennis, brainwave demonstrations for robotics, audio review for my startup, and many small rounds of interface-tuning in between. 
+            Earlier in college, I probably would have treated that kind of manual work as a failure of elegance. 
+            I wanted the scalable™ solution: the clever algorithm, the synthetic data pipeline, the model that improves automatically once you point enough compute at it. 
+            And of course, there is real truth in that instinct.
+            <a href="https://www.cs.utexas.edu/~eunsol/courses/data/bitter_lesson.pdf" target="_blank">The Bitter Lesson</a> is bitter because it keeps being right: over a long enough time horizon, methods that leverage more compute and more data tend to win over methods that try to hard-code expert knowledge.
+          </p>
+          <p>
+            But my fourth year taught me a sweeter version of that lesson. 
+            Human knowledge does not stop being useful just because it may eventually be out-scaled. 
+            There are always moments where the missing ingredient is not more generic data, but the right human signal: a clinician's intuition, a speaker's lived experience, an annotator's careful ear, a user's adaptation to a tool, or a domain expert's sense of what matters. 
+            Sometimes that signal only buys a short-term improvement. 
+            But short-term improvements are not trivial when the system helps a child with a speech impediment communicate today, or helps someone with limited motor control gain even a little more command over a robotic limb. 
+            In those cases, "eventually" is not good enough. 
+            A small boost in usability now can be worth a lot.
+          </p>
+          <p>
+            Generative AI has made this feel even more true, not less. 
+            As more purely software tasks become easy to automate, the valuable human work shifts toward knowing what to measure, what to correct, what interface would make annotation bearable, and what kind of feedback would actually help the next model improve. 
+            It has also made the tedious parts easier to survive: now, when I need a custom labeling tool, review interface, or data-cleaning workflow, I can vibe-code something tailored to the task instead of bending my work around generic software. 
+            That makes me much less afraid of projects that require manual effort.
+          </p>
+          <p>
+            So my takeaway is: do not worship manual work, but do not run from it either. 
+            If one person's careful effort can create repeated value for many people, especially in a domain where the automatic approach is not ready yet, that effort can be deeply worthwhile. 
+            Humans will keep adapting on top of technology, and technology will keep giving humans better ways to contribute back. 
+            The sweet lesson is that scaling and human knowledge are not opposites. 
+            The best systems often use both.
+          </p>
+          <h2>Next: PhD at UC Berkeley (2026)</h2>
+          <p>
+            UW taught me that the projects I enjoy most sit at the boundary between technical depth and human usefulness: 
+            tools that require signal processing, hardware, machine learning, deployment, and careful interface design, but ultimately matter because they help people do something they could not do before. 
+            That is what draws me to assistive speech technology, and it is what I'm excited to keep exploring with <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/gopala.html" target="_blank">Professor Gopala</a> at Berkeley. 
+            Huge thanks to my advisors, collaborators, classmates, and friends at UW for making these four years so fun.
+          </p>
+          <div class="post-links">
+            <a class="button" href="https://news.cs.washington.edu/2025/01/31/allen-school-undergraduates-receive-national-recognition-for-research-contributions/" target="_blank">Allen School News</a>
+            <a class="button alt" href="https://www.instagram.com/p/DYTacRtm8Ji/" target="_blank">UW Instagram</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <script src="/assets/js/site.js"></script>
+  </body>
+</html>
