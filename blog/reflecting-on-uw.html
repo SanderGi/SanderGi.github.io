@@ -75,10 +75,20 @@
           <p>
             That said, while my most useful experiences were outside the classroom, the course exercises were definitely not without their merits.
             As a violinist in <a href="https://music.washington.edu/ensembles/university-washington-symphony-orchestra" target="_blank">the UWSO</a>, the first project that resonated with me was actually in the very first introductory CS class I took.
-            The task was to implement a simple Guitar sound synthesizer. Naturally, I extended it to accept <a href="https://it.wikipedia.org/wiki/Musical_Instrument_Digital_Interface" target="_blank">MIDI input</a>:
+            The task was to implement a simple Guitar sound synthesizer. Naturally, I extended it to accept <a href="https://it.wikipedia.org/wiki/Musical_Instrument_Digital_Interface" target="_blank">MIDI input</a> (try "Under the Sea" or "Pirates", they work great):
           </p>
-          <section class="edge-demo">
-            TODO
+          <section class="uw-guitar-demo" data-uw-guitar-demo>
+            <div class="uw-guitar-controls">
+              <label for="uw-guitar-song">Song</label>
+              <select id="uw-guitar-song" data-guitar-song></select>
+              <button type="button" data-guitar-play-song>Play</button>
+              <button type="button" class="alt" data-guitar-stop>Stop</button>
+            </div>
+            <div class="uw-guitar-stage">
+              <div class="uw-guitar-strings" aria-hidden="true"></div>
+              <div class="uw-guitar-piano" data-guitar-piano aria-label="Interactive guitar piano"></div>
+            </div>
+            <p class="uw-guitar-status" data-guitar-status aria-live="polite"></p>
           </section>
           <br><p>
             So, while I recommend seeking out extracurricular experiences early, I do not want the message to be to ignore your coursework. Even if you're forced to take a boring prerequisite, the smart move is to extend it and learn something new.
@@ -240,5 +250,6 @@
       </div>
     </section>
     <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/uw-guitar-synth-demo.js"></script>
   </body>
 </html>
