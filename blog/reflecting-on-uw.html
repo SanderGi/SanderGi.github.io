@@ -109,8 +109,28 @@
             My class partner, <a href="https://www.linkedin.com/in/danieltameishi" target="_blank">Daniel Tameishi</a>, and I built a (mini)Java compiler that targets x86 and extended it to support Apple Silicon's ARM64 target.
             Enjoy this <a href="https://godbolt.org/" target="_blank">Godbolt Compiler Explorer</a> inspired MiniJava explorer that shows the source code and assembly correspondence:
           </p>
-          <section class="edge-demo">
-            TODO
+          <section class="uw-compiler-demo" data-minijava-demo>
+            <div class="uw-compiler-grid">
+              <div class="uw-compiler-pane">
+                <div class="uw-compiler-pane-title">
+                  <span>MiniJava</span>
+                  <button type="button" data-minijava-compile>Compile</button>
+                </div>
+                <div class="minijava-editor" data-minijava-editor></div>
+              </div>
+              <div class="uw-compiler-pane">
+                <div class="uw-compiler-pane-title">
+                  <span>Assembly</span>
+                  <select id="minijava-target" aria-label="Assembly output format" data-minijava-target>
+                    <option value="x86">x86</option>
+                    <option value="x86-mac">x86 Intel Mac</option>
+                    <option value="arm64-mac">ARM64 Apple Silicon Mac</option>
+                  </select>
+                </div>
+                <pre class="minijava-assembly" data-minijava-assembly tabindex="0"></pre>
+              </div>
+            </div>
+            <p class="uw-compiler-status" data-minijava-status aria-live="polite"></p>
           </section>
           <br><p>
             The things I've learned from building compilers have come in useful in linguistics projects, machine learning research, and software-hardware optimmization.
@@ -251,5 +271,6 @@
     </section>
     <script src="/assets/js/site.js"></script>
     <script src="/assets/js/uw-guitar-synth-demo.js"></script>
+    <script type="module" src="/assets/js/minijava-explorer.js"></script>
   </body>
 </html>

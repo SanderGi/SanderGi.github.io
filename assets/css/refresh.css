@@ -2518,6 +2518,169 @@ button.alt:hover,
   margin: 0.9em 0 0;
 }
 
+.uw-compiler-demo {
+  background: linear-gradient(135deg, #f8fbff 0%, #fff7e9 100%);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 18px 18px 0 var(--sky), -18px -18px 0 var(--mint);
+  margin: 3em 0 0.75em;
+  overflow: hidden;
+  padding: 0;
+}
+
+.uw-compiler-grid {
+  display: grid;
+  gap: 0;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  height: 34.5em;
+  margin: 0;
+}
+
+.uw-compiler-pane {
+  background: rgba(255, 255, 255, 0.86);
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.uw-compiler-pane:first-child {
+  border-right: 1px solid rgba(35, 49, 61, 0.14);
+}
+
+.uw-compiler-pane:last-child {
+  border-left: 0;
+}
+
+.uw-compiler-pane-title {
+  align-items: center;
+  background: #f5f8f9;
+  border-bottom: 1px solid rgba(35, 49, 61, 0.12);
+  color: var(--ink);
+  display: flex;
+  font-family: "Nunito", system-ui, sans-serif;
+  font-size: 0.86em;
+  font-weight: 1000;
+  gap: 0.6em;
+  justify-content: space-between;
+  min-height: 3.35em;
+  padding: 0.62em 0.8em;
+}
+
+.uw-compiler-pane-title button,
+.uw-compiler-pane-title select {
+  border-radius: 999px;
+  font-family: "Nunito", system-ui, sans-serif;
+  font-size: 0.86em;
+  font-weight: 900;
+  min-height: 2.25em;
+}
+
+.uw-compiler-pane-title button {
+  background: var(--teal);
+  border: 1px solid #0a6f6a;
+  color: #fff;
+  padding: 0 0.95em;
+}
+
+.uw-compiler-pane-title select {
+  appearance: none;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  max-width: 15em;
+  padding: 0 2em 0 0.8em;
+}
+
+.minijava-editor,
+.minijava-assembly {
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  height: auto;
+  min-height: 0;
+}
+
+.minijava-editor .cm-editor {
+  background: #fffdf8;
+  height: 100%;
+}
+
+.minijava-editor .cm-gutters {
+  background: #f5f8f9;
+  border-right: 1px solid rgba(35, 49, 61, 0.12);
+  color: #667985;
+}
+
+.minijava-editor .cm-scroller {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.86em;
+  line-height: 1.52;
+}
+
+.minijava-fallback-editor {
+  background: #fffdf8;
+  border: 0;
+  color: var(--ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.86em;
+  height: 100%;
+  line-height: 1.52;
+  padding: 0.85em;
+  resize: none;
+  width: 100%;
+}
+
+.minijava-assembly {
+  background: #23313d;
+  color: #f8fbff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.82em;
+  line-height: 1.52;
+  margin: 0;
+  overflow: auto;
+  padding: 0.85em;
+  white-space: pre;
+}
+
+.mj-mark,
+.mj-active-mark,
+.mj-asm {
+  --mj-color: rgba(111, 207, 183, 0.35);
+  background: var(--mj-color);
+  border-radius: 4px;
+  box-decoration-break: clone;
+  cursor: pointer;
+  outline: 1px solid transparent;
+}
+
+.mj-asm {
+  color: #fff;
+  display: inline;
+}
+
+.mj-active-mark,
+.mj-asm.active {
+  outline-color: rgba(35, 49, 61, 0.55);
+  filter: saturate(1.35);
+}
+
+.minijava-assembly .mj-asm.active {
+  outline-color: rgba(255, 255, 255, 0.7);
+}
+
+.uw-compiler-status {
+  background: #f5f8f9;
+  border-top: 1px solid rgba(35, 49, 61, 0.12);
+  color: #43515b;
+  font-size: 0.92em;
+  font-weight: 800;
+  line-height: 1.45;
+  margin: 0;
+  margin-bottom: 0 !important;
+  padding: 0.72em 0.95em;
+}
+
 .koel-demo {
   background: linear-gradient(135deg, #f7fbff 0%, #fffdf8 100%);
   border: 1px solid var(--line);
@@ -3678,6 +3841,29 @@ ul.social li a.fa-orcid:hover:before {
 
   .uw-guitar-piano {
     min-width: 62em;
+  }
+
+  .uw-compiler-demo {
+    box-shadow: 9px 9px 0 var(--sky), -9px -9px 0 var(--mint);
+  }
+
+  .uw-compiler-grid {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .uw-compiler-pane:first-child {
+    border-bottom: 1px solid rgba(35, 49, 61, 0.14);
+    border-right: 0;
+  }
+
+  .uw-compiler-pane:last-child {
+    border-left: 0;
+  }
+
+  .minijava-editor,
+  .minijava-assembly {
+    height: 25em;
   }
 
   .koel-demo {
