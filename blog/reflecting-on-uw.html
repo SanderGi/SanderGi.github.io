@@ -163,8 +163,33 @@
             We started by shadowing their work and understanding the data analysis bottlenecks. Then we built a tailored seismology agent to make iteration and data exploration easy for seismologists.
             Check out the earthquake detection 101 tutorial below and see how good you are at identifying earthquakes from the noisy data:
           </p>
-          <section class="edge-demo">
-            TODO
+          <section class="earthquake-demo" data-earthquake-demo>
+            <div class="earthquake-toolbar">
+              <span class="earthquake-round" data-earthquake-round>Trace set 1 of 2</span>
+              <button type="button" class="earthquake-next" data-earthquake-next>Switch trace set</button>
+            </div>
+            <div class="earthquake-grid">
+              <section class="earthquake-panel">
+                <div class="earthquake-panel-heading">
+                  <h3>Station map</h3>
+                  <span>distance from candidate source</span>
+                </div>
+                <canvas data-earthquake-map role="img" aria-label="Map of seismic stations surrounding a candidate source"></canvas>
+              </section>
+              <section class="earthquake-panel">
+                <div class="earthquake-panel-heading">
+                  <h3>Moveout plot</h3>
+                  <span>vertical velocity at each station</span>
+                </div>
+                <canvas data-earthquake-moveout role="img" aria-label="Aligned station waveforms over time"></canvas>
+              </section>
+            </div>
+            <div class="earthquake-actions">
+              <span>Classify this trace set:</span>
+              <button type="button" data-earthquake-choice="earthquake">Likely earthquake</button>
+              <button type="button" data-earthquake-choice="noise">Unlikely earthquake</button>
+            </div>
+            <p class="earthquake-feedback" data-earthquake-feedback aria-live="polite">Look for a small P arrival followed by a stronger S arrival, both moving later as distance increases.</p>
           </section>
           <br><p>
             Based on these research experiences, I gave a bunch of <a href="/index.html#portfolio">talks and guest lectures</a> this year.
@@ -298,5 +323,6 @@
     <script src="/assets/js/uw-guitar-synth-demo.js"></script>
     <script type="module" src="/assets/js/minijava-explorer.js"></script>
     <script src="/assets/js/tennis-serve-demo.js"></script>
+    <script src="/assets/js/earthquake-tutorial-demo.js"></script>
   </body>
 </html>
