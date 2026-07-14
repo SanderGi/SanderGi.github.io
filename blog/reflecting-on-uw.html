@@ -213,10 +213,34 @@
           <p>
             Similarly, my other favorite project from this year, required collecting physical data on humans using their body to play tennis.
             With my group in computer vision, we collected hundreds of videos of serves, and used that data to build a pipeline that takes a video of someone playing tennis, determines the frames where a serve occurs, further annotates each frame with the corresponding stage in <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3445225/" target="_blank">the 8 stage model</a>, and then analyses each stage for potential injury risks and technique improvements.
-            View it in action below and try with some of your own videos too:
+            View it in action below:
           </p>
-          <section class="edge-demo">
-            TODO
+          <section class="tennis-demo" data-tennis-demo>
+            <div class="tennis-player-grid">
+              <div class="tennis-video-panel">
+                <div class="tennis-media">
+                  <video class="tennis-video" data-tennis-video playsinline muted preload="metadata">
+                    <source src="/images/demo/tennis-serve/clips/start.mp4" type="video/mp4" />
+                  </video>
+                  <figure class="tennis-image-preview" data-tennis-image-preview hidden>
+                    <img data-tennis-preview-image alt="" />
+                  </figure>
+                </div>
+                <div class="tennis-video-controls">
+                  <button type="button" data-tennis-toggle>Replay stage</button>
+                  <span data-tennis-status aria-live="polite">Frames 0-0</span>
+                </div>
+              </div>
+              <div class="tennis-analysis-panel">
+                <div class="tennis-stage-header">
+                  <h3 data-tennis-stage-title>Start</h3>
+                  <span data-tennis-stage-kicker>Stage 1 of 8</span>
+                </div>
+                <p data-tennis-stage-summary></p>
+                <div class="tennis-rule-list" data-tennis-rules></div>
+              </div>
+            </div>
+            <div class="tennis-timeline" data-tennis-timeline aria-label="Tennis serve stage timeline"></div>
           </section>
           <br><p>
             Lastly, since I spent a significant amount of time this year working on <a href="https://slayspeech.com">my pronunciation coaching app</a>, I would like to share the most tedious part: reviewing and annotating audio samples.
@@ -273,5 +297,6 @@
     <script src="/assets/js/site.js"></script>
     <script src="/assets/js/uw-guitar-synth-demo.js"></script>
     <script type="module" src="/assets/js/minijava-explorer.js"></script>
+    <script src="/assets/js/tennis-serve-demo.js"></script>
   </body>
 </html>

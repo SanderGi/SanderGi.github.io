@@ -2689,6 +2689,281 @@ button.alt:hover,
   padding: 0.72em 0.95em;
 }
 
+.tennis-demo {
+  background: linear-gradient(135deg, #f8fbff 0%, #fff8ec 100%);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 18px 18px 0 var(--mint), -18px -18px 0 var(--sky);
+  margin: 3em 0 0.75em;
+  overflow: hidden;
+  padding: 0;
+}
+
+.tennis-player-grid {
+  --tennis-panel-height: clamp(26rem, 46vw, 34rem);
+  display: grid;
+  gap: 0;
+  grid-template-columns: minmax(16em, 0.9fr) minmax(0, 1.1fr);
+  height: var(--tennis-panel-height);
+}
+
+.tennis-video-panel,
+.tennis-analysis-panel {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(35, 49, 61, 0.14);
+  border-radius: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.tennis-video-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.tennis-media {
+  background: #17242a;
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+.tennis-analysis-panel {
+  border-left: 1px solid rgba(35, 49, 61, 0.14);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tennis-video {
+  display: block;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+  width: 100%;
+}
+
+.tennis-loading-stage .tennis-video {
+  visibility: hidden;
+}
+
+.tennis-image-preview {
+  align-items: center;
+  background: #17242a;
+  display: grid;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+.tennis-image-preview[hidden] {
+  display: none;
+}
+
+.tennis-image-preview img {
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  width: 100%;
+}
+
+.tennis-video-controls {
+  align-items: center;
+  background: #f5f8f9;
+  border-top: 1px solid rgba(35, 49, 61, 0.12);
+  display: flex;
+  gap: 0.75em;
+  justify-content: space-between;
+  padding: 0.72em;
+}
+
+.tennis-video-controls button {
+  background: var(--teal);
+  border: 1px solid #0a6f6a;
+  border-radius: 999px;
+  color: #fff;
+  font-family: "Nunito", system-ui, sans-serif;
+  font-size: 0.9em;
+  font-weight: 900;
+  min-height: 2.55em;
+  padding: 0 1em;
+}
+
+.tennis-video-controls span {
+  color: #43515b;
+  font-size: 0.9em;
+  font-weight: 900;
+  text-align: right;
+}
+
+.tennis-analysis-panel { padding: 1em; }
+
+.tennis-stage-header {
+  align-items: baseline;
+  display: flex;
+  gap: 0.65em;
+  justify-content: space-between;
+}
+
+.tennis-stage-header span {
+  color: var(--teal);
+  font-family: "Nunito", system-ui, sans-serif;
+  font-size: 0.78em;
+  font-weight: 1000;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tennis-stage-header h3 {
+  font-size: clamp(1.45rem, 2.8vw, 2.2rem);
+  line-height: 1;
+  margin: 0;
+  text-align: left;
+}
+
+.tennis-analysis-panel p {
+  color: #43515b;
+  font-size: 0.98em;
+  margin: 0.75em 0 0;
+}
+
+.tennis-rule-list {
+  align-content: start;
+  display: grid;
+  flex: 0 1 auto;
+  gap: 0.72em;
+  margin-top: 1em;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 0.25em;
+}
+
+.tennis-rule-card {
+  align-items: center;
+  background: #fffdf8;
+  border: 1px solid rgba(35, 49, 61, 0.12);
+  border-left: 0.45em solid var(--teal);
+  border-radius: 8px;
+  display: grid;
+  gap: 0.55em;
+  grid-template-columns: 4.1em minmax(0, 1fr) auto;
+  padding: 0.48em;
+}
+
+.tennis-rule-card.is-viewing {
+  background: #f3fbf8;
+  border-color: var(--teal);
+}
+
+.tennis-rule-card[data-severity="warning"] {
+  border-left-color: #f4a940;
+}
+
+.tennis-rule-card[data-severity="risk"] {
+  border-left-color: var(--coral);
+}
+
+.tennis-rule-thumbnail {
+  aspect-ratio: 9 / 16;
+  border-radius: 4px;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.tennis-rule-view {
+  align-self: start;
+  background: #fff;
+  border: 1px solid rgba(35, 49, 61, 0.22);
+  border-radius: 999px;
+  color: var(--ink) !important;
+  font-family: "Nunito", system-ui, sans-serif;
+  font-size: 0.72em;
+  font-weight: 900;
+  min-height: 2.25em;
+  padding: 0 0.72em;
+}
+
+.tennis-rule-view:hover,
+.tennis-rule-view[aria-pressed="true"] {
+  background: var(--mint);
+  border-color: var(--teal);
+  color: var(--ink) !important;
+}
+
+.tennis-rule-card strong {
+  color: var(--ink);
+  display: block;
+  font-family: "Nunito", system-ui, sans-serif;
+  font-size: 1em;
+  font-weight: 1000;
+  line-height: 1.12;
+}
+
+.tennis-rule-card p {
+  font-size: 0.8em;
+  line-height: 1.35;
+  margin: 0.2em 0 0;
+}
+
+.tennis-rule-badge {
+  border: 1px solid rgba(35, 49, 61, 0.14);
+  border-radius: 999px;
+  color: var(--ink);
+  display: inline-flex;
+  font-size: 0.74em;
+  font-weight: 1000;
+  line-height: 1;
+  margin-bottom: 0.45em;
+  padding: 0.32em 0.56em;
+}
+
+.tennis-rule-badge.pass {
+  background: rgba(111, 207, 183, 0.34);
+}
+
+.tennis-rule-badge.warning {
+  background: rgba(247, 196, 1, 0.35);
+}
+
+.tennis-rule-badge.risk {
+  background: rgba(244, 124, 84, 0.3);
+}
+
+.tennis-timeline {
+  display: grid;
+  gap: 0.35em;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  padding: 1em;
+}
+
+.tennis-stage-button {
+  --stage-color: var(--teal);
+  background: #fff;
+  border: 1px solid rgba(35, 49, 61, 0.14);
+  border-top: 0.42em solid var(--stage-color);
+  border-radius: 8px;
+  color: var(--ink) !important;
+  cursor: pointer;
+  font-family: "Nunito", system-ui, sans-serif;
+  font-size: clamp(0.66rem, 1.2vw, 0.82rem);
+  font-weight: 1000;
+  line-height: 1.05;
+  min-height: 3.15em;
+  padding: 0.45em 0.25em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tennis-stage-button.active,
+.tennis-stage-button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(14, 116, 109, 0.18);
+  outline: 2px solid var(--stage-color);
+  outline-offset: 2px;
+}
+
+
 .koel-demo {
   background: linear-gradient(135deg, #f7fbff 0%, #fffdf8 100%);
   border: 1px solid var(--line);
@@ -3872,6 +4147,32 @@ ul.social li a.fa-orcid:hover:before {
   .minijava-editor,
   .minijava-assembly {
     height: 25em;
+  }
+
+  .tennis-demo {
+    box-shadow: 9px 9px 0 var(--mint), -9px -9px 0 var(--sky);
+  }
+
+  .tennis-player-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .tennis-video-panel,
+  .tennis-analysis-panel {
+    height: min(34em, 72vh);
+  }
+
+  .tennis-video {
+    height: 100%;
+  }
+
+  .tennis-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tennis-rule-card {
+    grid-template-columns: 3.9em minmax(0, 1fr) auto;
   }
 
   .koel-demo {
