@@ -545,6 +545,14 @@ footer > p {
   min-height: calc(100vh - 4.25em);
   padding: 7em 0 5em;
   text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-aspect-ratio: 4/3) {
+  #top {
+    min-height: 0;
+  }
 }
 
 .hero-grid {

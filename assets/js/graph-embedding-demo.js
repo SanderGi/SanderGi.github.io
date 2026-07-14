@@ -2,7 +2,7 @@
   const root = document.querySelector("[data-embedding-demo]");
   if (!root) return;
 
-  const API_SOCKET = "wss://genus.fly.dev/stream_calc_genus";
+  const API_SOCKET = "wss://genus.sandergi.com/stream_calc_genus";
   const canvas = root.querySelector("[data-embedding-canvas]");
   const ctx = canvas.getContext("2d");
   const runButton = root.querySelector("[data-embedding-run]");
@@ -347,7 +347,7 @@
     rotationTarget.textContent = "";
     genusTarget.textContent = "";
     setResultActionsHidden(true);
-    setStatus("Running PAGE on genus.fly.dev...", true);
+    setStatus("Running PAGE on genus.sandergi.com...", true);
 
     try {
       let response = await runApi(adj, "page", "json");
@@ -387,9 +387,7 @@
         Number(data.genus) === 0
           ? `Embedded ${nodes.length} vertices and ${edges.length} edges on a plane. This graph is 'planar'.`
           : `Embedded ${nodes.length} vertices and ${edges.length} edges. To form the 3D surface, glue matching colors.`;
-      setStatus(
-        statusMessage,
-      );
+      setStatus(statusMessage);
     } catch (error) {
       setResultActionsHidden(false);
       setStatus(error.message || "Embedding failed.");
