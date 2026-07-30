@@ -66,23 +66,27 @@
           <p>
             Instead of trying every drawing directly, the algorithm works with
             rotations: the cyclic order of edges around each vertex. Those local
-            choices determine the faces of a surface embedding. By using cycle
-            structure, the search can narrow upper and lower bounds and avoid
-            some bridge-placement headaches that make genus algorithms difficult
-            in practice.
-          </p>
-          <p>
-            The result is practical in a very satisfying sense: it is relatively
-            simple to implement, it returns a certificate that can be checked,
-            and it can produce the actual faces of the optimal embedding rather
-            than only a number.
+            choices determine the faces of a surface embedding. A naive algorithm
+            would just iterate through the combinations of rotations around each vertex.
+            However the large branching factor quickly becomes intractable even for graphs
+            as small as the complete graph on 8 vertices. 
+            <a href="https://arxiv.org/abs/2005.08243" target="_blank">An improvement by Gunnar Brinkmann</a>
+            uses branch and bound to prune branches that can easily be deduced to yield higher genus
+            than the current lowest branch. Yet this approach still has to explore many
+            branches before the current best is good enough to prune all sub-optimal branches.
+            Our algorithm instead looks at the faces of the 3D surface and notes that they can all
+            be broken into cycles in the graph. Due to a result by Euler, it turns out that maximizing
+            the number of faces is the same as minimizing the genus. By working with cycles,
+            this then yields a practical way to iterate through the rotation systems in a heuristic 
+            order of minimal to maximal genus. As a result, our algorithm (PAGE) is orders of magnitude
+            faster than prior algorithms in practice and can compute graphs with thousands of vertices and edges.
           </p>
           <h2>Why it matters</h2>
           <p>
-            Computing the genus of the (3,12)-cage as 17 is the kind of result
-            that makes a theoretical algorithm feel tangible. It says: here is a
-            graph whose surface was hard to pin down, and here is a concrete way
-            to certify it.
+            Having a practical algorithm is incredibly useful for both theoretical and applied use cases.
+            It allows theoretical mathematicians to quickly validate hypotheses and spot patterns and
+            it means that applied scientists can get useful results for most applications even though the
+            problem is technically NP-hard.
           </p>
           <div class="post-links">
             <a class="button" href="https://arxiv.org/abs/2411.07347" target="_blank">Read the paper</a>

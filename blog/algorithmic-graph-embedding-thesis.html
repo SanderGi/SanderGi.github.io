@@ -63,28 +63,38 @@
             to find the smallest surface that gives the graph enough room.
           </p>
           <p>
-            The thesis starts by building that intuition carefully: topology,
+            The thesis starts by building that intuition: topology,
             compact surfaces, graph embeddings, and rotation systems. A rotation
             system is a compact way to describe an embedding without drawing the
             whole surface. For each vertex, it records the cyclic order in which
             the incident edges appear as you walk around that vertex. Those local
-            clockwise orders determine how the faces of the drawing fit together.
+            orders determine how the faces of the drawing fit together. Check out
+            the interactive explanation <a href="https://genus.sandergi.com/k33_rotation_animation.html" target="_blank">here</a>.
           </p>
           <h2>From exposition to algorithm</h2>
           <p>
             Once embeddings can be described combinatorially, they become
-            searchable. PAGE takes advantage of the cycle sequence of a graph,
-            which is especially useful for graphs with high girth or low degree.
+            searchable. PAGE takes advantage of the cycle sequence of a graph
+            to search in the most efficient order.
             The thesis walks through the algorithm and its results, including
-            the genus-17 computation for the (3,12)-cage.
+            the genus-17 computation for the (3,12)-cage. Check out an explanation
+            <a href="/blog/efficient-genus-algorithm.html">here</a>.
           </p>
           <h2>Why it matters</h2>
           <p>
-            I like this project because it is both visual and computational.
-            The pictures give you intuition; the rotation systems give you a
-            certificate; the implementation gives you something you can run.
-            That combination is exactly what makes algorithmic mathematics feel
-            alive.
+            There are lots of reasons you might want to lay out a graph without crossings
+            with as few holes as possible. For instance, in circuit design, the wire connections
+            can be viewed as a graph, crossings are undesirable because they cause short-circuiting,
+            and holes are costly because they require more layers in the printed circuit board.
+            In infrastructure design, road networks form a graph, crossings are inefficient, and holes 
+            (i.e., bridges and tunnels) are costly. 
+          <p></p>
+            Personally, I really like this project because it is both visual and computational.
+            The pictures give you intuition; the rotation systems give you a certificate; 
+            the implementation gives you something you can run. This combination really makes 
+            algorithmic mathematics feel alive. Not to mention, it is incredibly satisfying to
+            optimize the algorithm for larger and larger graphs which yields more and more intricate 
+            visualizations.
           </p>
           <p>
             The demo below shows the same idea in miniature. You build a graph,

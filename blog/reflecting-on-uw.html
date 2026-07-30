@@ -9,11 +9,10 @@
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-    <meta name="draft" content="true">
     <meta name="author" content="Alexander Metzger" />
     <meta name="description" content="I spent 4 years at UW: 1.5 years on my Bachelors of Science in CS, 1.5 year on my BS with Honors in Math, and 1 year on my Masters in CS. I learned a lot and built lots of fun projects with my classmates." />
     <meta name="keywords" content="Projects,ML,Math" />
-    <meta name="dcterms.created" content="2026-06-23" />
+    <meta name="dcterms.created" content="2026-07-30" />
     <meta property="og:image" content="/images/4_years_at_UW.png | photos from my time at UW" />
   </head>
   <body>
@@ -33,7 +32,7 @@
         <p>
           A tour through 4 years of projects at University of Washington and what I have learned.
         </p>
-        <div class="post-meta"><span>Alexander Metzger</span><span>June 23, 2026</span></div>
+        <div class="post-meta"><span>Alexander Metzger</span><span>July 30, 2026</span></div>
         <div class="pills">
           <span>Projects</span><span>Computer Science</span><span>Math</span>
         </div>
@@ -203,13 +202,9 @@
           </section>
           <br><p>
             I ended the year by taking the NLP capstone with <a href="https://github.com/arunasrivastava" target="_blank">Aruna Srivastava</a>.
-            We laid the groundwork for <a href="https://sandergi.com/blog/scaling-human-g2p-supervision.html">our Interspeech publication</a> and trained early versions of the models we now use in <a href="https://koellabs.com" target="_blank">our startup</a>.
-            Try a quantized version of the phonetic transcription model we trained in your browser below:
-          </p>
-          <section class="edge-demo">
-            TODO
-          </section>
-          <br><p>
+            We laid the groundwork for <a href="https://sandergi.com/blog/scaling-human-g2p-supervision.html">our Interspeech publication</a> and trained early versions of the models we now use at <a href="https://koellabs.com" target="_blank">our startup</a>.
+            Try the models in action by <a href="https://slayspeech.com" target="_blank">downloading our app</a>!
+          </p><p>
             This year, I learned that sharing my work is just as fun as making it. 
             Before, I would keep my projects on my private disk for my own enjoyment and shy away from public speaking.
             But after speaking at lots of events, including <a href="https://www.youtube.com/watch?v=s7yPjSUjU9s&list=PLgjjGlfBflISGQaljPUkxEWqDYBgfC7TZ&index=6" target="_blank">the Mozilla Builders Demo Day</a> and Interspeech Speech Slam, I now see the value of it.
@@ -271,10 +266,24 @@
             Lastly, since I spent a significant amount of time this year working on <a href="https://slayspeech.com">my pronunciation coaching app</a>, I would like to share the most tedious part: reviewing and annotating audio samples.
             Listening to audio, even sped up, is inherently a linear process where reviewing X hours of audio is lower-bounded by X hours of work.
             However, by visually representing audio using <a href="https://huggingface.co/learn/audio-course/en/chapter1/audio_data#mel-spectrogram" target="_blank">Mel spectrograms</a>, it is possible to read it much faster and "listen" to multiple audio samples at the same time to spot patterns by rendering multiple on the same screen.
-            Here's an interactive tutorial on reading Mel spectrograms:
+            Here's an interactive tutorial on reading speech from spectrograms:
           </p>
-          <section class="edge-demo">
-            TODO
+          <section class="spectrogram-tutorial" data-spectrogram-tutorial aria-labelledby="spectrogram-tutorial-title">
+            <h2 class="visually-hidden" id="spectrogram-tutorial-title">Learn to read speech</h2>
+            <nav class="spectrogram-lesson-nav" data-spectrogram-nav aria-label="Spectrogram tutorial lessons"></nav>
+            <div class="spectrogram-stage" data-spectrogram-stage tabindex="-1"></div>
+            <footer class="spectrogram-tutorial-footer">
+              <button class="spectrogram-nav-button" type="button" data-spectrogram-previous disabled>
+                <span aria-hidden="true">&#10216;</span>
+                Previous
+              </button>
+              <button class="spectrogram-nav-button is-primary" type="button" data-spectrogram-next>
+                Next
+                <span aria-hidden="true">&#10217;</span>
+              </button>
+            </footer>
+            <audio data-spectrogram-audio preload="none"></audio>
+            <noscript>This tutorial needs JavaScript for its audio, diagrams, and exercises.</noscript>
           </section>
           <br><p>
             A lot of my projects this year required tedious human work: frame annotations for tennis, brainwave demonstrations for robotics, audio review for my startup, and many small rounds of interface-tuning in between. 
@@ -324,5 +333,7 @@
     <script type="module" src="/assets/js/minijava-explorer.js"></script>
     <script src="/assets/js/tennis-serve-demo.js"></script>
     <script src="/assets/js/earthquake-tutorial-demo.js"></script>
+    <script src="/assets/js/spectrogram-tutorial-data.js"></script>
+    <script src="/assets/js/spectrogram-tutorial.js"></script>
   </body>
 </html>

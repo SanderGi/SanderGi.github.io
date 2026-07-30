@@ -3931,6 +3931,1545 @@ ul.social li a.fa-orcid:hover:before {
   }
 }
 
+.spectrogram-tutorial {
+  --sun: #ffd166;
+  background: #fffaf4;
+  border: 1px solid rgba(35, 49, 61, 0.2);
+  border-radius: 8px;
+  box-shadow: 18px 18px 0 var(--sky), -18px -18px 0 var(--mint);
+  color: var(--ink);
+  margin: 3em 0 1em;
+  overflow: hidden;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.spectrogram-tutorial button,
+.spectrogram-tutorial input {
+  font: inherit;
+}
+
+.spectrogram-tutorial button {
+  color: var(--ink) !important;
+  text-shadow: none;
+}
+
+.spectrogram-tutorial button:hover {
+  transform: none;
+}
+
+.spectrogram-tutorial button:focus-visible,
+.spectrogram-tutorial input:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 3px;
+}
+
+.spectrogram-lesson-nav {
+  background: #f2f7f4;
+  border-bottom: 1px solid rgba(35, 49, 61, 0.16);
+  display: grid;
+  grid-template-columns: repeat(11, minmax(4.7em, 1fr));
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.spectrogram-lesson-nav button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.18em;
+  justify-content: center;
+  min-height: 4.1em;
+  padding: 0.55em 0.35em;
+  position: relative;
+}
+
+.spectrogram-lesson-nav button::after {
+  background: var(--coral);
+  bottom: 0;
+  content: "";
+  height: 0.28em;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 180ms ease;
+  width: 70%;
+}
+
+.spectrogram-lesson-nav button:hover {
+  background: #e4f2ec;
+}
+
+.spectrogram-lesson-nav button.is-active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.spectrogram-lesson-nav button span {
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(35, 49, 61, 0.2);
+  border-radius: 50%;
+  display: inline-flex;
+  font-size: 0.7em;
+  font-weight: 900;
+  height: 1.7em;
+  justify-content: center;
+  width: 1.7em;
+}
+
+.spectrogram-lesson-nav button.is-active span {
+  background: var(--coral);
+  border-color: #a74430;
+}
+
+.spectrogram-lesson-nav button small {
+  color: var(--ink);
+  font-size: 0.62em;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.spectrogram-stage {
+  background: #fffdf9;
+  height: min(43em, 72vh);
+  min-height: 35em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 1.4em 1.5em 1.8em;
+  scroll-behavior: smooth;
+}
+
+.spectrogram-stage:focus {
+  outline: 0;
+}
+
+.spectrogram-stage h3,
+.spectrogram-stage h4,
+.spectrogram-stage p {
+  color: var(--ink);
+}
+
+.spectrogram-stage p {
+  font-size: 0.94em;
+  line-height: 1.55;
+}
+
+.spectrogram-lesson-heading {
+  align-items: start;
+  border-bottom: 1px solid rgba(35, 49, 61, 0.14);
+  display: grid;
+  gap: 0.9em;
+  grid-template-columns: 3.2em minmax(0, 1fr);
+  margin-bottom: 1.25em;
+  padding-bottom: 1em;
+}
+
+.spectrogram-lesson-heading h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.45em, 2.5vw, 2.1em);
+  letter-spacing: 0;
+  line-height: 1.05;
+  margin: 0 0 0.25em;
+}
+
+.spectrogram-lesson-heading p {
+  margin: 0;
+  max-width: 60em;
+}
+
+.spectrogram-lesson-number {
+  align-items: center;
+  background: var(--sun);
+  border: 1px solid #bb872f;
+  border-radius: 50%;
+  color: var(--ink);
+  display: inline-flex;
+  font-size: 0.86em;
+  font-weight: 900;
+  height: 3.2em;
+  justify-content: center;
+  width: 3.2em;
+}
+
+.spectrogram-tutorial-footer {
+  align-items: center;
+  background: #fff;
+  border-top: 1px solid rgba(35, 49, 61, 0.16);
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 4.8em;
+  padding: 0.8em 1em;
+}
+
+.spectrogram-nav-button {
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(35, 49, 61, 0.28);
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 0.76em;
+  font-weight: 900;
+  gap: 0.45em;
+  justify-content: center;
+  min-height: 2.85em;
+  padding: 0.58em 0.9em;
+  width: 100%;
+}
+
+.spectrogram-nav-button.is-primary {
+  background: var(--sun);
+  border-color: #b88025;
+}
+
+.spectrogram-nav-button:disabled {
+  opacity: 0.38;
+}
+
+.ipa-chart-block {
+  border-bottom: 1px solid rgba(35, 49, 61, 0.14);
+  padding-bottom: 1.25em;
+}
+
+.ipa-chart-intro {
+  align-items: baseline;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+}
+
+.ipa-chart-intro h4,
+.ipa-vowel-layout h4 {
+  font-family: var(--serif);
+  font-size: 1.45em;
+  margin: 0;
+}
+
+.ipa-chart-intro p {
+  margin: 0 0 0.7em;
+  max-width: 56em;
+}
+
+.ipa-table-scroll {
+  overflow-x: auto;
+  padding: 0.2em 0.1em 0.5em;
+}
+
+.ipa-consonant-grid {
+  display: grid;
+  font-size: 0.74em;
+  gap: 0.32em;
+  grid-template-columns: 7.2em repeat(8, minmax(4.8em, 1fr));
+  min-width: 52em;
+}
+
+.ipa-corner,
+.ipa-place,
+.ipa-manner,
+.ipa-cell {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 2.65em;
+}
+
+.ipa-corner,
+.ipa-place {
+  color: var(--muted);
+  font-size: 0.82em;
+  font-weight: 800;
+  text-align: center;
+}
+
+.ipa-manner {
+  background: #e6f3ee;
+  border-left: 4px solid var(--teal);
+  justify-content: flex-start;
+  padding: 0.35em 0.55em;
+}
+
+.ipa-cell {
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(35, 49, 61, 0.1);
+  gap: 0.18em;
+}
+
+.ipa-symbol {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: var(--serif) !important;
+  font-size: 1.35em !important;
+  font-weight: 800;
+  line-height: 1;
+  min-height: 1.6em;
+  padding: 0.1em 0.25em;
+}
+
+.ipa-symbol:hover,
+.ipa-symbol.is-sounding {
+  border-bottom-color: var(--coral);
+  color: var(--teal) !important;
+}
+
+.ipa-consonant-glossary {
+  display: grid;
+  font-size: 0.68em;
+  gap: 1em;
+  grid-template-columns: 0.85fr 1.15fr;
+  margin-top: 0.65em;
+}
+
+.ipa-consonant-glossary > div {
+  display: grid;
+  gap: 0.4em;
+  grid-template-rows: auto 1fr;
+}
+
+.ipa-consonant-glossary > div > b {
+  color: var(--teal);
+  text-transform: uppercase;
+}
+
+.ipa-consonant-glossary > div > div {
+  display: grid;
+  gap: 0.4em;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ipa-consonant-glossary span {
+  background: rgba(255, 255, 255, 0.68);
+  border-left: 2px solid var(--sky);
+  padding: 0.45em 0.55em;
+}
+
+.ipa-consonant-glossary strong {
+  color: var(--ink);
+}
+
+.ipa-vowel-layout {
+  align-items: stretch;
+  display: grid;
+  gap: 1.4em;
+  grid-template-columns: minmax(15em, 0.82fr) minmax(28em, 1.18fr);
+  padding-top: 1.3em;
+}
+
+.ipa-plain-definitions {
+  display: grid;
+  font-size: 0.78em;
+  gap: 0.45em;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ipa-plain-definitions span {
+  border-left: 3px solid var(--sky);
+  padding-left: 0.55em;
+}
+
+.ipa-vowel-chart {
+  background: rgba(255, 255, 255, 0.72);
+  border-left: 2px solid rgba(35, 49, 61, 0.28);
+  border-top: 2px solid rgba(35, 49, 61, 0.28);
+  min-height: 16em;
+  overflow: visible;
+  position: relative;
+}
+
+.ipa-vowel {
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(35, 49, 61, 0.28);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 3.15em;
+  justify-content: center;
+  left: var(--left);
+  padding: 0;
+  position: absolute;
+  top: var(--top);
+  translate: -50% -50%;
+  width: 3.15em;
+}
+
+.ipa-vowel b {
+  font-family: var(--serif);
+  font-size: 1.2em;
+  line-height: 0.9;
+}
+
+.ipa-vowel small {
+  color: var(--muted);
+  font-size: 0.46em;
+  font-weight: 700;
+}
+
+.ipa-vowel:hover,
+.ipa-vowel.is-sounding {
+  background: var(--sun);
+  border-color: #9f6b1e;
+}
+
+.ipa-axis {
+  color: var(--muted);
+  font-size: 0.64em;
+  font-weight: 800;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.ipa-axis-front {
+  left: 3%;
+  top: -2.5ch;
+}
+
+.ipa-axis-back {
+  right: 3%;
+  top: -2.5ch;
+}
+
+.ipa-axis-close {
+  left: -6ch;
+  top: 0;
+}
+
+.ipa-axis-open {
+  bottom: 0;
+  left: -5ch;
+}
+
+.ipa-word-examples {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ipa-word-examples article {
+  border-left: 1px solid rgba(35, 49, 61, 0.16);
+  padding: 1em;
+}
+
+.ipa-word-examples article:first-child {
+  border-left: 0;
+}
+
+.ipa-word-examples span,
+.ipa-word-examples strong {
+  display: block;
+}
+
+.ipa-word-examples span {
+  font-family: var(--serif);
+  font-size: 1.45em;
+  font-weight: 900;
+}
+
+.ipa-word-examples strong {
+  color: var(--teal);
+  font-size: 1.1em;
+}
+
+.ipa-word-examples p {
+  font-size: 0.75em;
+  margin: 0.35em 0 0;
+}
+
+.dialect-table {
+  border-bottom: 1px solid rgba(35, 49, 61, 0.16);
+  border-top: 1px solid rgba(35, 49, 61, 0.16);
+  margin-top: 1.2em;
+}
+
+.dialect-row {
+  align-items: center;
+  border-top: 1px solid rgba(35, 49, 61, 0.1);
+  display: grid;
+  font-size: 0.78em;
+  gap: 0.8em;
+  grid-template-columns: 0.7fr 1.2fr 1.2fr 1.35fr;
+  min-height: 3.6em;
+  padding: 0.55em 0.7em;
+}
+
+.dialect-row:first-child {
+  border-top: 0;
+}
+
+.dialect-head {
+  background: #e6f3ee;
+  font-weight: 900;
+}
+
+.dialect-row small {
+  color: var(--muted);
+}
+
+.spectrogram-callout {
+  background: #fff1d2;
+  border-left: 5px solid var(--sun);
+  font-size: 0.82em;
+  margin-top: 1.1em;
+  padding: 0.8em 0.95em;
+}
+
+.pressure-lab,
+.wave-lab,
+.spectrum-lab,
+.stack-lab {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(35, 49, 61, 0.14);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.pressure-lab canvas {
+  display: block;
+  height: 17em;
+  width: 100%;
+}
+
+.pressure-controls {
+  align-items: center;
+  border-top: 1px solid rgba(35, 49, 61, 0.12);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.7em;
+  gap: 1em;
+  padding: 0.65em 0.8em;
+}
+
+.pressure-controls button,
+.wave-controls button,
+.pattern-unit button {
+  background: var(--sky);
+  border: 1px solid #447eaa;
+  border-radius: 999px;
+  font-weight: 900;
+  min-height: 2.55em;
+  padding: 0.45em 0.8em;
+}
+
+.pressure-controls span {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.4em;
+}
+
+.pressure-key {
+  border-radius: 50%;
+  display: inline-block;
+  height: 0.85em;
+  width: 0.85em;
+}
+
+.pressure-key.is-compression {
+  background: var(--coral);
+}
+
+.pressure-key.is-rarefaction {
+  background: var(--sky);
+}
+
+.pressure-takeaway-grid,
+.mel-explainer-grid {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.1em;
+}
+
+.mel-explainer-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.pressure-takeaway-grid article,
+.mel-explainer-grid article {
+  border-left: 1px solid rgba(35, 49, 61, 0.16);
+  padding: 0.3em 1em;
+}
+
+.pressure-takeaway-grid article:first-child,
+.mel-explainer-grid article:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.pressure-takeaway-grid b {
+  font-size: 0.924em;
+}
+
+.pressure-takeaway-grid p,
+.mel-explainer-grid p {
+  font-size: 0.76em;
+  margin: 0.28em 0 0;
+}
+
+.wave-controls {
+  align-items: end;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(2, minmax(12em, 1fr)) auto;
+  padding: 0.8em;
+}
+
+.wave-controls label {
+  color: var(--ink);
+  display: grid;
+  font-size: 0.72em;
+  font-weight: 900;
+  gap: 0.28em;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.wave-controls input {
+  accent-color: var(--teal);
+  grid-column: 1;
+  width: 100%;
+}
+
+.wave-controls output {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.wave-canvas-wrap {
+  border-top: 1px solid rgba(35, 49, 61, 0.12);
+  padding: 0.7em 1em 1.3em 2.5em;
+  position: relative;
+}
+
+.wave-canvas-wrap canvas {
+  display: block;
+  height: 19em;
+  width: 100%;
+}
+
+.wave-y-label {
+  color: var(--muted);
+  font-size: 0.62em;
+  font-weight: 800;
+  left: 0.4em;
+  position: absolute;
+  top: 50%;
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: left top;
+}
+
+.wave-x-label {
+  bottom: 0.2em;
+  color: var(--muted);
+  font-size: 0.65em;
+  font-weight: 800;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.spectrogram-equation {
+  display: grid;
+  font-size: 0.82em;
+  gap: 0.5em 1em;
+  grid-template-columns: auto 1fr auto 1fr;
+  margin-top: 1em;
+}
+
+.spectrogram-equation span {
+  background: var(--mint);
+  border: 1px solid #71a98f;
+  border-radius: 999px;
+  padding: 0.45em 0.7em;
+  text-align: center;
+}
+
+.spectrogram-equation b {
+  align-self: center;
+}
+
+.spectrum-picker {
+  display: flex;
+  gap: 0.7em;
+  padding: 0.8em;
+}
+
+.spectrum-picker label {
+  cursor: pointer;
+  font-size: 0.74em;
+}
+
+.spectrum-picker input {
+  accent-color: var(--teal);
+  margin-right: 0.25em;
+}
+
+.spectrum-picker span {
+  border-bottom: 4px solid var(--tone);
+  font-weight: 900;
+  padding-bottom: 0.16em;
+}
+
+.spectrum-grid {
+  border-top: 1px solid rgba(35, 49, 61, 0.12);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.spectrum-grid figure {
+  margin: 0;
+  padding: 0.7em 0.7em 1.1em;
+  position: relative;
+}
+
+.spectrum-grid figure + figure {
+  border-left: 1px solid rgba(35, 49, 61, 0.12);
+}
+
+.spectrum-grid figcaption,
+.formant-lab figcaption,
+.mel-comparison figcaption {
+  color: var(--ink);
+  font-size: 0.72em;
+  font-weight: 900;
+  margin-bottom: 0.45em;
+}
+
+.spectrum-grid canvas {
+  display: block;
+  height: 19em;
+  width: 100%;
+}
+
+.stack-lab canvas {
+  display: block;
+  height: 24em;
+  width: 100%;
+}
+
+.stack-rotation-control {
+  align-items: center;
+  border-top: 1px solid rgba(35, 49, 61, 0.12);
+  display: grid;
+  font-size: 0.72em;
+  font-weight: 900;
+  gap: 0.7em;
+  grid-template-columns: auto minmax(10em, 1fr) auto;
+  padding: 0.7em 1em;
+}
+
+.stack-rotation-control input {
+  accent-color: var(--teal);
+  width: 100%;
+}
+
+.spectrogram-axis-summary {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.spectrogram-axis-summary span {
+  border-left: 1px solid rgba(35, 49, 61, 0.18);
+  font-size: 0.78em;
+  padding: 0.2em 1.4em;
+}
+
+.spectrogram-axis-summary span:first-child {
+  border-left: 0;
+}
+
+.mel-comparison {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mel-comparison figure {
+  margin: 0;
+  min-width: 0;
+  padding: 0.7em;
+}
+
+.mel-comparison figure + figure {
+  border-left: 1px solid rgba(35, 49, 61, 0.15);
+}
+
+.mel-comparison figcaption {
+  display: flex;
+  flex-direction: column;
+}
+
+.mel-comparison figcaption span {
+  color: var(--muted);
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.mel-comparison canvas,
+.spectrogram-image-shell {
+  display: block;
+  height: 18em;
+  width: 100%;
+}
+
+.real-spectrogram-shell {
+  display: grid;
+  grid-template-columns: 2.8em minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) 1.25em;
+  height: 18em;
+  min-width: 0;
+}
+
+.real-spectrogram-shell img {
+  background: #fff;
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  height: 100%;
+  min-height: 0;
+  object-fit: fill;
+  width: 100%;
+}
+
+.real-spectrogram-y {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.56em;
+  font-style: normal;
+  font-weight: 800;
+  grid-column: 1;
+  grid-row: 1;
+  justify-content: space-between;
+  padding: 0.2em 0.35em;
+}
+
+.real-spectrogram-y i {
+  font-style: normal;
+}
+
+.real-spectrogram-y b {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.real-spectrogram-x {
+  align-self: center;
+  color: var(--muted);
+  font-size: 0.6em;
+  font-weight: 800;
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: center;
+}
+
+.spectrogram-image-shell {
+  background: #fffaf4;
+  overflow: hidden;
+  padding: 0 0 1.2em 2.4em;
+  position: relative;
+}
+
+.spectrogram-image-shell img {
+  height: 100%;
+  object-fit: fill;
+  width: 100%;
+}
+
+.spectrogram-frequency-axis {
+  color: var(--muted);
+  font-size: 0.54em;
+  font-weight: 800;
+}
+
+.spectrogram-image-shell .spectrogram-frequency-axis {
+  bottom: 1.2em;
+  left: 0.2em;
+  line-height: 1.2;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.spectrogram-image-shell .spectrogram-time-axis {
+  bottom: 0;
+}
+
+.formant-lab {
+  display: grid;
+  gap: 1.2em;
+  grid-template-columns: minmax(0, 1fr) minmax(21em, 0.9fr);
+}
+
+.formant-lab figure {
+  margin: 0;
+}
+
+.formant-observation {
+  min-width: 0;
+}
+
+.formant-view-bar {
+  align-items: center;
+  display: flex;
+  gap: 0.8em;
+  justify-content: space-between;
+}
+
+.formant-view-bar figcaption {
+  margin: 0;
+  text-align: right;
+}
+
+.formant-view-bar > div {
+  display: flex;
+}
+
+.formant-view-bar button {
+  background: #fff;
+  border: 1px solid rgba(35, 49, 61, 0.28);
+  border-radius: 0;
+  font-size: 0.65em;
+  font-weight: 800;
+  padding: 0.4em 0.65em;
+}
+
+.formant-view-bar button:first-child {
+  border-radius: 999px 0 0 999px;
+}
+
+.formant-view-bar button:last-child {
+  border-radius: 0 999px 999px 0;
+}
+
+.formant-view-bar button[aria-pressed="true"] {
+  background: var(--mint);
+  border-color: #548f71;
+}
+
+.formant-spectrogram {
+  display: grid;
+  grid-template-columns: 2.8em minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) 1.25em;
+  height: 21em;
+  position: relative;
+}
+
+.formant-spectrogram[hidden] {
+  display: none !important;
+}
+
+.formant-image-wrap {
+  grid-column: 2;
+  grid-row: 1;
+  min-height: 0;
+  position: relative;
+}
+
+.formant-image-wrap img {
+  display: block;
+  height: 100%;
+  object-fit: fill;
+  width: 100%;
+}
+
+.formant-band {
+  border-top: 2px dashed;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: var(--y);
+  z-index: 1;
+}
+
+.formant-band b {
+  background: #fff;
+  font-size: 0.6em;
+  padding: 0 0.25em;
+}
+
+.formant-band.is-f1 {
+  border-color: var(--coral);
+  color: #9d3429;
+}
+
+.formant-band.is-f2 {
+  border-color: #7659c7;
+  color: #4e378f;
+}
+
+.formant-lab canvas {
+  background: #fff;
+  border: 1px solid rgba(35, 49, 61, 0.14);
+  border-radius: 6px;
+  display: block;
+  height: 21em;
+  width: 100%;
+}
+
+.formant-lab canvas[hidden] {
+  display: none !important;
+}
+
+.formant-vowel-plot {
+  background: rgba(255, 255, 255, 0.74);
+  border-bottom: 2px solid rgba(35, 49, 61, 0.25);
+  border-left: 2px solid rgba(35, 49, 61, 0.25);
+  margin: 2.1em 1.6em 1.8em 5.8em;
+  min-height: 20em;
+  position: relative;
+}
+
+.formant-vowel-plot button {
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(35, 49, 61, 0.35);
+  border-radius: 50%;
+  display: flex;
+  font-family: var(--serif) !important;
+  font-size: 0.84em;
+  font-weight: 900;
+  height: 2.3em;
+  justify-content: center;
+  left: var(--x);
+  padding: 0;
+  position: absolute;
+  top: var(--y);
+  translate: -50% -50%;
+  width: 2.3em;
+}
+
+.formant-vowel-plot button.is-active {
+  background: var(--coral);
+  border-color: #a74430;
+}
+
+.formant-axis {
+  color: var(--muted);
+  font-size: 0.6em;
+  font-weight: 800;
+  position: absolute;
+}
+
+.formant-axis.is-front {
+  left: 0;
+  top: -1.8em;
+}
+
+.formant-axis.is-back {
+  right: 0;
+  top: -1.8em;
+}
+
+.formant-axis.is-close {
+  left: -8.6em;
+  top: 0;
+}
+
+.formant-axis.is-open {
+  bottom: 0;
+  left: -8.6em;
+}
+
+.formant-reading {
+  border-bottom: 1px solid rgba(35, 49, 61, 0.16);
+  border-top: 1px solid rgba(35, 49, 61, 0.16);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1em;
+}
+
+.formant-reading > div {
+  border-left: 1px solid rgba(35, 49, 61, 0.14);
+  padding: 0.65em 1em;
+}
+
+.formant-reading > div:first-child {
+  border-left: 0;
+}
+
+.formant-reading span,
+.formant-reading strong,
+.formant-reading small {
+  display: block;
+}
+
+.formant-reading span {
+  color: var(--muted);
+  font-size: 0.62em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.formant-reading strong {
+  color: var(--teal);
+  font-size: 1.15em;
+}
+
+.formant-reading small {
+  color: var(--muted);
+  font-size: 0.64em;
+}
+
+.formant-quiz {
+  align-items: stretch;
+  display: grid;
+  gap: 1.2em;
+  grid-template-columns: minmax(0, 1.35fr) minmax(18em, 0.65fr);
+}
+
+.formant-quiz-visual {
+  background: #fffaf4;
+  border: 1px solid rgba(35, 49, 61, 0.14);
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 2.8em minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) 1.25em;
+  height: 28em;
+}
+
+.formant-quiz-visual img {
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  height: 100%;
+  object-fit: fill;
+  width: 100%;
+}
+
+.spectrogram-stage.is-formant-quiz {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+.spectrogram-stage.is-formant-quiz .spectrogram-lesson-heading {
+  flex: 0 0 auto;
+  margin-bottom: 0.8em;
+  padding-bottom: 0.8em;
+}
+
+.spectrogram-stage.is-formant-quiz .formant-quiz {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.spectrogram-stage.is-formant-quiz .formant-quiz-visual {
+  height: auto;
+  min-height: 0;
+}
+
+.formant-frequency-labels {
+  bottom: 0.4em;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  font-size: 0.62em;
+  font-weight: 800;
+  justify-content: space-between;
+  position: absolute;
+  right: 0.4em;
+  top: 0.4em;
+}
+
+.formant-quiz-copy > span,
+.pattern-check > div > span {
+  color: var(--teal);
+  font-size: 0.68em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.formant-quiz-copy h4,
+.pattern-check h4 {
+  font-family: var(--serif);
+  font-size: 1.45em;
+  margin: 0.15em 0 0.4em;
+}
+
+.formant-quiz-copy [data-formant-options] {
+  display: grid;
+  gap: 0.5em;
+}
+
+.formant-quiz-copy [data-formant-options] button,
+.formant-next-question,
+.pattern-check [data-pattern-quiz-options] button,
+.endless-actions button {
+  background: #fff;
+  border: 1px solid rgba(35, 49, 61, 0.28);
+  border-radius: 6px;
+  font-size: 0.76em;
+  font-weight: 800;
+  padding: 0.65em 0.75em;
+  text-align: left;
+}
+
+.formant-quiz-copy button.is-correct,
+.pattern-check button.is-correct {
+  background: var(--mint);
+  border-color: #548f71;
+}
+
+.formant-quiz-copy button.is-wrong,
+.pattern-check button.is-wrong {
+  background: #ffe0d8;
+  border-color: #bf5b45;
+}
+
+.formant-quiz-copy [data-formant-feedback] {
+  font-size: 0.76em;
+  min-height: 3em;
+}
+
+.formant-next-question {
+  background: var(--sun);
+  display: inline-block;
+  margin-top: 0.5em;
+}
+
+.pattern-tabs {
+  display: grid;
+  grid-auto-rows: 3.7em;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  overflow: visible;
+}
+
+.pattern-tabs button {
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(35, 49, 61, 0.18);
+  border-radius: 0;
+  display: flex;
+  font-size: 0.64em;
+  font-weight: 900;
+  height: 100%;
+  justify-content: center;
+  line-height: 1.15;
+  min-height: 0;
+  padding: 0.55em 0.4em;
+  text-align: center;
+  white-space: normal;
+}
+
+.pattern-tabs button[aria-selected="true"] {
+  background: var(--mint);
+  border-bottom: 4px solid var(--teal);
+}
+
+.pattern-unit {
+  align-items: stretch;
+  background: rgba(255, 255, 255, 0.72);
+  display: grid;
+  gap: 1.2em;
+  grid-template-columns: minmax(0, 1.25fr) minmax(18em, 0.75fr);
+  min-height: 18em;
+  padding: 1em;
+}
+
+.pattern-spectrogram {
+  align-self: stretch;
+  height: auto;
+  min-height: 18em;
+}
+
+.pattern-unit [data-pattern-kicker] {
+  color: var(--teal);
+  font-size: 0.64em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.pattern-unit h4 {
+  font-family: var(--serif);
+  font-size: 1.5em;
+  margin: 0.15em 0 0.35em;
+}
+
+.pattern-unit p {
+  font-size: 0.78em;
+  margin: 0 0 0.6em;
+}
+
+.pattern-copy {
+  min-width: 0;
+}
+
+.pattern-copy ul {
+  font-size: 0.7em;
+  line-height: 1.45;
+  margin: 0 0 0.75em;
+  padding-left: 1.15em;
+}
+
+.pattern-example-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+  margin-bottom: 0.7em;
+}
+
+.pattern-example-buttons button {
+  background: #fff;
+  border-color: rgba(35, 49, 61, 0.28);
+  border-radius: 999px;
+  font-size: 0.64em;
+  min-height: 2.25em;
+  padding: 0.35em 0.55em;
+}
+
+.pattern-example-buttons button[aria-pressed="true"] {
+  background: var(--sun);
+  border-color: #a56e16;
+}
+
+.pattern-check {
+  border-top: 1px solid rgba(35, 49, 61, 0.16);
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+.pattern-check-heading {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.12em;
+  margin-bottom: 0.65em;
+}
+
+.pattern-check-heading h4 {
+  margin: 0;
+}
+
+.pattern-check-body {
+  align-items: stretch;
+  display: grid;
+  gap: 1em;
+  grid-template-columns: minmax(16em, 1.25fr) minmax(14em, 0.75fr);
+}
+
+.pattern-quiz-spectrogram {
+  height: 10em;
+}
+
+.pattern-check-answers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pattern-check [data-pattern-quiz-options] {
+  display: grid;
+  gap: 0.35em;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pattern-check [data-pattern-quiz-feedback] {
+  font-size: 0.72em;
+  margin: 0.55em 0 0;
+  min-height: 2.8em;
+}
+
+.endless-score {
+  display: flex;
+  font-size: 0.7em;
+  gap: 0;
+  justify-content: flex-end;
+  margin-bottom: 0.6em;
+}
+
+.endless-score span {
+  border-left: 1px solid rgba(35, 49, 61, 0.18);
+  padding: 0 0.7em;
+}
+
+.endless-score span:first-child {
+  border-left: 0;
+}
+
+.endless-spectrogram {
+  display: grid;
+  grid-template-columns: 2.7em minmax(0, 1fr);
+  grid-template-rows: auto 1.2em;
+}
+
+.endless-spectrogram > .spectrogram-frequency-axis {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  grid-column: 1;
+  grid-row: 1;
+  justify-content: space-between;
+  padding: 0.2em 0;
+}
+
+.endless-spectrogram > .spectrogram-frequency-axis span:nth-child(2) {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.endless-image-wrap {
+  background: #fff;
+  border: 1px solid rgba(35, 49, 61, 0.2);
+  grid-column: 2;
+  grid-row: 1;
+  height: min(22em, 38vh);
+  min-height: 15em;
+  overflow: hidden;
+  position: relative;
+}
+
+.spectrogram-stage.is-practice {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+.spectrogram-stage.is-practice .spectrogram-lesson-heading {
+  margin-bottom: 0.65em;
+  padding-bottom: 0.65em;
+}
+
+.spectrogram-stage.is-practice .endless-score {
+  flex: 0 0 auto;
+}
+
+.spectrogram-stage.is-practice .endless-spectrogram {
+  flex: 1 1 auto;
+  grid-template-rows: minmax(0, 1fr) 1.2em;
+  min-height: 8em;
+}
+
+.spectrogram-stage.is-practice .endless-image-wrap {
+  height: auto;
+  min-height: 0;
+}
+
+.spectrogram-stage.is-practice .endless-actions,
+.spectrogram-stage.is-practice .endless-hint,
+.spectrogram-stage.is-practice .endless-feedback {
+  flex: 0 0 auto;
+}
+
+.endless-image-wrap img {
+  height: 100%;
+  object-fit: fill;
+  width: 100%;
+}
+
+.practice-region {
+  background: rgba(255, 255, 255, 0.14);
+  border: 2px solid rgba(35, 49, 61, 0.68);
+  border-radius: 0;
+  bottom: 0;
+  box-shadow: none;
+  left: var(--start);
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: max(var(--width), 1.2%);
+}
+
+.practice-region:hover,
+.practice-region:focus-visible {
+  background: rgba(255, 209, 102, 0.25);
+  border-color: #8b5b0f;
+}
+
+.practice-region span {
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(35, 49, 61, 0.5);
+  border-radius: 50%;
+  color: var(--ink);
+  display: flex;
+  font-size: 0.58em;
+  font-weight: 900;
+  height: 1.8em;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  top: 0.4em;
+  transform: translateX(-50%);
+  width: 1.8em;
+}
+
+.practice-region.is-correct {
+  background: rgba(111, 207, 151, 0.28);
+  border-color: #287053;
+  border-width: 3px;
+}
+
+.practice-region.is-wrong {
+  background: rgba(239, 123, 97, 0.25);
+  border-color: #a43e31;
+  border-width: 3px;
+}
+
+.practice-region:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.endless-spectrogram > .spectrogram-time-axis {
+  align-self: center;
+  color: var(--muted);
+  font-size: 0.62em;
+  font-weight: 800;
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: center;
+  position: static;
+  transform: none;
+}
+
+.endless-actions {
+  display: flex;
+  gap: 0.6em;
+  justify-content: center;
+  margin-top: 0.7em;
+}
+
+.endless-actions button {
+  border-radius: 999px;
+  text-align: center;
+}
+
+.endless-hint,
+.endless-feedback {
+  font-size: 0.76em !important;
+  margin: 0.65em auto 0 !important;
+  max-width: 55em;
+  text-align: center;
+}
+
+.endless-feedback.is-correct {
+  color: #126447;
+}
+
+.endless-feedback.is-wrong {
+  color: #9d3429;
+}
+
 @media screen and (max-width: 736px) {
   body {
     padding-top: 4em;
@@ -4375,6 +5914,214 @@ ul.social li a.fa-orcid:hover:before {
   .koel-word {
     font-size: 1.05em;
     padding: 0.52em 0.62em;
+  }
+
+  .spectrogram-tutorial {
+    box-shadow: 9px 9px 0 var(--sky), -9px -9px 0 var(--mint);
+  }
+
+  .spectrogram-lesson-nav {
+    grid-template-columns: repeat(11, 4.6em);
+  }
+
+  .spectrogram-stage {
+    height: min(39em, 69vh);
+    min-height: 31em;
+    padding: 1em;
+  }
+
+  .spectrogram-lesson-heading {
+    gap: 0.65em;
+    grid-template-columns: 2.55em minmax(0, 1fr);
+  }
+
+  .spectrogram-lesson-number {
+    font-size: 0.74em;
+    height: 2.55em;
+    width: 2.55em;
+  }
+
+  .spectrogram-lesson-heading h3 {
+    font-size: 1.35em;
+  }
+
+  .spectrogram-stage p {
+    font-size: 0.82em;
+  }
+
+  .spectrogram-tutorial-footer {
+    gap: 0.5em;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-height: 4.4em;
+    padding: 0.65em;
+  }
+
+  .spectrogram-nav-button {
+    grid-row: 1;
+  }
+
+  .ipa-chart-intro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.2em;
+  }
+
+  .ipa-vowel-layout,
+  .formant-lab,
+  .formant-quiz,
+  .pattern-unit {
+    grid-template-columns: 1fr;
+  }
+
+  .ipa-consonant-glossary {
+    grid-template-columns: 1fr;
+  }
+
+  .ipa-consonant-glossary > div > div {
+    grid-template-columns: 1fr;
+  }
+
+  .ipa-vowel-chart {
+    margin: 1.8em 0.2em 0 3.2em;
+    min-height: 18em;
+  }
+
+  .ipa-word-examples {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ipa-word-examples article:nth-child(3) {
+    border-left: 0;
+  }
+
+  .ipa-word-examples article:nth-child(n + 3) {
+    border-top: 1px solid rgba(35, 49, 61, 0.16);
+  }
+
+  .dialect-table {
+    overflow-x: auto;
+  }
+
+  .dialect-row {
+    min-width: 43em;
+  }
+
+  .pressure-lab canvas,
+  .wave-canvas-wrap canvas {
+    height: 14em;
+  }
+
+  .pressure-takeaway-grid,
+  .mel-explainer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pressure-takeaway-grid article,
+  .mel-explainer-grid article {
+    border-left: 0;
+    border-top: 1px solid rgba(35, 49, 61, 0.14);
+    padding: 0.65em 0;
+  }
+
+  .pressure-takeaway-grid article:first-child,
+  .mel-explainer-grid article:first-child {
+    border-top: 0;
+  }
+
+  .wave-controls {
+    align-items: stretch;
+    grid-template-columns: 1fr;
+  }
+
+  .wave-controls button {
+    justify-self: start;
+  }
+
+  .spectrogram-equation {
+    grid-template-columns: 1fr;
+  }
+
+  .spectrum-grid,
+  .mel-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .spectrum-grid figure + figure,
+  .mel-comparison figure + figure {
+    border-left: 0;
+    border-top: 1px solid rgba(35, 49, 61, 0.14);
+  }
+
+  .spectrum-grid canvas,
+  .mel-comparison canvas,
+  .spectrogram-image-shell {
+    height: 14em;
+  }
+
+  .stack-lab canvas {
+    height: 19em;
+  }
+
+  .stack-rotation-control {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .spectrogram-axis-summary span {
+    padding: 0.2em 0.55em;
+  }
+
+  .formant-vowel-plot {
+    min-height: 18em;
+  }
+
+  .formant-reading {
+    grid-template-columns: 1fr;
+  }
+
+  .formant-reading > div {
+    border-left: 0;
+    border-top: 1px solid rgba(35, 49, 61, 0.14);
+  }
+
+  .formant-reading > div:first-child {
+    border-top: 0;
+  }
+
+  .formant-quiz-visual {
+    height: 19em;
+  }
+
+  .spectrogram-stage.is-formant-quiz .formant-quiz {
+    gap: 0.7em;
+    grid-template-rows: minmax(7em, 1fr) auto;
+  }
+
+  .spectrogram-stage.is-formant-quiz .formant-quiz-visual {
+    height: auto;
+    min-height: 0;
+  }
+
+  .pattern-tabs {
+    grid-template-columns: repeat(8, 6.7em);
+    overflow-x: auto;
+  }
+
+  .pattern-spectrogram {
+    min-height: 14em;
+  }
+
+  .pattern-check-body {
+    grid-template-columns: 1fr;
+  }
+
+  .endless-score {
+    justify-content: center;
+  }
+
+  .endless-image-wrap {
+    height: 15em;
+    min-height: 0;
   }
 
   details > summary > h3 {
