@@ -13,6 +13,7 @@
 
   let sessionPromise;
   let currentObjectUrl;
+  let initialized = false;
 
   ort.env.wasm.wasmPaths = "/assets/js/vendor/";
   ort.env.wasm.numThreads = 1;
@@ -116,6 +117,7 @@
 
   sampleButtons.forEach((button) => {
     button.addEventListener("click", () => {
+      initialized = true;
       setImage(button.dataset.edgeSample, button);
     });
   });
@@ -125,9 +127,27 @@
     if (!file) return;
     if (currentObjectUrl) URL.revokeObjectURL(currentObjectUrl);
     currentObjectUrl = URL.createObjectURL(file);
+    initialized = true;
     setImage(currentObjectUrl);
   });
 
-  setStatus("Model loading...", "Preparing the browser runtime.", 6);
-  classify(preview.src);
+  function initialize() {
+    if (initialized) return;
+    initialized = true;
+    setStatus("Model loading...", "Preparing the browser runtime.", 6);
+    classify(preview.src);
+  }
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      observer.disconnect();
+      initialize();
+    }, { rootMargin: "600px" });
+    observer.observe(root);
+    root.addEventListener("pointerdown", initialize, { once: true });
+    root.addEventListener("focusin", initialize, { once: true });
+  } else {
+    initialize();
+  }
 })();

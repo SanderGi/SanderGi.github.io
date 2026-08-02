@@ -13,7 +13,7 @@
     <meta name="description" content="I spent 4 years at UW: 1.5 years on my Bachelors of Science in CS, 1.5 year on my BS with Honors in Math, and 1 year on my Masters in CS. I learned a lot and built lots of fun projects with my classmates." />
     <meta name="keywords" content="Projects,ML,Math" />
     <meta name="dcterms.created" content="2026-07-30" />
-    <meta property="og:image" content="/images/4_years_at_UW.png | photos from my time at UW" />
+    <meta property="og:image" content="/images/4_years_at_UW.webp | photos from my time at UW" />
   </head>
   <body>
     <nav id="nav">
@@ -36,7 +36,7 @@
         <div class="pills">
           <span>Projects</span><span>Computer Science</span><span>Math</span>
         </div>
-        <img class="post-cover" src="/images/4_years_at_UW.png" alt="photos from my time at UW" />
+        <img loading="eager" decoding="async" fetchpriority="high" width="1600" height="900" class="post-cover" src="/images/4_years_at_UW.webp" alt="photos from my time at UW" />
       </div>
     </article>
     <section class="wrapper style3 post-body">
@@ -53,18 +53,49 @@
             After a year of field deployments and validation, I had learned Django and made friends in the ICTD community. Both helped me land my first internship at <a href="https://gooey.ai" target="_blank">Gooey.AI</a> working on <a href="https://farmer.chat" target="_blank">Farmer.CHAT</a> (a chatbot to help farmers across India, Ethiopia, and Kenya).
             The work was demoed at the <a href="https://gooey.ai/FarmerCHATatUN" target="_blank">UN 77th General Assembly</a> and <a href="https://www.fao.org/agroinformatics/news/news-detail/fao--ai-and-digital-tools-for-climate-resilient-agri-food-systems--on-the-spotlight-at-the-science-and-innovation-forum-2023/en" target="_blank">FAO Science and Innovation Forum 2023</a>, but it is more fun if you try the English version yourself:
           </p>
-          <section class="edge-demo" style="padding: 0; overflow: hidden;">
-            <div id="gooey-embed"></div>
-            <script src="https://cdn.jsdelivr.net/gh/GooeyAI/gooey-web-widget@2.12.1/dist/lib.js"></script>
+          <section class="edge-demo gooey-embed-shell">
+            <div id="gooey-embed" aria-live="polite" aria-busy="true"></div>
             <script>
-                function onLoadGooeyEmbed() { 
-                    GooeyEmbed.mount({ 
-                      target: "#gooey-embed",
-                      enableConversations: false
-                    }); 
+              (() => {
+                const target = document.querySelector("#gooey-embed");
+                const shell = target.closest(".gooey-embed-shell");
+                let loading = false;
+                const loadDemo = () => {
+                  if (loading) return;
+                  loading = true;
+                  const chat = document.createElement("script");
+                  chat.src = "https://gooey.ai/chat/agriculture-farmerchat-NRq/lib.js";
+                  chat.onload = () => {
+                    const mount = () => {
+                      GooeyEmbed.mount({
+                        target: "#gooey-embed",
+                        enableConversations: false
+                      });
+                      target.setAttribute("aria-busy", "false");
+                    };
+                    const widget = Array.from(document.scripts).find((script) =>
+                      script.src.includes("gooey-web-widget@2.12.3")
+                    );
+                    if (Object.prototype.hasOwnProperty.call(GooeyEmbed, "defaultConfig")) {
+                      mount();
+                    } else if (widget) {
+                      widget.addEventListener("load", mount, { once: true });
+                    }
+                  };
+                  document.body.append(chat);
+                };
+                if ("IntersectionObserver" in window) {
+                  const observer = new IntersectionObserver((entries) => {
+                    if (!entries.some((entry) => entry.isIntersecting)) return;
+                    observer.disconnect();
+                    loadDemo();
+                  }, { rootMargin: "500px" });
+                  observer.observe(shell);
+                } else {
+                  loadDemo();
                 }
+              })();
             </script>
-            <script async="" defer="" onload="onLoadGooeyEmbed()" src="https://gooey.ai/chat/agriculture-farmerchat-NRq/lib.js"></script>
           </section>
           <br><p>
             Working at Gooey with AI agents, clients, startups, and model deployments laid the foundation for eventually founding <a href="https://koellabs.com" target="_blank">my own startup</a>.
@@ -195,9 +226,9 @@
             A fun one was to the students of the Embedded Systems capstone where <a href="https://www.linkedin.com/in/jiuyang-lyu-92ab28222/" target="_blank">Jiuyang Lyu</a> and I showed how to run custom ML architectures on the <a href="https://github.com/analogdevicesinc/MaximAI_Documentation" target="_blank">MAX78000</a>.
             We demonstrated both a tiny LLM and a simple elk detection model:
           </p>
-          <section class="edge-demo" style="padding: 0; overflow: hidden; display: flex;">
-            <video style="width: 100%; margin: 0;" controls loop>
-              <source src="/images/demo/elkdetection.mp4" type="video/mp4" />
+          <section class="edge-demo deferred-video-shell">
+            <video class="deferred-video" width="1280" height="720" poster="/images/demo/elkdetection-poster.webp" controls loop playsinline preload="none">
+              <source src="/images/demo/elkdetection-720p.mp4" type="video/mp4" />
             </video>
           </section>
           <br><p>
@@ -221,8 +252,8 @@
             The first was in robotics with <a href="https://www.linkedin.com/in/ethan-k-8a92041b7/" target="_blank">Ethan Kogan</a> where we trained a model to control a robotic arm using our brain waves.
             In the video, I'm moving a second arm to focus my brain waves, but the main arm on the left is purely controlled by my brain:
           </p>
-          <section class="edge-demo" style="padding: 0; overflow: hidden; display: flex;">
-            <video style="width: 100%; margin: 0;" controls loop>
+          <section class="edge-demo deferred-video-shell">
+            <video class="deferred-video" width="1280" height="720" poster="/images/demo/cse571-poster.webp" controls loop playsinline preload="none">
               <source src="/images/demo/cse571.mp4" type="video/mp4" />
             </video>
           </section>
@@ -243,7 +274,7 @@
                     <source src="/images/demo/tennis-serve/clips/start.mp4" type="video/mp4" />
                   </video>
                   <figure class="tennis-image-preview" data-tennis-image-preview hidden>
-                    <img data-tennis-preview-image alt="" />
+                    <img data-tennis-preview-image alt="" loading="lazy" decoding="async" />
                   </figure>
                 </div>
                 <div class="tennis-video-controls">

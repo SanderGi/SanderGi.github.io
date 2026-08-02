@@ -21,6 +21,7 @@
   let sessionPromise = null;
   let objectUrl = null;
   let runId = 0;
+  let initialized = false;
 
   ort.env.wasm.wasmPaths = "/assets/js/vendor/";
   ort.env.wasm.numThreads = 1;
@@ -282,6 +283,7 @@
 
   samples.forEach((button) => {
     button.addEventListener("click", () => {
+      initialized = true;
       runDetection(button.dataset.pcbSrc, button);
     });
   });
@@ -291,8 +293,26 @@
     if (!file) return;
     if (objectUrl) URL.revokeObjectURL(objectUrl);
     objectUrl = URL.createObjectURL(file);
+    initialized = true;
     runDetection(objectUrl, null);
   });
 
-  runDetection(samples[0].dataset.pcbSrc, samples[0]);
+  function initialize() {
+    if (initialized) return;
+    initialized = true;
+    runDetection(samples[0].dataset.pcbSrc, samples[0]);
+  }
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      observer.disconnect();
+      initialize();
+    }, { rootMargin: "600px" });
+    observer.observe(root);
+    root.addEventListener("pointerdown", initialize, { once: true });
+    root.addEventListener("focusin", initialize, { once: true });
+  } else {
+    initialize();
+  }
 })();

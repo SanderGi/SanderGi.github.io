@@ -1015,6 +1015,27 @@ class EchoChild extends EchoBase {
 
   window.__minijavaExplorer = { compileSource };
 
-  await setupEditor();
-  compile();
+  let editorStarted = false;
+  async function initializeEditor() {
+    if (editorStarted) return;
+    editorStarted = true;
+    await setupEditor();
+    compile();
+  }
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      observer.disconnect();
+      initializeEditor();
+    }, { rootMargin: "500px" });
+    observer.observe(root);
+  } else {
+    initializeEditor();
+  }
+  root.addEventListener("pointerdown", initializeEditor, {
+    capture: true,
+    once: true,
+  });
+  root.addEventListener("focusin", initializeEditor, { once: true });
 }

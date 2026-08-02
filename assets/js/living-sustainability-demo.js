@@ -58,7 +58,7 @@
       badge: "Reusable",
       category: "Artifacts",
       initials: "EX",
-      image: "/images/demo/living-products/excalibur.png",
+      image: "/images/demo/living-products/excalibur.webp",
       icon: "sword",
       color: "#5c6f82",
       co2e: 86,
@@ -82,7 +82,7 @@
       badge: "Please reconsider",
       category: "Living Goods",
       initials: "PE",
-      image: "/images/demo/living-products/pet-elephant.png",
+      image: "/images/demo/living-products/pet-elephant.webp",
       icon: "elephant",
       color: "#8b9aa3",
       co2e: 18000,
@@ -106,7 +106,7 @@
       badge: "Unavailable",
       category: "Food",
       initials: "FT",
-      image: "/images/demo/living-products/flown-turkey.png",
+      image: "/images/demo/living-products/flown-turkey.webp",
       icon: "turkey",
       color: "#b76e45",
       co2e: 32,
@@ -126,7 +126,7 @@
       badge: "High risk",
       category: "Jewelry",
       initials: "OR",
-      image: "/images/demo/living-products/one-ring.png",
+      image: "/images/demo/living-products/one-ring.webp",
       icon: "ring",
       color: "#c8911c",
       co2e: 420,
@@ -150,7 +150,7 @@
       badge: "Material intensive",
       category: "Wearables",
       initials: "IG",
-      image: "/images/demo/living-products/infinity-gauntlet.png",
+      image: "/images/demo/living-products/infinity-gauntlet.webp",
       icon: "gauntlet",
       color: "#c9a227",
       co2e: 9800,
@@ -174,7 +174,7 @@
       badge: "Unknown",
       category: "Artifacts",
       initials: "TF",
-      image: "/images/demo/living-products/triforce.png",
+      image: "/images/demo/living-products/triforce.webp",
       icon: "triforce",
       color: "#e0a921",
       co2e: 120,
@@ -198,7 +198,7 @@
       badge: "Heavy freight",
       category: "Tools",
       initials: "MJ",
-      image: "/images/demo/living-products/mjolnir.png",
+      image: "/images/demo/living-products/mjolnir.webp",
       icon: "hammer",
       color: "#7a8790",
       co2e: 510,
@@ -222,7 +222,7 @@
       badge: "Energy efficient",
       category: "Tools",
       initials: "LS",
-      image: "/images/demo/living-products/lightsaber.png",
+      image: "/images/demo/living-products/lightsaber.webp",
       icon: "lightsaber",
       color: "#34b6ff",
       co2e: 175,
@@ -246,7 +246,7 @@
       badge: "Use-phase heavy",
       category: "Electronics",
       initials: "FC",
-      image: "/images/demo/living-products/flux-capacitor.png",
+      image: "/images/demo/living-products/flux-capacitor.webp",
       icon: "flux",
       color: "#33a6a6",
       co2e: 1210,
@@ -270,7 +270,7 @@
       badge: "Refurbished",
       category: "Appliances",
       initials: "PP",
-      image: "/images/demo/living-products/proton-pack.png",
+      image: "/images/demo/living-products/proton-pack.webp",
       icon: "proton",
       color: "#d24f3f",
       co2e: 740,
@@ -294,7 +294,7 @@
       badge: "Toxicity flag",
       category: "Jewelry",
       initials: "KN",
-      image: "/images/demo/living-products/kryptonite-necklace.png",
+      image: "/images/demo/living-products/kryptonite-necklace.webp",
       icon: "kryptonite",
       color: "#42b853",
       co2e: 155,
@@ -318,7 +318,7 @@
       badge: "Do not spill",
       category: "Fuel",
       initials: "ER",
-      image: "/images/demo/living-products/energon-runoff.png",
+      image: "/images/demo/living-products/energon-runoff.webp",
       icon: "energon",
       color: "#9c4dcc",
       co2e: 6500,
@@ -342,7 +342,7 @@
       badge: "Reject",
       category: "Industrial",
       initials: "HL",
-      image: "/images/demo/living-products/hexxus-leveller.png",
+      image: "/images/demo/living-products/hexxus-leveller.webp",
       icon: "smog",
       color: "#4d5b3f",
       co2e: 9999,
@@ -464,7 +464,7 @@
       );
       card.innerHTML = `
         <span class="living-product-art">
-          <img src="${productImage(product)}" alt="${product.name}" loading="lazy" />
+          <img src="${productImage(product)}" alt="${product.name}" loading="lazy" decoding="async" />
         </span>
         <span class="living-product-info">
           <span class="living-product-name">${product.name}</span>
@@ -475,7 +475,7 @@
           </span>
         </span>
         <span class="living-product-badge">
-          <img src="/images/demo/lca-128.png" alt="" aria-hidden="true" />
+          <img src="/images/demo/lca-128.png" alt="" aria-hidden="true" loading="lazy" decoding="async" />
           <span>${product.badge}</span>
         </span>
       `;

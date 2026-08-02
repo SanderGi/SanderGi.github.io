@@ -25,8 +25,8 @@
       color: "#0e746d",
       summary: "Checks the stance before motion begins: base width and shoulder line.",
       rules: [
-        ["pass", "Foot Width", "Ankle width 2.06x shoulder width, meeting the >=0.80 stance threshold.", "1_1_foot_width_frame_0000.jpg"],
-        ["pass", "Shoulder Level", "Shoulder tilt is 38.5°, clearing the >15° setup criterion.", "1_2_shoulder_level_frame_0000.jpg"],
+        ["pass", "Foot Width", "Ankle width 2.06x shoulder width, meeting the >=0.80 stance threshold.", "1_1_foot_width_frame_0000.webp"],
+        ["pass", "Shoulder Level", "Shoulder tilt is 38.5°, clearing the >15° setup criterion.", "1_2_shoulder_level_frame_0000.webp"],
       ],
     },
     {
@@ -37,8 +37,8 @@
       color: "#1e88e5",
       summary: "Looks for the beginning of wind-up and whether the toss arm rises cleanly.",
       rules: [
-        ["pass", "Elbow Rising", "Serving elbow is 88px above the hip as the wind-up starts.", "2_1_elbow_rising_frame_0006.jpg"],
-        ["warning", "Toss Arm Rising", "Tossing wrist is still 134px below the tossing shoulder during release.", "2_2_toss_arm_rising_frame_0006.jpg"],
+        ["pass", "Elbow Rising", "Serving elbow is 88px above the hip as the wind-up starts.", "2_1_elbow_rising_frame_0006.webp"],
+        ["warning", "Toss Arm Rising", "Tossing wrist is still 134px below the tossing shoulder during release.", "2_2_toss_arm_rising_frame_0006.webp"],
       ],
     },
     {
@@ -49,10 +49,10 @@
       color: "#7b61c8",
       summary: "Measures whether the body reaches a strong loaded position before the racket drop.",
       rules: [
-        ["risk", "Elbow Height", "Serving elbow is 44px below the shoulder in loading position.", "3_1_elbow_height_frame_0016.jpg"],
-        ["pass", "Elbow Angle", "Serving elbow angle is 83.1°, inside the target loading range.", "3_2_elbow_angle_frame_0016.jpg"],
-        ["pass", "Toss Arm Extension", "Toss arm is extended at 173.5°.", "3_3_toss_arm_extension_frame_0016.jpg"],
-        ["warning", "Knee Bend", "Serving knee is too straight at loading: 171.2°, with <=160° desired.", "3_4_knee_bend_frame_0016.jpg"],
+        ["risk", "Elbow Height", "Serving elbow is 44px below the shoulder in loading position.", "3_1_elbow_height_frame_0016.webp"],
+        ["pass", "Elbow Angle", "Serving elbow angle is 83.1°, inside the target loading range.", "3_2_elbow_angle_frame_0016.webp"],
+        ["pass", "Toss Arm Extension", "Toss arm is extended at 173.5°.", "3_3_toss_arm_extension_frame_0016.webp"],
+        ["warning", "Knee Bend", "Serving knee is too straight at loading: 171.2°, with <=160° desired.", "3_4_knee_bend_frame_0016.webp"],
       ],
     },
     {
@@ -63,7 +63,7 @@
       color: "#f4a940",
       summary: "Checks whether the racket drops below the elbow before acceleration.",
       rules: [
-        ["warning", "Racket Drop", "Serving wrist is not below elbow, suggesting the racket may not be fully loaded.", "4_1_racket_drop_frame_0028.jpg"],
+        ["warning", "Racket Drop", "Serving wrist is not below elbow, suggesting the racket may not be fully loaded.", "4_1_racket_drop_frame_0028.webp"],
       ],
     },
     {
@@ -74,9 +74,9 @@
       color: "#f47c54",
       summary: "Looks for upward elbow lead, wrist acceleration, and leg drive into the swing.",
       rules: [
-        ["pass", "Elbow Leading", "Serving elbow is above the shoulder during the upward swing.", "5_1_elbow_leading_frame_0036.jpg"],
-        ["pass", "Wrist Acceleration", "Serving wrist moves 52px above the elbow during swing.", "5_2_wrist_acceleration_frame_0041.jpg"],
-        ["warning", "Leg Drive", "Serving knee remains flexed at 137.8°; >=155° is desired for leg drive.", "5_3_leg_drive_frame_0041.jpg"],
+        ["pass", "Elbow Leading", "Serving elbow is above the shoulder during the upward swing.", "5_1_elbow_leading_frame_0036.webp"],
+        ["pass", "Wrist Acceleration", "Serving wrist moves 52px above the elbow during swing.", "5_2_wrist_acceleration_frame_0041.webp"],
+        ["warning", "Leg Drive", "Serving knee remains flexed at 137.8°; >=155° is desired for leg drive.", "5_3_leg_drive_frame_0041.webp"],
       ],
     },
     {
@@ -87,9 +87,9 @@
       color: "#01bf67",
       summary: "Analyzes arm extension, contact height, and shoulder rotation at the strike.",
       rules: [
-        ["pass", "Arm Extension", "Serving arm is extended at contact: 162.2°.", "6_1_arm_extension_frame_0042.jpg"],
-        ["pass", "Contact Height", "Contact proxy is 263px above shoulder level.", "6_2_contact_height_frame_0042.jpg"],
-        ["pass", "Shoulder Rotation", "Shoulder line is rotated 116.6° relative to the hips.", "6_3_shoulder_rotation_frame_0042.jpg"],
+        ["pass", "Arm Extension", "Serving arm is extended at contact: 162.2°.", "6_1_arm_extension_frame_0042.webp"],
+        ["pass", "Contact Height", "Contact proxy is 263px above shoulder level.", "6_2_contact_height_frame_0042.webp"],
+        ["pass", "Shoulder Rotation", "Shoulder line is rotated 116.6° relative to the hips.", "6_3_shoulder_rotation_frame_0042.webp"],
       ],
     },
     {
@@ -100,8 +100,8 @@
       color: "#d9534f",
       summary: "Checks follow-through mechanics that can indicate injury risk after contact.",
       rules: [
-        ["risk", "Cross-Body Follow-Through", "Racket-arm wrist does not cross the body midline during follow-through.", "7_1_cross_body_follow_through_frame_0054.jpg"],
-        ["warning", "Elbow Deceleration", "Serving elbow is still extended in follow-through: 166.5°, with <=130° desired.", "7_2_elbow_deceleration_frame_0054.jpg"],
+        ["risk", "Cross-Body Follow-Through", "Racket-arm wrist does not cross the body midline during follow-through.", "7_1_cross_body_follow_through_frame_0054.webp"],
+        ["warning", "Elbow Deceleration", "Serving elbow is still extended in follow-through: 166.5°, with <=130° desired.", "7_2_elbow_deceleration_frame_0054.webp"],
       ],
     },
     {
@@ -112,8 +112,8 @@
       color: "#23313d",
       summary: "Looks at landing balance and knee flexion on both sides.",
       rules: [
-        ["warning", "Landing Knee Flexion (Serving Side)", "Serving knee is too straight on landing: 168.2°, with <=160° desired.", "8_1_landing_knee_flexion_serving_side_frame_0061.jpg"],
-        ["pass", "Landing Knee Flexion (Non-Dominant Side)", "Non-dominant knee is 160.2°, indicating a balanced landing.", "8_2_landing_knee_flexion_non_dominant_side_frame_0061.jpg"],
+        ["warning", "Landing Knee Flexion (Serving Side)", "Serving knee is too straight on landing: 168.2°, with <=160° desired.", "8_1_landing_knee_flexion_serving_side_frame_0061.webp"],
+        ["pass", "Landing Knee Flexion (Non-Dominant Side)", "Non-dominant knee is 160.2°, indicating a balanced landing.", "8_2_landing_knee_flexion_non_dominant_side_frame_0061.webp"],
       ],
     },
   ];
@@ -135,7 +135,7 @@
       .map(
         ([severity, name, text, image]) => `
           <article class="tennis-rule-card" data-severity="${severity}">
-            <img class="tennis-rule-thumbnail" src="/images/demo/tennis-serve/frames/${image}" alt="Annotated serve frame for ${name}" loading="lazy" />
+            <img class="tennis-rule-thumbnail" src="/images/demo/tennis-serve/frames/${image}" alt="Annotated serve frame for ${name}" loading="lazy" decoding="async" />
             <div>
               <span class="tennis-rule-badge ${severity}">${labelFor(severity)}</span>
               <strong>${name}</strong>
