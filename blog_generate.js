@@ -1,6 +1,7 @@
 // node --watch blog_generate.js
 
 const fs = require("fs");
+const SITE_URL = "https://sandergi.com";
 
 function read_image_dimensions(url) {
   if (!url || /^(?:https?:|data:)/i.test(url)) return null;
@@ -93,6 +94,10 @@ function read_property(content, property, fallback = "") {
   return match ? match[1] : fallback;
 }
 
+function local_site_url(url) {
+  return url.startsWith(`${SITE_URL}/`) ? url.slice(SITE_URL.length) : url;
+}
+
 function update_blog_list() {
   const template = fs.readFileSync("./blog_template.html").toString();
   const [template_start, template_end] = template.split("{blog_list}", 2);
@@ -117,11 +122,18 @@ function update_blog_list() {
       const keywords = read_meta(content, "keywords", "Research")
         .split(",");
       const created = read_meta(content, "dcterms.created");
-      const [image, alt] = read_property(
+      const image_property = read_property(
         content,
         "og:image",
-        "/images/profile.jpg | Alex Metzger"
-      ).split(" | ");
+        `${SITE_URL}/images/profile.jpg`
+      );
+      const [legacy_image, legacy_alt] = image_property.split(" | ");
+      const image = local_site_url(legacy_image);
+      const alt = read_property(
+        content,
+        "og:image:alt",
+        legacy_alt || "Alex Metzger"
+      );
       const dimensions = read_image_dimensions(image);
       const dimension_attributes = dimensions
         ? ` width="${dimensions.width}" height="${dimensions.height}"`
