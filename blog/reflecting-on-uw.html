@@ -81,7 +81,7 @@
                       target.setAttribute("aria-busy", "false");
                     };
                     const widget = Array.from(document.scripts).find((script) =>
-                      script.src.includes("gooey-web-widget@2.12.3")
+                      script.src.startsWith("https://cdn.jsdelivr.net/gh/GooeyAI/gooey-web-widget@")
                     );
                     if (Object.prototype.hasOwnProperty.call(GooeyEmbed, "defaultConfig")) {
                       mount();
