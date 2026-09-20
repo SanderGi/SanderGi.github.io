@@ -10,13 +10,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <meta name="author" content="Alexander Metzger" />
-    <meta name="description" content="A plain-language tour of our Interspeech 2026 paper on phonetic transcription, why synthetic labels help only up to a point, and what this means for accent-robust speech technology." />
+    <meta name="description" content="Our Interspeech 2026 study shows how a small amount of human annotation can improve speech models trained at scale." />
     <meta name="keywords" content="Research,Speech,ML,Accessibility" />
     <meta name="dcterms.created" content="2026-06-20" />
     <meta property="og:title" content="When More Synthetic Speech Labels Stop Helping" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://sandergi.com/blog/scaling-human-g2p-supervision.html" />
-    <meta property="og:description" content="A plain-language tour of our Interspeech 2026 paper on phonetic transcription, why synthetic labels help only up to a point, and what this means for accent-robust speech technology." />
+    <meta property="og:description" content="Our Interspeech 2026 study shows how a small amount of human annotation can improve speech models trained at scale." />
     <meta property="og:image" content="https://sandergi.com/images/xlsrenglish01.png" />
     <meta property="og:image:alt" content="Phonetic transcription benchmark chart" />
     <meta property="og:image:width" content="2064" />
@@ -37,8 +37,8 @@
         <p class="eyebrow">Inclusive Speech</p>
         <h1>When more synthetic speech labels stop helping</h1>
         <p>
-          Robust pronunciation feedback needs to hear what people actually say,
-          not just what standard English spelling suggests they should say.
+          A small amount of careful human annotation can help speech models
+          recognize how different people pronounce the same words.
         </p>
         <div class="post-meta"><span>Alexander Metzger</span><span>June 20, 2026</span></div>
         <div class="pills">
@@ -51,57 +51,58 @@
       <div class="container">
         <article>
           <p class="post-callout">
-            The headline result: auto-generated phonetic labels are useful when
-            human labels are scarce, but after roughly 20 to 30 hours of human
-            annotation they can stop helping and even hurt cross-dialect robustness.
+            Automatically generated phonetic labels helped when human labels
+            were scarce. In our experiments, after about 20 to 30 hours of human
+            annotation, adding synthetic labels could make performance worse
+            across dialects.
           </p>
-          <h2>The everyday problem</h2>
+          <h2>Words and sounds</h2>
           <p>
-            A speech recognizer writes words. A phonetic transcriber tries to
-            write sounds. The latter is required for pronunciation learning,
-            speech therapy, accent research, and any tool that needs to notice
-            how a word was said rather than only guessing which word was meant.
-          </p>
-          <p>
-            The catch is that expert phonetic annotation is slow and expensive.
-            A common shortcut is grapheme-to-phoneme (G2P) labeling: take the text
-            transcription of the audio and predict the expected pronunciation. 
-            That creates lots of labels cheaply, but it also risks teaching the 
-            model an idealized pronunciation instead of the sound in the recording.
-          </p>
-          <h2>What we tested</h2>
-          <p>
-            We studied English phonetic transcription across native, non-native,
-            and post-stroke speech using a curated 80-hour benchmark. Then we
-            asked a practical scaling question: when should a team spend its next
-            dollar on more expert labels, and when is synthetic supervision good
-            enough?
+            Speech recognition identifies words. Phonetic transcription records
+            the sounds a person makes. Pronunciation feedback, speech therapy,
+            and accent research need those details: two people can say the same
+            word differently.
           </p>
           <p>
-            In stark contrast with <a href="https://www.cs.utexas.edu/~eunsol/courses/data/bitter_lesson.pdf">The Bitter Lesson</a>, 
-            the surprising answer is not "more data always wins." G2P labels are
-            helpful in the low-data regime. Once there is a meaningful amount of
-            human annotation, the better recipe is strong ASR pretraining plus
-            carefully curated human labels. That recipe achieved a 2.3x reduction
-            in weighted phone feature error rate over prior systems, with gains
-            on non-native and aphasic speech. For speakers suffering from post post-stroke
-            aphasia, the difference is >25% error rate with thousands of hours of G2P labeled data
-            and &lt;6% error rate with just 40 hours of human annotated data, only a couple of which
-            actually need to be aphasic speech. That's the difference between a clinically
-            useful model and one that is almost randomly guessing. Moreover, a couple hours
-            of specialized human annotations is often quite feasible, even in low resource settings.
-            We have additionally shown that the higher quality labels generalize better to unseen dialects, 
-            further paving the way for greater performance in low resource settings.
+            Having experts listen and label those sounds is expensive. A cheaper
+            option is grapheme-to-phoneme (G2P) labeling, which predicts a word's
+            pronunciation from its spelling. But those labels can miss what the
+            speaker actually said.
           </p>
-          <h2>Why it matters</h2>
+          <h2>What we found</h2>
           <p>
-            The work pushes against a tempting story in speech ML: if labels are
-            cheap, scale them up. For inclusive speech systems, label quality can 
-            matter more than raw quantity. A pronunciation tutor, clinical tool, 
-            or linguistic analysis pipeline should not become confident by averaging 
-            away the very differences it needs to hear. While cheap labels are convenient
-            for narrow benchmarks and research publications, careful handling of data 
-            is essential for systems deployed in the real world to diverse users. 
+            We compared human and G2P labels on an 80-hour benchmark covering
+            native English speakers, non-native speakers, and people with
+            post-stroke aphasia. G2P labels helped when little human annotation
+            was available. With more human annotation, our best approach combined
+            a model pretrained for speech recognition with human phonetic labels.
+          </p>
+          <p>
+            This reduced weighted phone feature error rate, which measures errors
+            in the sound features being transcribed, by a factor of 2.3 compared
+            with prior systems. On aphasic speech, a model trained with 40 hours
+            of human annotation had under 6% error, compared with over 25% for a
+            model trained with thousands of hours of G2P labels. Only a few of
+            those 40 hours needed to be aphasic speech. Human labels also helped
+            the model generalize to dialects it had not seen during training.
+          </p>
+          <h2>The sweet lesson</h2>
+          <p>
+            Large-scale pretraining gave us a strong starting point. Careful
+            human annotation then taught the model pronunciation details that
+            labels generated from spelling missed. Both contributed to the result.
+          </p>
+          <p>
+            This is the <a href="/blog/reflecting-on-uw.html">sweet lesson I took
+            from my time at UW</a>: human expertise can make a system more useful
+            today, even if future methods eventually automate that work. For
+            someone who needs better speech tools now, that improvement matters.
+          </p>
+          <p>
+            The practical question is where human effort helps most. In our
+            experiments, a few hours of labels for a particular kind of speech
+            made a substantial difference. Better annotation tools can make
+            that work easier, and models can extend its benefit to more speakers.
           </p>
           <div class="post-links">
             <a class="button" href="https://arxiv.org/abs/2606.16019" target="_blank">Read the paper</a>
@@ -111,14 +112,11 @@
           <section class="koel-demo" data-koel-demo>
             <div class="koel-demo-copy">
               <p class="eyebrow">Interactive Demo</p>
-              <h2>Try an accent coaching story flow</h2>
+              <h2>Try pronunciation feedback</h2>
               <p>
-                This mini lesson lets you watch a short story clip,
-                say the target phrase, and get word-level pronunciation
-                feedback. It uses the phonetic transcription models and
-                benchmarks described in the paper. Inference goes through
-                the Koel Labs server, but your audio is only processed 
-                ephemerally and not stored past processing.
+                Watch a short clip, repeat the phrase, and get pronunciation
+                feedback from our phonetic transcription models. The Koel Labs
+                server processes your audio and does not retain it afterward.
               </p>
             </div>
             <div class="koel-phone" aria-label="Interactive Slay Speech pronunciation demo">

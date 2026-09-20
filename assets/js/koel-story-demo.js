@@ -289,9 +289,10 @@
           watchButton.textContent = "▶ Play";
           setStatus("Clip paused.");
         }
-      } catch {
+      } catch (error) {
+        console.warn("Story clip playback failed:", error);
         setStatus(
-          "This browser cannot play the HLS clip here; continue to practice.",
+          "The clip could not start. Try Play again, or skip to practice.",
         );
       }
     });
@@ -342,10 +343,6 @@
     video.playsInline = true;
     video.preload = "auto";
     video.poster = story.posterUrl;
-    const sourceElement = document.createElement("source");
-    sourceElement.src = story.videoUrl;
-    sourceElement.type = "application/vnd.apple.mpegurl";
-    video.append(sourceElement);
     attachHls(video);
     return video;
   }
@@ -353,11 +350,14 @@
   function attachHls(video) {
     if (video.dataset.koelHlsAttached) return;
     video.dataset.koelHlsAttached = "true";
-    if (video.canPlayType("application/vnd.apple.mpegurl")) return;
     if (window.Hls?.isSupported()) {
       const hls = new window.Hls({ enableWorker: true });
       hls.loadSource(story.videoUrl);
       hls.attachMedia(video);
+      return;
+    }
+    if (video.canPlayType("application/vnd.apple.mpegurl")) {
+      video.src = story.videoUrl;
       return;
     }
     setStatus(
@@ -382,7 +382,6 @@
       },
       { once: true },
     );
-    video.load();
     preloadedVideo = video;
     preloadedStepIndex = nextIndex;
   }
