@@ -154,7 +154,7 @@ function update_blog_list() {
                 <span>${created}</span>
               </div>
               <div class="pills">
-                ${keywords.map((k) => "<span>" + k.trim() + "</span> ").join("")}
+                ${keywords.map((k) => "<span>" + k.trim() + "</span>").join(" ")}
               </div>
             </div>
           </article>
